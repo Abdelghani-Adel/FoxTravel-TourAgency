@@ -8,7 +8,7 @@
   display: block;
   text-decoration: none;
   color: inherit;
-  height: 60vh;
+  height: 70vh;
 }
 
 .foxCard_img {
@@ -102,11 +102,6 @@
 /////////////////////////////////////////
 // PackageCard
 /////////////////////////////////////////
-.packageCard {
-  height: 70vh;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
 
 .packageCard_img {
   height: 40%;
@@ -126,8 +121,6 @@
 .packageCard_info {
   height: 80%;
   width: 100%;
-  // background-color: #f5f5f5;
-  // color: v.$thirdColor;
   position: absolute;
   bottom: 0;
   border-radius: 10px;
@@ -142,4 +135,88 @@
 
 .packageCard_info .foxCard_rating .ratingBox {
   background-color: v.$thirdColor;
+}
+
+/////////////////////////////////
+.foxPrice {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: v.$secondColor;
+}
+
+$duration: 3s;
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+.transportIcon {
+  width: 3vw;
+  overflow: hidden;
+  padding-left: 100%;
+  box-sizing: content-box;
+  z-index: 2;
+  transition: ease-in-out;
+  font-size: 1.8rem;
+  color: v.$secondColor;
+
+  &:hover svg {
+    animation-play-state: paused;
+  }
+
+  svg {
+    display: inline-block;
+    white-space: nowrap;
+    padding-right: 100%;
+    box-sizing: content-box;
+    transition: ease-in-out;
+
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-name: ticker;
+    animation-name: ticker;
+    -webkit-animation-duration: $duration;
+    animation-duration: $duration;
+
+    &__item {
+      display: inline-block;
+      padding: 0 2rem;
+      color: white;
+    }
+  }
+}
+
+.transportationLine {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  border: 1px solid v.$secondColor;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
+  background-color: v.$secondColor;
+}
+
+.transportationStop {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid v.$secondColor;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #fff;
 }

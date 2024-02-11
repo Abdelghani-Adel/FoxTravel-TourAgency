@@ -1,6 +1,6 @@
 import React from "react";
 import Logo from "./Logo";
-import BtnMenuCloseX from "../../ui/BtnMenuCloseX";
+import BtnMenuCloseX from "../ui/BtnMenuCloseX";
 
 type props = {
   isShown: boolean;

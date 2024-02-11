@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ServiceSearch from "../../common/ServiceSearch/ServiceSearch";
+import ServiceSearch from "../../ServiceSearch/ServiceSearch";
 
 const HeroSection = () => {
   return (

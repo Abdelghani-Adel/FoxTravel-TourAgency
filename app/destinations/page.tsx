@@ -1,9 +1,8 @@
-import React from 'react'
+import RouteWrapper from "@/src/components/pages/common/RouteWrapper";
+import React from "react";
 
 const Page = () => {
-  return (
-    <div>Hotel List</div>
-  )
-}
+  return <RouteWrapper>Hotel List</RouteWrapper>;
+};
 
-export default Page
+export default Page;

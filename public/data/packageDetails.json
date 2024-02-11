@@ -2,7 +2,7 @@
   "id": 1,
   "title": "Have a week in Hurghada and Marsa-Alam",
   "price": 200,
-  "currency": "usd",
+  "currency": "$",
   "startDate": "01/03/2024",
   "endDate": "07/03/2024",
   "startingPoints": [
@@ -15,8 +15,8 @@
       "address": "Alexandria"
     }
   ],
-  "description": "Have 4 nights in Hurghada and 3 nights in Marsa-Alam",
-  "durations": "7 Days",
+  "description": "Escape to the captivating wonders of Hurghada and Marsa Alam with our exclusive tourism package. Embark on a journey to the Red Sea Riviera, where pristine beaches, azure waters, and vibrant marine life await. In Hurghada, dive into the vibrant underwater world of the Red Sea, explore colorful coral reefs, and partake in exhilarating water sports such as snorkeling and diving.",
+  "duration": "7 Days",
   "transportation": [
     [
       {
@@ -29,7 +29,7 @@
         "id": 2,
         "from": "Hurghada",
         "to": "Marsa-Alam",
-        "transportationType": "Flight"
+        "transportationType": "Bus"
       },
       {
         "id": 3,
@@ -49,7 +49,7 @@
         "id": 2,
         "from": "Hurghada",
         "to": "Marsa-Alam",
-        "transportationType": "Flight"
+        "transportationType": "Bus"
       },
       {
         "id": 3,

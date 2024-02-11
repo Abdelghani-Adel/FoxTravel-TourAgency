@@ -8,9 +8,12 @@ import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GiDuration } from "react-icons/gi";
 import RtsRating from "../ui/RtsRating";
 import { formatNumber } from "@/src/utils/Formatters";
+import FoxCard from "./components/FoxCard";
+import { encrypt } from "@/src/utils/Cryptojs";
 
 const PackageCard = (props: IPackageCardProps) => {
   const {
+    id,
     img,
     title,
     rating,
@@ -23,8 +26,12 @@ const PackageCard = (props: IPackageCardProps) => {
     activitiesCount,
     duration,
   } = props;
+
+  const encryptedId = encrypt(id.toString());
+  const url = `packages/${encryptedId}`;
+
   return (
-    <div className="packageCard">
+    <FoxCard url={url}>
       <div className="packageCard_img">
         <Image src={img} fill alt="" />
       </div>
@@ -55,7 +62,7 @@ const PackageCard = (props: IPackageCardProps) => {
         <div className="d-flex justify-content-between align-items-center mb-2">
           <p className="mb-0">
             <RtsRating rating={rating} readonly />
-            <span className="fw-light">({formatNumber(props.reviews)})</span>
+            <span className="fw-light">({formatNumber(reviews)})</span>
           </p>
           <p className="fw-normal mb-0">
             <RiMoneyDollarCircleLine className="icon" /> {price} {currency}
@@ -64,7 +71,7 @@ const PackageCard = (props: IPackageCardProps) => {
 
         <button className="foxBtn mainBtn w-100">Find Out More</button>
       </div>
-    </div>
+    </FoxCard>
   );
 };
 

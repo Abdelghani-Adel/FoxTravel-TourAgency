@@ -79,7 +79,6 @@ ul {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: -moz-max-content;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
@@ -780,8 +779,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .foxBtn {
@@ -964,7 +962,7 @@ ul {
   display: block;
   text-decoration: none;
   color: inherit;
-  height: 60vh;
+  height: 70vh;
 }
 
 .foxCard_img {
@@ -1053,12 +1051,6 @@ ul {
   margin-bottom: 5px;
 }
 
-.packageCard {
-  height: 70vh;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
 .packageCard_img {
   height: 40%;
   aspect-ratio: 1;
@@ -1091,6 +1083,84 @@ ul {
 
 .packageCard_info .foxCard_rating .ratingBox {
   background-color: #f36c24;
+}
+
+.foxPrice {
+  margin-bottom: 0;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #3554d1;
+}
+
+@keyframes ticker {
+  0% {
+    transform: translate3d(-100%, 0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+    opacity: 0;
+  }
+}
+.transportIcon {
+  width: 3vw;
+  overflow: hidden;
+  padding-left: 100%;
+  box-sizing: content-box;
+  z-index: 2;
+  transition: ease-in-out;
+  font-size: 1.8rem;
+  color: #3554d1;
+}
+
+.transportIcon:hover svg {
+  animation-play-state: paused;
+}
+
+.transportIcon svg {
+  display: inline-block;
+  white-space: nowrap;
+  padding-right: 100%;
+  box-sizing: content-box;
+  transition: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-name: ticker;
+  animation-name: ticker;
+  -webkit-animation-duration: 3s;
+  animation-duration: 3s;
+}
+
+.transportIcon svg__item {
+  display: inline-block;
+  padding: 0 2rem;
+  color: white;
+}
+
+.transportationLine {
+  display: flex;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  border: 1px solid #3554d1;
+  padding: 10px;
+  border-radius: 10px;
+  width: max-content;
+  background-color: #3554d1;
+}
+
+.transportationStop {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  border: 1px solid #3554d1;
+  padding: 0 10px;
+  border-radius: 10px;
+  background-color: #fff;
 }
 
 .home_heroSection {
@@ -1300,4 +1370,4 @@ ul {
 .destinationDetails_header {
   margin-bottom: 30px;
   border-radius: 10px;
-}/*# sourceMappingURL=main.css.map */
+}

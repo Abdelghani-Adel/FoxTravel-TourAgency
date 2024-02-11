@@ -5,8 +5,8 @@ import "swiper/css";
 import "swiper/css/effect-cards";
 import styles from "./ImageGalleryImageCards.module.css";
 import Image from "next/image";
-import Modal from "../../ui/Modal";
-import ModalTrigger from "../../ui/ModalTrigger";
+import Modal from "../ui/Modal";
+import ModalTrigger from "../ui/ModalTrigger";
 
 const images = [
   "/img/hotelDetails/1.png",
