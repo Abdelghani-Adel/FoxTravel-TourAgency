@@ -1,5 +1,5 @@
 import React from "react";
-import ImageGallerySwiperCards from "../../common/ImageGallerySwiperCards/ImageGallerySwiperCards";
+import ImageGallerySwiperCards from "../../ImageGallerySwiperCards/ImageGallerySwiperCards";
 import { FcAdvance } from "react-icons/fc";
 import RtsRating from "../../ui/RtsRating";
 

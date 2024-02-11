@@ -1163,6 +1163,23 @@ ul {
   background-color: #fff;
 }
 
+.cityPlan {
+  margin-top: 2rem;
+  border: 1px solid #3554d1;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cityPlan_header {
+  background-color: #3554d1;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
+
 .home_heroSection {
   position: relative;
 }

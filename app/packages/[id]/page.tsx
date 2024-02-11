@@ -8,6 +8,7 @@ import RtsRating from "@/src/components/ui/RtsRating";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
 import { useAppDispatch } from "@/src/redux/store";
 import { getPackageDetails } from "@/src/services/getPackageDetails";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 const Page = ({ params }: { params: { id: string } }) => {
@@ -29,8 +30,8 @@ const Page = ({ params }: { params: { id: string } }) => {
     <div className="container mt-4 mb-4">
       <div className="row">
         <div className="col-12 col-lg-8 order-2 order-lg-1">
-          <h3>{packageDetails.title}</h3>
-          <div className="d-flex justify-content-between align-item-center mb-3">
+          <h3 className="mb-0">{packageDetails.title}</h3>
+          <div className="d-flex justify-content-between align-item-center mb-4">
             <div>
               <span className="txtGray fw-normal">
                 <RtsRating readonly rating={4.5} /> (215)
@@ -61,6 +62,30 @@ const Page = ({ params }: { params: { id: string } }) => {
             <ImageGallerySwiperCards />
           </div>
         </div>
+      </div>
+
+      <div className="row gx-3">
+        {packageDetails?.cityPlans?.map((plan: any, i: any) => (
+          <div key={plan.id} className="col-6">
+            <div className="cityPlan">
+              <div className="cityPlan_header">
+                <h5 className="mb-0">{plan.cityName} Schedule</h5>
+              </div>
+              <h6 className="fw-normal">Duration : {plan.duration}</h6>
+
+              <div className="d-flex align-items-center gap-2">
+                <h6 className="fw-normal mb-0">Accommodation: </h6>
+                <Link href="/hotels/1" className="cityPlan_hotel">
+                  <span>{plan.accommodation.hotelName}</span>
+                </Link>
+              </div>
+
+              {plan.activities.map((activity: any, i: any) => (
+                <div key={activity.id}></div>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

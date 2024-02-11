@@ -1,6 +1,6 @@
 import { useAppSelector } from "@/src/redux/store";
 import React from "react";
-import ProgressBar from "../../common/ProgressBar";
+import ProgressBar from "../../ProgressBar";
 
 const ReviewStatistics = () => {
   const hotelDetails = useAppSelector((state) => state.hotelDetails);

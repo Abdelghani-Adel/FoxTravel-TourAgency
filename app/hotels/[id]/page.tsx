@@ -1,5 +1,5 @@
 "use client";
-import ImageGallerySwiperCards from "@/src/components/common/ImageGallerySwiperCards/ImageGallerySwiperCards";
+import ImageGallerySwiperCards from "@/src/components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import Facilities from "@/src/components/pages/HotelDetails/Facilities";
 import Header from "@/src/components/pages/HotelDetails/Header";
 import HelpfulFacts from "@/src/components/pages/HotelDetails/HelpfulFacts";

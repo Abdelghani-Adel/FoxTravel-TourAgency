@@ -220,3 +220,20 @@ $duration: 3s;
   border-radius: 10px;
   background-color: #fff;
 }
+
+.cityPlan {
+  margin-top: 2rem;
+  border: 1px solid v.$secondColor;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.cityPlan_header {
+  background-color: v.$secondColor;
+  padding: 10px;
+  color: #fff;
+  border-radius: 10px;
+}
