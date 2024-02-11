@@ -17,7 +17,7 @@ const HotelCard = (props: IHotelCardProps) => {
   const dispatch = useAppDispatch();
   const { id, title, address, image, rating, reviewers, price, currency, badges } = props;
   const encryptedId = encrypt(`${id}`);
-  const url = `/hotel/${encryptedId}`;
+  const url = `/hotels/${encryptedId}`;
 
   return (
     <FoxCard url={url}>

@@ -1,6 +1,6 @@
 import React from "react";
 import trips from "@/public/data/TripInspirationsCards.json";
-import TripCard from "../../common/Cards/TripCard";
+import TripCard from "../../Cards/TripCard";
 
 const TripInspiration = () => {
   return (

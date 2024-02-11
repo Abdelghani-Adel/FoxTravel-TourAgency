@@ -2,7 +2,7 @@
 
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import DestinationCard from "../../common/Cards/DestinationCard";
+import DestinationCard from "../../Cards/DestinationCard";
 import CardsData from "@/public/data/DetinationsCards.json";
 import SwiperScroll from "../../ui/SwiperScroll";
 

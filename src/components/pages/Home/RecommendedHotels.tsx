@@ -4,7 +4,7 @@ import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import hotels from "@/public/data/RecommendedHotelsCards.json";
 import SwiperScroll from "../../ui/SwiperScroll";
-import HotelCard from "../../common/Cards/HotelCard";
+import HotelCard from "../../Cards/HotelCard";
 
 const RecommendedHotels = () => {
   return (

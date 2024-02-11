@@ -6,7 +6,7 @@ import { MdOutlineSportsHandball } from "react-icons/md";
 import { MdOutlineDateRange } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import { GiDuration } from "react-icons/gi";
-import RtsRating from "../../ui/RtsRating";
+import RtsRating from "../ui/RtsRating";
 import { formatNumber } from "@/src/utils/Formatters";
 
 const PackageCard = (props: IPackageCardProps) => {

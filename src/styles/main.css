@@ -79,6 +79,7 @@ ul {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: -moz-max-content;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
@@ -779,7 +780,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .foxBtn {
@@ -1298,4 +1300,4 @@ ul {
 .destinationDetails_header {
   margin-bottom: 30px;
   border-radius: 10px;
-}
+}/*# sourceMappingURL=main.css.map */

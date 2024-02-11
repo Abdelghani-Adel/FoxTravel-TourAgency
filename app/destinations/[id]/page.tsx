@@ -5,10 +5,10 @@ import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import { useEffect } from "react";
 import parse from "html-react-parser";
 import SwiperScroll from "@/src/components/ui/SwiperScroll";
-import DestinationCard from "@/src/components/common/Cards/DestinationCard";
-import HotelCard from "@/src/components/common/Cards/HotelCard";
+import DestinationCard from "@/src/components/Cards/DestinationCard";
+import HotelCard from "@/src/components/Cards/HotelCard";
 import { GoArrowUpRight } from "react-icons/go";
-import TripCard from "@/src/components/common/Cards/TripCard";
+import TripCard from "@/src/components/Cards/TripCard";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const dispatch = useAppDispatch();

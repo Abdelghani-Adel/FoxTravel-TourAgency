@@ -9,7 +9,7 @@ const DestinationCard = (props: IDestinationCardProps) => {
   const dispatch = useAppDispatch();
   const { id, img, title, hotels, cars, trips, activities } = props;
   const encryptedId = encrypt(`${id}`);
-  const url = `/destination/${encryptedId}`;
+  const url = `/destinations/${encryptedId}`;
 
   const onNavigate = () => dispatch(loaderActions.showLoadingOverlay());
 

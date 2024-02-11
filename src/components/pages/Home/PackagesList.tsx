@@ -4,7 +4,7 @@ import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import SwiperScroll from "../../ui/SwiperScroll";
 import packages from "@/public/data/packageCards.json";
-import PackageCard from "../../common/Cards/PackageCard";
+import PackageCard from "../../Cards/PackageCard";
 
 const PackagesList = () => {
   return (
