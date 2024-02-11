@@ -1,0 +1,21 @@
+@use "../../mixins/mediaQuery" as mixins;
+@use "../../abstract/variables" as v;
+
+.react-datepicker {
+  border-color: v.$mainColor;
+}
+.react-datepicker__header {
+  background-color: v.$mainColor;
+}
+.react-datepicker__current-month,
+.react-datepicker__day-name {
+  color: #fff;
+}
+.react-datepicker__day--selected {
+  background-color: v.$thirdColor;
+}
+
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::after {
+  border-bottom-color: v.$mainColor;
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "image": "/img/tripInspirations/1.webp",
+    "title": "10 European ski destinations you should visit this winter",
+    "startDate": "Jan 06, 2023"
+  },
+  {
+    "id": 2,
+    "image": "/img/tripInspirations/2.webp",
+    "title": "Booking travel during Corona: good advice in an uncertain time",
+    "startDate": "April 06, 2022"
+  },
+  {
+    "id": 3,
+    "image": "/img/tripInspirations/3.webp",
+    "title": "Where can I go? 5 amazing countries that open right now",
+    "startDate": "Jan 06, 2023"
+  }
+]

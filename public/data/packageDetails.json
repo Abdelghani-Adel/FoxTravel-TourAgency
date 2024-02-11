@@ -1,0 +1,124 @@
+{
+  "id": 1,
+  "title": "Have a week in Hurghada and Marsa-Alam",
+  "price": 200,
+  "currency": "usd",
+  "startDate": "01/03/2024",
+  "endDate": "07/03/2024",
+  "startingPoints": [
+    {
+      "id": 1,
+      "address": "Cairo"
+    },
+    {
+      "id": 2,
+      "address": "Alexandria"
+    }
+  ],
+  "description": "Have 4 nights in Hurghada and 3 nights in Marsa-Alam",
+  "durations": "7 Days",
+  "transportation": [
+    [
+      {
+        "id": 1,
+        "from": "Cairo",
+        "to": "Hurghada",
+        "transportationType": "Flight"
+      },
+      {
+        "id": 2,
+        "from": "Hurghada",
+        "to": "Marsa-Alam",
+        "transportationType": "Flight"
+      },
+      {
+        "id": 3,
+        "from": "Marsa-Alam",
+        "to": "Cairo",
+        "transportationType": "Flight"
+      }
+    ],
+    [
+      {
+        "id": 1,
+        "from": "Alexandria",
+        "to": "Hurghada",
+        "transportationType": "Flight"
+      },
+      {
+        "id": 2,
+        "from": "Hurghada",
+        "to": "Marsa-Alam",
+        "transportationType": "Flight"
+      },
+      {
+        "id": 3,
+        "from": "Marsa-Alam",
+        "to": "Alexandria",
+        "transportationType": "Flight"
+      }
+    ]
+  ],
+  "cityPlans": [
+    {
+      "id": 1,
+      "cityName": "Hurghada",
+      "duration": "4 days",
+      "accommodation": {
+        "hotelName": "SunRise Makadi",
+        "address": "Makadi, soma bay",
+        "hotelId": "2"
+      },
+      "activities": [
+        {
+          "id": 1,
+          "title": "Dive trip near Orange island",
+          "duration": "8 hours",
+          "date": "02/03/2024",
+          "startTime": "09:00 AM",
+          "endTime": "05:00 PM",
+          "includes": ["Breakfast", "Lunch", "Photographer"]
+        },
+        {
+          "id": 2,
+          "title": "Visit Hurghada Mueseum",
+          "duration": "4 hours",
+          "date": "03/03/2024",
+          "startTime": "09:00 AM",
+          "endTime": "01:00 PM",
+          "includes": ["Breakfast", "Photographer"]
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "cityName": "Marsa-Alam",
+      "duration": "3 days",
+      "accommodation": {
+        "hotelName": "Amarina Hotels",
+        "address": "Marsa-Alam, Ring Road, Amarina Hotels",
+        "hotelId": "3"
+      },
+      "activities": [
+        {
+          "id": 1,
+          "title": "Dive trip near Orange island",
+          "duration": "8 hours",
+          "date": "02/03/2024",
+          "startTime": "09:00 AM",
+          "endTime": "05:00 PM",
+          "includes": ["Breakfast", "Lunch", "Photographer"]
+        },
+        {
+          "id": 2,
+          "title": "Visit Hurghada Mueseum",
+          "duration": "4 hours",
+          "date": "03/03/2024",
+          "startTime": "09:00 AM",
+          "endTime": "01:00 PM",
+          "includes": ["Breakfast", "Photographer"]
+        }
+      ]
+    }
+  ]
+}

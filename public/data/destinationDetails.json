@@ -1,0 +1,191 @@
+{
+  "destinationName": "Red Sea",
+  "images": [""],
+  "description": "<div><p><London is a shining example of a metropolis at the highest peak of modernity and boasts an economy and cultural diversity that’s the envy of other global superpowers./p><p>Take the opportunity to acquaint yourself with its fascinating history chronicled by institutions like the British Museum as well as see how far it has come by simply riding the Tube and passing by celebrated landmarks like Buckingham Palace, Westminster Abbey, and marvels like Big Ben, the London Eye, and the Tower Bridge.</p><p>You can also immerse yourself in its ever-evolving and impactful culture by visiting places like the National Gallery, the Tate Modern, West End, Abbey Road, the Royal Albert Hall, Oxford Street and the Westfield Shopping Centers, and areas referenced and seen in literature and film.</p></div>",
+  "generalInfo": [
+    {
+      "title": "Time Zone",
+      "info": "GMT +00:00",
+      "desc": ""
+    },
+    {
+      "title": "Currency",
+      "info": "Egyptian Pound",
+      "desc": ""
+    },
+    {
+      "title": "Local weather",
+      "info": "17 / 16",
+      "desc": ""
+    }
+  ],
+  "hotels": [
+    {
+      "id": 1,
+      "image": "/img/hotels/1.png",
+      "title": "The Montcalm At Brewery London City",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "feature",
+          "badgeTitle": "breakfast included"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "image": "/img/hotels/2.png",
+      "title": "staycity apart hotels deptford bridge station",
+      "address": "ciutat vella, barcellona",
+      "rating": 4.8,
+      "reviews": 2345,
+      "price": 85,
+      "currency": "$",
+      "badges": []
+    },
+    {
+      "id": 3,
+      "image": "/img/hotels/3.png",
+      "title": "the westin new york at times sqaure west",
+      "address": "manhattan, new york",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 68,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "specs",
+          "badgeTitle": "best seller"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "image": "/img/hotels/3.png",
+      "title": "double tree by hilton hotel new york times square west",
+      "address": "vaticano parti, rome",
+      "rating": 4.5,
+      "reviews": 5633,
+      "price": 89,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "specs",
+          "badgeTitle": "top rated"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "image": "/img/hotels/1.png",
+      "title": "The Montcalm At Brewery London City",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 99,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "sale",
+          "badgeTitle": "-25% today"
+        }
+      ]
+    }
+  ],
+  "tours": [
+    {
+      "id": 1,
+      "image": "/img/hotels/1.png",
+      "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "feature",
+          "badgeTitle": "breakfast included"
+        }
+      ],
+      "duration": "16+ hours"
+    },
+    {
+      "id": 2,
+      "image": "/img/hotels/2.png",
+      "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "sale",
+          "badgeTitle": "best seller"
+        }
+      ],
+      "duration": "14+ hours"
+    },
+    {
+      "id": 3,
+      "image": "/img/hotels/3.png",
+      "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "specs",
+          "badgeTitle": "top rated"
+        }
+      ],
+      "duration": "18+ hours"
+    },
+    {
+      "id": 4,
+      "image": "/img/hotels/1.png",
+      "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [],
+      "duration": "20+ hours"
+    },
+    {
+      "id": 5,
+      "image": "/img/hotels/1.png",
+      "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+      "address": "Westminster Borough, London",
+      "rating": 4.7,
+      "reviews": 3014,
+      "price": 72,
+      "currency": "$",
+      "badges": [
+        {
+          "id": 1,
+          "badgeType": "feature",
+          "badgeTitle": "breakfast included"
+        }
+      ],
+      "duration": "16+ hours"
+    }
+  ],
+  "activities": [],
+  "cars": []
+}

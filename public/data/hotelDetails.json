@@ -1,0 +1,201 @@
+{
+  "name": "Great Northern Hotel, a Tribute Portfolio Hotel, London",
+  "location": {
+    "address": "London City Centre",
+    "mapLocation": ""
+  },
+  "rating": 4.8,
+  "totalReviews": 3014,
+  "price": {
+    "currency": "USD",
+    "amount": 99
+  },
+  "images": ["", ""],
+  "highlights": [
+    {
+      "title": "In London City Centre",
+      "icon": ""
+    },
+    {
+      "title": "Airport transfer",
+      "icon": ""
+    },
+    {
+      "title": "Front desk [24-hour]",
+      "icon": ""
+    },
+    {
+      "title": "Premium TV channels",
+      "icon": ""
+    }
+  ],
+  "description": "<div><p>You can directly book the best price if your travel dates are available, all discounts are already included. In the following house description you will find all information about our listing.</p><p>2-room terraced house on 2 levels. Comfortable and cosy furnishings: 1 room with 1 french bed and radio. Shower, sep. WC. Upper floor: (steep stair) living/dining room with 1 sofabed (110 cm, length 180 cm), TV. Exit to the balcony. Small kitchen (2 hot plates, oven</p></div>",
+  "facilities": [
+    {
+      "title": "Non-smoking rooms",
+      "icon": ""
+    },
+    {
+      "title": "Free WiFi",
+      "icon": ""
+    },
+    {
+      "title": "Parking",
+      "icon": ""
+    },
+    {
+      "title": "Kitchen",
+      "icon": ""
+    },
+    {
+      "title": "Living Area",
+      "icon": ""
+    },
+    {
+      "title": "Safety & security",
+      "icon": ""
+    }
+  ],
+  "availability": {
+    "availableRooms": [
+      {
+        "roomImages": [""],
+        "roomType": "Standard Twin Room",
+        "beds": 2,
+        "benefits": [
+          {
+            "title": "Non-smoking room",
+            "icon": "non-smoking-icon.png"
+          },
+          {
+            "title": "Free WiFi",
+            "icon": "wifi-icon.png"
+          },
+          {
+            "title": "Parking",
+            "icon": "parking-icon.png"
+          },
+          {
+            "title": "Kitchen",
+            "icon": "kitchen-icon.png"
+          }
+        ],
+        "price": {
+          "amount": 99,
+          "currency": "USD"
+        },
+        "amenities": [
+          "Air conditioning",
+          "Flat-screen TV",
+          "Private bathroom",
+          "Toiletries",
+          "Hairdryer",
+          "Wardrobe or closet",
+          "Iron and ironing board",
+          "Coffee/tea maker",
+          "In-room safe",
+          "Mini-refrigerator"
+        ],
+        "reviews": {
+          "averageRating": 4.5,
+          "totalReviews": 120
+        },
+        "availability": {
+          "availableRooms": 10,
+          "totalRooms": 20,
+          "minimumNights": 1,
+          "maximumNights": 7
+        },
+        "additionalInfo": [
+          {
+            "title": "cancellation",
+            "info": "Free cancellation up to 24 hours before check-in"
+          },
+          {
+            "title": "petFriendly",
+            "info": "Not allowed"
+          },
+          {
+            "title": "smoking",
+            "info": "Non-smoking property"
+          },
+          {
+            "title": "child",
+            "info": "Children under 12 stay free using existing bedding"
+          }
+        ]
+      }
+    ],
+    "totalRooms": 20,
+    "reservedRooms": 3
+  },
+  "reviewsStatistics": [
+    {
+      "title": "Location",
+      "rating": 9.4
+    },
+    {
+      "title": "Staff",
+      "rating": 8.4
+    },
+    {
+      "title": "Cleanliness",
+      "rating": 9.4
+    },
+    {
+      "title": "Value for money",
+      "rating": 8
+    },
+    {
+      "title": "Comfort",
+      "rating": 8
+    },
+    {
+      "title": "Facilities",
+      "rating": 8.5
+    },
+    {
+      "title": "WIFI",
+      "rating": 9
+    }
+  ],
+  "surroundings": ["Royal Pump Room Museum", "Harrogate Turkish Baths", "Royal Hall Theatre"],
+  "helpfulFacts": [
+    {
+      "title": "checkInTime",
+      "info": "16:00"
+    },
+    {
+      "title": "checkOutTime",
+      "info": "12:00"
+    },
+    {
+      "title": "receptionOpenUntil",
+      "info": "00:00"
+    },
+    {
+      "title": "airportTransferFee",
+      "info": "60 USD"
+    },
+    {
+      "title": "distanceToCityCenter",
+      "info": "2 km"
+    },
+    {
+      "title": "travelTimeToAirport",
+      "info": "45 minutes"
+    },
+    {
+      "title": "breakfastCharge",
+      "info": "25 USD"
+    },
+    {
+      "title": "internetFee",
+      "info": "10 USD"
+    },
+    {
+      "title": "parkingFee",
+      "info": "65 USD"
+    }
+  ]
+}

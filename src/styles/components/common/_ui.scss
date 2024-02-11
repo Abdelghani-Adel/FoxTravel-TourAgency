@@ -1,0 +1,88 @@
+@use "../../mixins/mediaQuery" as mixins;
+@use "../../abstract/variables" as v;
+
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(4, 4, 4, 0.53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.foxBtn {
+  height: 50px;
+  line-height: 50px;
+  border-radius: 5px;
+  padding-inline: 30px;
+  font-weight: 1rem;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+}
+
+.foxBtn a {
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+}
+
+.foxBtn.mainBtn {
+  background-color: v.$mainColor;
+  border-color: v.$mainColor;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    border-color: v.$mainColor;
+    color: v.$mainColor;
+  }
+}
+
+.foxBtn.secondBtn {
+  background-color: v.$secondColor;
+  border-color: v.$secondColor;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    border-color: v.$secondColor;
+    color: v.$secondColor;
+  }
+}
+
+.foxBtn.thirdBtn {
+  background-color: v.$thirdColor;
+  border-color: v.$thirdColor;
+  color: #fff;
+
+  &:hover {
+    background-color: #fff;
+    border-color: v.$thirdColor;
+    color: v.$thirdColor;
+  }
+}
+
+.btnAction {
+  height: 50px;
+  line-height: 50px;
+  padding-inline: 25px;
+  background-color: v.$secondColor;
+  font-weight: 500;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  color: #fff;
+}
+
+.btnAction:hover {
+  background-color: v.$mainColor;
+}

@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "title": "New York",
+    "img": "/img/destinations/newyork.webp",
+    "hotels": "14",
+    "cars": "22",
+    "trips": "18",
+    "activities": "95"
+  },
+  {
+    "id": 2,
+    "title": "London",
+    "img": "/img/destinations/london.webp",
+    "hotels": "14",
+    "cars": "22",
+    "trips": "18",
+    "activities": "95"
+  },
+  {
+    "id": 3,
+    "title": "Barcelona",
+    "img": "/img/destinations/barcelona.webp",
+    "hotels": "14",
+    "cars": "22",
+    "trips": "18",
+    "activities": "95"
+  },
+  {
+    "id": 4,
+    "title": "Sydney",
+    "img": "/img/destinations/sydney.webp",
+    "hotels": "14",
+    "cars": "22",
+    "trips": "18",
+    "activities": "95"
+  },
+  {
+    "id": 5,
+    "title": "Rome",
+    "img": "/img/destinations/roma.webp",
+    "hotels": "14",
+    "cars": "22",
+    "trips": "18",
+    "activities": "95"
+  }
+]

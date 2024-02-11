@@ -1,0 +1,25 @@
+@use "../abstract/variables" as v;
+
+.txtMain {
+  color: v.$mainColor;
+}
+
+.txtSecondary {
+  color: v.$secondColor;
+}
+
+.txtThird {
+  color: v.$thirdColor;
+}
+
+.txtWhite {
+  color: #fff;
+}
+
+.txtGray {
+  color: v.$gray;
+}
+
+.txtYellow {
+  color: v.$yellow;
+}
