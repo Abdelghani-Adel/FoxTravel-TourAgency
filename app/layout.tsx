@@ -1,5 +1,5 @@
-import MainFooter from "@/src/components/common/MainFooter/MainFooter";
-import MainHeader from "@/src/components/common/MainHeader/MainHeader";
+import MainFooter from "@/src/components/MainFooter/MainFooter";
+import MainHeader from "@/src/components/MainHeader/MainHeader";
 import LoaderOverlay from "@/src/components/ui/LoaderOverlay";
 import Providers from "@/src/providers/Providers";
 import type { Metadata } from "next";
@@ -23,7 +23,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
       <body>
         <Providers>
           <LoaderOverlay />
-
           <MainHeader />
           {children}
           <MainFooter />
