@@ -1,6 +1,9 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
+// ============================================== //
+// FoxCard
+// ============================================== //
 .foxCard {
   position: relative;
   border-radius: 10px;
@@ -99,10 +102,10 @@
   margin-top: 5px;
   margin-bottom: 5px;
 }
-/////////////////////////////////////////
-// PackageCard
-/////////////////////////////////////////
 
+// ============================================== //
+// PakageCard
+// ============================================== //
 .packageCard_img {
   height: 40%;
   aspect-ratio: 1;
@@ -236,4 +239,217 @@ $duration: 3s;
   padding: 10px;
   color: #fff;
   border-radius: 10px;
+}
+
+// ============================================== //
+// HotelCard
+// ============================================== //
+.hotelCard {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  height: 65vh;
+}
+
+.hotelCard_img {
+  position: relative;
+  height: 60%;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.hotelCard_badges {
+  position: absolute;
+  top: 10px;
+  left: 0;
+
+  .hotelBadge {
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .hotelBadge.feature {
+    background-color: v.$secondColor;
+    color: #fff;
+  }
+
+  .hotelBadge.sale {
+    background-color: #923e01;
+    color: #fff;
+  }
+
+  .hotelBadge.specs {
+    background-color: #f8d448;
+  }
+}
+
+.hotelCard_name {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0.4rem;
+}
+
+.hotelCard_address {
+  margin-bottom: 1rem;
+  color: gray;
+}
+
+.hotelCard_rating {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  margin-bottom: 1rem;
+
+  .rating {
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    background-color: v.$secondColor;
+    color: #fff;
+    text-align: center;
+    border-radius: 7px;
+    margin-bottom: 0;
+  }
+
+  .reviewers {
+    color: gray;
+    margin-bottom: 0;
+  }
+}
+
+.hotelCard_bottomPrice {
+  .currency,
+  .price {
+    color: v.$secondColor;
+    font-weight: bold;
+  }
+}
+
+// ============================================== //
+// DestinationCard
+// ============================================== //
+.destinationCard {
+  height: 55vh;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.3s ease-in-out;
+}
+
+.destinationCard a {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+}
+
+.destinationCard_bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.destinationCard_bg::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0;
+  transition: 0.4s ease-in-out;
+}
+
+.destinationCard_header {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: max-content;
+  z-index: 3;
+  transition: 0.4s ease-in-out;
+}
+
+.destinationCard_desc {
+  font-size: 0.8rem;
+}
+
+.destinationCard_footer {
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  z-index: 3;
+  transform: translateX(-50%);
+  transition: 0.4s ease-in-out;
+}
+
+.destinationCard_name {
+  height: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 35px;
+  transition: 0.4s ease-in-out;
+}
+
+.destinationCard_btn {
+  background-color: #fff;
+  border: none;
+  outline: none;
+  padding: 10px 70px;
+  border-radius: 5px;
+  height: 50px;
+}
+
+.destinationCard:hover {
+  .destinationCard_bg::after {
+    opacity: 0.45;
+  }
+
+  .destinationCard_header {
+    top: 5%;
+    opacity: 1;
+  }
+
+  .destinationCard_footer {
+    bottom: 15px;
+  }
+
+  .destinationCard_name {
+    margin-bottom: 15px;
+  }
+}
+
+// ============================================== //
+// TripCard
+// ============================================== //
+.tripCard {
+  height: 60vh;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.tripCard_img {
+  position: relative;
+  height: 75%;
+  flex-shrink: 0;
+}
+
+.tripCard_title {
+  font-size: 1.5rem;
+  font-weight: 600;
 }

@@ -1,20 +1,9 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
-.loadingScreen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(4, 4, 4, 0.53);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  backdrop-filter: blur(3px);
-}
-
+// ============================================== //
+// FoxBtn
+// ============================================== //
 .foxBtn {
   height: 50px;
   line-height: 50px;
@@ -85,4 +74,160 @@
 
 .btnAction:hover {
   background-color: v.$mainColor;
+}
+
+// ============================================== //
+// section
+// ============================================== //
+.section {
+  padding-top: 80px;
+  margin-bottom: 20px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.sectionHeader_title {
+  font-weight: 700;
+  font-size: 2rem;
+}
+.sectionHeader_caption {
+  font-size: 1rem;
+  color: gray;
+}
+.sectionHeader_btn {
+  border: 1px solid transparent;
+  outline: none;
+  background-color: v.$secondColor;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.sectionHeader_btn:hover {
+  color: v.$secondColor;
+  background-color: transparent;
+  border: 1px solid;
+}
+
+@include mixins.media-query(medium) {
+  .sectionHeader {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .sectionHeader_title {
+    font-size: 2.2rem;
+  }
+}
+
+// ============================================== //
+// loadingScreen
+// ============================================== //
+.loadingScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(4, 4, 4, 0.53);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(3px);
+}
+
+.loading-container {
+  width: 100%;
+  max-width: 520px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  margin: 0 32px;
+
+  &:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    animation: movingLine 2.4s infinite ease-in-out;
+  }
+}
+
+@keyframes movingLine {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  33.3%,
+  66% {
+    opacity: 0.8;
+    width: 100%;
+  }
+
+  85% {
+    width: 0;
+    left: initial;
+    right: 0;
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    width: 0;
+  }
+}
+
+.loading-text {
+  font-size: 5vw;
+  line-height: 64px;
+  letter-spacing: 10px;
+  margin-bottom: 32px;
+  display: flex;
+  justify-content: space-evenly;
+  span {
+    animation: moveLetters 2.4s infinite ease-in-out;
+    transform: translatex(0);
+    position: relative;
+    display: inline-block;
+    opacity: 0;
+    text-shadow: 0px 2px 10px rgba(46, 74, 81, 0.3);
+  }
+}
+
+@for $i from 1 through 7 {
+  .loading-text span:nth-child(#{$i}) {
+    animation-delay: $i * 0.1s;
+  }
+}
+
+@keyframes moveLetters {
+  0% {
+    transform: translateX(-15vw);
+    opacity: 0;
+  }
+
+  33.3%,
+  66% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(15vw);
+    opacity: 0;
+  }
 }
