@@ -1,12 +1,9 @@
 "use client";
 import ImageGallerySwiperCards from "@/src/components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import RouteWrapper from "@/src/routes/common/RouteWrapper";
-import BusTransport from "@/src/routes/packageDetails/BusTransport";
-import PlaneTransport from "@/src/routes/packageDetails/PlaneTransport";
-import TransportaionLine from "@/src/routes/packageDetails/TransportaionLine";
 import RtsRating from "@/src/components/ui/RtsRating";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
 import { useAppDispatch } from "@/src/redux/store";
+import TransportaionLine from "@/src/routes/package/TransportaionLine";
 import { getPackageDetails } from "@/src/services/getPackageDetails";
 import Link from "next/link";
 import { useEffect, useState } from "react";

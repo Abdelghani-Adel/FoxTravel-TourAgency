@@ -1,3 +1,6 @@
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
+
 .loading-container {
   width: 100%;
   max-width: 520px;

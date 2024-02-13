@@ -1,0 +1,7 @@
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
+
+.destinationDetails_header {
+  margin-bottom: 30px;
+  border-radius: 10px;
+}

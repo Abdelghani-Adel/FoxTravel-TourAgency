@@ -1,0 +1,87 @@
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
+
+.hotelDetails_secion {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hotelImageWrapper {
+  height: 45vh;
+  width: 80%;
+  margin: auto;
+}
+
+@include mixins.media-query(small) {
+  .hotelImageWrapper {
+    width: 60%;
+  }
+}
+@include mixins.media-query(medium) {
+  .hotelImageWrapper {
+    width: 40%;
+  }
+}
+@include mixins.media-query(large) {
+  .hotelImageWrapper {
+    height: 60vh;
+    width: 80%;
+  }
+}
+
+.hotelHighlights .highlight {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  .highlightIcon {
+    font-size: 2rem;
+    color: v.$secondColor;
+  }
+}
+
+.hotelRoom {
+  padding: 15px;
+  border: 2px solid v.$secondColor;
+  border-radius: 10px;
+}
+
+.roomHeader {
+  background-color: v.$secondColor;
+  color: #fff;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-inline: 20px;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.hotelRoom_gallery {
+  // width: 100%;
+  // height: 50vh;
+}
+
+.hotelRoom_imgWrapper {
+  width: 80%;
+  height: 40vh;
+  margin: auto;
+}
+
+.hotelReview_box {
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+
+  .number {
+    font-size: 4rem;
+    color: v.$secondColor;
+  }
+}
