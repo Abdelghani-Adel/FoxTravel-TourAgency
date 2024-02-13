@@ -1,10 +1,10 @@
-import CompanyFeatures from "@/src/components/pages/Home/CompanyFeatures";
-import EmailSubscriber from "@/src/components/pages/Home/EmailSubscriber";
-import HeroSection from "@/src/components/pages/Home/HeroSection";
-import PackagesList from "@/src/components/pages/Home/PackagesList";
-import PopularDestinations from "@/src/components/pages/Home/PopularDestinations";
-import RecommendedHotels from "@/src/components/pages/Home/RecommendedHotels";
-import TripInspiration from "@/src/components/pages/Home/TripInspiration";
+import CompanyFeatures from "@/src/routes/Home/CompanyFeatures";
+import EmailSubscriber from "@/src/routes/Home/EmailSubscriber";
+import HeroSection from "@/src/routes/Home/HeroSection";
+import PackagesList from "@/src/routes/Home/PackagesList";
+import PopularDestinations from "@/src/routes/Home/PopularDestinations";
+import RecommendedHotels from "@/src/routes/Home/RecommendedHotels";
+import TripInspiration from "@/src/routes/Home/TripInspiration";
 
 export default function Home() {
   return (

@@ -1,4 +1,4 @@
-import RouteWrapper from "@/src/components/pages/common/RouteWrapper";
+import RouteWrapper from "@/src/routes/common/RouteWrapper";
 import React from "react";
 
 const Page = () => {

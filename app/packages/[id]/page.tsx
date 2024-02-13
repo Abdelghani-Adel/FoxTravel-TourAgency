@@ -1,9 +1,9 @@
 "use client";
 import ImageGallerySwiperCards from "@/src/components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import RouteWrapper from "@/src/components/pages/common/RouteWrapper";
-import BusTransport from "@/src/components/pages/packageDetails/BusTransport";
-import PlaneTransport from "@/src/components/pages/packageDetails/PlaneTransport";
-import TransportaionLine from "@/src/components/pages/packageDetails/TransportaionLine";
+import RouteWrapper from "@/src/routes/common/RouteWrapper";
+import BusTransport from "@/src/routes/packageDetails/BusTransport";
+import PlaneTransport from "@/src/routes/packageDetails/PlaneTransport";
+import TransportaionLine from "@/src/routes/packageDetails/TransportaionLine";
 import RtsRating from "@/src/components/ui/RtsRating";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
 import { useAppDispatch } from "@/src/redux/store";

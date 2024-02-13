@@ -9,7 +9,7 @@ import DestinationCard from "@/src/components/Cards/DestinationCard";
 import HotelCard from "@/src/components/Cards/HotelCard";
 import { GoArrowUpRight } from "react-icons/go";
 import TripCard from "@/src/components/Cards/TripCard";
-import RouteWrapper from "@/src/components/pages/common/RouteWrapper";
+import RouteWrapper from "@/src/routes/common/RouteWrapper";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const details = useAppSelector((state) => state.destinationDetails);
