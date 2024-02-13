@@ -15,7 +15,7 @@ const TripInspiration = () => {
               data-aos="fade-up"
               data-aos-delay={i * 100}
             >
-              <TripCard image={trip.image} startDate={trip.startDate} title={trip.title} />
+              {/* <TripCard image={trip.image} startDate={trip.startDate} title={trip.title} /> */}
             </div>
           ))}
         </div>
