@@ -43,36 +43,37 @@
       }
     ]
   },
-  {
-    "title": "Price",
-    "type": "range",
-    "min": 10,
-    "max": 1000
-  },
+
   {
     "title": "Star Rating",
     "type": "radio",
     "options": [
       {
         "id": 1,
-        "title": "1"
+        "title": "1 Star"
       },
       {
         "id": 2,
-        "title": "2"
+        "title": "2 Stars"
       },
       {
         "id": 3,
-        "title": "3"
+        "title": "3 Stars"
       },
       {
         "id": 4,
-        "title": "4"
+        "title": "4 Stars"
       },
       {
         "id": 5,
-        "title": "5"
+        "title": "5 Stars"
       }
     ]
+  },
+  {
+    "title": "Price",
+    "type": "range",
+    "min": 10,
+    "max": 1000
   }
 ]

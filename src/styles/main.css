@@ -1189,6 +1189,19 @@ ul {
     opacity: 0;
   }
 }
+.foxFilter_group {
+  padding: 10px 0;
+}
+
+.foxFilter_group + .foxFilter_group {
+  border-top: 1px solid #f36c24;
+}
+
+.foxFilter_title {
+  font-size: 1.2rem;
+  color: #f36c24;
+}
+
 .home_heroSection {
   position: relative;
 }

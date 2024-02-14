@@ -1,0 +1,15 @@
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
+
+.foxFilter_group {
+  padding: 10px 0;
+}
+
+.foxFilter_group + .foxFilter_group {
+  border-top: 1px solid v.$thirdColor;
+}
+
+.foxFilter_title {
+  font-size: 1.2rem;
+  color: v.$thirdColor;
+}
