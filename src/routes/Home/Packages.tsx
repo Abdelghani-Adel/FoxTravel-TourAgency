@@ -3,10 +3,10 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import SwiperScroll from "../../components/ui/SwiperScroll";
-import packages from "@/public/data/packageCards.json";
+import packages from "@/public/data/Cards_Packages.json";
 import PackageCard from "../../components/Cards/PackageCard";
 
-const PackagesList = () => {
+const Packages = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items-center mt-5 mb-3">
@@ -46,4 +46,4 @@ const PackagesList = () => {
   );
 };
 
-export default PackagesList;
+export default Packages;

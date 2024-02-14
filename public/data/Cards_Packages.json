@@ -1,0 +1,146 @@
+[
+  {
+    "id": 1,
+    "image": "/img/hotels/albatros.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  },
+  {
+    "id": 2,
+    "image": "/img/hotels/sunrise.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  },
+  {
+    "id": 3,
+    "image": "/img/hotels/mariott.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  },
+  {
+    "id": 4,
+    "image": "/img/hotels/selena.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  },
+  {
+    "id": 5,
+    "image": "/img/hotels/palminn.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  },
+  {
+    "id": 6,
+    "image": "/img/hotels/sunrise.jpg",
+    "desc": "Enjoy 4 nights in Hurghada and 3 nights in Marsa-Alam in a 5 stars sea view hotels.",
+    "title": "A Week in Redsea",
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "activitiesCount": 8,
+    "startingPoints": [
+      {
+        "id": 1,
+        "address": "Cairo"
+      },
+      {
+        "id": 2,
+        "address": "Alexandria"
+      }
+    ],
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 200,
+    "currency": "$",
+    "duration": "7 Days"
+  }
+]

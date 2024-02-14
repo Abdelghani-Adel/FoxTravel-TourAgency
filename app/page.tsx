@@ -1,20 +1,22 @@
 import CompanyFeatures from "@/src/routes/home/CompanyFeatures";
 import EmailSubscriber from "@/src/routes/home/EmailSubscriber";
 import HeroSection from "@/src/routes/home/HeroSection";
-import PackagesList from "@/src/routes/home/PackagesList";
-import PopularDestinations from "@/src/routes/home/PopularDestinations";
-import RecommendedHotels from "@/src/routes/home/RecommendedHotels";
-import TripInspiration from "@/src/routes/home/TripInspiration";
+import Packages from "@/src/routes/home/Packages";
+import Destinations from "@/src/routes/home/Destinations";
+import Hotels from "@/src/routes/home/Hotels";
+import Tours from "@/src/routes/home/Tours";
+import Cars from "@/src/routes/home/Cars";
 
 export default function Home() {
   return (
     <main className="homePage">
       <HeroSection />
       <div className="container">
-        <PackagesList />
-        <PopularDestinations />
-        <TripInspiration />
-        <RecommendedHotels />
+        <Cars />
+        <Packages />
+        <Destinations />
+        <Tours />
+        <Hotels />
         <CompanyFeatures />
       </div>
 

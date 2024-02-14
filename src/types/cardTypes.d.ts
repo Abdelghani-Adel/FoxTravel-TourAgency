@@ -22,10 +22,25 @@ type ITripCardProps = {
   address: string;
   image: string;
   rating: number;
-  reviewers: number;
+  reviews: number;
   price: number;
   currency: string;
   badges: IFoxCardBadge[];
+  duration: string;
+};
+
+type ICarCardProps = {
+  id: number;
+  model: string;
+  img: string;
+  passengers: number;
+  bags: number;
+  transmission: string;
+  rating: number;
+  reviews: number;
+  badges: IFoxCardBadge[];
+  price: number;
+  currency: string;
   duration: string;
 };
 

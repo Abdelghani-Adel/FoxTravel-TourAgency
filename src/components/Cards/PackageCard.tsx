@@ -1,15 +1,11 @@
-import Image from "next/image";
-import React from "react";
-import FoxCardTitle from "./components/FoxCardTitle";
-import FoxCardRating from "./components/FoxCardRating";
-import { MdOutlineSportsHandball } from "react-icons/md";
-import { MdOutlineDateRange } from "react-icons/md";
-import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import { GiDuration } from "react-icons/gi";
-import RtsRating from "../ui/RtsRating";
-import { formatNumber } from "@/src/utils/Formatters";
-import FoxCard from "./components/FoxCard";
 import { encrypt } from "@/src/utils/Cryptojs";
+import { formatNumber } from "@/src/utils/Formatters";
+import Image from "next/image";
+import { GiDuration } from "react-icons/gi";
+import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
+import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import RtsRating from "../ui/RtsRating";
+import FoxCard from "./FoxCard/FoxCard";
 
 const PackageCard = (props: IPackageCardProps) => {
   const {

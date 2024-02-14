@@ -1,9 +1,11 @@
-import React from 'react'
+"use client";
+import useHideLoadingLayer from "@/src/hooks/loadingLayer";
+import React from "react";
 
 const Page = () => {
-  return (
-    <div>Flights Page</div>
-  )
-}
+  useHideLoadingLayer();
 
-export default Page
+  return <div>Flights Page</div>;
+};
+
+export default Page;

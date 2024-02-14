@@ -49,7 +49,7 @@ ul {
   position: relative;
   height: 60%;
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   overflow: hidden;
 }
 
@@ -69,28 +69,32 @@ ul {
 
 .foxCard_badge {
   padding: 5px 10px;
-  border-radius: 5px;
-  font-weight: 600;
+  border-radius: 0 5px 5px 0;
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: #fff;
+  letter-spacing: 1px;
+  width: max-content;
 }
 
 .foxCard_badge.feature {
   background-color: #3554d1;
-  color: #fff;
 }
 
 .foxCard_badge.sale {
-  background-color: #923e01;
-  color: #fff;
+  background-color: #d51f1f;
 }
 
 .foxCard_badge.specs {
-  background-color: #f8d448;
+  background-color: #039b0b;
 }
 
 .foxCard_title {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
+  font-weight: 500;
+  font-size: 1.1rem;
+  line-height: 1.5rem;
+  margin-bottom: 0.2rem;
 }
 
 .foxCard_rating {
@@ -459,6 +463,11 @@ ul {
 .tripCard_title {
   font-size: 1.5rem;
   font-weight: 600;
+}
+
+.carCard_image {
+  border: 1px solid #858585;
+  border-radius: 10px;
 }
 
 .swiperScroll {

@@ -1,23 +1,71 @@
+"use client";
+
+import { loaderActions } from "@/src/redux/slices/loaderSlice";
+import { useAppDispatch } from "@/src/redux/store";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React from "react";
 
+const nav = [
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "Hotels",
+    path: "/hotels",
+  },
+  {
+    title: "Packages",
+    path: "/packages",
+  },
+  {
+    title: "Destinations",
+    path: "/destinations",
+  },
+  {
+    title: "Tours",
+    path: "/tours",
+  },
+  {
+    title: "Flights",
+    path: "/flights",
+  },
+  {
+    title: "Cars",
+    path: "/cars",
+  },
+  {
+    title: "Contact",
+    path: "/contact",
+  },
+  {
+    title: "About",
+    path: "/about",
+  },
+];
+
 const Navigation = () => {
+  const pathname = usePathname();
+  const dispatch = useAppDispatch();
+  const onNavigate = () => dispatch(loaderActions.showLoadingOverlay());
+
   return (
     <nav className="navigation">
       <ul className="navList">
-        <li className="navItem active">
-          <Link className="navLink" aria-current="page" href="/">
-            Home
-          </Link>
-        </li>
+        {nav.map((link, i) => (
+          <li
+            key={i}
+            className={`navItem ${pathname === link.path ? "active" : ""}`}
+            onClick={onNavigate}
+          >
+            <Link className="navLink" aria-current="page" href={link.path}>
+              {link.title}
+            </Link>
+          </li>
+        ))}
 
-        <li className="navItem">
-          <Link className="navLink active" aria-current="page" href="#">
-            Destications
-          </Link>
-        </li>
-
-        <li className="navItem dropdown">
+        {/* <li className="navItem dropdown">
           <button
             className="nav-link dropdown-toggle"
             id="categories"
@@ -71,19 +119,7 @@ const Navigation = () => {
               </Link>
             </li>
           </ul>
-        </li>
-
-        <li className="navItem">
-          <Link className="navLink" href="#">
-            Contact
-          </Link>
-        </li>
-
-        <li className="navItem">
-          <Link className="navLink" href="#">
-            About
-          </Link>
-        </li>
+        </li> */}
       </ul>
     </nav>
   );

@@ -3,10 +3,10 @@
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
 import DestinationCard from "../../components/Cards/DestinationCard";
-import CardsData from "@/public/data/DetinationsCards.json";
+import CardsData from "@/public/data/Cards_Destinations.json";
 import SwiperScroll from "../../components/ui/SwiperScroll";
 
-const PopularDestinations = () => {
+const Destinations = () => {
   return (
     <div className="popularDestinations section mb-5">
       <div className="sectionHeader">
@@ -40,4 +40,4 @@ const PopularDestinations = () => {
   );
 };
 
-export default PopularDestinations;
+export default Destinations;

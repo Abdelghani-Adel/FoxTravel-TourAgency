@@ -2,11 +2,11 @@
 
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import hotels from "@/public/data/RecommendedHotelsCards.json";
+import hotels from "@/public/data/Cards_Hotels.json";
 import SwiperScroll from "../../components/ui/SwiperScroll";
 import HotelCard from "../../components/Cards/HotelCard";
 
-const RecommendedHotels = () => {
+const Hotels = () => {
   return (
     <div className="recommendedHotels section mb-5">
       <div className="recommendedHotels_header">
@@ -42,4 +42,4 @@ const RecommendedHotels = () => {
   );
 };
 
-export default RecommendedHotels;
+export default Hotels;

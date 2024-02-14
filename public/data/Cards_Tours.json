@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "image": "/img/hotels/1.png",
+    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+    "address": "Westminster Borough, London",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 72,
+    "currency": "$",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "breakfast included"
+      }
+    ],
+    "duration": "18+ hours"
+  },
+  {
+    "id": 2,
+    "image": "/img/hotels/1.png",
+    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+    "address": "Westminster Borough, London",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 72,
+    "currency": "$",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "sale",
+        "badgeTitle": "-25% today"
+      }
+    ],
+    "duration": "18+ hours"
+  },
+  {
+    "id": 3,
+    "image": "/img/hotels/1.png",
+    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+    "address": "Westminster Borough, London",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 72,
+    "currency": "$",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "specs",
+        "badgeTitle": "best seller"
+      }
+    ],
+    "duration": "18+ hours"
+  },
+  {
+    "id": 4,
+    "image": "/img/hotels/1.png",
+    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+    "address": "Westminster Borough, London",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 72,
+    "currency": "$",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "breakfast included"
+      }
+    ],
+    "duration": "18+ hours"
+  },
+  {
+    "id": 5,
+    "image": "/img/hotels/1.png",
+    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
+    "address": "Westminster Borough, London",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 72,
+    "currency": "$",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "breakfast included"
+      }
+    ],
+    "duration": "18+ hours"
+  }
+]

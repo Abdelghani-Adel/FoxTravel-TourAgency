@@ -8,7 +8,7 @@ import SwiperScroll from "@/src/components/ui/SwiperScroll";
 import DestinationCard from "@/src/components/Cards/DestinationCard";
 import HotelCard from "@/src/components/Cards/HotelCard";
 import { GoArrowUpRight } from "react-icons/go";
-import TripCard from "@/src/components/Cards/TripCard";
+import TourCard from "@/src/components/Cards/TourCard";
 import RouteWrapper from "@/src/routes/common/RouteWrapper";
 
 const Page = ({ params }: { params: { id: string } }) => {
@@ -99,7 +99,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
           <SwiperScroll>
             {details.tours.map((tour) => (
-              <TripCard
+              <TourCard
                 key={tour.id}
                 id={tour.id}
                 title={tour.title}

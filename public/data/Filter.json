@@ -1,0 +1,78 @@
+[
+  {
+    "title": "Deals",
+    "type": "checkbox",
+    "options": [
+      {
+        "id": 1,
+        "title": "Free Cancellation"
+      },
+      {
+        "id": 2,
+        "title": "Reserve now, pay at stay"
+      },
+      {
+        "id": 3,
+        "title": "properties with special offers"
+      }
+    ]
+  },
+  {
+    "title": "Popular Filters",
+    "type": "checkbox",
+    "options": [
+      {
+        "id": 1,
+        "title": "Breakfast included"
+      },
+      {
+        "id": 2,
+        "title": "Romantic"
+      },
+      {
+        "id": 3,
+        "title": "Airport Transfer"
+      },
+      {
+        "id": 4,
+        "title": "WIFI Included"
+      },
+      {
+        "id": 5,
+        "title": "5 Stars"
+      }
+    ]
+  },
+  {
+    "title": "Price",
+    "type": "range",
+    "min": 10,
+    "max": 1000
+  },
+  {
+    "title": "Star Rating",
+    "type": "radio",
+    "options": [
+      {
+        "id": 1,
+        "title": "1"
+      },
+      {
+        "id": 2,
+        "title": "2"
+      },
+      {
+        "id": 3,
+        "title": "3"
+      },
+      {
+        "id": 4,
+        "title": "4"
+      },
+      {
+        "id": 5,
+        "title": "5"
+      }
+    ]
+  }
+]
