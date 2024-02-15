@@ -1,13 +1,14 @@
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import { useEffect, useState } from "react";
 
-const useHotelGuests = (
-  requestBody: IServiceSearchReqBody,
-  updateRequestBody: IServiceSearchUpdateReqBody
-) => {
-  const [hotelGuests, setHotelGuests] = useState(requestBody.hotelGuests);
+const useHotelGuests = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
+  const [hotelGuests, setHotelGuests] = useState(searchState.hotelGuests);
 
   useEffect(() => {
-    updateRequestBody("hotelGuests", hotelGuests);
+    dispatch(searchActions.updateHotelGuests(hotelGuests));
   }, [hotelGuests]);
 
   const incrementAdults = () => {

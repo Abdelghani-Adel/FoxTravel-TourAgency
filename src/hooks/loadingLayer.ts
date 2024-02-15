@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import { useAppDispatch } from "../redux/store";
 import { loaderActions } from "../redux/slices/loaderSlice";

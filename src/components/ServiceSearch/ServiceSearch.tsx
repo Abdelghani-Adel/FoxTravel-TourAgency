@@ -1,5 +1,8 @@
 "use client";
 
+import { loaderActions } from "@/src/redux/slices/loaderSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
+import { useRouter } from "next/navigation";
 import { FormEvent } from "react";
 import { FaSearch } from "react-icons/fa";
 import ActivityInput from "./ActivityInput";
@@ -10,48 +13,40 @@ import CityInput from "./CityInput";
 import DateEndInput from "./DateEndInput";
 import DateStartInput from "./DateStartInput";
 import HotelGuestsInput from "./HotelGuestsInput";
-import useRequestBody from "./hooks/useRequestBody";
 
 const ServiceSearch = () => {
-  const { requestBody, updateRequestBody } = useRequestBody();
+  const router = useRouter();
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
 
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(requestBody);
+    dispatch(loaderActions.showLoadingOverlay());
+
+    // make the api call
+
+    // navigate
+    router.push("/search-result", {});
   };
 
   return (
     <div className="serviceSearch">
-      <CategoryList requestBody={requestBody} updateRequestBody={updateRequestBody} />
+      <CategoryList />
 
       <form className="serviceSearch_form" onSubmit={submitHandler}>
-        <CityInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-        <DateStartInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-        <DateEndInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
+        <CityInput />
 
-        {requestBody.category === "Car Rental" && (
-          <>
-            <CarModelInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-          </>
-        )}
+        <DateStartInput />
 
-        {requestBody.category === "Car Hire" && (
-          <>
-            <CarRidersInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-          </>
-        )}
+        <DateEndInput />
 
-        {requestBody.category === "Hotel" && (
-          <>
-            <HotelGuestsInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-          </>
-        )}
+        {searchState.category === "Car Rental" && <CarModelInput />}
 
-        {requestBody.category === "Activity" && (
-          <>
-            <ActivityInput requestBody={requestBody} updateRequestBody={updateRequestBody} />
-          </>
-        )}
+        {searchState.category === "Car Hire" && <CarRidersInput />}
+
+        {searchState.category === "Hotel" && <HotelGuestsInput />}
+
+        {searchState.category === "Activity" && <ActivityInput />}
 
         <button className="serviceSearch_submitBtn">
           <FaSearch /> Search

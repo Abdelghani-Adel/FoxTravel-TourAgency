@@ -1,3 +1,5 @@
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import React from "react";
 
 const activities = [
@@ -15,13 +17,13 @@ const activities = [
   },
 ];
 
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
+const ActivityInput = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
 
-const ActivityInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
+  const changeType = (newCategory: string) => {
+    dispatch(searchActions.updateActivityType(newCategory));
+  };
 
   return (
     <div className="serviceSearch_inputController">
@@ -33,7 +35,7 @@ const ActivityInput = (props: props) => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {requestBody.activityType.length < 1 ? "Choose the activity" : requestBody.activityType}
+          {searchState.activityType.length < 1 ? "Choose the activity" : searchState.activityType}
         </button>
 
         <div className="dropdown-menu serviceSearch_inputDropdown">
@@ -42,9 +44,9 @@ const ActivityInput = (props: props) => {
               <li
                 key={activity.id}
                 className={`serviceSearch_option ${
-                  requestBody.activityType === activity.name ? "active" : ""
+                  searchState.activityType === activity.name ? "active" : ""
                 }`}
-                onClick={() => updateRequestBody("activityType", activity.name)}
+                onClick={() => changeType(activity.name)}
               >
                 <div className="d-flex flex-column">
                   <span>{activity.name}</span>

@@ -1,17 +1,19 @@
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import React, { useEffect, useState } from "react";
 import DatePicker from "react-datepicker";
 
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
-
-const DateStartInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
+const DateStartInput = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
   const [startDateLabel, setStartDateLabel] = useState("Check in");
 
+  const updateDate = (newDate: Date | null) => {
+    dispatch(searchActions.updateStartDate(newDate));
+  };
+
   useEffect(() => {
-    switch (requestBody.category) {
+    switch (searchState.category) {
       case "Hotel":
         setStartDateLabel("Check in");
         break;
@@ -24,14 +26,14 @@ const DateStartInput = (props: props) => {
       default:
         setStartDateLabel("Date");
     }
-  }, [requestBody.category]);
+  }, [searchState.category]);
 
   return (
     <div className="guestInput serviceSearch_inputController">
       <h5 className="searchService_inputTitle">{startDateLabel}</h5>
       <DatePicker
-        onChange={(date) => updateRequestBody("startDate", date)}
-        selected={requestBody.startDate}
+        onChange={(date) => updateDate(date)}
+        selected={searchState.startDate}
         dateFormat="dd - MM - yy"
         onKeyDown={(e) => {
           e.preventDefault();

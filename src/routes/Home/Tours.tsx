@@ -4,8 +4,14 @@ import toursList from "@/public/data/Cards_Tours.json";
 import TourCard from "../../components/Cards/TourCard";
 import { GoArrowUpRight } from "react-icons/go";
 import SwiperScroll from "@/src/components/ui/SwiperScroll";
+import Link from "next/link";
+import { useAppDispatch } from "@/src/redux/store";
+import { loaderActions } from "@/src/redux/slices/loaderSlice";
 
 const Tours = () => {
+  const dispatch = useAppDispatch();
+  const showLoadingLayer = () => dispatch(loaderActions.showLoadingOverlay());
+
   return (
     <div className="section">
       <div className="d-flex justify-content-between align-items-center mt-5 mb-3">
@@ -15,8 +21,10 @@ const Tours = () => {
         </div>
 
         <div>
-          <button className="foxBtn secondBtn">
-            View All Tours <GoArrowUpRight className="fs-3" />
+          <button className="foxBtn secondBtn" onClick={showLoadingLayer}>
+            <Link href="/tours">
+              View All Tours <GoArrowUpRight className="fs-3" />
+            </Link>
           </button>
         </div>
       </div>

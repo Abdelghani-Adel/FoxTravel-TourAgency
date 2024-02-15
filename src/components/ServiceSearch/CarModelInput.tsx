@@ -1,9 +1,6 @@
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import React from "react";
-
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
 
 const carModels = [
   {
@@ -24,8 +21,13 @@ const carModels = [
   },
 ];
 
-const CarModelInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
+const CarModelInput = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
+
+  const updateCar = (newCar: string) => {
+    dispatch(searchActions.updateCarModel(newCar));
+  };
 
   return (
     <div className="serviceSearch_inputController">
@@ -37,7 +39,7 @@ const CarModelInput = (props: props) => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {requestBody.carModel}
+          {searchState.carModel}
         </button>
         <div className="dropdown-menu serviceSearch_inputDropdown">
           <ul className="serviceSearch_optionsList">
@@ -45,9 +47,9 @@ const CarModelInput = (props: props) => {
               <li
                 key={car.id}
                 className={`serviceSearch_option ${
-                  requestBody.carModel === car.name ? "active" : ""
+                  searchState.carModel === car.name ? "active" : ""
                 }`}
-                onClick={() => updateRequestBody("carModel", car.name)}
+                onClick={() => updateCar(car.name)}
               >
                 <div className="d-flex flex-column">
                   <span>{car.name}</span>

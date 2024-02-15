@@ -4,13 +4,7 @@ import HotelGuestsRooms from "./HotelGuestsRooms";
 import HotelGuestsSummary from "./HotelGuestsSummary";
 import useHotelGuests from "./hooks/useHotelGuests";
 
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
-
-const HotelGuestsInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
+const HotelGuestsInput = () => {
   const {
     hotelGuests,
     incrementAdults,
@@ -21,7 +15,7 @@ const HotelGuestsInput = (props: props) => {
     decrementChilds,
     incrementChildAge,
     decrementChildAge,
-  } = useHotelGuests(requestBody, updateRequestBody);
+  } = useHotelGuests();
 
   return (
     <div className="guestInput serviceSearch_inputController">

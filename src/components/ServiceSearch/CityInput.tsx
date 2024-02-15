@@ -1,4 +1,6 @@
 "use client";
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import React, { useState } from "react";
 import { FaLocationDot } from "react-icons/fa6";
 
@@ -30,13 +32,13 @@ const locations = [
   },
 ];
 
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
+const CityInput = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
 
-const CityInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
+  const changeCity = (newCity: string) => {
+    dispatch(searchActions.updateCity(newCity));
+  };
 
   return (
     <div className="cityInput serviceSearch_inputController">
@@ -48,15 +50,15 @@ const CityInput = (props: props) => {
           data-bs-toggle="dropdown"
           aria-expanded="false"
         >
-          {requestBody.city}
+          {searchState.city}
         </button>
         <div className="dropdown-menu serviceSearch_inputDropdown">
           <ul className="cityLocations_optionsList">
             {locations.map((location) => (
               <li
                 key={location.id}
-                className={`cityLocation ${requestBody.city === location.name ? "active" : ""}`}
-                onClick={() => updateRequestBody("city", location.name)}
+                className={`cityLocation ${searchState.city === location.name ? "active" : ""}`}
+                onClick={() => changeCity(location.name)}
               >
                 <FaLocationDot className="icon" />
                 <div className="d-flex flex-column">

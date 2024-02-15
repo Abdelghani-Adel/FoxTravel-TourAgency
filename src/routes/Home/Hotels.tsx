@@ -5,8 +5,14 @@ import { GoArrowUpRight } from "react-icons/go";
 import hotels from "@/public/data/Cards_Hotels.json";
 import SwiperScroll from "../../components/ui/SwiperScroll";
 import HotelCard from "../../components/Cards/HotelCard";
+import Link from "next/link";
+import { useAppDispatch } from "@/src/redux/store";
+import { loaderActions } from "@/src/redux/slices/loaderSlice";
 
 const Hotels = () => {
+  const dispatch = useAppDispatch();
+  const showLoadingLayer = () => dispatch(loaderActions.showLoadingOverlay());
+
   return (
     <div className="recommendedHotels section mb-5">
       <div className="recommendedHotels_header">
@@ -16,8 +22,10 @@ const Hotels = () => {
         </div>
 
         <div>
-          <button className="foxBtn secondBtn">
-            View All Hotels <GoArrowUpRight className="fs-3" />
+          <button className="foxBtn secondBtn" onClick={showLoadingLayer}>
+            <Link href="/hotels">
+              View All Hotels <GoArrowUpRight className="fs-3" />
+            </Link>
           </button>
         </div>
       </div>

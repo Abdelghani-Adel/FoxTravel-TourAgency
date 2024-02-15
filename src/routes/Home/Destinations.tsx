@@ -5,8 +5,14 @@ import { GoArrowUpRight } from "react-icons/go";
 import DestinationCard from "../../components/Cards/DestinationCard";
 import CardsData from "@/public/data/Cards_Destinations.json";
 import SwiperScroll from "../../components/ui/SwiperScroll";
+import Link from "next/link";
+import { useAppDispatch } from "@/src/redux/store";
+import { loaderActions } from "@/src/redux/slices/loaderSlice";
 
 const Destinations = () => {
+  const dispatch = useAppDispatch();
+  const showLoadingLayer = () => dispatch(loaderActions.showLoadingOverlay());
+
   return (
     <div className="popularDestinations section mb-5">
       <div className="sectionHeader">
@@ -16,8 +22,10 @@ const Destinations = () => {
         </div>
 
         <div>
-          <button className="foxBtn secondBtn">
-            View All Destinations <GoArrowUpRight className="fs-3" />
+          <button className="foxBtn secondBtn" onClick={showLoadingLayer}>
+            <Link href="/destinations">
+              View All Destinations <GoArrowUpRight className="fs-3" />
+            </Link>
           </button>
         </div>
       </div>

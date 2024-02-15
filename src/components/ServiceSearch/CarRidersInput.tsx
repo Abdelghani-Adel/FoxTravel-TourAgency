@@ -1,14 +1,16 @@
 "use client";
+import { searchActions } from "@/src/redux/slices/searchSlice";
+import { useAppDispatch, useAppSelector } from "@/src/redux/store";
 import React, { useState } from "react";
 
-type props = {
-  requestBody: IServiceSearchReqBody;
-  updateRequestBody: IServiceSearchUpdateReqBody;
-};
+const CarRidersInput = () => {
+  const dispatch = useAppDispatch();
+  const searchState = useAppSelector((state) => state.search);
+  const riders = searchState.carRiders;
 
-const CarRidersInput = (props: props) => {
-  const { requestBody, updateRequestBody } = props;
-  const riders = requestBody.carRiders;
+  const updateRiders = (newRiders: number) => {
+    dispatch(searchActions.updateCarRiders(newRiders));
+  };
 
   return (
     <div className="ridersInput serviceSearch_inputController">
@@ -29,42 +31,42 @@ const CarRidersInput = (props: props) => {
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 1 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 1)}
+              onClick={() => updateRiders(1)}
             >
               1
             </button>
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 2 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 2)}
+              onClick={() => updateRiders(2)}
             >
               2
             </button>
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 3 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 3)}
+              onClick={() => updateRiders(3)}
             >
               3
             </button>
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 4 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 4)}
+              onClick={() => updateRiders(4)}
             >
               4
             </button>
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 5 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 5)}
+              onClick={() => updateRiders(5)}
             >
               5
             </button>
             <button
               type="button"
               className={`serviceSearch_carRidersInput ${riders == 6 ? "active" : ""}`}
-              onClick={() => updateRequestBody("carRiders", 6)}
+              onClick={() => updateRiders(6)}
             >
               6
             </button>
