@@ -1,5 +1,11 @@
 [
   {
+    "title": "Price",
+    "type": "range",
+    "min": 10,
+    "max": 1000
+  },
+  {
     "title": "Deals",
     "type": "checkbox",
     "options": [
@@ -69,11 +75,5 @@
         "title": "5 Stars"
       }
     ]
-  },
-  {
-    "title": "Price",
-    "type": "range",
-    "min": 10,
-    "max": 1000
   }
 ]
