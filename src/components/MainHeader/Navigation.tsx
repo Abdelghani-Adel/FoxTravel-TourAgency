@@ -27,10 +27,10 @@ const nav = [
     title: "Tours",
     path: "/tours",
   },
-  {
-    title: "Flights",
-    path: "/flights",
-  },
+  // {
+  //   title: "Flights",
+  //   path: "/flights",
+  // },
   {
     title: "Cars",
     path: "/cars",

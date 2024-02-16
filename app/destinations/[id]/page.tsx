@@ -3,11 +3,13 @@ import HotelCard from "@/src/components/Cards/HotelCard";
 import TourCard from "@/src/components/Cards/TourCard";
 import ImageGallerySwiperCards from "@/src/components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import SwiperScroll from "@/src/components/ui/SwiperScroll";
+import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { useAppSelector } from "@/src/redux/store";
 import parse from "html-react-parser";
 import { GoArrowUpRight } from "react-icons/go";
 
 const Page = ({ params }: { params: { id: string } }) => {
+  useHideLoadingLayer();
   const details = useAppSelector((state) => state.destinationDetails);
 
   return (

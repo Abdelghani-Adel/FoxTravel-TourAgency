@@ -10,38 +10,42 @@ const Page = () => {
   useHideLoadingLayer();
 
   return (
-    <div className="container mt-3 mb-3">
-      <h1 className="text-center txtSecondary fw-bolder mt-5 mb-5">Find Your Dream Luxury Car</h1>
-      <div className="row g-3">
-        <div className="col-3">
-          <Filter />
-        </div>
+    <>
+      <div className="bg-light py-5">
+        <h1 className="text-center txtSecondary fw-bolder">Find Your Dream Luxury Car</h1>
+      </div>
+      <div className="container mt-4 mb-3">
+        <div className="row g-3">
+          <div className="col-3">
+            <Filter />
+          </div>
 
-        <div className="col-9">
-          <div className="row g-3">
-            {carsList.map((car) => (
-              <div key={uuidv4()} className="col-12 col-md-4">
-                <CarCard
-                  key={car.id}
-                  id={car.id}
-                  img={car.img}
-                  model={car.model}
-                  rating={car.rating}
-                  reviews={car.reviews}
-                  price={car.price}
-                  currency={car.currency}
-                  badges={car.badges}
-                  passengers={car.passengers}
-                  bags={car.bags}
-                  transmission={car.transmission}
-                  duration={car.duration}
-                />
-              </div>
-            ))}
+          <div className="col-9">
+            <div className="row g-3">
+              {carsList.map((car) => (
+                <div key={uuidv4()} className="col-12 col-md-4">
+                  <CarCard
+                    key={car.id}
+                    id={car.id}
+                    img={car.img}
+                    model={car.model}
+                    rating={car.rating}
+                    reviews={car.reviews}
+                    price={car.price}
+                    currency={car.currency}
+                    badges={car.badges}
+                    passengers={car.passengers}
+                    bags={car.bags}
+                    transmission={car.transmission}
+                    duration={car.duration}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 

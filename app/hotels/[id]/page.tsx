@@ -14,13 +14,14 @@ import hotelDetails from "@/public/data/hotelDetails.json";
 import { hotelDetailsActions } from "@/src/redux/slices/hotelDetails";
 import { decrypt } from "@/src/utils/Cryptojs";
 import parse from "html-react-parser";
+import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 
 const Page = ({ params }: { params: { id: string } }) => {
+  useHideLoadingLayer();
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(hotelDetailsActions.setHotelDetails(hotelDetails));
-    dispatch(loaderActions.hideLoadingOverlay());
   }, []);
 
   return (
