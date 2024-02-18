@@ -45,10 +45,17 @@ const nav = [
   },
 ];
 
-const Navigation = () => {
+type props = {
+  onItemClick?: () => void;
+};
+
+const Navigation = (props: props) => {
   const pathname = usePathname();
   const dispatch = useAppDispatch();
-  const onNavigate = () => dispatch(loaderActions.showLoadingOverlay());
+  const onNavigate = () => {
+    dispatch(loaderActions.showLoadingOverlay());
+    props.onItemClick && props.onItemClick();
+  };
 
   return (
     <nav className="navigation">
@@ -64,62 +71,6 @@ const Navigation = () => {
             </Link>
           </li>
         ))}
-
-        {/* <li className="navItem dropdown">
-          <button
-            className="nav-link dropdown-toggle"
-            id="categories"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-            categories
-          </button>
-          <ul className="dropdown-menu" aria-labelledby="categories">
-            <li>
-              <Link className="dropdown-item" href="#">
-                Hotel
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Tour
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Activity
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Holiday Rentals
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Car
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Cruise
-              </Link>
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Flights
-              </Link>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-              <Link className="dropdown-item" href="#">
-                Something else here
-              </Link>
-            </li>
-          </ul>
-        </li> */}
       </ul>
     </nav>
   );

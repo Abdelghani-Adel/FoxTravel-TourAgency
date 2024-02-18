@@ -16,11 +16,11 @@ const Page = () => {
       </div>
       <div className="container mt-4 mb-3">
         <div className="row g-3">
-          <div className="col-3">
+          <div className="col-3 d-none d-lg-block">
             <Filter />
           </div>
 
-          <div className="col-9">
+          <div className="col-12 col-lg-9">
             <div className="row g-3">
               {packageList.map((pkg) => (
                 <div key={v4()} className="col-12 col-md-4">

@@ -75,7 +75,6 @@ ul {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
-  width: -moz-max-content;
   width: max-content;
 }
 
@@ -211,9 +210,13 @@ ul {
   padding-right: 100%;
   box-sizing: content-box;
   transition: ease-in-out;
+  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
+  -webkit-animation-name: ticker;
   animation-name: ticker;
+  -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
 
@@ -230,7 +233,6 @@ ul {
   border: 1px solid #3554d1;
   padding: 10px;
   border-radius: 10px;
-  width: -moz-max-content;
   width: max-content;
   background-color: #3554d1;
 }
@@ -389,7 +391,6 @@ ul {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: -moz-max-content;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
@@ -565,6 +566,8 @@ ul {
   transition: 0.3s ease-in-out;
   color: #fff;
   background-color: #041553;
+  z-index: 50;
+  position: relative;
 }
 
 .absoluteHeader.mainHeader {
@@ -593,17 +596,20 @@ ul {
   list-style: none;
   padding-inline-start: 0;
   margin-bottom: 0;
-  gap: 15px;
+  flex-direction: column;
 }
 
 .navItem {
   font-size: 1.2rem;
   color: #c4c4c4;
+  color: #000;
+  padding: 10px 20px;
 }
 
 .navItem.active,
 .navItem:hover {
   color: #fff;
+  background-color: #041553;
 }
 
 .navLink {
@@ -648,6 +654,21 @@ ul {
   flex-direction: column;
 }
 
+@media (min-width: 992px) {
+  .navList {
+    gap: 15px;
+    flex-direction: row;
+  }
+  .navItem {
+    color: #c4c4c4;
+    padding: 0;
+  }
+  .navItem.active,
+  .navItem:hover {
+    color: #fff;
+    background-color: transparent;
+  }
+}
 .mobileMenu.shown {
   left: 0;
 }
@@ -1085,8 +1106,7 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 
 .loading-container {
@@ -1410,4 +1430,4 @@ ul {
 .destinationDetails_header {
   margin-bottom: 30px;
   border-radius: 10px;
-}/*# sourceMappingURL=main.css.map */
+}

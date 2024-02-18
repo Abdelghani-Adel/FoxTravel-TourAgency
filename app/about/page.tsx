@@ -5,7 +5,13 @@ import React from "react";
 const Page = () => {
   useHideLoadingLayer();
 
-  return <div>About Page</div>;
+  return (
+    <div className="container mt-5 mb-5">
+      <div className="row">
+        <div>About Page</div>
+      </div>
+    </div>
+  );
 };
 
 export default Page;

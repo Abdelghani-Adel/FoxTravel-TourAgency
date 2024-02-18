@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import BtnMenuCloseX from "../ui/BtnMenuCloseX";
+import Navigation from "./Navigation";
 
 type props = {
   isShown: boolean;
@@ -16,7 +17,9 @@ const MobileMenu = (props: props) => {
         <BtnMenuCloseX onClick={closeMenu} />
       </div>
 
-      <div className="mobileMenu_footer">footer</div>
+      <Navigation onItemClick={closeMenu} />
+
+      <div className="mobileMenu_footer"></div>
     </div>
   );
 };

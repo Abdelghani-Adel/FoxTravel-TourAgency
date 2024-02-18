@@ -1,0 +1,74 @@
+{
+  "images": [
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png"
+  ],
+  "title": "Stonehenge, Windsor Castle and Bath with Pub Lunch in Lacock",
+  "location": "Westminster Borough, London",
+  "rating": 5,
+  "price": 200,
+  "currency": "$",
+  "totalReviews": 3014,
+  "snapshot": {
+    "duration": "11h",
+    "groupSize": 52
+  },
+  "overview": "Unless you hire a car, visiting Stonehenge, Bath, and Windsor Castle in one day is next to impossible. Designed specifically for travelers with limited time in London, this tour allows you to check off a range of southern England‘s historical attractions in just one day by eliminating the hassle of traveling between each one independently. Travel by comfortable coach and witness your guide bring each UNESCO World Heritage Site to life with commentary. Plus, all admission tickets are included in the tour price.",
+  "languages": ["German", "Chinese", "English", "French"],
+  "highlights": [
+    "Travel between the UNESCO World Heritage sites aboard a comfortable coach",
+    "Explore with a guide to delve deeper into the history",
+    "Great for history buffs and travelers with limited time"
+  ],
+  "importantInfo": {
+    "inclusions": [
+      "Superior Coach, Wi-Fi and USB Charging On-board",
+      "Expert guide",
+      "Admission to Windsor Castle (if option selected)",
+      "Admission to Stonehenge"
+    ],
+    "departureDetails": "Departures from 01st April 2022: Tour departs at 8 am (boarding at 7.30 am), Victoria Coach Station Gate 1-5",
+    "exclusions": ["Hotel pick-up and drop-off", "Gratuities"],
+    "additionalInfo": [
+      "Confirmation will be received at time of booking",
+      "Departs at 8am (boarding at 7.30am), Victoria Coach Station Gate 1-5, 164 Buckingham Palace Road, London, SW1W 9TP",
+      "Please note: the tour itinerary and order may change"
+    ]
+  },
+  "itinerary": [
+    {
+      "title": "Windsor Castle",
+      "duration": "60 minutes",
+      "description": "Our first stop is Windsor Castle, the ancestral home of the British Royal family for more than 900 years and the largest, continuously occupied castle in Europe.",
+      "images": [""]
+    },
+    {
+      "title": "St. George's Chapel",
+      "duration": "60 minutes",
+      "description": "Our first stop is Windsor Castle, the ancestral home of the British Royal family for more than 900 years and the largest, continuously occupied castle in Europe.",
+      "images": [""]
+    },
+    {
+      "title": "The Roman Baths",
+      "duration": "60 minutes",
+      "description": "Our first stop is Windsor Castle, the ancestral home of the British Royal family for more than 900 years and the largest, continuously occupied castle in Europe.",
+      "images": [""]
+    },
+    {
+      "title": "Stonehenge",
+      "duration": "60 minutes",
+      "description": "Our first stop is Windsor Castle, the ancestral home of the British Royal family for more than 900 years and the largest, continuously occupied castle in Europe.",
+      "images": [""]
+    }
+  ]
+}

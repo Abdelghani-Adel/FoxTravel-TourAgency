@@ -6,6 +6,8 @@
   transition: 0.3s ease-in-out;
   color: #fff;
   background-color: v.$mainColor;
+  z-index: 50;
+  position: relative;
 }
 
 .absoluteHeader.mainHeader {
@@ -34,17 +36,21 @@
   list-style: none;
   padding-inline-start: 0;
   margin-bottom: 0;
-  gap: 15px;
+  // gap: 15px;
+  flex-direction: column;
 }
 
 .navItem {
   font-size: 1.2rem;
   color: #c4c4c4;
+  color: #000;
+  padding: 10px 20px;
 }
 
 .navItem.active,
 .navItem:hover {
   color: #fff;
+  background-color: v.$mainColor;
 }
 
 .navLink {
@@ -87,6 +93,24 @@
   background-color: #fff;
   display: flex;
   flex-direction: column;
+}
+
+@include mixins.media-query(large) {
+  .navList {
+    gap: 15px;
+    flex-direction: row;
+  }
+
+  .navItem {
+    color: #c4c4c4;
+    padding: 0;
+  }
+
+  .navItem.active,
+  .navItem:hover {
+    color: #fff;
+    background-color: transparent;
+  }
 }
 
 .mobileMenu.shown {
