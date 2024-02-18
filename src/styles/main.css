@@ -75,6 +75,7 @@ ul {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -210,13 +211,9 @@ ul {
   padding-right: 100%;
   box-sizing: content-box;
   transition: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-name: ticker;
   animation-name: ticker;
-  -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
 
@@ -233,6 +230,7 @@ ul {
   border: 1px solid #3554d1;
   padding: 10px;
   border-radius: 10px;
+  width: -moz-max-content;
   width: max-content;
   background-color: #3554d1;
 }
@@ -391,6 +389,7 @@ ul {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: -moz-max-content;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
@@ -1086,7 +1085,8 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .loading-container {
@@ -1410,4 +1410,4 @@ ul {
 .destinationDetails_header {
   margin-bottom: 30px;
   border-radius: 10px;
-}
+}/*# sourceMappingURL=main.css.map */
