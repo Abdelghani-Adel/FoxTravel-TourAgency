@@ -9,19 +9,28 @@ import Overview from "@/src/routes/hotel/Overview";
 import ReviewStatistics from "@/src/routes/hotel/ReviewStatistics";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
 import { useAppDispatch, useAppSelector } from "@/src/redux/store";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import hotelDetails from "@/public/data/hotelDetails.json";
 import { hotelDetailsActions } from "@/src/redux/slices/hotelDetails";
 import { decrypt } from "@/src/utils/Cryptojs";
 import parse from "html-react-parser";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
+import { getHotelDetails } from "@/src/services/hotelServices";
 
 const Page = ({ params }: { params: { id: string } }) => {
-  useHideLoadingLayer();
   const dispatch = useAppDispatch();
+  const [hotel, setHotel] = useState<any>();
+  const encryptedId = params.id;
+  const hotelId = decrypt(encryptedId);
 
   useEffect(() => {
-    dispatch(hotelDetailsActions.setHotelDetails(hotelDetails));
+    const getHotel = async () => {
+      const response = await getHotelDetails(hotelId);
+      setHotel(response);
+      dispatch(loaderActions.hideLoadingOverlay());
+    };
+
+    getHotel();
   }, []);
 
   return (

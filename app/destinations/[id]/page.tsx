@@ -5,6 +5,9 @@ import ImageGallerySwiperCards from "@/src/components/ImageGallerySwiperCards/Im
 import SwiperScroll from "@/src/components/ui/SwiperScroll";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { useAppSelector } from "@/src/redux/store";
+import Cars from "@/src/routes/home/Cars";
+import Hotels from "@/src/routes/home/Hotels";
+import Tours from "@/src/routes/home/Tours";
 import parse from "html-react-parser";
 import { GoArrowUpRight } from "react-icons/go";
 
@@ -46,70 +49,9 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
       </div>
 
-      <div className="row mt-5">
-        <div className="recommendedHotels_header">
-          <div>
-            <h3 className="fw-bold">Recommended Hotels</h3>
-            <p className="mb-0">Our recommended hotels in {details.destinationName}</p>
-          </div>
-
-          <div>
-            <button className="btn btn-warning">
-              View All Hotels <GoArrowUpRight className="fs-3" />
-            </button>
-          </div>
-        </div>
-
-        <SwiperScroll>
-          {details.hotels.map((hotel) => (
-            <HotelCard
-              key={hotel.id}
-              id={hotel.id}
-              title={hotel.title}
-              image={hotel.image}
-              address={hotel.address}
-              rating={hotel.rating}
-              reviewers={hotel.reviews}
-              price={hotel.price}
-              currency={hotel.currency}
-              badges={hotel.badges}
-            />
-          ))}
-        </SwiperScroll>
-      </div>
-
-      <div className="row mt-5">
-        <div className="recommendedHotels_header">
-          <div>
-            <h3 className="fw-bold">Most popular tours</h3>
-            <p className="mb-0">Our recommended tours in {details.destinationName}</p>
-          </div>
-
-          <div>
-            <button className="btn btn-warning">
-              View All Hotels <GoArrowUpRight className="fs-3" />
-            </button>
-          </div>
-        </div>
-
-        <SwiperScroll>
-          {details.tours.map((tour) => (
-            <TourCard
-              key={tour.id}
-              id={tour.id}
-              title={tour.title}
-              image={tour.image}
-              address={tour.address}
-              rating={tour.rating}
-              reviews={tour.reviews}
-              price={tour.price}
-              currency={tour.currency}
-              badges={tour.badges}
-              duration={tour.duration}
-            />
-          ))}
-        </SwiperScroll>
-      </div>
+      <Hotels />
+      <Cars />
+      <Tours />
     </div>
   );
 };

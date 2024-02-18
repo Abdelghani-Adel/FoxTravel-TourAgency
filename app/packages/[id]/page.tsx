@@ -4,7 +4,7 @@ import RtsRating from "@/src/components/ui/RtsRating";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
 import { useAppDispatch } from "@/src/redux/store";
 import TransportaionLine from "@/src/routes/package/TransportaionLine";
-import { getPackageDetails } from "@/src/services/getPackageDetails";
+import { getPackageDetails } from "@/src/services/packageServices";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoMdCheckmarkCircle } from "react-icons/io";
@@ -39,7 +39,8 @@ const Page = ({ params }: { params: { id: string } }) => {
                 <RtsRating readonly rating={4.5} /> (215)
               </span>
               <p className="mb-0 txtGray fw-normal">
-                {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate}
+                {packageDetails.duration} : {packageDetails.startDate} ~{" "}
+                {packageDetails.endDate}
               </p>
             </div>
             <p className="foxPrice">
@@ -92,10 +93,12 @@ const Page = ({ params }: { params: { id: string } }) => {
               {plan.activities.map((activity: any, i: any) => (
                 <div key={activity.id}>
                   <h6 className="mb-0">
-                    {activity.title} <span className="fw-light">({activity.duration})</span>
+                    {activity.title}{" "}
+                    <span className="fw-light">({activity.duration})</span>
                   </h6>
                   <p className="fw-normal txtGray mb-0">
-                    On {activity.date} from {activity.startTime} to {activity.endTime}
+                    On {activity.date} from {activity.startTime} to{" "}
+                    {activity.endTime}
                   </p>
 
                   <div className="d-flex gap-2">
