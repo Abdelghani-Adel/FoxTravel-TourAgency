@@ -12,7 +12,7 @@ const TourCard = (props: ITripCardProps) => {
   const { id, title, address, image, rating, reviews, price, currency, badges, duration } = props;
 
   const encryptedId = encrypt(id.toString());
-  const url = `tours/${encryptedId}`;
+  const url = `/tours/${encryptedId}`;
 
   return (
     <FoxCard url={url}>

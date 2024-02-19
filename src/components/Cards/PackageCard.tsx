@@ -24,7 +24,7 @@ const PackageCard = (props: IPackageCardProps) => {
   } = props;
 
   const encryptedId = encrypt(id.toString());
-  const url = `packages/${encryptedId}`;
+  const url = `/packages/${encryptedId}`;
 
   return (
     <FoxCard url={url}>

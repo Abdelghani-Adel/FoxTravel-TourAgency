@@ -16,7 +16,7 @@ const CarCard = (props: ICarCardProps) => {
   const { rating, reviews, badges, price, currency, duration } = props;
 
   const encryptedId = encrypt(id.toString());
-  const url = `cars/${encryptedId}`;
+  const url = `/cars/${encryptedId}`;
 
   return (
     <FoxCard url={url}>
