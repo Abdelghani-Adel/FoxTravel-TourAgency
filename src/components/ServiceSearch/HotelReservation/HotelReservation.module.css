@@ -1,0 +1,102 @@
+.wrapper {
+  min-width: 270px;
+}
+
+.wrapper p {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.togglerButton {
+  font-size: 14px;
+  padding: 10px 20px;
+  background-color: #fff;
+  border: 1px solid gray;
+  border-radius: 10px;
+  width: 100%;
+  color: rgb(44, 44, 44);
+}
+
+.dropdownWrapper {
+  width: 350px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dropdownWrapper_inner {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.numberInput {
+  padding: 5px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  width: 130px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.numberInput .number {
+  font-size: 14px;
+}
+
+.numberIcons {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: blue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.numberIcons:hover:not(:disabled) {
+  background-color: blue;
+  color: #fff;
+}
+
+.numberIcons:disabled {
+  color: rgb(146, 146, 146);
+}
+
+.numberIcons span {
+  position: relative;
+  top: -3px;
+}
+
+.doneBtn {
+  background-color: transparent;
+  border: 1px solid blue;
+  padding: 8px;
+  border-radius: 5px;
+  margin-top: 16px;
+  transition: 0.3s ease-in-out;
+}
+
+.doneBtn:hover {
+  background-color: blue;
+  color: #fff;
+}
+
+.childAgeInput {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid gray;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-weight: 300;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

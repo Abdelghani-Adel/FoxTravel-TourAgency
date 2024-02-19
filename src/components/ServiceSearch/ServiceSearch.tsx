@@ -13,6 +13,7 @@ import CityInput from "./CityInput";
 import DateEndInput from "./DateEndInput";
 import DateStartInput from "./DateStartInput";
 import HotelGuestsInput from "./HotelGuestsInput";
+import HotelReservation from "./HotelReservation/HotelReservation";
 
 const ServiceSearch = () => {
   const router = useRouter();
@@ -35,6 +36,8 @@ const ServiceSearch = () => {
 
       <form className="serviceSearch_form" onSubmit={submitHandler}>
         <CityInput />
+
+        <HotelReservation />
 
         <DateStartInput />
 
