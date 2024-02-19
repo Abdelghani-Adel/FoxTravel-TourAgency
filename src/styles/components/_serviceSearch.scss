@@ -33,17 +33,20 @@
 }
 
 .serviceSearch_form {
-  padding: 10px;
-  background-color: #fff;
+  padding: 5px;
+  background-color: v.$thirdColor;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+
+  // flex-wrap: wrap;
 }
 
 .serviceSearch_inputController {
   padding-top: 5px;
   padding-left: 5px;
+  width: 100%;
 }
 
 .serviceSearch_inputController + .serviceSearch_inputController {
@@ -96,15 +99,15 @@
 }
 
 // datepicker style
-.serviceSearch_form .react-datepicker__input-container input {
-  width: 110px;
-  border: none;
-  color: gray;
-  outline: none;
-  text-align: center;
-  cursor: pointer;
-  caret-color: transparent;
-}
+// .serviceSearch_form .react-datepicker__input-container input {
+//   width: 110px;
+//   border: none;
+//   color: gray;
+//   outline: none;
+//   text-align: center;
+//   cursor: pointer;
+//   caret-color: transparent;
+// }
 
 .serviceSearch_submitBtn {
   background-color: v.$secondColor;
@@ -113,6 +116,7 @@
   outline: none;
   border-radius: 10px;
   padding: 10px;
+  min-width: 150px;
 }
 
 @include mixins.media-query(small) {
@@ -131,7 +135,7 @@
   .serviceSearch_form {
     flex-direction: row;
     align-items: center;
-    border-radius: 50px;
+    width: max-content;
   }
   .serviceSearch_inputController {
     padding-inline: 5px;
@@ -143,8 +147,8 @@
     border-left: 1px solid gray;
   }
   .serviceSearch_submitBtn {
-    border-radius: 50px;
-    padding: 15px 20px;
+    // border-radius: 50px;
+    // padding: 15px 20px;
   }
 }
 @include mixins.media-query(large) {

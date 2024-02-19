@@ -19,9 +19,9 @@ const Page = () => {
         </div>
 
         <div className="col-12 col-lg-9">
-          <div className="row gx-3">
+          <div className="row g-3">
             {hotels.map((hotel) => (
-              <div className="col-4" key={v4()}>
+              <div className="col-12 col-md-4" key={v4()}>
                 <HotelCard
                   key={hotel.id}
                   id={hotel.id}

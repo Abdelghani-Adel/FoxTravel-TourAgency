@@ -9,11 +9,11 @@ import ActivityInput from "./ActivityInput";
 import CarModelInput from "./CarModelInput";
 import CarRidersInput from "./CarRidersInput";
 import CategoryList from "./CategoryList";
-import CityInput from "./CityInput";
 import DateEndInput from "./DateEndInput";
 import DateStartInput from "./DateStartInput";
-import HotelGuestsInput from "./HotelGuestsInput";
 import HotelReservation from "./HotelReservation/HotelReservation";
+import CityInput from "./CityInput/CityInput";
+import DateDoublePicker from "./DateDoublePicker/DateDoublePicker";
 
 const ServiceSearch = () => {
   const router = useRouter();
@@ -36,20 +36,8 @@ const ServiceSearch = () => {
 
       <form className="serviceSearch_form" onSubmit={submitHandler}>
         <CityInput />
-
+        <DateDoublePicker />
         <HotelReservation />
-
-        <DateStartInput />
-
-        <DateEndInput />
-
-        {searchState.category === "Car Rental" && <CarModelInput />}
-
-        {searchState.category === "Car Hire" && <CarRidersInput />}
-
-        {searchState.category === "Hotel" && <HotelGuestsInput />}
-
-        {searchState.category === "Activity" && <ActivityInput />}
 
         <button className="serviceSearch_submitBtn">
           <FaSearch /> Search

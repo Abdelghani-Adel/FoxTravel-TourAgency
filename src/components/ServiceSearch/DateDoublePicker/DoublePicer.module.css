@@ -1,0 +1,21 @@
+.datePicker {
+  min-width: 260px;
+  padding: 8px 10px;
+  min-height: 40px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  border: 1px solid gray;
+  overflow: hidden;
+}
+
+.datePicker_input {
+  min-width: 230px;
+  border: none;
+  color: gray;
+  outline: none;
+  text-align: center;
+  cursor: pointer;
+  caret-color: transparent;
+}

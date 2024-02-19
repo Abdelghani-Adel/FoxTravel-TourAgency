@@ -27,9 +27,9 @@ const HotelReservation = () => {
           <AdultsInput onAdultsChange={onAdultsChange} />
           <ChildrenInput onChildrenChange={onChildrenChange} />
 
-          <button type="button" className={styles.doneBtn}>
+          {/* <button type="button" className={styles.doneBtn}>
             Done
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
