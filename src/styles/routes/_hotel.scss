@@ -1,6 +1,33 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
+.pageNavigator {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.pageNavigator li {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: 300;
+
+  &.active {
+    font-weight: 400;
+    color: v.$mainColor;
+    border-bottom: 2px solid v.$mainColor;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+    width: 100%;
+    display: block;
+  }
+}
+
 .hotelDetails_secion {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -84,4 +111,42 @@
     font-size: 4rem;
     color: v.$secondColor;
   }
+}
+
+//////////////////////////////////////
+// Rooms Table
+//////////////////////////////////////
+#hotelPrices {
+  overflow: auto;
+}
+
+.roomsTable {
+  min-width: 1000px;
+}
+
+.roomsTable thead tr th {
+  background-color: v.$secondColor !important;
+  color: #fff;
+  border: 2px solid rgb(214, 214, 214);
+
+  &:nth-child(1) {
+    width: 15%;
+  }
+  &:nth-child(2) {
+    width: 7%;
+  }
+  &:nth-child(3) {
+    width: 12%;
+  }
+  &:nth-child(4) {
+    width: 50%;
+  }
+  &:nth-child(5) {
+    width: 10%;
+  }
+}
+
+.roomsTable tbody tr td {
+  border: 2px solid rgb(214, 214, 214);
+  text-align: center;
 }

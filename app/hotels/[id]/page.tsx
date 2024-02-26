@@ -16,6 +16,8 @@ import { decrypt } from "@/src/utils/Cryptojs";
 import parse from "html-react-parser";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { getHotelDetails } from "@/src/services/hotelServices";
+import PageNavigator from "@/src/routes/hotel/PageNavigator";
+import Rooms from "@/src/routes/hotel/Rooms";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const dispatch = useAppDispatch();
@@ -27,6 +29,7 @@ const Page = ({ params }: { params: { id: string } }) => {
     const getHotel = async () => {
       const response = await getHotelDetails(hotelId);
       setHotel(response);
+      dispatch(hotelDetailsActions.setHotelDetails(response));
       dispatch(loaderActions.hideLoadingOverlay());
     };
 
@@ -36,12 +39,13 @@ const Page = ({ params }: { params: { id: string } }) => {
   return (
     <div className="container mt-4 mb-5">
       <Header />
+      <PageNavigator />
 
       <div className="row hotelDetails_secion">
         <div className="col-12 col-lg-8 order-2 order-lg-1">
-          <Highlights />
-          <Facilities />
           <Overview />
+          <Facilities />
+          <Highlights />
         </div>
 
         <div className="col-12 col-lg-4 order-1">
@@ -52,12 +56,18 @@ const Page = ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="row">
+        <div className="col-12">
+          <Rooms />
+        </div>
+      </div>
+
+      {/* <div className="row" id="hotelPrices">
         {hotelDetails?.availability?.availableRooms?.map((room, i) => (
           <div key={i} className="col-12 hotelDetails_secion">
             <HotelRoom room={room} />
           </div>
         ))}
-      </div>
+      </div> */}
 
       <div className="row hotelDetails_secion">
         <div className="col-12">

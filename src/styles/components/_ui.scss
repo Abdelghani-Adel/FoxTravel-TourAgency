@@ -60,6 +60,26 @@
   }
 }
 
+.foxBtn.mainBtn,
+.foxBtn.secondBtn,
+.foxBtn.thirdBtn {
+  &.smBtn {
+    height: max-content;
+    line-height: normal;
+    padding: 5px 10px;
+  }
+}
+
+.showMoreBtn {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid v.$mainColor;
+  outline: none;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
+
 .btnAction {
   height: 50px;
   line-height: 50px;

@@ -56,6 +56,61 @@
       "icon": ""
     }
   ],
+  "rooms": [
+    {
+      "id": 1,
+      "roomType": "Twin room with sea view",
+      "guests": 2,
+      "pricePerNight": 850,
+      "includes": [
+        "Free cancellation 2 days before",
+        "Balcony",
+        "Sea view",
+        "Flat-screen TV",
+        "Tea / Coffee maker",
+        "Flat-screen TV"
+      ]
+    },
+    {
+      "id": 2,
+      "roomType": "Single room with sea view",
+      "guests": 1,
+      "pricePerNight": 600,
+      "includes": [
+        "Free cancellation 2 days before",
+        "Balcony",
+        "Sea view",
+        "Flat-screen TV",
+        "Tea / Coffee maker"
+      ]
+    },
+    {
+      "id": 2,
+      "roomType": "Twin room with sea view",
+      "guests": 2,
+      "pricePerNight": 600,
+      "includes": [
+        "Free cancellation 2 days before",
+        "Balcony",
+        "Sea view",
+        "Flat-screen TV",
+        "Tea / Coffee maker"
+      ]
+    },
+    {
+      "id": 2,
+      "roomType": "Single room with sea view",
+      "guests": 1,
+      "pricePerNight": 600,
+      "includes": [
+        "Free cancellation 2 days before",
+        "Balcony",
+        "Sea view",
+        "Flat-screen TV",
+        "Tea / Coffee maker"
+      ]
+    }
+  ],
   "availability": {
     "availableRooms": [
       {

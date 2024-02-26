@@ -11,6 +11,126 @@ ul {
   margin-bottom: 0;
 }
 
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
 .txtMain {
   color: #041553;
 }
@@ -537,7 +657,7 @@ ul {
 
 .footer_title {
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   color: #3554d1;
 }
 
@@ -553,7 +673,7 @@ ul {
   color: #041553;
   transition: 0.3s ease-in-out;
   display: block;
-  margin-bottom: 0.8rem;
+  margin-bottom: 0.4rem;
   font-size: 1.2rem;
 }
 
@@ -1017,6 +1137,24 @@ ul {
   color: #f36c24;
 }
 
+.foxBtn.mainBtn.smBtn,
+.foxBtn.secondBtn.smBtn,
+.foxBtn.thirdBtn.smBtn {
+  height: max-content;
+  line-height: normal;
+  padding: 5px 10px;
+}
+
+.showMoreBtn {
+  width: 100%;
+  background-color: transparent;
+  border: 1px solid #041553;
+  outline: none;
+  border-radius: 5px;
+  text-transform: capitalize;
+  transition: 0.3s ease-in-out;
+}
+
 .btnAction {
   height: 50px;
   line-height: 50px;
@@ -1338,6 +1476,33 @@ ul {
   font-weight: 500;
 }
 
+.pageNavigator {
+  display: flex;
+  width: 100%;
+  border-bottom: 1px solid rgb(207, 207, 207);
+}
+
+.pageNavigator li {
+  flex-grow: 1;
+  text-align: center;
+  padding: 10px;
+  font-weight: 300;
+}
+
+.pageNavigator li.active {
+  font-weight: 400;
+  color: #041553;
+  border-bottom: 2px solid #041553;
+}
+
+.pageNavigator li a {
+  text-decoration: none;
+  color: inherit;
+  height: 100%;
+  width: 100%;
+  display: block;
+}
+
 .hotelDetails_secion {
   margin-top: 1rem;
   margin-bottom: 2rem;
@@ -1415,6 +1580,45 @@ ul {
 .hotelReview_box .number {
   font-size: 4rem;
   color: #3554d1;
+}
+
+#hotelPrices {
+  overflow: auto;
+}
+
+.roomsTable {
+  min-width: 1000px;
+}
+
+.roomsTable thead tr th {
+  background-color: #3554d1 !important;
+  color: #fff;
+  border: 2px solid rgb(214, 214, 214);
+}
+
+.roomsTable thead tr th:nth-child(1) {
+  width: 15%;
+}
+
+.roomsTable thead tr th:nth-child(2) {
+  width: 7%;
+}
+
+.roomsTable thead tr th:nth-child(3) {
+  width: 12%;
+}
+
+.roomsTable thead tr th:nth-child(4) {
+  width: 50%;
+}
+
+.roomsTable thead tr th:nth-child(5) {
+  width: 10%;
+}
+
+.roomsTable tbody tr td {
+  border: 2px solid rgb(214, 214, 214);
+  text-align: center;
 }
 
 .destinationDetails_header {

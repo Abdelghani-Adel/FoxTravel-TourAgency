@@ -39,10 +39,10 @@ const nav = [
     title: "Contact",
     path: "/contact",
   },
-  {
-    title: "About",
-    path: "/about",
-  },
+  // {
+  //   title: "About",
+  //   path: "/about",
+  // },
 ];
 
 type props = {
