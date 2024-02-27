@@ -4,7 +4,7 @@ import Facilities from "@/src/routes/hotel/Facilities";
 import Header from "@/src/routes/hotel/Header";
 import HelpfulFacts from "@/src/routes/hotel/HelpfulFacts";
 import Highlights from "@/src/routes/hotel/Highlights";
-import HotelRoom from "@/src/routes/hotel/HotelRoom";
+import HotelRoomOld from "@/src/routes/hotel/HotelRoomOld";
 import Overview from "@/src/routes/hotel/Overview";
 import ReviewStatistics from "@/src/routes/hotel/ReviewStatistics";
 import { loaderActions } from "@/src/redux/slices/loaderSlice";
@@ -17,7 +17,7 @@ import parse from "html-react-parser";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { getHotelDetails } from "@/src/services/hotelServices";
 import PageNavigator from "@/src/routes/hotel/PageNavigator";
-import Rooms from "@/src/routes/hotel/Rooms";
+import HotelRoomsTable from "@/src/routes/hotel/HotelRoomsTable";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const dispatch = useAppDispatch();
@@ -57,25 +57,17 @@ const Page = ({ params }: { params: { id: string } }) => {
 
       <div className="row">
         <div className="col-12">
-          <Rooms />
+          <HotelRoomsTable />
         </div>
       </div>
 
-      {/* <div className="row" id="hotelPrices">
-        {hotelDetails?.availability?.availableRooms?.map((room, i) => (
-          <div key={i} className="col-12 hotelDetails_secion">
-            <HotelRoom room={room} />
-          </div>
-        ))}
-      </div> */}
-
-      <div className="row hotelDetails_secion">
+      <div className="row hotelDetails_secion" id="hotelReviews">
         <div className="col-12">
           <ReviewStatistics />
         </div>
       </div>
 
-      <div className="row hotelDetails_secion">
+      <div className="row hotelDetails_secion" id="hotelGeneralInfo">
         <div className="col-12">
           <HelpfulFacts />
         </div>

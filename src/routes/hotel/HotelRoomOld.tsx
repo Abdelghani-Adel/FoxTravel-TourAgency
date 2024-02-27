@@ -7,7 +7,7 @@ type props = {
   room: any;
 };
 
-const HotelRoom = (props: props) => {
+const HotelRoomOld = (props: props) => {
   const { room } = props;
 
   return (
@@ -68,4 +68,4 @@ const HotelRoom = (props: props) => {
   );
 };
 
-export default HotelRoom;
+export default HotelRoomOld;

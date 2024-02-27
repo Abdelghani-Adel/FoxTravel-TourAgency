@@ -9,14 +9,14 @@ const PageNavigator = () => {
       <li>
         <a href="#hotelPrices">Prices</a>
       </li>
-      <li>
+      {/* <li>
         <a href="#hotelPrices">Facilities</a>
+      </li> */}
+      <li>
+        <a href="#hotelReviews">Reviews</a>
       </li>
       <li>
-        <a href="#hotelPrices">Reviews</a>
-      </li>
-      <li>
-        <a href="#hotelPrices">Info</a>
+        <a href="#hotelGeneralInfo">Info</a>
       </li>
     </ul>
   );

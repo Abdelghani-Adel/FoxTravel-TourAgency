@@ -2,6 +2,17 @@
 @use "../abstract/variables" as v;
 
 // ============================================== //
+// Colors
+// ============================================== //
+.bgMain {
+  background-color: v.$mainColor;
+}
+
+.bgSecondary {
+  background-color: v.$secondColor;
+}
+
+// ============================================== //
 // FoxBtn
 // ============================================== //
 .foxBtn {

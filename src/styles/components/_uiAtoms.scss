@@ -1,0 +1,32 @@
+@use "../abstract/variables" as v;
+
+// =============================================================== //
+// Colors
+// =============================================================== //
+$colors: (
+  ("primary", v.$mainColor),
+  ("secondary", v.$secondColor),
+  ("third", v.$thirdColor),
+  ("gray", #858585),
+  ("muted", #bdbdbd),
+  ("white", #fff),
+  ("black", #000),
+  ("trans", transparent)
+);
+
+@each $color in $colors {
+  $name: nth($color, 1);
+  $value: nth($color, 2);
+
+  .bg_#{$name} {
+    background-color: $value;
+  }
+
+  .text_#{$name} {
+    color: $value;
+  }
+
+  .border_#{$name} {
+    border-color: $value;
+  }
+}

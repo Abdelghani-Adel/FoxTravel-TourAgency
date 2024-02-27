@@ -1081,6 +1081,14 @@ q:after {
   width: 30px;
 }
 
+.bgMain {
+  background-color: #041553;
+}
+
+.bgSecondary {
+  background-color: #3554d1;
+}
+
 .foxBtn {
   height: 50px;
   line-height: 50px;
@@ -1349,6 +1357,102 @@ q:after {
 .foxFilter_title {
   font-size: 1.2rem;
   color: #f36c24;
+}
+
+.bg_primary {
+  background-color: #041553;
+}
+
+.text_primary {
+  color: #041553;
+}
+
+.border_primary {
+  border-color: #041553;
+}
+
+.bg_secondary {
+  background-color: #3554d1;
+}
+
+.text_secondary {
+  color: #3554d1;
+}
+
+.border_secondary {
+  border-color: #3554d1;
+}
+
+.bg_third {
+  background-color: #f36c24;
+}
+
+.text_third {
+  color: #f36c24;
+}
+
+.border_third {
+  border-color: #f36c24;
+}
+
+.bg_gray {
+  background-color: #858585;
+}
+
+.text_gray {
+  color: #858585;
+}
+
+.border_gray {
+  border-color: #858585;
+}
+
+.bg_muted {
+  background-color: #bdbdbd;
+}
+
+.text_muted {
+  color: #bdbdbd;
+}
+
+.border_muted {
+  border-color: #bdbdbd;
+}
+
+.bg_white {
+  background-color: #fff;
+}
+
+.text_white {
+  color: #fff;
+}
+
+.border_white {
+  border-color: #fff;
+}
+
+.bg_black {
+  background-color: #000;
+}
+
+.text_black {
+  color: #000;
+}
+
+.border_black {
+  border-color: #000;
+}
+
+.bg_trans {
+  background-color: transparent;
+}
+
+.text_trans {
+  color: transparent;
+}
+
+.border_trans {
+  border-color: transparent;
 }
 
 .home_heroSection {

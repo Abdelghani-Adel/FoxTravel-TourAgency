@@ -32,7 +32,7 @@ const ImageGallerySwiperCards = () => {
         {images.map((image, i) => (
           <SwiperSlide key={i} className={styles.swiperSlide}>
             <div className={styles.imgWrapper} onClick={() => setClickedImage(image)}>
-              <ModalTrigger>
+              <ModalTrigger modalId="PhotoGallery">
                 <Image fill src={image} alt="" />
               </ModalTrigger>
             </div>
@@ -40,10 +40,10 @@ const ImageGallerySwiperCards = () => {
         ))}
       </Swiper>
 
-      <Modal>
+      <Modal id="PhotoGallery">
         <div className={styles.modalWrapper}>
           <div className={styles.modalImageWrapper}>
-            <Image fill src={clickedImage} alt="" />
+            <Image fill src={clickedImage ? clickedImage : ""} alt="" />
           </div>
         </div>
       </Modal>

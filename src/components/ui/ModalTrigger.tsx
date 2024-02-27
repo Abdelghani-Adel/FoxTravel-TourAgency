@@ -1,8 +1,13 @@
 import React from "react";
 
-const ModalTrigger = ({ children }: Readonly<{ children: React.ReactNode }>) => {
+type props = {
+  children: React.ReactNode;
+  modalId: string;
+};
+
+const ModalTrigger = ({ children, modalId }: props) => {
   return (
-    <div data-bs-toggle="modal" data-bs-target="#bootstrapModal">
+    <div data-bs-toggle="modal" data-bs-target={`#${modalId}`}>
       {children}
     </div>
   );
