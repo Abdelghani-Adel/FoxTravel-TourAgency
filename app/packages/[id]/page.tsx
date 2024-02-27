@@ -36,23 +36,23 @@ const Page = ({ params }: { params: { id: string } }) => {
 
           <div className="d-flex justify-content-between align-item-center mb-4">
             <div>
-              <span className="txtGray fw-normal">
+              <span className="text_gray fw-normal">
                 <RtsRating readonly rating={4.5} /> (215)
               </span>
-              <p className="mb-0 txtGray fw-normal">
+              <p className="mb-0 text_gray fw-normal">
                 {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate}
               </p>
             </div>
             <p className="foxPrice">
-              <span className="currency">{packageDetails.currency}</span>
-              <span className="amount">{packageDetails.price}</span>
+              <span>{packageDetails.currency}</span>
+              <span>{packageDetails.price}</span>
             </p>
           </div>
 
-          <p className="txtGray">{packageDetails.description}</p>
+          <p className="text_gray mb-2">{packageDetails.description}</p>
 
-          <h5 className="txtSecondary fw-bold">Transportation</h5>
-          <div className="d-flex flex-md-column gap-1">
+          <h5 className="text_secondary fw-bold mb-2">Transportation</h5>
+          <div className="d-flex flex-md-column gap-2">
             {packageDetails?.transportation?.map((line: any, i: any) => (
               <TransportaionLine key={i} line={line} />
             ))}

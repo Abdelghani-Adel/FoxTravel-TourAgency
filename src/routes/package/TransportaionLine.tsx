@@ -13,7 +13,7 @@ type props = {
 
 const TransportaionLine = (props: props) => {
   return (
-    <div className="transportationLine d-flex flex-column flex-md-row">
+    <div className="d-flex flex-column flex-md-row gap-2 bg_secondary p-2 rounded width_maxContent">
       {props.line.map((stop: any, i: any) => (
         <div key={stop.id} className="transportationStop fw-normal">
           <span>{stop.from}</span>

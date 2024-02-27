@@ -1081,6 +1081,54 @@ q:after {
   width: 30px;
 }
 
+.flightSearch {
+  color: #000;
+}
+
+.flightSearch_submitBtn {
+  background-color: #024daf;
+  border: none;
+  outline: none;
+  color: #fff;
+  font-weight: 500;
+  border-radius: 15px;
+  padding: 0 20px;
+}
+
+.flightSearch_controllerList {
+  display: flex;
+  gap: 5px;
+  flex-grow: 1;
+}
+
+.flightSearch_controller {
+  padding: 10px;
+  background-color: #fff;
+  width: 100%;
+}
+
+.flightSearch_controller:last-of-type {
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.flightSearch_controller:nth-child(1) {
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.flightSearch_input {
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+.flightSearch .react-datepicker__input-container input {
+  border: none;
+  outline: none;
+  color: gray;
+}
+
 .bgMain {
   background-color: #041553;
 }
@@ -1455,6 +1503,10 @@ q:after {
   border-color: transparent;
 }
 
+.width_maxContent {
+  width: max-content;
+}
+
 .home_heroSection {
   position: relative;
 }
@@ -1535,11 +1587,6 @@ q:after {
 @media (min-width: 1200px) {
   .featuredHeroBox {
     width: 70%;
-  }
-}
-@media (min-width: 1400px) {
-  .featuredHeroBox {
-    width: 60%;
   }
 }
 .popularDestinations_header {

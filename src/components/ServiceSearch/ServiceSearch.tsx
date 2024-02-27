@@ -14,6 +14,7 @@ import DateStartInput from "./DateStartInput";
 import HotelReservation from "./HotelReservation/HotelReservation";
 import CityInput from "./CityInput/CityInput";
 import DateDoublePicker from "./DateDoublePicker/DateDoublePicker";
+import FlightSearch from "./FlightSearch/FlightSearch";
 
 const ServiceSearch = () => {
   const router = useRouter();
@@ -23,10 +24,6 @@ const ServiceSearch = () => {
   const submitHandler = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     dispatch(loaderActions.showLoadingOverlay());
-
-    // make the api call
-
-    // navigate
     router.push("/search-result", {});
   };
 
@@ -35,13 +32,19 @@ const ServiceSearch = () => {
       <CategoryList />
 
       <form className="serviceSearch_form" onSubmit={submitHandler}>
-        <CityInput />
-        <DateDoublePicker />
-        <HotelReservation />
+        {searchState.category === "Flights" && <FlightSearch />}
 
-        <button className="serviceSearch_submitBtn">
-          <FaSearch /> Search
-        </button>
+        {searchState.category !== "Flights" && (
+          <>
+            <CityInput />
+            <DateDoublePicker />
+            <HotelReservation />
+
+            <button className="serviceSearch_submitBtn">
+              <FaSearch /> Search
+            </button>
+          </>
+        )}
       </form>
     </div>
   );

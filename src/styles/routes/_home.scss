@@ -90,11 +90,6 @@
     width: 70%;
   }
 }
-@include mixins.media-query(xxlarge) {
-  .featuredHeroBox {
-    width: 60%;
-  }
-}
 
 // ------------- PopularDestinations ------------- //
 .popularDestinations_header {
