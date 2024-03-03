@@ -34,11 +34,12 @@
 
 .serviceSearch_form {
   padding: 5px;
-  background-color: v.$thirdColor;
+  // background-color: v.$thirdColor;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 
   // flex-wrap: wrap;
 }
@@ -135,7 +136,7 @@
   .serviceSearch_form {
     flex-direction: row;
     align-items: center;
-    width: max-content;
+    // width: max-content;
   }
   .serviceSearch_inputController {
     padding-inline: 5px;
@@ -297,6 +298,7 @@
 //////////////////////////////////////////
 .flightSearch {
   color: #000;
+  width: 100%;
 }
 
 .flightSearch_submitBtn {

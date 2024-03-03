@@ -650,27 +650,30 @@ q:after {
   border-bottom-color: #041553;
 }
 
-.section.mainFooter {
-  background-color: rgb(241, 241, 241);
+.mainFooter {
+  background-color: #041553;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 0;
+  color: #fff;
 }
 
 .footer_title {
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 1rem;
-  color: #3554d1;
+  letter-spacing: 1px;
+  color: #f36c24;
 }
 
 .mainFooter_phone,
 .mainFooter_email {
-  color: #3554d1;
+  color: #f36c24;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .mainFooter_link {
-  text-decoration: none;
-  color: #041553;
+  color: #fff;
   transition: 0.3s ease-in-out;
   display: block;
   margin-bottom: 0.4rem;
@@ -678,7 +681,30 @@ q:after {
 }
 
 .mainFooter_link:hover {
-  color: #3554d1;
+  color: #afafaf;
+}
+
+.socialIcon_list {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.socialIcon {
+  font-size: 2.5rem;
+  line-height: 40px;
+}
+
+.socialIcon.facebook {
+  color: #1877f2;
+}
+
+.socialIcon.whatsapp {
+  color: #25d366;
+}
+
+.socialIcon.youtube {
+  color: #ff0000;
 }
 
 .mainHeader {
@@ -851,11 +877,11 @@ q:after {
 
 .serviceSearch_form {
   padding: 5px;
-  background-color: #f36c24;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .serviceSearch_inputController {
@@ -936,7 +962,6 @@ q:after {
   .serviceSearch_form {
     flex-direction: row;
     align-items: center;
-    width: max-content;
   }
   .serviceSearch_inputController {
     padding-inline: 5px;
@@ -1083,6 +1108,7 @@ q:after {
 
 .flightSearch {
   color: #000;
+  width: 100%;
 }
 
 .flightSearch_submitBtn {
@@ -1775,4 +1801,38 @@ q:after {
 .destinationDetails_header {
   margin-bottom: 30px;
   border-radius: 10px;
+}
+
+.mainTeamImage {
+  position: relative;
+  height: 50vh;
+  width: 90%;
+  margin: auto;
+  border-radius: 20px;
+  overflow: hidden;
+  outline: 2px solid #3554d1;
+  outline-offset: 5px;
+}
+
+.teamMember {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.teamMember_picture {
+  font-size: 7rem;
+  color: #3554d1;
+}
+
+.teamMember_name {
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.teamMember_position {
+  font-weight: 300;
 }

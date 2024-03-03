@@ -9,6 +9,9 @@ import { getPackageDetails } from "@/src/services/packageServices";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { IoMdCheckmarkCircle } from "react-icons/io";
+import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
+import { SiYourtraveldottv } from "react-icons/si";
+import { TbBeachOff } from "react-icons/tb";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const dispatch = useAppDispatch();
@@ -34,19 +37,45 @@ const Page = ({ params }: { params: { id: string } }) => {
             <button className="foxBtn secondBtn">Book this package</button>
           </div>
 
-          <div className="d-flex justify-content-between align-item-center mb-4">
+          <div className="d-flex justify-content-between align-item-center">
             <div>
               <span className="text_gray fw-normal">
                 <RtsRating readonly rating={4.5} /> (215)
               </span>
               <p className="mb-0 text_gray fw-normal">
-                {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate}
+                {/* {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate} */}
               </p>
             </div>
             <p className="foxPrice">
               <span>{packageDetails.currency}</span>
               <span>{packageDetails.price}</span>
             </p>
+          </div>
+
+          <div className="d-flex gap-5 mb-4">
+            <div className="d-flex align-items-center gap-3">
+              <IoTimeOutline className="display-6 text_third" />
+              <div>
+                <h5 className="text_third">Duration</h5>
+                <p className="text_gray fw-normal">{packageDetails.duration}</p>
+              </div>
+            </div>
+
+            <div className="d-flex align-items-center gap-3">
+              <SiYourtraveldottv className="display-6 text_third" />
+              <div>
+                <h5 className="text_third">Package Type</h5>
+                <p className="text_gray fw-normal">Classical</p>
+              </div>
+            </div>
+
+            <div className="d-flex align-items-center gap-3">
+              <IoLocationOutline className="display-6 text_third" />
+              <div>
+                <h5 className="text_third">Location</h5>
+                <p className="text_gray fw-normal">Egypt</p>
+              </div>
+            </div>
           </div>
 
           <p className="text_gray mb-2">{packageDetails.description}</p>

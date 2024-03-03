@@ -27,7 +27,7 @@ const DateDoublePicker = () => {
   }, [startDate, endDate]);
 
   return (
-    <div className={styles.datePicker}>
+    <div className={`${styles.datePicker} flex-grow-1`}>
       <Image src={calender} height={20} width={20} alt="calender" />
       <DatePicker
         selected={startDate}

@@ -39,7 +39,7 @@ const CityInput = () => {
   const onCityClick = (newCity: string) => setSelectedCity(newCity);
 
   return (
-    <div className={`dropdown ${styles.wrapper}`}>
+    <div className={`dropdown flex-grow-1 ${styles.wrapper}`}>
       <button
         className={styles.toggler}
         type="button"

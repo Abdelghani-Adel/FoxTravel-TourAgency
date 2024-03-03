@@ -18,7 +18,7 @@ const HotelReservation = () => {
   const onChildrenChange = (newChildren: number[]) => setChildren(newChildren);
 
   return (
-    <div className={`dropdown ${styles.wrapper}`}>
+    <div className={`dropdown flex-grow-1 ${styles.wrapper}`}>
       <TogglerButton adults={adults} childs={children.length} rooms={rooms} />
 
       <div className={`dropdown-menu ${styles.dropdownWrapper}`}>

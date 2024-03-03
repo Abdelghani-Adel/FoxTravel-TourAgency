@@ -4,10 +4,10 @@ import React from "react";
 
 const categories: ISearchCategory[] = [
   "Hotel",
+  "Flights",
   "Car Hire",
   "Car Rental",
   "Activity",
-  "Flights",
   "Packages",
 ];
 
