@@ -4,73 +4,130 @@ import Link from "next/link";
 import React from "react";
 import { FaHeadphones } from "react-icons/fa6";
 import SocialMediaLinks from "./SocialMediaLinks";
+import { HiOutlineMail } from "react-icons/hi";
 
 const MainFooter = () => {
   return (
     <div className="mainFooter">
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-12 col-md-3 fw-light">
-            <h4 className="footer_title">Contact Us</h4>
-            <p className="mb-1">Free customer care</p>
-            <p className="mainFooter_phone">
-              <FaHeadphones /> +20 102 888 6661
-            </p>
-
-            <p className="mb-1 mt-3">Need live support ?</p>
-            <p className="mainFooter_email">samarelkady@foxtraveleg.com</p>
-
-            <p className="mt-2">Follow us</p>
-            <SocialMediaLinks />
+          <div className="col-12 col-md-2">
+            <div className="footer_iconWrapper">
+              <Image src="/img/icon.png" fill alt="" />
+            </div>
           </div>
 
-          <div className="col-12 col-md-2 fw-light">
-            <h4 className="footer_title">Company</h4>
-            <Link href="/about" className="mainFooter_link">
-              About Us
-            </Link>
-            <Link href="/about" className="mainFooter_link">
-              Our Team
-            </Link>
-            <Link href="/contact" className="mainFooter_link">
-              Contact Us
-            </Link>
+          <div className="col-12 col-md-2">
+            <div className="mb-3">
+              <h5 className="text_third">CUSTOMER SUPPORT</h5>
+              <p className="fw-light">+201028880661</p>
+              <p className="fw-light">nfo@toxtraveleg.com</p>
+            </div>
+
+            <div>
+              <h5 className="text_third">JOIN OUR NEWS LETTER</h5>
+              <p className="fw-light">
+                Follow Fox Travel Egypt on social media to keep up to date with latest updates
+              </p>
+              <SocialMediaLinks />
+            </div>
           </div>
 
-          <div className="col-12 col-md-2 fw-light">
-            <h4 className="footer_title">Our Services</h4>
-            <Link href="#" className="mainFooter_link">
-              Car Hire
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Activity Finder
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Tour List
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Flight Finder
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Cruise Ticket
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Holiday Rental
-            </Link>
-            <Link href="#" className="mainFooter_link">
-              Travel Agents
-            </Link>
+          <div className="col-12 col-md-2">
+            <h5 className="text_third">TRAVEL SERVICES</h5>
+            <ul className="fotter_ul">
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Hotel Deals
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Nile Cruises
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Hajj & Umrah
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Transporation
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Flight Booking
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  International Holidays
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Egypt Packages
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Excursions
+                </Link>
+              </li>
+            </ul>
           </div>
 
-          <div className="col-12 col-md-5 fw-light"></div>
+          <div className="col-12 col-md-2">
+            <h5 className="text_third">FOX TRAVEL EGYPT</h5>
+            <ul className="fotter_ul">
+              <li>
+                <Link href="/about" className="mainFooter_link">
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link href="/team" className="mainFooter_link">
+                  Our Team
+                </Link>
+              </li>
+              <li>
+                <Link href="/contact" className="mainFooter_link">
+                  Contact Us
+                </Link>
+              </li>
+              <li>
+                <Link href="#" className="mainFooter_link">
+                  Booking Terms & Conditions
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div className="col-12 col-md-4">
+            <div className="d-flex align-items-center gap-2 mb-3">
+              <HiOutlineMail className="display-2" />
+              <div>
+                <h5 className="text_third">YOUR TRAVEL JOURNEY STARTS HERE!</h5>
+                <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
+              </div>
+            </div>
+
+            <div className="d-flex gap-3 mb-3">
+              <input type="email" className="form-control" placeholder="ENTER YOUR EMAIL"></input>
+              <button className="foxBtn thirdBtn smBtn">SUBSCRIBE</button>
+            </div>
+
+            <div className="d-flex align-items-center gap-2">
+              <Image src="/img/certificates/iata.png" width={80} height={50} alt="IATA" />
+              <Image src="/img/certificates/etaa.png" width={90} height={60} alt="IATA" />
+              <Image src="/img/certificates/minister.png" width={80} height={70} alt="IATA" />
+              <Image src="/img/certificates/egypt.png" width={80} height={70} alt="IATA" />
+              <Image src="/img/certificates/amadeus.png" width={100} height={60} alt="IATA" />
+            </div>
+          </div>
         </div>
-
-        {/* <div className="d-flex flex-wrap align-items-center justify-content-between gap-3">
-          <Image width={80} height={50} src="/img/Certificates/turkish.png" alt="" />
-          <Image width={80} height={50} src="/img/Certificates/iata.png" alt="" />
-          <Image width={220} height={30} src="/img/Certificates/aircairo.png" alt="" />
-          <Image width={220} height={30} src="/img/Certificates/amadeus-logo.png" alt="" />
-        </div> */}
       </div>
     </div>
   );

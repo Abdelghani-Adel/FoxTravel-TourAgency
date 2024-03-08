@@ -1,23 +1,25 @@
 import React from "react";
 import { FaFacebook, FaWhatsapp, FaYoutube } from "react-icons/fa";
-
-const iconSize = "2.5rem";
+import { AiFillInstagram } from "react-icons/ai";
+import { FaTwitter } from "react-icons/fa6";
 
 const SocialMediaLinks = () => {
   return (
     <div className="socialIcon_list">
-      <a
-        href="https://www.facebook.com/foxtravelegypt"
-        target="_blank"
-        className="socialIcon facebook"
-      >
+      <a href="https://www.facebook.com/foxtravelegypt" target="_blank" className="socialIcon">
         <FaFacebook />
       </a>
-      <a href="https://wa.me/+201028886661" target="_blank" className="socialIcon whatsapp">
-        <FaWhatsapp />
+      <a href="https://www.facebook.com/foxtravelegypt" target="_blank" className="socialIcon">
+        <AiFillInstagram />
       </a>
-      <a href="#" target="_blank" className="socialIcon youtube">
+      <a href="https://www.facebook.com/foxtravelegypt" target="_blank" className="socialIcon">
+        <FaTwitter />
+      </a>
+      <a href="#" target="_blank" className="socialIcon">
         <FaYoutube />
+      </a>
+      <a href="https://wa.me/+201028886661" target="_blank" className="socialIcon">
+        <FaWhatsapp />
       </a>
     </div>
   );

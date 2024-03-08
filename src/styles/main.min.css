@@ -132,7 +132,7 @@ q:after {
 }
 
 .txtMain {
-  color: #041553;
+  color: #3c3837;
 }
 
 .txtSecondary {
@@ -265,7 +265,7 @@ q:after {
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
-  outline: 2px solid #041553;
+  outline: 2px solid #3c3837;
   margin-top: 2px;
   z-index: 1;
 }
@@ -277,12 +277,12 @@ q:after {
   bottom: 0;
   border-radius: 10px;
   padding: 15vh 10px 10px;
-  border: 2px solid #041553;
+  border: 2px solid #3c3837;
 }
 
 .packageCard_info .icon {
   font-size: 1.7rem;
-  color: #041553;
+  color: #3c3837;
 }
 
 .packageCard_info .foxCard_rating .ratingBox {
@@ -629,11 +629,11 @@ q:after {
 }
 
 .react-datepicker {
-  border-color: #041553;
+  border-color: #3c3837;
 }
 
 .react-datepicker__header {
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .react-datepicker__current-month,
@@ -647,37 +647,38 @@ q:after {
 
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
-  border-bottom-color: #041553;
+  border-bottom-color: #3c3837;
 }
 
 .mainFooter {
-  background-color: #041553;
+  background-color: #3c3837;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 0;
   color: #fff;
+  border: 10px solid #fff;
 }
 
-.footer_title {
-  font-weight: 700;
-  margin-bottom: 1rem;
-  letter-spacing: 1px;
-  color: #f36c24;
+.footer_iconWrapper {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  aspect-ratio: 1;
 }
 
-.mainFooter_phone,
-.mainFooter_email {
-  color: #f36c24;
-  font-weight: 600;
-  font-size: 1.1rem;
+.fotter_ul {
+  list-style: square;
+  padding-inline-start: 40px;
 }
 
 .mainFooter_link {
+  text-decoration: none;
   color: #fff;
   transition: 0.3s ease-in-out;
   display: block;
   margin-bottom: 0.4rem;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-weight: 300;
 }
 
 .mainFooter_link:hover {
@@ -691,27 +692,16 @@ q:after {
 }
 
 .socialIcon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   line-height: 40px;
-}
-
-.socialIcon.facebook {
-  color: #1877f2;
-}
-
-.socialIcon.whatsapp {
-  color: #25d366;
-}
-
-.socialIcon.youtube {
-  color: #ff0000;
+  color: #fff;
 }
 
 .mainHeader {
   padding: 20px;
   transition: 0.3s ease-in-out;
   color: #fff;
-  background-color: #041553;
+  background-color: #3c3837;
   z-index: 50;
   position: relative;
 }
@@ -728,7 +718,7 @@ q:after {
 }
 
 .mainHeader.sticky {
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .mainHeader_inner {
@@ -755,7 +745,7 @@ q:after {
 .navItem.active,
 .navItem:hover {
   color: #fff;
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .navLink {
@@ -782,7 +772,7 @@ q:after {
 
 .headerBtn:hover {
   background-color: #fff;
-  color: #041553;
+  color: #3c3837;
 }
 
 .navToggler {
@@ -912,7 +902,7 @@ q:after {
   background-color: #fff;
   position: relative;
   padding: 10px;
-  border: 1px solid #041553;
+  border: 1px solid #3c3837;
   min-height: 100%;
   margin-top: 5px !important;
 }
@@ -992,7 +982,7 @@ q:after {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #041553;
+  color: #3c3837;
   padding: 5px 10px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -1004,7 +994,7 @@ q:after {
 
 .serviceSearch_option:hover,
 .serviceSearch_option.active {
-  background-color: #041553;
+  background-color: #3c3837;
   color: #fff;
 }
 
@@ -1023,7 +1013,7 @@ q:after {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #041553;
+  color: #3c3837;
   padding: 5px 10px;
   transition: 0.3s ease-in-out;
   cursor: pointer;
@@ -1046,7 +1036,7 @@ q:after {
 
 .cityInput .cityLocation:hover,
 .cityInput .cityLocation.active {
-  background-color: #041553;
+  background-color: #3c3837;
   color: #fff;
 }
 
@@ -1078,7 +1068,7 @@ q:after {
 }
 
 .guestInput .numberInput button {
-  border: 1px solid #041553;
+  border: 1px solid #3c3837;
   background-color: transparent;
   border-radius: 5px;
   transition: 0.3s ease-in-out;
@@ -1090,7 +1080,7 @@ q:after {
 }
 
 .guestInput .numberInput button:hover {
-  background-color: #041553;
+  background-color: #3c3837;
   color: #fff;
 }
 
@@ -1156,7 +1146,7 @@ q:after {
 }
 
 .bgMain {
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .bgSecondary {
@@ -1184,15 +1174,15 @@ q:after {
 }
 
 .foxBtn.mainBtn {
-  background-color: #041553;
-  border-color: #041553;
+  background-color: #3c3837;
+  border-color: #3c3837;
   color: #fff;
 }
 
 .foxBtn.mainBtn:hover {
   background-color: #fff;
-  border-color: #041553;
-  color: #041553;
+  border-color: #3c3837;
+  color: #3c3837;
 }
 
 .foxBtn.secondBtn {
@@ -1230,7 +1220,7 @@ q:after {
 .showMoreBtn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #041553;
+  border: 1px solid #3c3837;
   outline: none;
   border-radius: 5px;
   text-transform: capitalize;
@@ -1251,7 +1241,7 @@ q:after {
 }
 
 .btnAction:hover {
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .section {
@@ -1434,15 +1424,15 @@ q:after {
 }
 
 .bg_primary {
-  background-color: #041553;
+  background-color: #3c3837;
 }
 
 .text_primary {
-  color: #041553;
+  color: #3c3837;
 }
 
 .border_primary {
-  border-color: #041553;
+  border-color: #3c3837;
 }
 
 .bg_secondary {
@@ -1630,7 +1620,7 @@ q:after {
 }
 
 .emailSubscriber {
-  background-color: #041553;
+  background-color: #3c3837;
   padding: 70px 0;
   color: #fff;
 }
@@ -1668,8 +1658,8 @@ q:after {
 
 .pageNavigator li.active {
   font-weight: 400;
-  color: #041553;
-  border-bottom: 2px solid #041553;
+  color: #3c3837;
+  border-bottom: 2px solid #3c3837;
 }
 
 .pageNavigator li a {

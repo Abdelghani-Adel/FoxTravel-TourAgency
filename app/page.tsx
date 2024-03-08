@@ -23,8 +23,6 @@ export default function Home() {
         <Hotels />
         <CompanyFeatures />
       </div>
-
-      <EmailSubscriber />
     </main>
   );
 }
