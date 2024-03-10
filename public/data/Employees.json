@@ -1,0 +1,33 @@
+{
+  "owners": [
+    {
+      "id": 1,
+      "image": "/img/employee.png",
+      "name": "Maged Elkady",
+      "position": "Owner",
+      "email": "test@example.com",
+      "phone": "123-456-789",
+      "quote": "Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote"
+    },
+    {
+      "id": 2,
+      "image": "/img/employee.png",
+      "name": "Sayed Eldaly",
+      "position": "Owner",
+      "email": "test@example.com",
+      "phone": "123-456-789",
+      "quote": "Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote"
+    }
+  ],
+  "management": [
+    {
+      "id": 3,
+      "image": "/img/employee.png",
+      "name": "Samar Elkady",
+      "position": "Manager",
+      "email": "test@example.com",
+      "phone": "123-456-789",
+      "quote": "Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote Quote quote"
+    }
+  ]
+}

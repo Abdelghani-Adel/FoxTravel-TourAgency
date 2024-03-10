@@ -18,6 +18,8 @@ import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { getHotelDetails } from "@/src/services/hotelServices";
 import PageNavigator from "@/src/routes/hotel/PageNavigator";
 import HotelRoomsTable from "@/src/routes/hotel/HotelRoomsTable";
+import ServiceSearch from "@/src/components/ServiceSearch/ServiceSearch";
+import HotelSearchForm from "@/src/components/ServiceSearch/HotelSearchForm";
 
 const Page = ({ params }: { params: { id: string } }) => {
   const dispatch = useAppDispatch();
@@ -52,6 +54,12 @@ const Page = ({ params }: { params: { id: string } }) => {
           <div className="hotelImageWrapper">
             <ImageGallerySwiperCards />
           </div>
+        </div>
+      </div>
+
+      <div className="row mb-2">
+        <div className="col-12 col-md-8">
+          <HotelSearchForm />
         </div>
       </div>
 

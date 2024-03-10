@@ -8,6 +8,8 @@ import TransportaionLine from "@/src/routes/package/TransportaionLine";
 import { getPackageDetails } from "@/src/services/packageServices";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { FaXmark } from "react-icons/fa6";
+import { GiCheckMark } from "react-icons/gi";
 import { IoMdCheckmarkCircle } from "react-icons/io";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { SiYourtraveldottv } from "react-icons/si";
@@ -94,6 +96,72 @@ const Page = ({ params }: { params: { id: string } }) => {
         <div className="col-12 col-lg-4 order-1">
           <div className="hotelImageWrapper">
             <ImageGallerySwiperCards />
+          </div>
+        </div>
+      </div>
+
+      <div className="row mt-4 mb-4">
+        <div className="col-12 col-md-6">
+          <h5 className="text_secondary fw-bold mb-2">Included</h5>
+          <div className="d-flex flex-column gap-2">
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">Nights’ accommodation in Cairo with breakfast.</span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">
+                Nights accommodation on board Nile Cruise on full board basis.
+              </span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">
+                Nights’ accommodation in Sleeping train on half board.
+              </span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">Full days in Cairo with lunch.</span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">Meet and assist.</span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">All Meals Mentioned on the itinerary.</span>
+            </p>
+            <p>
+              <GiCheckMark className="text-success me-2" />{" "}
+              <span className="fw-light">All entrance fees for the above-mentioned tours.</span>
+            </p>
+          </div>
+        </div>
+
+        <div className="col-12 col-md-6">
+          <h5 className="text_secondary fw-bold mb-2">Excluded</h5>
+          <div className="d-flex flex-column gap-2">
+            <p>
+              <FaXmark className="text-danger me-2" />{" "}
+              <span className="fw-light">Any items not mentioned in the above itinerary.</span>
+            </p>
+            <p>
+              <FaXmark className="text-danger me-2" />{" "}
+              <span className="fw-light">
+                Any items of personal nature such as drinks, laundry etc.
+              </span>
+            </p>
+            <p>
+              <FaXmark className="text-danger me-2" />{" "}
+              <span className="fw-light">
+                Tips of any kind to those who serve you during your trip.
+              </span>
+            </p>
+            <p>
+              <FaXmark className="text-danger me-2" />{" "}
+              <span className="fw-light">Egypt’s entry visa.</span>
+            </p>
           </div>
         </div>
       </div>

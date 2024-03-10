@@ -465,3 +465,27 @@ $duration: 3s;
   border: 1px solid v.$gray;
   border-radius: 10px;
 }
+
+// ============================================== //
+// EmployeeCard
+// ============================================== //
+
+.employeeCard {
+  border: 3px solid v.$gray;
+  border-radius: 10px;
+  padding: 10px;
+
+  .image {
+    text-align: center;
+    outline: 5px solid v.$thirdColor;
+    outline-offset: 10px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    position: relative;
+    margin-inline: auto;
+    margin-top: 10px;
+    width: 140px;
+    height: 140px;
+    overflow: hidden;
+  }
+}

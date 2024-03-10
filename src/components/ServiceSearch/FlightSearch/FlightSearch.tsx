@@ -4,6 +4,7 @@ import TripType from "./TripType";
 import AirportInput from "./AirportInput";
 import DateInput from "./DateInput";
 import MultiDestinations from "./MultiDestinations";
+import PassengerInput from "../PassengerInput/PassengerInput";
 
 const FlightSearch = () => {
   const [tripType, setTripType] = useState("round");
@@ -27,6 +28,11 @@ const FlightSearch = () => {
             <AirportInput title="To" />
             <DateInput shown title="Departure" />
             <DateInput shown={tripType === "round"} title="Return" />
+
+            <div className="flightSearch_controller">
+              <h6 className="flightSearch_controllerTitle">Passengers</h6>
+              <PassengerInput />
+            </div>
           </div>
 
           <button type="submit" className="flightSearch_submitBtn">

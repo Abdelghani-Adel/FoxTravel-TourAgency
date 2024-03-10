@@ -3,6 +3,8 @@ import React from "react";
 import { v4 } from "uuid";
 import { IoIosCheckmark } from "react-icons/io";
 import HotelRoomInfo from "./HotelRoomInfo";
+import { GiPerson } from "react-icons/gi";
+import { BsPersonStanding } from "react-icons/bs";
 
 const HotelRoomsTable = () => {
   const rooms = useAppSelector((state) => state.hotelDetails.rooms);
@@ -42,7 +44,13 @@ const TableRow = ({ room }: { room: any }) => {
         <p>{room.roomType}</p>
         <HotelRoomInfo room={room} />
       </td>
-      <td>{room.guests}</td>
+      <td>
+        <div className="d-flex align-items-center justify-content-between">
+          <BsPersonStanding className="text_secondary fs-4" />{" "}
+          <BsPersonStanding className="text_secondary fs-4" /> |
+          <GiPerson className="text_third" />
+        </div>
+      </td>
       <td className="fw-bold text-success fs-5">{room.pricePerNight}$</td>
 
       <td>

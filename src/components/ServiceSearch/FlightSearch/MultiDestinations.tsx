@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import AirportInput from "./AirportInput";
 import DateInput from "./DateInput";
 import { v4 } from "uuid";
+import PassengerInput from "../PassengerInput/PassengerInput";
 
 const MultiDestinations = () => {
   const [destCount, setDestCount] = useState<number>(1);
@@ -17,21 +18,38 @@ const MultiDestinations = () => {
     });
   };
 
+  const cancelDest = () => {
+    setDestCount((prev) => {
+      return prev - 1;
+    });
+  };
+
   return (
     <div className="d-flex flex-column gap-2">
       <div className="d-flex flex-column gap-2">
+        <div className="d-flex align-items-center gap-2">
+          <AirportInput title="From" />
+          <AirportInput title="To" />
+          <DateInput shown title="Departure" />
+          <div className="flightSearch_controller">
+            <h6 className="flightSearch_controllerTitle">Passengers</h6>
+            <PassengerInput />
+          </div>
+        </div>
         {divsArray.map((_, index) => (
           <div className="d-flex align-items-center gap-2" key={v4()}>
             <AirportInput title="From" />
             <AirportInput title="To" />
             <DateInput shown title="Departure" />
+            <div className="flightSearch_controller">
+              <h6 className="flightSearch_controllerTitle">Passengers</h6>
+              <PassengerInput />
+            </div>
+            <button type="button" onClick={cancelDest} className="btn btn-danger text-white">
+              X
+            </button>
           </div>
         ))}
-        <div className="d-flex align-items-center gap-2">
-          <AirportInput title="From" />
-          <AirportInput title="To" />
-          <DateInput shown title="Departure" />
-        </div>
       </div>
 
       <div className="d-flex gap-2">
