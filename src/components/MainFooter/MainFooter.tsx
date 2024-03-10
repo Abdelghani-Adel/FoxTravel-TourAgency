@@ -120,11 +120,11 @@ const MainFooter = () => {
             </div>
 
             <div className="d-flex align-items-center gap-2">
-              <Image src="/img/certificates/iata.png" width={80} height={50} alt="IATA" />
-              <Image src="/img/certificates/etaa.png" width={90} height={60} alt="IATA" />
-              <Image src="/img/certificates/minister.png" width={80} height={70} alt="IATA" />
-              <Image src="/img/certificates/egypt.png" width={80} height={70} alt="IATA" />
-              <Image src="/img/certificates/amadeus.png" width={100} height={60} alt="IATA" />
+              <Image src="/img/iata.png" width={80} height={50} alt="IATA" />
+              <Image src="/img/etaa.png" width={90} height={60} alt="IATA" />
+              <Image src="/img/minister.png" width={80} height={70} alt="IATA" />
+              <Image src="/img/egypt.png" width={80} height={70} alt="IATA" />
+              <Image src="/img/amadeus.png" width={100} height={60} alt="IATA" />
             </div>
           </div>
         </div>
