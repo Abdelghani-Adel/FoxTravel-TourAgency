@@ -1,0 +1,22 @@
+@use "../abstract/variables" as v;
+
+// ========================================================================= //
+// Button
+// ========================================================================= //
+._btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}

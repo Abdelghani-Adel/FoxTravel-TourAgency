@@ -131,28 +131,88 @@ q:after {
   content: none;
 }
 
-.txtMain {
+.bgPrimary {
+  background-color: #3c3837;
+}
+
+.textPrimary {
   color: #3c3837;
 }
 
-.txtSecondary {
-  color: #3554d1;
+.borderPrimary {
+  border-color: #3c3837;
 }
 
-.txtThird {
+.bgSecondary {
+  background-color: #f36c24;
+}
+
+.textSecondary {
   color: #f36c24;
 }
 
-.txtWhite {
-  color: #fff;
+.borderSecondary {
+  border-color: #f36c24;
 }
 
-.txtGray {
+.bgGray {
+  background-color: #858585;
+}
+
+.textGray {
   color: #858585;
 }
 
-.txtYellow {
-  color: #fed900;
+.borderGray {
+  border-color: #858585;
+}
+
+.bgMuted {
+  background-color: #bdbdbd;
+}
+
+.textMuted {
+  color: #bdbdbd;
+}
+
+.borderMuted {
+  border-color: #bdbdbd;
+}
+
+.bgWhite {
+  background-color: #fff;
+}
+
+.textWhite {
+  color: #fff;
+}
+
+.borderWhite {
+  border-color: #fff;
+}
+
+.bgBlack {
+  background-color: #000;
+}
+
+.textBlack {
+  color: #000;
+}
+
+.borderBlack {
+  border-color: #000;
+}
+
+.bgTrans {
+  background-color: transparent;
+}
+
+.textTrans {
+  color: transparent;
+}
+
+.borderTrans {
+  border-color: transparent;
 }
 
 .foxCard {
@@ -1572,6 +1632,24 @@ q:after {
 
 .width_maxContent {
   width: max-content;
+}
+
+._btn {
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
 }
 
 .home_heroSection {
