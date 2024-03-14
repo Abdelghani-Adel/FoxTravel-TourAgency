@@ -4,7 +4,7 @@ import HotelForm from "./HotelForm/HotelForm";
 import FlightForm from "./FlightForm/FlightForm";
 import TransportForm from "./TransportForm/TransportForm";
 
-const NewServiceSearch = () => {
+const ServiceSearchForm = () => {
   return (
     <div className="serviceSearch">
       <CategorySelectors />
@@ -15,4 +15,4 @@ const NewServiceSearch = () => {
   );
 };
 
-export default NewServiceSearch;
+export default ServiceSearchForm;
