@@ -7,7 +7,7 @@ import TypeSelectors from "./TypeSelectors";
 const FlightForm = () => {
   const reduxFormState = useAppSelector((state) => state.serviceSearch);
   const activeCategory = reduxFormState.category;
-  const [flightType, setFlightType] = useState("round");
+  const [flightType, setFlightType] = useState("oneway");
 
   const onFlightTypeChange = (flightType: string) => {
     setFlightType(flightType);
