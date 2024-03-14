@@ -8,6 +8,7 @@ import Hotels from "@/src/routes/home/Hotels";
 import Tours from "@/src/routes/home/Tours";
 import Cars from "@/src/routes/home/Cars";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
+import MyModal from "@/src/components/ui/MyModal";
 
 export default function Home() {
   useHideLoadingLayer();

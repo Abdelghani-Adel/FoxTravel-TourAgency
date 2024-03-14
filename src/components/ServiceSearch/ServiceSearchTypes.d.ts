@@ -1,7 +1,5 @@
-type IServiceSearchCategory = "Hotel" | "Car Hire" | "Car Rental" | "Activity" | "Tour" | "Flights";
-
 type IServiceSearchReqBody = {
-  category: IServiceSearchCategory;
+  category: string;
   startDate: Date | undefined | null;
   endDate: Date | undefined | null;
   hotelGuests: {

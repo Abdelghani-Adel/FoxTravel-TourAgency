@@ -87,7 +87,7 @@
 
 @include mixins.media-query(xlarge) {
   .featuredHeroBox {
-    width: 70%;
+    width: max-content;
   }
 }
 

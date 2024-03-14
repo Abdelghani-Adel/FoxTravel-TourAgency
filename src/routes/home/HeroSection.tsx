@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import ServiceSearch from "../../components/ServiceSearch/ServiceSearch";
 import FlightSearch from "@/src/components/ServiceSearch/FlightSearch/FlightSearch";
+import NewServiceSearch from "@/src/components/NewServiceSearch/NewServiceSearch";
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,8 @@ const HeroSection = () => {
         </p>
 
         <div data-aos="fade-up" data-aos-delay={200}>
-          <ServiceSearch />
+          {/* <ServiceSearch /> */}
+          <NewServiceSearch />
         </div>
       </div>
     </div>

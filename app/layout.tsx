@@ -26,6 +26,8 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           <MainHeader />
           {children}
           <MainFooter />
+
+          <div id="foxPortal"></div>
         </body>
       </html>
     </Providers>
