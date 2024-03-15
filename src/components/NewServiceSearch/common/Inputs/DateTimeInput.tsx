@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import calender from "./icons/calendar.png";
+import calender from "../icons/calendar.png";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
-import ServiceSearchController from "./ServiceSearchController";
+import InputWrapper from "../InputWrapper";
+import CalenderIcon from "../icons/CalenderIcon";
 
 const DateTimeInput = (props: Props) => {
   const { placeholder, title } = props;
@@ -14,8 +15,8 @@ const DateTimeInput = (props: Props) => {
   };
 
   return (
-    <ServiceSearchController title={title}>
-      <Image src={calender} height={15} width={15} alt="calender" />
+    <InputWrapper title={title}>
+      <CalenderIcon />
       <div>
         <DatePicker
           selected={startDate}
@@ -30,7 +31,7 @@ const DateTimeInput = (props: Props) => {
           className="serviceSearch_dateInput"
         />
       </div>
-    </ServiceSearchController>
+    </InputWrapper>
   );
 };
 

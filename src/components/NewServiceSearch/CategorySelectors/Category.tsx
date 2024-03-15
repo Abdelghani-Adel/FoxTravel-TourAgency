@@ -17,7 +17,7 @@ const Category = (props: Props) => {
   };
 
   return (
-    <li onClick={onClickHandler} className={`serviceSearch_category ${isActive ? "active" : ""}`}>
+    <li onClick={onClickHandler} className={`ss_category ${isActive ? "active" : ""}`}>
       {categoryName}
     </li>
   );

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
-import LocationInput from "../common/LocationInput";
+import Location from "../common/Inputs/Location";
 import SubmitBtn from "../common/SubmitBtn";
-import DateInput from "../common/DateInput";
-import FlightPassengersInput from "./FlightPassengersInput";
+import DateInput from "../common/Inputs/DateInput";
+import FlightPassengers from "../common/Inputs/FlightPassengers";
 import { v4 } from "uuid";
 
-const Multiple = () => {
+const MultipleFlights = () => {
   const [destCount, setDestCount] = useState<number>(3);
   const divsArray = Array.from({ length: destCount - 1 });
 
@@ -24,18 +24,18 @@ const Multiple = () => {
       <h1 className="text-center mb-2 fw-normal">Multiple Destinations</h1>
       <div className="d-flex flex-column gap-3">
         <div className="d-flex gap-2">
-          <LocationInput title="From" placeholder="Departure Location" onChange={() => {}} />
-          <LocationInput title="To" placeholder="Destination Location" onChange={() => {}} />
+          <Location title="From" placeholder="Departure Location" onChange={() => {}} />
+          <Location title="To" placeholder="Destination Location" onChange={() => {}} />
           <DateInput title="Departure" placeholder="Enter departure date" />
-          <FlightPassengersInput />
+          <FlightPassengers />
         </div>
 
         {divsArray.map((_, index) => (
           <div className="d-flex gap-2 align-items-center" key={v4()}>
-            <LocationInput title="From" placeholder="Departure Location" onChange={() => {}} />
-            <LocationInput title="To" placeholder="Destination Location" onChange={() => {}} />
+            <Location title="From" placeholder="Departure Location" onChange={() => {}} />
+            <Location title="To" placeholder="Destination Location" onChange={() => {}} />
             <DateInput title="Departure" placeholder="Enter departure date" />
-            <FlightPassengersInput />
+            <FlightPassengers />
             <button type="button" onClick={cancelDest} className="btn btn-danger text-white">
               X
             </button>
@@ -53,4 +53,4 @@ const Multiple = () => {
   );
 };
 
-export default Multiple;
+export default MultipleFlights;

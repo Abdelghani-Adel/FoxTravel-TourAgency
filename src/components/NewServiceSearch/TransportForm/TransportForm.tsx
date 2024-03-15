@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useAppSelector } from "@/src/redux/store";
-import TypeSelectors from "./TypeSelectors";
-import OneWay from "./OneWay";
-import Return from "./Return";
-import Excursion from "./Excursion";
-import Multiple from "./Multiple";
+import TransportTypeSelectors from "./TransportTypeSelectors";
+import OneWayTransfer from "./OneWayTransfer";
+import ReturnTransfer from "./ReturnTransfer";
+import ExcursionTransfer from "./ExcursionTransfer";
+import MultipleTransfers from "./MultipleTransfers";
 
 const TransportForm = () => {
   const reduxFormState = useAppSelector((state) => state.serviceSearch);
@@ -19,10 +19,10 @@ const TransportForm = () => {
 
   return (
     <div>
-      <TypeSelectors onChange={onFlightTypeChange} />
-      {flightType === "oneway" && <OneWay />}
-      {flightType === "return" && <Return />}
-      {flightType === "excursion" && <Excursion />}
+      <TransportTypeSelectors selectedType={flightType} onChange={onFlightTypeChange} />
+      {flightType === "oneway" && <OneWayTransfer />}
+      {flightType === "return" && <ReturnTransfer />}
+      {flightType === "excursion" && <ExcursionTransfer />}
     </div>
   );
 };

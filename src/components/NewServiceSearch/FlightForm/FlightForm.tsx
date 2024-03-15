@@ -1,8 +1,8 @@
 import { useAppSelector } from "@/src/redux/store";
 import React, { useState } from "react";
-import OneWay from "./OneWay";
-import Round from "./Round";
-import TypeSelectors from "./TypeSelectors";
+import OneWayFlight from "./OneWayFlight";
+import RoundFlight from "./RoundFlight";
+import FlightTypeSelectors from "./FlightTypeSelectors";
 
 const FlightForm = () => {
   const reduxFormState = useAppSelector((state) => state.serviceSearch);
@@ -17,9 +17,9 @@ const FlightForm = () => {
 
   return (
     <div>
-      <TypeSelectors onChange={onFlightTypeChange} />
-      {flightType === "oneway" && <OneWay />}
-      {flightType === "round" && <Round />}
+      <FlightTypeSelectors selectedType={flightType} onChange={onFlightTypeChange} />
+      {flightType === "oneway" && <OneWayFlight />}
+      {flightType === "round" && <RoundFlight />}
     </div>
   );
 };

@@ -1,13 +1,7 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
-.serviceSearch {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.serviceSearch_category {
+.ss_category {
   position: relative;
   font-size: 0.9rem;
   font-weight: 400;
@@ -17,7 +11,7 @@
   transition: 0.3s ease-in-out;
 }
 
-.serviceSearch_category::after {
+.ss_category::after {
   content: " ";
   position: absolute;
   bottom: 0;
@@ -28,8 +22,8 @@
   transition: 0.4s ease-in-out;
 }
 
-.serviceSearch_category.active::after,
-.serviceSearch_category:hover::after {
+.ss_category.active::after,
+.ss_category:hover::after {
   width: 100%;
 }
 
@@ -41,7 +35,7 @@
   width: max-content;
 }
 
-.serviceSearch_controller {
+.ss_inputWrapper {
   padding: 5px 10px;
   background-color: #fff;
   color: #000;
@@ -49,25 +43,19 @@
   border: 1px solid;
 }
 
-.serviceSearch_controller-inner {
+.ss_inputWrapper-inner {
   display: flex;
   align-items: center;
   gap: 10px;
 }
 
-.serviceSearch_textInput {
+.ss_inputField {
   border: none;
   outline: none;
   font-weight: 300;
 }
 
-.serviceSearch_dateInput {
-  border: none;
-  outline: none;
-  font-weight: 300;
-}
-
-.serviceSearch_dropdownToggler {
+.ss_dropdownToggler {
   font-weight: 300;
   background-color: transparent;
   border: none;
@@ -78,13 +66,13 @@
   padding: 0;
 }
 
-.serviceSearch_dropdownWraper {
+.ss_dropdowncontent {
   width: 350px;
   padding: 15px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
-.serviceSearch_childAgeInput {
+.ss_childAgeInput {
   width: 100%;
   background-color: transparent;
   border: 1px solid gray;
@@ -141,7 +129,7 @@
   top: -3px;
 }
 
-.serviceSearch_optionsListBtn {
+.ss_optionsListBtn {
   width: 100%;
   background-color: transparent;
   border: none;

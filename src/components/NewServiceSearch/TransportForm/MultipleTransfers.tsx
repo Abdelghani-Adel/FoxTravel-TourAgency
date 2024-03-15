@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import LocationInput from "../common/LocationInput";
+import Location from "../common/Inputs/Location";
 import SubmitBtn from "../common/SubmitBtn";
-import DateInput from "../common/DateInput";
+import DateInput from "../common/Inputs/DateInput";
 import { v4 } from "uuid";
-import DateTimeInput from "../common/DateTimeInput";
-import CarPassengerInput from "./CarPassengerInput";
+import DateTimeInput from "../common/Inputs/DateTimeInput";
+import CarPassengersDropdown from "../common/Inputs/CarPassengers";
 
-const Multiple = () => {
+const MultipleTransfers = () => {
   const [destCount, setDestCount] = useState<number>(3);
   const divsArray = Array.from({ length: destCount - 1 });
 
@@ -25,34 +25,34 @@ const Multiple = () => {
       <h1 className="text-center mb-2 fw-normal">Multiple Transfers</h1>
       <div className="d-flex flex-column gap-3">
         <div className="d-flex gap-2">
-          <LocationInput
+          <Location
             title="Pickup Location"
             placeholder="Airport, city, hotel..."
             onChange={() => {}}
           />
-          <LocationInput
+          <Location
             title="Drop off location"
             placeholder="Airport, city, hotel..."
             onChange={() => {}}
           />
           <DateTimeInput title="Pickup Date" placeholder="Enter pickup date" />
-          <CarPassengerInput />
+          <CarPassengersDropdown />
         </div>
 
         {divsArray.map((_, index) => (
           <div className="d-flex gap-2 align-items-center" key={v4()}>
-            <LocationInput
+            <Location
               title="Pickup Location"
               placeholder="Airport, city, hotel..."
               onChange={() => {}}
             />
-            <LocationInput
+            <Location
               title="Drop off location"
               placeholder="Airport, city, hotel..."
               onChange={() => {}}
             />
             <DateTimeInput title="Pickup Date" placeholder="Enter pickup date" />
-            <CarPassengerInput />
+            <CarPassengersDropdown />
 
             <button type="button" onClick={cancelDest} className="btn btn-danger text-white">
               X
@@ -71,4 +71,4 @@ const Multiple = () => {
   );
 };
 
-export default Multiple;
+export default MultipleTransfers;

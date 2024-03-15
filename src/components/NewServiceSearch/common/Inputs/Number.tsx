@@ -8,7 +8,7 @@ type INumberInputProps = {
   onChange: (newValue: number) => void;
 };
 
-const NumberInput = (props: INumberInputProps) => {
+const Number = (props: INumberInputProps) => {
   const [number, setNumber] = useState(props.initValue);
   const [plusIsDisabled, setPlusIsDisabled] = useState(false);
   const [minusIsDisabled, setMinusIsDisabled] = useState(false);
@@ -87,4 +87,4 @@ const MinusButton = (props: IMinusProps) => {
   );
 };
 
-export default NumberInput;
+export default Number;

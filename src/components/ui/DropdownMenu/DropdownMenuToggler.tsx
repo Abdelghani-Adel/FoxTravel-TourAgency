@@ -1,16 +1,18 @@
 import React from "react";
 
 type Props = {
+  className?: string;
   children: React.ReactNode;
 };
 
-const DropdownToggler = (props: Props) => {
+const DropdownMenuToggler = (props: Props) => {
+  const { className } = props;
   return (
     <button
       type="button"
       data-bs-toggle="dropdown"
       aria-expanded="false"
-      className="serviceSearch_dropdownToggler"
+      className={className ? className : ""}
       data-bs-auto-close="outside"
     >
       {props.children}
@@ -18,4 +20,4 @@ const DropdownToggler = (props: Props) => {
   );
 };
 
-export default DropdownToggler;
+export default DropdownMenuToggler;

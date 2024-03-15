@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
-import NumberInput from "./NumberInput";
+import Number from "./Number";
 import { v4 } from "uuid";
-import ChildAgeInput from "./ChildAgeInput";
+import ChildAge from "./ChildAge";
 
 type props = {
   onChildrenChange: (newChilds: number[]) => void;
 };
 
-const ChildsWithAgeInput = (props: props) => {
+const Children = (props: props) => {
   const [childsCount, setChildsCount] = useState(0);
   const [childsAges, setChildsAges] = useState<number[]>([]);
 
@@ -35,13 +35,13 @@ const ChildsWithAgeInput = (props: props) => {
 
   return (
     <>
-      <NumberInput initValue={0} min={0} max={8} title="Children" onChange={onCountChange} />
+      <Number initValue={0} min={0} max={8} title="Children" onChange={onCountChange} />
 
       {childsCount > 0 && (
         <div>
           <div className="row row-cols-2 g-2 mb-2">
             {childsAges.map((age, i) => (
-              <ChildAgeInput key={v4()} id={i} value={age} onChange={onChildAgeChange} />
+              <ChildAge key={v4()} id={i} value={age} onChange={onChildAgeChange} />
             ))}
           </div>
 
@@ -55,4 +55,4 @@ const ChildsWithAgeInput = (props: props) => {
   );
 };
 
-export default ChildsWithAgeInput;
+export default Children;

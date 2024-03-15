@@ -6,7 +6,7 @@ import TransportForm from "./TransportForm/TransportForm";
 
 const ServiceSearchForm = () => {
   return (
-    <div className="serviceSearch">
+    <div className="d-flex flex-column gap-3">
       <CategorySelectors />
       <HotelForm />
       <FlightForm />
