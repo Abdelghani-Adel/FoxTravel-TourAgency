@@ -1,45 +1,22 @@
 "use client";
-import Filter from "@/src/components/Filter/Filter";
+import useSearchData from "@/src/components/ServiceSearch/useSearchData";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import { useAppSelector } from "@/src/redux/store";
-import hotels from "@/public/data/Cards_Hotels.json";
-import React from "react";
-import HotelCard from "@/src/components/Cards/HotelCard";
-import { v4 } from "uuid";
+import FlightSearchResult from "@/src/routes/search/FlightSearchResult";
+import HotelSearchResult from "@/src/routes/search/HotelSearchResult";
+import TransportSearchResult from "@/src/routes/search/TransportSearchResult";
 
 const Page = () => {
+  const searchState = useAppSelector((state) => state.serviceSearch);
+  const searchData = useSearchData();
   useHideLoadingLayer();
-  const searchState = useAppSelector((state) => state.search);
 
   return (
-    <div className="container mt-5 mb-5">
-      <div className="row g-4">
-        <div className="col-3 d-none d-lg-block">
-          <Filter />
-        </div>
-
-        <div className="col-12 col-lg-9">
-          <div className="row g-3">
-            {hotels.map((hotel) => (
-              <div className="col-12 col-md-4" key={v4()}>
-                <HotelCard
-                  key={hotel.id}
-                  id={hotel.id}
-                  title={hotel.title}
-                  image={hotel.image}
-                  address={hotel.address}
-                  rating={hotel.rating}
-                  reviewers={hotel.reviews}
-                  price={hotel.price}
-                  currency={hotel.currency}
-                  badges={hotel.badges}
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+    <>
+      {searchState.category === "Hotel" && <HotelSearchResult />}
+      {searchState.category === "Flight" && <FlightSearchResult />}
+      {searchState.category === "Transport" && <TransportSearchResult />}
+    </>
   );
 };
 

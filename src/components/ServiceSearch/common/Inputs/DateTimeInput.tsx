@@ -28,7 +28,7 @@ const DateTimeInput = (props: Props) => {
           timeIntervals={15}
           selectsStart
           placeholderText={placeholder}
-          className="serviceSearch_dateInput"
+          className="ss_inputField"
         />
       </div>
     </InputWrapper>

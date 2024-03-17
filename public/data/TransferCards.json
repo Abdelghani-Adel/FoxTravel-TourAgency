@@ -1,0 +1,60 @@
+[
+  {
+    "id": "1",
+    "title": "Private Transfer",
+    "img": "/img/carCards/2.webp",
+    "luggages": 3,
+    "bags": 3,
+    "bagDimensions": {
+      "height": 63,
+      "width": 36,
+      "depth": 21
+    },
+    "price": 11,
+    "currency": "$",
+    "duration": "20 Minutes",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "EXCLUSIVE OFFER 80%"
+      }
+    ],
+    "includes": [
+      "Guaranteed individual transfer",
+      "60 / 90 min free waiting time for Schengen/Non Schengen arrival",
+      "Multilingual driver"
+    ],
+    "excludes": [],
+    "notes": ["Your vehicle may be different from the one shown"]
+  },
+  {
+    "id": "2",
+    "title": "Private Transfer",
+    "img": "/img/carCards/2.webp",
+    "luggages": 3,
+    "bags": 3,
+    "bagDimensions": {
+      "height": 63,
+      "width": 36,
+      "depth": 21
+    },
+    "price": 11,
+    "currency": "$",
+    "duration": "20 Minutes",
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "EXCLUSIVE OFFER 80%"
+      }
+    ],
+    "includes": [
+      "Guaranteed individual transfer",
+      "60 / 90 min free waiting time for Schengen/Non Schengen arrival",
+      "Multilingual driver"
+    ],
+    "excludes": [],
+    "notes": ["Your vehicle may be different from the one shown"]
+  }
+]

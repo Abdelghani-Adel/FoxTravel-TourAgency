@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import ServiceSearchForm from "@/src/components/NewServiceSearch/ServiceSearchForm";
+import ServiceSearch from "@/src/components/ServiceSearch/ServiceSearch";
 
 const HeroSection = () => {
   return (
@@ -18,7 +18,7 @@ const HeroSection = () => {
         </p>
 
         <div data-aos="fade-up" data-aos-delay={200}>
-          <ServiceSearchForm />
+          <ServiceSearch />
         </div>
       </div>
     </div>

@@ -1,8 +1,6 @@
 // ================================================================= //
-// Search Form START
+// ServiceSearch Form START
 // ================================================================= //
-type IServiceSearchCategory = "Hotel" | "Flight" | "Transport";
-
 type ISearchFormState = {
   category: IServiceSearchCategory;
   hotel: ISearchHotelState;
@@ -12,13 +10,16 @@ type ISearchFormState = {
   package: {};
 };
 
-// CommonTypes
 type ISearchLocation = {
   location: string;
   locationType: "city" | "airport" | "hotel" | "other";
 };
 
-// HotelSearch
+type IServiceSearchCategory = "Hotel" | "Flight" | "Transport";
+type ISSFlightType = "oneway" | "round" | "multiple";
+type ISSTransferType = "oneway" | "round" | "multiple" | "excursion";
+
+// ========================== HOTEL ========================== //
 type ISearchHotelState = {
   city: string;
   startDate: Date | null;
@@ -28,8 +29,10 @@ type ISearchHotelState = {
   rooms: number;
 };
 
-// FlightSearch
+// ========================== FLIGHT ========================== //
 type ISearchFlightState = {
+  flightType: ISSFlightType;
+  passengers: ISearchFlightPassengers;
   oneway: {
     from: ISearchLocation;
     to: ISearchLocation;
@@ -47,7 +50,6 @@ type ISearchFlightState = {
     departureDate: Date | null;
     passengers: ISearchFlightPassengers;
   }[];
-  passengers: ISearchFlightPassengers;
 };
 
 type ISearchFlightPassengers = {
@@ -56,36 +58,30 @@ type ISearchFlightPassengers = {
   infants: number;
 };
 
-// TransportSearch
+// ========================== TRANSFER ========================== //
 type ISearchTransportState = {
+  transferType: ISSTransferType;
+  passengers: number;
   oneway: {
     pickupLocation: ISearchLocation;
     dropoffLocation: ISearchLocation;
     pickupDate: Date | null;
-    pickupTime: Date | null;
-    passengers: number;
   };
   round: {
     pickupLocation: ISearchLocation;
     dropoffLocation: ISearchLocation;
     pickupDate: Date | null;
-    pickupTime: Date | null;
     returnDate: Date | null;
-    returnTime: Date | null;
-    passengers: number;
   };
   multiple: {
     pickupLocation: ISearchLocation;
     dropoffLocation: ISearchLocation;
     pickupDate: Date | null;
-    pickupTime: Date | null;
     passengers: number;
   }[];
   excursion: {
     pickupLocation: ISearchLocation;
     pickupDate: Date | null;
-    pickupTime: Date | null;
-    passengers: number;
     excursionType: string;
   };
 };

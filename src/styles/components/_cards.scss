@@ -489,3 +489,40 @@ $duration: 3s;
     overflow: hidden;
   }
 }
+
+// ============================================== //
+// TransferCard
+// ============================================== //
+.transferCard {
+  position: relative;
+  display: flex;
+  border: 1px solid v.$gray;
+  border-radius: 10px;
+  padding: 5px 10px;
+
+  .carImage {
+    position: relative;
+    height: 25vh;
+    width: 20%;
+  }
+
+  .carInfo {
+    width: 60%;
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    gap: 10px;
+  }
+
+  .carPrice {
+    margin-left: auto;
+    width: 20%;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}

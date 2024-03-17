@@ -4,7 +4,6 @@ import type { TypedUseSelectorHook } from "react-redux";
 import loaderSlice from "./slices/loaderSlice";
 import hotelDetailsSlice from "./slices/hotelDetails";
 import destinationDetailsSlice from "./slices/destnationDetailsSlice";
-import searchSlice from "./slices/searchSlice";
 import serviceSearch from "./slices/serviceSearch";
 
 const store = configureStore({
@@ -12,7 +11,6 @@ const store = configureStore({
     loader: loaderSlice.reducer,
     hotelDetails: hotelDetailsSlice.reducer,
     destinationDetails: destinationDetailsSlice.reducer,
-    search: searchSlice.reducer,
     serviceSearch: serviceSearch.reducer,
   },
 });

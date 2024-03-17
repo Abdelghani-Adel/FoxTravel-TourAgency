@@ -1,6 +1,7 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
 const initialState: ISearchFormState = {
+  category: "Hotel",
   hotel: {
     city: "",
     startDate: null,
@@ -10,6 +11,7 @@ const initialState: ISearchFormState = {
     rooms: 0,
   },
   flight: {
+    flightType: "oneway",
     oneway: {
       from: {
         location: "",
@@ -33,7 +35,24 @@ const initialState: ISearchFormState = {
       departureDate: null,
       returnDate: null,
     },
-    multiple: [],
+    multiple: [
+      {
+        from: {
+          location: "",
+          locationType: "hotel",
+        },
+        to: {
+          location: "",
+          locationType: "hotel",
+        },
+        departureDate: null,
+        passengers: {
+          adults: 0,
+          children: 0,
+          infants: 0,
+        },
+      },
+    ],
     passengers: {
       adults: 0,
       children: 0,
@@ -41,6 +60,8 @@ const initialState: ISearchFormState = {
     },
   },
   transport: {
+    transferType: "oneway",
+    passengers: 0,
     oneway: {
       pickupLocation: {
         location: "",
@@ -51,8 +72,6 @@ const initialState: ISearchFormState = {
         locationType: "hotel",
       },
       pickupDate: null,
-      pickupTime: null,
-      passengers: 0,
     },
     round: {
       pickupLocation: {
@@ -64,26 +83,33 @@ const initialState: ISearchFormState = {
         locationType: "hotel",
       },
       pickupDate: null,
-      pickupTime: null,
       returnDate: null,
-      returnTime: null,
-      passengers: 0,
     },
-    multiple: [],
+    multiple: [
+      {
+        pickupLocation: {
+          location: "",
+          locationType: "hotel",
+        },
+        dropoffLocation: {
+          location: "",
+          locationType: "hotel",
+        },
+        pickupDate: null,
+        passengers: 0,
+      },
+    ],
     excursion: {
       pickupLocation: {
         location: "",
         locationType: "hotel",
       },
       pickupDate: null,
-      pickupTime: null,
-      passengers: 0,
       excursionType: "",
     },
   },
   carRental: {},
   package: {},
-  category: "Hotel",
 };
 
 const serviceSearch = createSlice({
