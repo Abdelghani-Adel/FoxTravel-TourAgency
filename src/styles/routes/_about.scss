@@ -7,7 +7,7 @@
   margin: auto;
   border-radius: 20px;
   overflow: hidden;
-  outline: 2px solid v.$secondColor;
+  outline: 2px solid v.$secondaryColor;
   outline-offset: 5px;
 }
 
@@ -20,7 +20,7 @@
 }
 .teamMember_picture {
   font-size: 7rem;
-  color: v.$secondColor;
+  color: v.$secondaryColor;
 }
 
 .teamMember_name {

@@ -21,7 +21,7 @@ const MultipleTransfers = () => {
   };
 
   return (
-    <form className="serviceSearchForm flex-column">
+    <form className="serviceSearchForm flex-column text-white bgMain p-3 rounded-3">
       <h1 className="text-center mb-2 fw-normal">Multiple Transfers</h1>
       <div className="d-flex flex-column gap-3">
         <div className="d-flex gap-2">
@@ -54,14 +54,14 @@ const MultipleTransfers = () => {
             <DateTimeInput title="Pickup Date" placeholder="Enter pickup date" />
             <CarPassengersDropdown />
 
-            <button type="button" onClick={cancelDest} className="btn btn-danger text-white">
+            <button type="button" onClick={cancelDest} className="foxBtn secondBtn smBtn">
               X
             </button>
           </div>
         ))}
 
         <div className="d-flex gap-2 justify-content-center">
-          <button type="button" className="btn btn-success" onClick={addNewDest}>
+          <button type="button" className="foxBtn thirdBtn" onClick={addNewDest}>
             Add Transfer
           </button>
           <SubmitBtn />

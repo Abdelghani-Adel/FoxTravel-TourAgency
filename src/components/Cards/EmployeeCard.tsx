@@ -18,14 +18,14 @@ const EmployeeCard = (props: Props) => {
         <Image src={employee.image} fill alt="employee" />
       </div>
       <h5 className="fw-bold text-center">{employee.name}</h5>
-      <p className="text_third text-center">{employee.position}</p>
+      <p className="textSecondary text-center">{employee.position}</p>
       <p className="text-center fw-normal mb-2">"{employee.quote}"</p>
       <p className="fw-light">
-        <MdOutlineAttachEmail className="text_third me-2" />
+        <MdOutlineAttachEmail className="textSecondary me-2" />
         {employee.email}
       </p>
       <p className="fw-light">
-        <MdLocalPhone className="text_third me-2" />
+        <MdLocalPhone className="textSecondary me-2" />
         {employee.phone}
       </p>
 

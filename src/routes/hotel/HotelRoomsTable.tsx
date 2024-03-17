@@ -46,9 +46,9 @@ const TableRow = ({ room }: { room: any }) => {
       </td>
       <td>
         <div className="d-flex align-items-center justify-content-between">
-          <BsPersonStanding className="text_secondary fs-4" />{" "}
-          <BsPersonStanding className="text_secondary fs-4" /> |
-          <GiPerson className="text_third" />
+          <BsPersonStanding className="textPrimary fs-4" />{" "}
+          <BsPersonStanding className="textPrimary fs-4" /> |
+          <GiPerson className="textSecondary" />
         </div>
       </td>
       <td className="fw-bold text-success fs-5">{room.pricePerNight}$</td>
@@ -64,7 +64,7 @@ const TableRow = ({ room }: { room: any }) => {
       </td>
 
       <td>
-        <button className="foxBtn thirdBtn">Reserve</button>
+        <button className="foxBtn secondBtn">Reserve</button>
       </td>
     </tr>
   );

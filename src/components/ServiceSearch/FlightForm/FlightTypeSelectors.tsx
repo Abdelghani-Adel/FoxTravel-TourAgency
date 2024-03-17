@@ -33,7 +33,7 @@ const FlightTypeSelectors = (props: props) => {
         onChange={onChange}
       />
 
-      <button className="foxBtn thirdBtn smBtn" onClick={() => setIsShown(true)}>
+      <button className="foxBtn secondBtn smBtn" onClick={() => setIsShown(true)}>
         Multiple Destinations
       </button>
 

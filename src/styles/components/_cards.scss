@@ -48,7 +48,7 @@
 }
 
 .foxCard_badge.feature {
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
 }
 
 .foxCard_badge.sale {
@@ -75,7 +75,7 @@
     height: 30px;
     width: 30px;
     padding: 5px;
-    background-color: v.$secondColor;
+    background-color: v.$secondaryColor;
     color: #fff;
     border-radius: 7px;
     display: flex;
@@ -120,7 +120,7 @@
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
-  outline: 2px solid v.$mainColor;
+  outline: 2px solid v.$primaryColor;
   margin-top: 2px;
   z-index: 1;
 }
@@ -132,12 +132,12 @@
   bottom: 0;
   border-radius: 10px;
   padding: 15vh 10px 10px;
-  border: 2px solid v.$mainColor;
+  border: 2px solid v.$primaryColor;
 }
 
 .packageCard_info .icon {
   font-size: 1.7rem;
-  color: v.$mainColor;
+  color: v.$primaryColor;
 }
 
 .packageCard_info .foxCard_rating .ratingBox {
@@ -149,7 +149,7 @@
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: bold;
-  color: v.$secondColor;
+  color: v.$secondaryColor;
 }
 
 $duration: 3s;
@@ -177,7 +177,7 @@ $duration: 3s;
   z-index: 2;
   transition: ease-in-out;
   font-size: 1.8rem;
-  color: v.$secondColor;
+  color: v.$secondaryColor;
 
   &:hover svg {
     animation-play-state: paused;
@@ -211,18 +211,18 @@ $duration: 3s;
   display: flex;
   margin-bottom: 1rem;
   gap: 1rem;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 10px;
   border-radius: 10px;
   width: max-content;
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
 }
 
 .transportationStop {
   display: flex;
   align-items: center;
   gap: 5px;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 0 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -230,7 +230,7 @@ $duration: 3s;
 
 .cityPlan {
   margin-top: 2rem;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -239,7 +239,7 @@ $duration: 3s;
 }
 
 .cityPlan_header {
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
   padding: 10px;
   color: #fff;
   border-radius: 10px;
@@ -277,7 +277,7 @@ $duration: 3s;
   }
 
   .hotelBadge.feature {
-    background-color: v.$secondColor;
+    background-color: v.$secondaryColor;
     color: #fff;
   }
 
@@ -312,7 +312,7 @@ $duration: 3s;
     height: 30px;
     width: 30px;
     line-height: 30px;
-    background-color: v.$secondColor;
+    background-color: v.$secondaryColor;
     color: #fff;
     text-align: center;
     border-radius: 7px;
@@ -328,7 +328,7 @@ $duration: 3s;
 .hotelCard_bottomPrice {
   .currency,
   .price {
-    color: v.$secondColor;
+    color: v.$secondaryColor;
     font-weight: bold;
   }
 }

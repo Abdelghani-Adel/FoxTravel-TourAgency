@@ -15,8 +15,8 @@
 
   &.active {
     font-weight: 400;
-    color: v.$mainColor;
-    border-bottom: 2px solid v.$mainColor;
+    color: v.$primaryColor;
+    border-bottom: 2px solid v.$primaryColor;
   }
 
   a {
@@ -65,18 +65,18 @@
 
   .highlightIcon {
     font-size: 2rem;
-    color: v.$secondColor;
+    color: v.$secondaryColor;
   }
 }
 
 .hotelRoom {
   padding: 15px;
-  border: 2px solid v.$secondColor;
+  border: 2px solid v.$secondaryColor;
   border-radius: 10px;
 }
 
 .roomHeader {
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
   color: #fff;
   height: 50px;
   display: flex;
@@ -109,7 +109,7 @@
 
   .number {
     font-size: 4rem;
-    color: v.$secondColor;
+    color: v.$secondaryColor;
   }
 }
 
@@ -125,7 +125,7 @@
 }
 
 .roomsTable thead tr th {
-  background-color: v.$secondColor !important;
+  background-color: v.$secondaryColor !important;
   color: #fff;
   border: 2px solid rgb(214, 214, 214);
 

@@ -13,7 +13,7 @@ const SubmitBtn = () => {
   };
 
   return (
-    <button type="button" className="foxBtn thirdBtn" onClick={clickHandler}>
+    <button type="button" className="foxBtn secondBtn" onClick={clickHandler}>
       <FaSearch /> Search
     </button>
   );

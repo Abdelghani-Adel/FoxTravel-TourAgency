@@ -41,10 +41,10 @@ const Page = ({ params }: { params: { id: string } }) => {
 
           <div className="d-flex justify-content-between align-item-center">
             <div>
-              <span className="text_gray fw-normal">
+              <span className="textGray fw-normal">
                 <RtsRating readonly rating={4.5} /> (215)
               </span>
-              <p className="mb-0 text_gray fw-normal">
+              <p className="mb-0 textGray fw-normal">
                 {/* {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate} */}
               </p>
             </div>
@@ -56,33 +56,33 @@ const Page = ({ params }: { params: { id: string } }) => {
 
           <div className="d-flex gap-5 mb-4">
             <div className="d-flex align-items-center gap-3">
-              <IoTimeOutline className="display-6 text_third" />
+              <IoTimeOutline className="display-6 textSecondary" />
               <div>
-                <h5 className="text_third">Duration</h5>
-                <p className="text_gray fw-normal">{packageDetails.duration}</p>
+                <h5 className="textSecondary">Duration</h5>
+                <p className="textGray fw-normal">{packageDetails.duration}</p>
               </div>
             </div>
 
             <div className="d-flex align-items-center gap-3">
-              <SiYourtraveldottv className="display-6 text_third" />
+              <SiYourtraveldottv className="display-6 textSecondary" />
               <div>
-                <h5 className="text_third">Package Type</h5>
-                <p className="text_gray fw-normal">Classical</p>
+                <h5 className="textSecondary">Package Type</h5>
+                <p className="textGray fw-normal">Classical</p>
               </div>
             </div>
 
             <div className="d-flex align-items-center gap-3">
-              <IoLocationOutline className="display-6 text_third" />
+              <IoLocationOutline className="display-6 textSecondary" />
               <div>
-                <h5 className="text_third">Location</h5>
-                <p className="text_gray fw-normal">Egypt</p>
+                <h5 className="textSecondary">Location</h5>
+                <p className="textGray fw-normal">Egypt</p>
               </div>
             </div>
           </div>
 
-          <p className="text_gray mb-2">{packageDetails.description}</p>
+          <p className="textGray mb-2">{packageDetails.description}</p>
 
-          <h5 className="text_secondary fw-bold mb-2">Transportation</h5>
+          <h5 className="textPrimary fw-bold mb-2">Transportation</h5>
           <div className="d-flex flex-md-column gap-2">
             {packageDetails?.transportation?.map((line: any, i: any) => (
               <TransportaionLine key={i} line={line} />
@@ -102,7 +102,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
       <div className="row mt-4 mb-4">
         <div className="col-12 col-md-6">
-          <h5 className="text_secondary fw-bold mb-2">Included</h5>
+          <h5 className="textPrimary fw-bold mb-2">Included</h5>
           <div className="d-flex flex-column gap-2">
             <p>
               <GiCheckMark className="text-success me-2" />{" "}
@@ -140,7 +140,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="col-12 col-md-6">
-          <h5 className="text_secondary fw-bold mb-2">Excluded</h5>
+          <h5 className="textPrimary fw-bold mb-2">Excluded</h5>
           <div className="d-flex flex-column gap-2">
             <p>
               <FaXmark className="text-danger me-2" />{" "}

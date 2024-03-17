@@ -65,7 +65,7 @@ const TransferCard = () => {
           {carInfo.currency}
           {carInfo.price}
         </h2>
-        <button className="foxBtn thirdBtn">Choose</button>
+        <button className="foxBtn secondBtn">Choose</button>
       </div>
     </div>
   );

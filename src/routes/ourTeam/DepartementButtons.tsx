@@ -11,13 +11,13 @@ const DepartementButtons = (props: Props) => {
   return (
     <div className="d-flex gap-4 mb-4">
       <button
-        className={`foxBtn ${curDepartment === "owners" ? "thirdBtn" : ""}`}
+        className={`foxBtn ${curDepartment === "owners" ? "secondBtn" : ""}`}
         onClick={() => changeDepartment("owners")}
       >
         Owners
       </button>
       <button
-        className={`foxBtn ${curDepartment === "management" ? "thirdBtn" : ""}`}
+        className={`foxBtn ${curDepartment === "management" ? "secondBtn" : ""}`}
         onClick={() => changeDepartment("management")}
       >
         Management

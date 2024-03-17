@@ -1,8 +1,5 @@
 "use client";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
-import Image from "next/image";
-import React from "react";
-import { IoPersonCircleOutline } from "react-icons/io5";
 
 const Page = () => {
   useHideLoadingLayer();
@@ -13,7 +10,7 @@ const Page = () => {
         <div className="col-12">
           <div className="d-flex flex-column gap-3">
             <div>
-              <h4 className="text_third">Company History</h4>
+              <h4 className="textSecondary">Company History</h4>
               <p className="fw-normal">
                 Our first branch was established in Cairo by Sayed El Daly and Medhat Ammar in 1984.
                 We expanded our reach into Egypt’s local market by 1993, in Hurghada and Sharm El
@@ -23,7 +20,7 @@ const Page = () => {
             </div>
 
             <div>
-              <h4 className="text_third">OUR MISSION</h4>
+              <h4 className="textSecondary">OUR MISSION</h4>
               <p className="fw-normal">
                 We strive to enhance our clients travel experience by providing them with quality
                 service both locally and overseas. We continue to expand and build upon our
@@ -33,7 +30,7 @@ const Page = () => {
             </div>
 
             <div>
-              <h4 className="text_third">OUR VISION</h4>
+              <h4 className="textSecondary">OUR VISION</h4>
               <p className="fw-normal">
                 For Fox Travel Egypt, to be among Egypt's top-tier companies within our field,
                 through our highly qualified team we continue to meet our clients' travel needs. We
@@ -43,7 +40,7 @@ const Page = () => {
             </div>
 
             <div>
-              <h4 className="text_third">OUR GOALS</h4>
+              <h4 className="textSecondary">OUR GOALS</h4>
               <p className="fw-normal">To develop life-long relationships with our stakeholders.</p>
               <p className="fw-normal">
                 To become our clients’ first choice for their travel needs.

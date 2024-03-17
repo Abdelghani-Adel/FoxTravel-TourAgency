@@ -5,7 +5,7 @@
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: bold;
-  color: v.$secondColor;
+  color: v.$secondaryColor;
 }
 
 $duration: 3s;
@@ -33,7 +33,7 @@ $duration: 3s;
   z-index: 2;
   transition: ease-in-out;
   font-size: 1.8rem;
-  color: v.$secondColor;
+  color: v.$secondaryColor;
 
   &:hover svg {
     animation-play-state: paused;
@@ -67,18 +67,18 @@ $duration: 3s;
   display: flex;
   margin-bottom: 1rem;
   gap: 1rem;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 10px;
   border-radius: 10px;
   width: max-content;
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
 }
 
 .transportationStop {
   display: flex;
   align-items: center;
   gap: 5px;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 0 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -86,7 +86,7 @@ $duration: 3s;
 
 .cityPlan {
   margin-top: 2rem;
-  border: 1px solid v.$secondColor;
+  border: 1px solid v.$secondaryColor;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -95,7 +95,7 @@ $duration: 3s;
 }
 
 .cityPlan_header {
-  background-color: v.$secondColor;
+  background-color: v.$secondaryColor;
   padding: 10px;
   color: #fff;
   border-radius: 10px;

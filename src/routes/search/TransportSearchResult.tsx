@@ -2,7 +2,10 @@ import cars from "@/public/data/Cards_Cars.json";
 import CarCard from "@/src/components/Cards/CarCard";
 import TransferCard from "@/src/components/Cards/TransferCard";
 import Filter from "@/src/components/Filter/Filter";
+import MultiSteps from "@/src/components/ui/MultiSteps/MultiSteps";
 import { v4 } from "uuid";
+
+const steps = ["Select Transfer", "Extras", "Order Details", "Order Summary", "Purchase"];
 
 const TransportSearchResult = () => {
   return (
@@ -13,6 +16,7 @@ const TransportSearchResult = () => {
         </div>
 
         <div className="col-12 col-lg-9">
+          {/* <MultiSteps currentStep={3} steps={steps} /> */}
           <div className="d-flex flex-column gap-3">
             <TransferCard />
             <TransferCard />
@@ -20,28 +24,6 @@ const TransportSearchResult = () => {
             <TransferCard />
             <TransferCard />
           </div>
-
-          {/* <div className="row g-3 mt-2">
-            {cars.map((car) => (
-              <div className="col-12 col-md-4" key={v4()}>
-                <CarCard
-                  key={car.id}
-                  id={car.id}
-                  img={car.img}
-                  model={car.model}
-                  rating={car.rating}
-                  reviews={car.reviews}
-                  price={car.price}
-                  currency={car.currency}
-                  badges={car.badges}
-                  passengers={car.passengers}
-                  bags={car.bags}
-                  transmission={car.transmission}
-                  duration={car.duration}
-                />
-              </div>
-            ))}
-          </div> */}
         </div>
       </div>
     </div>

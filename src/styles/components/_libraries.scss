@@ -17,7 +17,7 @@
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: v.$secondColor;
+  color: v.$secondaryColor;
   background-color: #fff;
   height: 40px;
   width: 40px;
@@ -45,10 +45,10 @@
 // react-datepicker
 // ============================================== //
 .react-datepicker {
-  border-color: v.$mainColor;
+  border-color: v.$primaryColor;
 }
 .react-datepicker__header {
-  background-color: v.$mainColor;
+  background-color: v.$primaryColor;
 }
 .react-datepicker__current-month,
 .react-datepicker__day-name {
@@ -60,5 +60,5 @@
 
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::before,
 .react-datepicker-popper[data-placement^="bottom"] .react-datepicker__triangle::after {
-  border-bottom-color: v.$mainColor;
+  border-bottom-color: v.$primaryColor;
 }

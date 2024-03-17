@@ -9,6 +9,7 @@ import Tours from "@/src/routes/home/Tours";
 import Cars from "@/src/routes/home/Cars";
 import useHideLoadingLayer from "@/src/hooks/loadingLayer";
 import MyModal from "@/src/components/ui/MyModal";
+import MultiSteps from "@/src/components/ui/MultiSteps/MultiSteps";
 
 export default function Home() {
   useHideLoadingLayer();
@@ -16,6 +17,7 @@ export default function Home() {
   return (
     <main className="homePage">
       <HeroSection />
+
       <div className="container">
         <Cars />
         <Packages />

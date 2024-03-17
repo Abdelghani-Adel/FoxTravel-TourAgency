@@ -5,7 +5,7 @@
   padding: 20px;
   transition: 0.3s ease-in-out;
   color: #fff;
-  background-color: v.$mainColor;
+  background-color: v.$primaryColor;
   z-index: 50;
   position: relative;
 }
@@ -22,7 +22,7 @@
 }
 
 .mainHeader.sticky {
-  background-color: v.$mainColor;
+  background-color: v.$primaryColor;
 }
 
 .mainHeader_inner {
@@ -50,7 +50,7 @@
 .navItem.active,
 .navItem:hover {
   color: #fff;
-  background-color: v.$mainColor;
+  background-color: v.$primaryColor;
 }
 
 .navLink {
@@ -77,7 +77,7 @@
 
 .headerBtn:hover {
   background-color: #fff;
-  color: v.$mainColor;
+  color: v.$primaryColor;
 }
 
 .navToggler {

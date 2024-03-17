@@ -155,6 +155,18 @@ q:after {
   border-color: #f36c24;
 }
 
+.bgThird {
+  background-color: #ffc107;
+}
+
+.textThird {
+  color: #ffc107;
+}
+
+.borderThird {
+  border-color: #ffc107;
+}
+
 .bgGray {
   background-color: #858585;
 }
@@ -259,7 +271,7 @@ q:after {
 }
 
 .foxCard_badge.feature {
-  background-color: #3554d1;
+  background-color: #f36c24;
 }
 
 .foxCard_badge.sale {
@@ -287,7 +299,7 @@ q:after {
   height: 30px;
   width: 30px;
   padding: 5px;
-  background-color: #3554d1;
+  background-color: #f36c24;
   color: #fff;
   border-radius: 7px;
   display: flex;
@@ -346,14 +358,14 @@ q:after {
 }
 
 .packageCard_info .foxCard_rating .ratingBox {
-  background-color: #f36c24;
+  background-color: #ffc107;
 }
 
 .foxPrice {
   margin-bottom: 0;
   font-size: 2rem;
   font-weight: bold;
-  color: #3554d1;
+  color: #f36c24;
 }
 
 @keyframes ticker {
@@ -377,7 +389,7 @@ q:after {
   z-index: 2;
   transition: ease-in-out;
   font-size: 1.8rem;
-  color: #3554d1;
+  color: #f36c24;
 }
 
 .transportIcon:hover svg {
@@ -410,18 +422,18 @@ q:after {
   display: flex;
   margin-bottom: 1rem;
   gap: 1rem;
-  border: 1px solid #3554d1;
+  border: 1px solid #f36c24;
   padding: 10px;
   border-radius: 10px;
   width: max-content;
-  background-color: #3554d1;
+  background-color: #f36c24;
 }
 
 .transportationStop {
   display: flex;
   align-items: center;
   gap: 5px;
-  border: 1px solid #3554d1;
+  border: 1px solid #f36c24;
   padding: 0 10px;
   border-radius: 10px;
   background-color: #fff;
@@ -429,7 +441,7 @@ q:after {
 
 .cityPlan {
   margin-top: 2rem;
-  border: 1px solid #3554d1;
+  border: 1px solid #f36c24;
   padding: 10px;
   border-radius: 10px;
   display: flex;
@@ -438,7 +450,7 @@ q:after {
 }
 
 .cityPlan_header {
-  background-color: #3554d1;
+  background-color: #f36c24;
   padding: 10px;
   color: #fff;
   border-radius: 10px;
@@ -474,7 +486,7 @@ q:after {
 }
 
 .hotelCard_badges .hotelBadge.feature {
-  background-color: #3554d1;
+  background-color: #f36c24;
   color: #fff;
 }
 
@@ -509,7 +521,7 @@ q:after {
   height: 30px;
   width: 30px;
   line-height: 30px;
-  background-color: #3554d1;
+  background-color: #f36c24;
   color: #fff;
   text-align: center;
   border-radius: 7px;
@@ -523,7 +535,7 @@ q:after {
 
 .hotelCard_bottomPrice .currency,
 .hotelCard_bottomPrice .price {
-  color: #3554d1;
+  color: #f36c24;
   font-weight: bold;
 }
 
@@ -658,7 +670,7 @@ q:after {
 
 .employeeCard .image {
   text-align: center;
-  outline: 5px solid #f36c24;
+  outline: 5px solid #ffc107;
   outline-offset: 10px;
   margin-bottom: 20px;
   border-radius: 50%;
@@ -717,7 +729,7 @@ q:after {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  color: #3554d1;
+  color: #f36c24;
   background-color: #fff;
   height: 40px;
   width: 40px;
@@ -756,7 +768,7 @@ q:after {
 }
 
 .react-datepicker__day--selected {
-  background-color: #f36c24;
+  background-color: #ffc107;
 }
 
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
@@ -1092,7 +1104,7 @@ q:after {
 }
 
 .bgSecondary {
-  background-color: #3554d1;
+  background-color: #f36c24;
 }
 
 .foxBtn {
@@ -1128,27 +1140,27 @@ q:after {
 }
 
 .foxBtn.secondBtn {
-  background-color: #3554d1;
-  border-color: #3554d1;
-  color: #fff;
-}
-
-.foxBtn.secondBtn:hover {
-  background-color: #fff;
-  border-color: #3554d1;
-  color: #3554d1;
-}
-
-.foxBtn.thirdBtn {
   background-color: #f36c24;
   border-color: #f36c24;
   color: #fff;
 }
 
+.foxBtn.secondBtn:hover {
+  background-color: #9f3700;
+  border-color: #f36c24;
+  color: #ffffff;
+}
+
+.foxBtn.thirdBtn {
+  background-color: #ffc107;
+  border-color: #ffc107;
+  color: #fff;
+}
+
 .foxBtn.thirdBtn:hover {
   background-color: #fff;
-  border-color: #f36c24;
-  color: #f36c24;
+  border-color: #ffc107;
+  color: #ffc107;
 }
 
 .foxBtn.mainBtn.smBtn,
@@ -1173,7 +1185,7 @@ q:after {
   height: 50px;
   line-height: 50px;
   padding-inline: 25px;
-  background-color: #3554d1;
+  background-color: #f36c24;
   font-weight: 500;
   font-size: 1rem;
   border-radius: 5px;
@@ -1212,7 +1224,7 @@ q:after {
 .sectionHeader_btn {
   border: 1px solid transparent;
   outline: none;
-  background-color: #3554d1;
+  background-color: #f36c24;
   padding: 10px 20px;
   border-radius: 10px;
   color: #fff;
@@ -1220,7 +1232,7 @@ q:after {
 }
 
 .sectionHeader_btn:hover {
-  color: #3554d1;
+  color: #f36c24;
   background-color: transparent;
   border: 1px solid;
 }
@@ -1409,7 +1421,6 @@ q:after {
 
 .myModal_content {
   position: absolute;
-  background-color: #fff;
   z-index: 1;
   top: 50%;
   left: 50%;
@@ -1421,135 +1432,57 @@ q:after {
   overflow: auto;
 }
 
+.multiSteps {
+  display: flex;
+  justify-content: space-between;
+}
+
+.multiSteps .step {
+  text-align: center;
+}
+
+.multiSteps .step .number {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 1.5rem;
+  width: 3rem;
+  height: 3rem;
+  margin: auto;
+  border-radius: 50%;
+  background-color: #858585;
+}
+
+.multiSteps .step .title {
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.multiSteps .step.done .number {
+  background-color: #ffc107;
+}
+
+.multiSteps .step.active .number {
+  background-color: #ffc107;
+}
+
+.multiSteps .step.active .title {
+  font-weight: bold;
+}
+
 .foxFilter_group {
   padding: 10px 0;
 }
 
 .foxFilter_group + .foxFilter_group {
-  border-top: 1px solid #f36c24;
+  border-top: 1px solid #ffc107;
 }
 
 .foxFilter_title {
   font-size: 1.2rem;
-  color: #f36c24;
-}
-
-.bg_primary {
-  background-color: #3c3837;
-}
-
-.text_primary {
-  color: #3c3837;
-}
-
-.border_primary {
-  border-color: #3c3837;
-}
-
-.bg_secondary {
-  background-color: #3554d1;
-}
-
-.text_secondary {
-  color: #3554d1;
-}
-
-.border_secondary {
-  border-color: #3554d1;
-}
-
-.bg_third {
-  background-color: #f36c24;
-}
-
-.text_third {
-  color: #f36c24;
-}
-
-.border_third {
-  border-color: #f36c24;
-}
-
-.bg_gray {
-  background-color: #858585;
-}
-
-.text_gray {
-  color: #858585;
-}
-
-.border_gray {
-  border-color: #858585;
-}
-
-.bg_muted {
-  background-color: #bdbdbd;
-}
-
-.text_muted {
-  color: #bdbdbd;
-}
-
-.border_muted {
-  border-color: #bdbdbd;
-}
-
-.bg_white {
-  background-color: #fff;
-}
-
-.text_white {
-  color: #fff;
-}
-
-.border_white {
-  border-color: #fff;
-}
-
-.bg_black {
-  background-color: #000;
-}
-
-.text_black {
-  color: #000;
-}
-
-.border_black {
-  border-color: #000;
-}
-
-.bg_trans {
-  background-color: transparent;
-}
-
-.text_trans {
-  color: transparent;
-}
-
-.border_trans {
-  border-color: transparent;
-}
-
-.width_maxContent {
-  width: max-content;
-}
-
-._btn {
-  display: inline-block;
-  padding: 10px 20px;
-  border-radius: 5px;
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 1.5;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  cursor: pointer;
-  user-select: none;
-  border: 1px solid transparent;
-  color: #fff;
-  background-color: #007bff;
-  border-color: #007bff;
+  color: #ffc107;
 }
 
 .home_heroSection {
@@ -1570,8 +1503,9 @@ q:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, rgba(5, 16, 54, 0.5), #051036 72.43%);
+  background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
   opacity: 0.85;
+  backdrop-filter: blur(4px);
 }
 
 .featuredHeroBox {
@@ -1664,7 +1598,7 @@ q:after {
 
 .companyFeature svg {
   font-size: 4rem;
-  color: #3554d1;
+  color: #f36c24;
   margin-bottom: 1rem;
 }
 
@@ -1736,17 +1670,17 @@ q:after {
 
 .hotelHighlights .highlight .highlightIcon {
   font-size: 2rem;
-  color: #3554d1;
+  color: #f36c24;
 }
 
 .hotelRoom {
   padding: 15px;
-  border: 2px solid #3554d1;
+  border: 2px solid #f36c24;
   border-radius: 10px;
 }
 
 .roomHeader {
-  background-color: #3554d1;
+  background-color: #f36c24;
   color: #fff;
   height: 50px;
   display: flex;
@@ -1775,7 +1709,7 @@ q:after {
 
 .hotelReview_box .number {
   font-size: 4rem;
-  color: #3554d1;
+  color: #f36c24;
 }
 
 #hotelPrices {
@@ -1787,7 +1721,7 @@ q:after {
 }
 
 .roomsTable thead tr th {
-  background-color: #3554d1 !important;
+  background-color: #f36c24 !important;
   color: #fff;
   border: 2px solid rgb(214, 214, 214);
 }
@@ -1829,7 +1763,7 @@ q:after {
   margin: auto;
   border-radius: 20px;
   overflow: hidden;
-  outline: 2px solid #3554d1;
+  outline: 2px solid #f36c24;
   outline-offset: 5px;
 }
 
@@ -1843,7 +1777,7 @@ q:after {
 
 .teamMember_picture {
   font-size: 7rem;
-  color: #3554d1;
+  color: #f36c24;
 }
 
 .teamMember_name {

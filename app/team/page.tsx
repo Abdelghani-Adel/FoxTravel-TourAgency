@@ -14,7 +14,7 @@ const Team = () => {
   return (
     <div className="container">
       <div className="row mt-5 mb-5">
-        <h2 className="text_third fw-bolder text-center mb-3">MEET OUR TEAM</h2>
+        <h2 className="textSecondary fw-bolder text-center mb-3">MEET OUR TEAM</h2>
         <DepartementButtons curDepartment={department} changeDepartment={changeDepartment} />
         <EmployeeList department={department} />
       </div>

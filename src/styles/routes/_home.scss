@@ -21,8 +21,9 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(270deg, rgba(5, 16, 54, 0.5), #051036 72.43%);
+  background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
   opacity: 0.85;
+  backdrop-filter: blur(4px);
 }
 
 // featuredHeroBox
@@ -109,7 +110,7 @@
 
 // ------------- EmailSubscriber ------------- //
 .emailSubscriber {
-  background-color: v.$mainColor;
+  background-color: v.$primaryColor;
   padding: 70px 0;
   color: #fff;
 }
@@ -124,7 +125,7 @@
 
   svg {
     font-size: 4rem;
-    color: v.$secondColor;
+    color: v.$secondaryColor;
     margin-bottom: 1rem;
   }
 
