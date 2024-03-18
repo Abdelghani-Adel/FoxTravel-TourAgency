@@ -1,4 +1,4 @@
-import FoxCardRating from "@/app/_components/Cards/FoxCard/FoxCardRating";
+import FoxCardRating from "@/app/_components/cards/FoxCard/FoxCardRating";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import Modal from "@/app/_components/ui/Modal";
 import ModalTrigger from "@/app/_components/ui/ModalTrigger";

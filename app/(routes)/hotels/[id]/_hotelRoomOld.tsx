@@ -1,7 +1,7 @@
 import React from "react";
-import ImageGallerySwiperCards from "../../components/ImageGallerySwiperCards/ImageGallerySwiperCards";
+import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import { FcAdvance } from "react-icons/fc";
-import RtsRating from "../../../_components/ui/RtsRating";
+import RtsRating from "@/app/_components/ui/RtsRating";
 
 type props = {
   room: any;

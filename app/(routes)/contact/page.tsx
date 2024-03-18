@@ -1,5 +1,5 @@
 "use client";
-import Logo from "@/app/_components/MainHeader/Logo";
+import Logo from "@/app/_components/layout/MainHeader/Logo";
 import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import React from "react";
 import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
