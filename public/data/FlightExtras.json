@@ -1,0 +1,36 @@
+{
+  "addons": [
+    {
+      "id": "",
+      "title": "Extra Bags",
+      "description": "Our prices include one suitcase and one piece of hand luggage. An additional charge is made for any extra bags.",
+      "price": "5"
+    },
+    {
+      "id": "",
+      "title": "Child Seat",
+      "description": "These are provided free of charge. Please give us the ages of the children that require a child seat, in the comments box below.",
+      "price": ""
+    }
+  ],
+  "extraServices": [
+    {
+      "id": "",
+      "title": "Bicycle",
+      "description": "Please order this in advance. It will not be possible to order this service on the day of the transfer itself.",
+      "price": ""
+    },
+    {
+      "id": "",
+      "title": "Golf Bag",
+      "description": "Please order this in advance. It will not be possible to order this service on the day of the transfer itself.",
+      "price": ""
+    },
+    {
+      "id": "",
+      "title": "Pets",
+      "description": "Please order this in advance. It will not be possible to order this service on the day of the transfer itself.",
+      "price": "10"
+    }
+  ]
+}

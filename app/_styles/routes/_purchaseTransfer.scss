@@ -1,0 +1,30 @@
+@use "../abstract/variables" as v;
+
+.purchaseTransfer {
+  background-color: #f5f5f5;
+}
+
+.transferExtra {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-between;
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.purchase_flightPriceWrapper {
+  background-color: v.$secondaryColor;
+  padding: 10px;
+  border-radius: 10px;
+  color: #fff;
+
+  .price {
+    font-size: 3rem;
+  }
+}
+
+.boxShadow {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
