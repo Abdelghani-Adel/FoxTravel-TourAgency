@@ -991,6 +991,7 @@ q:after {
   align-items: stretch;
   justify-content: center;
   width: max-content;
+  margin: auto;
 }
 
 .ss_inputWrapper {

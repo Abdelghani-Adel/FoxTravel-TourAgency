@@ -31,7 +31,7 @@ const Page = () => {
             {currentStep == 1 && <Extras nextStep={nextStep} />}
             {currentStep == 2 && <OrderDetails nextStep={nextStep} prevStep={prevStep} />}
             {currentStep == 3 && <OrderSummary nextStep={nextStep} prevStep={prevStep} />}
-            {currentStep == 4 && <Purchase />}
+            {currentStep == 4 && <Purchase prevStep={prevStep} />}
           </div>
 
           <div className="col-3">

@@ -31,7 +31,7 @@ const RadioOptions = (props: props) => {
             defaultChecked={props.selectedType === option.value}
             onChange={onChangeHandler}
           />
-          <label htmlFor={option.value} className="form-check-label text-white">
+          <label htmlFor={option.value} className="form-check-label">
             {option.label}
           </label>
         </div>

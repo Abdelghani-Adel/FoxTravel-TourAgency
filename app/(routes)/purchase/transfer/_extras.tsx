@@ -27,7 +27,7 @@ const Extras = (props: Props) => {
 
                 <div className="text-center">
                   <p>{addon.price.length == 0 ? "FREE" : `${addon.price}$`}</p>
-                  <button className="foxBtn secondBtn">ADD</button>
+                  <button className="foxBtn secondBtn smBtn">ADD</button>
                 </div>
               </div>
             ))}
@@ -46,7 +46,7 @@ const Extras = (props: Props) => {
 
                 <div className="text-center">
                   <p>{service.price.length == 0 ? "FREE" : `${service.price}$`}</p>
-                  <button className="foxBtn secondBtn">ADD</button>
+                  <button className="foxBtn secondBtn smBtn">ADD</button>
                 </div>
               </div>
             ))}

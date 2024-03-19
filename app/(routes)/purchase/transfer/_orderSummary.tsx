@@ -1,6 +1,7 @@
 import React from "react";
 import PrevStep from "./_prevStep";
 import NextStep from "./_nextStep";
+import Image from "next/image";
 
 type Props = {
   nextStep: () => void;
@@ -18,18 +19,26 @@ const OrderSummary = (props: Props) => {
 
       <div className="bg-white p-4 rounded mb-3 boxShadow">
         <h5 className="mb-2">Passenger</h5>
-        <p className="d-flex gap-3">
-          <strong className="w-25 fw-normal">Name:</strong>{" "}
-          <span className="fw-light w-100">Abdelghani</span>
-        </p>
-        <p className="d-flex gap-3">
-          <strong className="w-25 fw-normal">Email:</strong>{" "}
-          <span className="fw-light w-100">abdelghani@rts.com</span>
-        </p>
-        <p className="d-flex gap-3">
-          <strong className="w-25 fw-normal">Phone:</strong>{" "}
-          <span className="fw-light w-100">01099908990</span>
-        </p>
+        <div className="d-flex align-items-center">
+          <div className="w-100">
+            <p className="d-flex gap-3">
+              <strong className="w-25 fw-normal">Name:</strong>{" "}
+              <span className="fw-light w-100">Abdelghani</span>
+            </p>
+            <p className="d-flex gap-3">
+              <strong className="w-25 fw-normal">Email:</strong>{" "}
+              <span className="fw-light w-100">abdelghani@rts.com</span>
+            </p>
+            <p className="d-flex gap-3">
+              <strong className="w-25 fw-normal">Phone:</strong>{" "}
+              <span className="fw-light w-100">01099908990</span>
+            </p>
+          </div>
+
+          <div>
+            <Image src="/img/logo.png" width={250} height={60} alt="" />
+          </div>
+        </div>
       </div>
 
       <div className="bg-white p-4 rounded mb-3 boxShadow">
