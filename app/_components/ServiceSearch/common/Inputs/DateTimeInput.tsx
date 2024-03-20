@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import calender from "../icons/calendar.png";
 import DatePicker from "react-datepicker";
-import "react-datepicker/dist/react-datepicker.css";
 import InputWrapper from "../InputWrapper";
 import CalenderIcon from "../icons/CalenderIcon";
 

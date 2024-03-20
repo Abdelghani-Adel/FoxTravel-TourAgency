@@ -381,3 +381,44 @@
 .multiSteps .step.active {
   color: #000;
 }
+
+// ============================================== //
+// PageStripe
+// ============================================== //
+.pageStripe {
+  height: 35vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.pageStripBackground {
+  position: relative;
+  top: -130%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.pageStripBackground::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
+  opacity: 0.55;
+  backdrop-filter: blur(4px);
+}
+
+.pageStripeTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}

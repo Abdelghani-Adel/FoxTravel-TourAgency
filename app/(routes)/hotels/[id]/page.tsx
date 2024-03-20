@@ -8,8 +8,11 @@ import Overview from "@/app/(routes)/hotels/[id]/_overview";
 import PageNavigator from "@/app/(routes)/hotels/[id]/_pageNavigator";
 import ReviewStatistics from "@/app/(routes)/hotels/[id]/_reviewStatistics";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
+import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
+import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 
 const Page = ({ params }: { params: { id: string } }) => {
+  useHideLoadingLayer();
   return (
     <div className="container mt-4 mb-5">
       <Header />
@@ -30,7 +33,9 @@ const Page = ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="row mb-2">
-        <div className="col-12 col-md-8">{/* <HotelSearchForm /> */}</div>
+        <div className="col-12 col-md-8">
+          <HotelForm />
+        </div>
       </div>
 
       <div className="row">

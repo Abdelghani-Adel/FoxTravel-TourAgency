@@ -1,24 +1,24 @@
-import FoxCardRating from "@/app/_components/cards/FoxCard/FoxCardRating";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import Modal from "@/app/_components/ui/Modal";
-import ModalTrigger from "@/app/_components/ui/ModalTrigger";
-import React, { useState } from "react";
+import FoxCardRating from "@/app/_components/cards/FoxCard/FoxCardRating";
+import MyModal from "@/app/_components/ui/MyModal";
+import { useState } from "react";
 import { IoIosCheckmark } from "react-icons/io";
 import { v4 } from "uuid";
-import Overview from "./_overview";
 
 const HotelRoomInfo = ({ room }: { room: any }) => {
+  const [isShown, setIsShown] = useState(false);
+
   return (
     <>
-      <ModalTrigger modalId="hotelRoomDetails">
-        <button className="foxBtn mainBtn smBtn w-100">More Info</button>
-      </ModalTrigger>
+      <button className="foxBtn mainBtn smBtn w-100" onClick={() => setIsShown(true)}>
+        More Info
+      </button>
 
-      <Modal id="hotelRoomDetails">
-        <div className="p-4">
+      <MyModal show={isShown} onClose={() => setIsShown(false)}>
+        <div className="p-4 bg-white rounded-3">
           <div className="container">
-            <div className="mb-3 bgSecondary p-2 txtWhite rounded-3">
-              <h3>Twin Room with sea view</h3>
+            <div className="mb-3 bgSecondary p-2 rounded-3">
+              <h3 className="text-white">Twin Room with sea view</h3>
             </div>
 
             <div className="row text-start">
@@ -54,7 +54,7 @@ const HotelRoomInfo = ({ room }: { room: any }) => {
             </div>
           </div>
         </div>
-      </Modal>
+      </MyModal>
     </>
   );
 };

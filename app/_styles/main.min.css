@@ -132,15 +132,15 @@ q:after {
 }
 
 .bgPrimary {
-  background-color: #3c3837;
+  background-color: #161514;
 }
 
 .textPrimary {
-  color: #3c3837;
+  color: #161514;
 }
 
 .borderPrimary {
-  border-color: #3c3837;
+  border-color: #161514;
 }
 
 .bgSecondary {
@@ -337,7 +337,7 @@ q:after {
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
-  outline: 2px solid #3c3837;
+  outline: 2px solid #161514;
   margin-top: 2px;
   z-index: 1;
 }
@@ -349,12 +349,12 @@ q:after {
   bottom: 0;
   border-radius: 10px;
   padding: 15vh 10px 10px;
-  border: 2px solid #3c3837;
+  border: 2px solid #161514;
 }
 
 .packageCard_info .icon {
   font-size: 1.7rem;
-  color: #3c3837;
+  color: #161514;
 }
 
 .packageCard_info .foxCard_rating .ratingBox {
@@ -755,11 +755,12 @@ q:after {
 }
 
 .react-datepicker {
-  border-color: #3c3837;
+  border-color: #161514;
 }
 
 .react-datepicker__header {
-  background-color: #3c3837;
+  background-color: #f36c24;
+  color: #fff;
 }
 
 .react-datepicker__current-month,
@@ -773,11 +774,20 @@ q:after {
 
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
 .react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
-  border-bottom-color: #3c3837;
+  border-bottom-color: #161514;
+}
+
+.react-datepicker-time__header {
+  color: #fff;
+}
+
+.react-datepicker__header--time {
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .mainFooter {
-  background-color: #3c3837;
+  background-color: #161514;
   padding-top: 20px;
   padding-bottom: 20px;
   margin-bottom: 0;
@@ -826,7 +836,7 @@ q:after {
   padding: 20px;
   transition: 0.3s ease-in-out;
   color: #fff;
-  background-color: #3c3837;
+  background-color: #161514;
   z-index: 50;
   position: relative;
 }
@@ -843,7 +853,7 @@ q:after {
 }
 
 .mainHeader.sticky {
-  background-color: #3c3837;
+  background-color: #161514;
 }
 
 .mainHeader_inner {
@@ -870,7 +880,7 @@ q:after {
 .navItem.active,
 .navItem:hover {
   color: #fff;
-  background-color: #3c3837;
+  background-color: #161514;
 }
 
 .navLink {
@@ -897,7 +907,7 @@ q:after {
 
 .headerBtn:hover {
   background-color: #fff;
-  color: #3c3837;
+  color: #161514;
 }
 
 .navToggler {
@@ -1100,7 +1110,7 @@ q:after {
 }
 
 .bgMain {
-  background-color: #3c3837;
+  background-color: #161514;
 }
 
 .bgSecondary {
@@ -1128,15 +1138,15 @@ q:after {
 }
 
 .foxBtn.mainBtn {
-  background-color: #3c3837;
-  border-color: #3c3837;
+  background-color: #161514;
+  border-color: #161514;
   color: #fff;
 }
 
 .foxBtn.mainBtn:hover {
   background-color: #fff;
-  border-color: #1a1817;
-  color: #3c3837;
+  border-color: #3c3837;
+  color: #161514;
 }
 
 .foxBtn.secondBtn {
@@ -1184,7 +1194,7 @@ q:after {
 .showMoreBtn {
   width: 100%;
   background-color: transparent;
-  border: 1px solid #3c3837;
+  border: 1px solid #161514;
   outline: none;
   border-radius: 5px;
   text-transform: capitalize;
@@ -1205,7 +1215,7 @@ q:after {
 }
 
 .btnAction:hover {
-  background-color: #3c3837;
+  background-color: #161514;
 }
 
 .section {
@@ -1473,6 +1483,44 @@ q:after {
   color: #000;
 }
 
+.pageStripe {
+  height: 35vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.pageStripBackground {
+  position: relative;
+  top: -130%;
+  height: 100vh;
+  width: 100vw;
+}
+
+.pageStripBackground::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
+  opacity: 0.55;
+  backdrop-filter: blur(4px);
+}
+
+.pageStripeTitle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  z-index: 2;
+  text-transform: uppercase;
+  font-size: 3rem;
+  letter-spacing: 5px;
+}
+
 .foxFilter_group {
   padding: 10px 0;
 }
@@ -1584,7 +1632,7 @@ q:after {
 }
 
 .emailSubscriber {
-  background-color: #3c3837;
+  background-color: #161514;
   padding: 70px 0;
   color: #fff;
 }
@@ -1622,8 +1670,8 @@ q:after {
 
 .pageNavigator li.active {
   font-weight: 400;
-  color: #3c3837;
-  border-bottom: 2px solid #3c3837;
+  color: #161514;
+  border-bottom: 2px solid #161514;
 }
 
 .pageNavigator li a {
@@ -1818,4 +1866,35 @@ q:after {
 
 .boxShadow {
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.notFoundPage {
+  padding: 4rem 0;
+}
+
+.notFoundLogo {
+  position: relative;
+  height: 20rem;
+  aspect-ratio: 1;
+  margin: auto;
+}
+
+._404 {
+  font-size: 10rem;
+}
+
+.branchDetailsWrapper {
+  margin: auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  display: flex;
+  flex-direction: column;
+}
+
+.branchDetailsWrapper .locationIcon {
+  font-size: 3rem;
+  color: #f36c24;
+  text-align: center;
 }
