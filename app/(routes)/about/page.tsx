@@ -3,24 +3,11 @@ import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import OurTeam from "./_ourTeam";
 
 // import { useRouter } from "next/router";
-import { useEffect, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 
 const Page = () => {
-  const params = useSearchParams();
-  const sectionRef = useRef(null);
   useHideLoadingLayer();
-
-  useEffect(() => {
-    if (params) {
-      params.forEach((param) => {
-        const sectionElement = document.getElementById(param);
-        if (sectionElement) {
-          sectionElement.scrollIntoView({ behavior: "smooth" });
-        }
-      });
-    }
-  }, [params]);
 
   return (
     <div className="container mt-5 mb-5">
@@ -82,10 +69,9 @@ const Page = () => {
           </div>
         </div> */}
       </div>
-
-      <section id="ourTeam" ref={sectionRef}>
+      <Suspense>
         <OurTeam />
-      </section>
+      </Suspense>
     </div>
   );
 };
