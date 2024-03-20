@@ -37,7 +37,7 @@ const MainFooter = () => {
             <h5 className="textSecondary">TRAVEL SERVICES</h5>
             <ul className="fotter_ul">
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/hotels" className="mainFooter_link">
                   Hotel Deals
                 </Link>
               </li>
@@ -52,7 +52,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/cars" className="mainFooter_link">
                   Transporation
                 </Link>
               </li>
@@ -67,7 +67,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/packages" className="mainFooter_link">
                   Egypt Packages
                 </Link>
               </li>
@@ -88,7 +88,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/team" className="mainFooter_link">
+                <Link href="/about?section=ourTeam" className="mainFooter_link">
                   Our Team
                 </Link>
               </li>
