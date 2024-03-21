@@ -1,16 +1,16 @@
 import React from "react";
 import CategorySelectors from "./CategorySelectors/CategorySelectors";
-import HotelForm from "./HotelForm/HotelForm";
+import HotelFormWrapper from "./HotelForm/HotelFormWrapper";
 import FlightForm from "./FlightForm/FlightForm";
-import TransportForm from "./TransportForm/TransportForm";
+import TransportFormWrapper from "./TransportForm/TransportFormWrapper";
 
 const ServiceSearch = () => {
   return (
     <div className="d-flex flex-column gap-3">
       <CategorySelectors />
-      <HotelForm />
+      <HotelFormWrapper />
       <FlightForm />
-      <TransportForm />
+      <TransportFormWrapper />
     </div>
   );
 };

@@ -179,6 +179,18 @@ q:after {
   border-color: #858585;
 }
 
+.bgDarkGray {
+  background-color: #3a3a3a;
+}
+
+.textDarkGray {
+  color: #3a3a3a;
+}
+
+.borderDarkGray {
+  border-color: #3a3a3a;
+}
+
 .bgMuted {
   background-color: #bdbdbd;
 }
@@ -759,8 +771,20 @@ q:after {
 }
 
 .react-datepicker__header {
-  background-color: #f36c24;
+  background-color: #161514;
   color: #fff;
+  position: relative;
+}
+
+.react-datepicker-time__header::after {
+  position: absolute;
+  content: "HH:MM";
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #fff;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .react-datepicker__current-month,
@@ -1532,6 +1556,10 @@ q:after {
 .foxFilter_title {
   font-size: 1.2rem;
   color: #ffc107;
+}
+
+.cursorPointer {
+  cursor: pointer;
 }
 
 .home_heroSection {

@@ -4,6 +4,7 @@ import hotelList from "@/public/data/Cards_Hotels.json";
 import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
+import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
 
 const Page = () => {
   useHideLoadingLayer();
@@ -14,6 +15,10 @@ const Page = () => {
         <h1 className="text-center txtSecondary fw-bolder">Find Your Dream Luxury Hotel</h1>
       </div>
       <div className="container mt-4 mb-3">
+        <div className="row mb-3">
+          <HotelForm />
+        </div>
+
         <div className="row g-3">
           <div className="col-3 d-none d-lg-block">
             <Filter />

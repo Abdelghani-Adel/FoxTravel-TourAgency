@@ -48,9 +48,21 @@
   border-color: v.$primaryColor;
 }
 .react-datepicker__header {
-  background-color: v.$secondaryColor;
+  background-color: v.$primaryColor;
   color: #fff;
+  position: relative;
 }
+.react-datepicker-time__header::after {
+  position: absolute;
+  content: "HH:MM";
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #fff;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
 .react-datepicker__current-month,
 .react-datepicker__day-name {
   color: #fff;

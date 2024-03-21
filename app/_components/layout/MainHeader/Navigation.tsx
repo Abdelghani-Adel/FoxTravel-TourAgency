@@ -6,45 +6,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-const nav = [
-  {
-    title: "Home",
-    path: "/",
-  },
-  {
-    title: "Hotels",
-    path: "/hotels",
-  },
-  {
-    title: "Packages",
-    path: "/packages",
-  },
-  {
-    title: "Destinations",
-    path: "/destinations",
-  },
-  {
-    title: "Tours",
-    path: "/tours",
-  },
-  // {
-  //   title: "Flights",
-  //   path: "/flights",
-  // },
-  {
-    title: "Cars",
-    path: "/cars",
-  },
-  {
-    title: "Contact",
-    path: "/contact",
-  },
-  // {
-  //   title: "About",
-  //   path: "/about",
-  // },
-];
-
 type props = {
   onItemClick?: () => void;
 };
@@ -60,17 +21,68 @@ const Navigation = (props: props) => {
   return (
     <nav className="navigation">
       <ul className="navList">
-        {nav.map((link, i) => (
-          <li
-            key={i}
-            className={`navItem ${pathname === link.path ? "active" : ""}`}
-            onClick={onNavigate}
+        <li className={`navItem ${pathname === "/" ? "active" : ""}`} onClick={onNavigate}>
+          <Link className="navLink" aria-current="page" href="/">
+            Home
+          </Link>
+        </li>
+
+        <li className={`navItem ${pathname === "/hotels" ? "active" : ""}`} onClick={onNavigate}>
+          <Link className="navLink" aria-current="page" href="/hotels">
+            Hotels
+          </Link>
+        </li>
+
+        <li className={`navItem ${pathname === "/packages" ? "active" : ""}`} onClick={onNavigate}>
+          <Link className="navLink" aria-current="page" href="/packages">
+            Packages
+          </Link>
+        </li>
+
+        <li
+          className={`navItem ${pathname === "/destinations" ? "active" : ""}`}
+          onClick={onNavigate}
+        >
+          <Link className="navLink" aria-current="page" href="/destinations">
+            Destinations
+          </Link>
+        </li>
+
+        <li className={`navItem ${pathname === "/tours" ? "active" : ""}`} onClick={onNavigate}>
+          <Link className="navLink" aria-current="page" href="/tours">
+            Tours
+          </Link>
+        </li>
+
+        <li className="navItem">
+          <a
+            className="nav-link dropdown-toggle"
+            href="#"
+            role="button"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
-            <Link className="navLink" aria-current="page" href={link.path}>
-              {link.title}
-            </Link>
-          </li>
-        ))}
+            Transfer
+          </a>
+          <ul className="dropdown-menu p-2 bgDarkGray">
+            <li className="navItem">
+              <Link className="navLink mb-2" aria-current="page" href="/contact">
+                Transportation
+              </Link>
+            </li>
+            <li className="navItem">
+              <Link className="navLink" aria-current="page" href="/contact">
+                Car Rental
+              </Link>
+            </li>
+          </ul>
+        </li>
+
+        <li className={`navItem ${pathname === "/contact" ? "active" : ""}`} onClick={onNavigate}>
+          <Link className="navLink" aria-current="page" href="/contact">
+            Contact
+          </Link>
+        </li>
       </ul>
     </nav>
   );

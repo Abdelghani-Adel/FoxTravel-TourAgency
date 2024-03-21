@@ -8,7 +8,7 @@ import Overview from "@/app/(routes)/hotels/[id]/_overview";
 import PageNavigator from "@/app/(routes)/hotels/[id]/_pageNavigator";
 import ReviewStatistics from "@/app/(routes)/hotels/[id]/_reviewStatistics";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
+import HotelFormWrapper from "@/app/_components/ServiceSearch/HotelForm/HotelFormWrapper";
 import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 
 const Page = ({ params }: { params: { id: string } }) => {
@@ -34,7 +34,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
       <div className="row mb-2">
         <div className="col-12 col-md-8">
-          <HotelForm />
+          <HotelFormWrapper />
         </div>
       </div>
 

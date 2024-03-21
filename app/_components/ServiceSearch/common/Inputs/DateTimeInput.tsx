@@ -25,6 +25,7 @@ const DateTimeInput = (props: Props) => {
           showTimeSelect
           timeFormat="HH:mm"
           timeIntervals={15}
+          timeCaption="Time"
           selectsStart
           placeholderText={placeholder}
           className="ss_inputField"

@@ -16,11 +16,11 @@ const optionsList = [
   },
   {
     value: "return",
-    label: "Return",
+    label: "Round Trip",
   },
   {
     value: "excursion",
-    label: "Excursion",
+    label: "Excursions",
   },
 ];
 

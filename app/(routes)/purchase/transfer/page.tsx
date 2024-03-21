@@ -6,6 +6,7 @@ import Extras from "./_extras";
 import OrderDetails from "./_orderDetails";
 import OrderSummary from "./_orderSummary";
 import Purchase from "./_purchase";
+import TransportForm from "@/app/_components/ServiceSearch/TransportForm/TransportForm";
 
 const steps = ["Extras", "Order Details", "Order Summary", "Purchase"];
 
@@ -19,7 +20,11 @@ const Page = () => {
 
   return (
     <div className="purchaseTransfer">
-      <div className="container pt-5 pb-5">
+      <div className="container pt-2 pb-5">
+        <div className="row mb-5">
+          <TransportForm />
+        </div>
+
         <div className="row mb-3">
           <div className="col-5 m-auto">
             <MultiSteps currentStep={currentStep} steps={steps} />

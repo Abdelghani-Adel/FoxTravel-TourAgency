@@ -15,8 +15,6 @@ const TransportForm = () => {
     setFlightType(flightType);
   };
 
-  if (activeCategory !== "Transport") return null;
-
   return (
     <div>
       <TransportTypeSelectors selectedType={flightType} onChange={onFlightTypeChange} />

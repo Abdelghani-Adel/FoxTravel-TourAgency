@@ -1,3 +1,4 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -5,8 +6,19 @@ import React from "react";
 import { FaHeadphones } from "react-icons/fa6";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { HiOutlineMail } from "react-icons/hi";
+import { useAppDispatch } from "@/app/_redux/store";
+import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import { useRouter } from "next/navigation";
 
 const MainFooter = () => {
+  const dispatch = useAppDispatch();
+  const router = useRouter();
+
+  const updateSearchCategory = () => {
+    dispatch(serviceSearchActions.updateCategory("Flight"));
+    router.push("/");
+  };
+
   return (
     <div className="mainFooter">
       <div className="container-fluid">
@@ -42,7 +54,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/" className="mainFooter_link">
                   Nile Cruises
                 </Link>
               </li>
@@ -57,12 +69,12 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <span className="mainFooter_link cursorPointer" onClick={updateSearchCategory}>
                   Flight Booking
-                </Link>
+                </span>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/destinations" className="mainFooter_link">
                   International Holidays
                 </Link>
               </li>
@@ -72,7 +84,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/tours" className="mainFooter_link">
                   Excursions
                 </Link>
               </li>
