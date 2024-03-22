@@ -46,6 +46,10 @@ const Number = (props: INumberInputProps) => {
   }, []);
 
   useEffect(() => {
+    setNumber(props.initValue);
+  }, [props.initValue]);
+
+  useEffect(() => {
     props.onChange(number);
   }, [number]);
 

@@ -3,11 +3,8 @@ import { ChangeEvent, useState } from "react";
 import MultipleFlights from "./MultipleFlights";
 import MyModal from "../../../../app/_components/ui/MyModal";
 import RadioOptions from "../common/Inputs/RadioOptions";
-
-type props = {
-  selectedType: string;
-  onChange: (tripType: string) => void;
-};
+import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
+import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
 
 const optionsList = [
   {
@@ -20,24 +17,42 @@ const optionsList = [
   },
 ];
 
-const FlightTypeSelectors = (props: props) => {
-  const [isShown, setIsShown] = useState(false);
-  const { onChange } = props;
+const FlightTypeSelectors = () => {
+  const dispatch = useAppDispatch();
+  const [isMultipleFormShown, setIsMultipleFormShown] = useState(false);
+  const reduxState = useAppSelector((state) => state.serviceSearch.flight);
+  const flightType = reduxState.flightType;
+
+  const onFlightTypeChange = (flightType: string) => {
+    if (flightType === "oneway" || flightType === "round" || flightType === "multiple") {
+      dispatch(serviceSearchActions.updateFlightForm({ ...reduxState, flightType: flightType }));
+    }
+  };
+
+  const showMultipleForm = () => {
+    dispatch(serviceSearchActions.updateFlightForm({ ...reduxState, flightType: "multiple" }));
+    setIsMultipleFormShown(true);
+  };
+
+  const hideMultipleForm = () => {
+    dispatch(serviceSearchActions.updateFlightForm({ ...reduxState, flightType: "oneway" }));
+    setIsMultipleFormShown(false);
+  };
 
   return (
     <div className="d-flex gap-4 mb-2 justify-content-center align-items-center fw-normal">
       <RadioOptions
-        selectedType={props.selectedType}
+        selectedType={flightType}
         fieldName="searchType"
         options={optionsList}
-        onChange={onChange}
+        onChange={onFlightTypeChange}
       />
 
-      <button className="foxBtn secondBtn smBtn" onClick={() => setIsShown(true)}>
+      <button className="foxBtn secondBtn smBtn" onClick={showMultipleForm}>
         Multiple Destinations
       </button>
 
-      <MyModal show={isShown} onClose={() => setIsShown(false)}>
+      <MyModal show={isMultipleFormShown} onClose={hideMultipleForm}>
         <MultipleFlights />
       </MyModal>
     </div>

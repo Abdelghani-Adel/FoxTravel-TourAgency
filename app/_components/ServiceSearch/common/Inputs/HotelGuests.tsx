@@ -8,7 +8,7 @@ import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import InputWrapper from "../InputWrapper";
 import ArrowIcon from "../icons/ArrowIcon";
 import PersonIcon from "../icons/PersonIcon";
-import Children from "./Children";
+import HotelChildren from "./HotelChildren";
 import Number from "./Number";
 
 // This is a controlled component, it reads from redux and update in redux.
@@ -41,7 +41,7 @@ const HotelGuests = () => {
           <div className="d-flex flex-column gap-2">
             <Number initValue={rooms} min={1} max={3} title="Rooms" onChange={onRoomsChange} />
             <Number initValue={adults} min={1} max={5} title="Adults" onChange={onAdultsChange} />
-            <Children />
+            <HotelChildren />
           </div>
         </DropdownMenuContent>
       </DropdownMenuWrapper>

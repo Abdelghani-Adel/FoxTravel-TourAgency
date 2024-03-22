@@ -8,24 +8,19 @@ import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
 
 const HotelForm = () => {
   const dispatch = useAppDispatch();
-  const reduxState = useAppSelector((state) => state.serviceSearch);
-  const [localState, setLocalState] = useState<ISearchHotelState>(reduxState.hotel);
+  const reduxState = useAppSelector((state) => state.serviceSearch.hotel);
 
   const onLocationChangeHandler = (city: string) => {
-    setLocalState((prev) => ({ ...prev, city: city }));
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, city: city }));
   };
 
   const onCheckInChangeHandler = (date: Date | null) => {
-    setLocalState({ ...localState, startDate: date });
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, startDate: date }));
   };
 
   const onCheckoutChangeHandler = (date: Date | null) => {
-    setLocalState({ ...localState, endDate: date });
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, endDate: date }));
   };
-
-  useEffect(() => {
-    dispatch(serviceSearchActions.updateHotelForm(localState));
-  }, [localState]);
 
   return (
     <form className="serviceSearchForm">
@@ -39,14 +34,14 @@ const HotelForm = () => {
         title="Check-In"
         placeholder="Enter checkin date"
         onChange={onCheckInChangeHandler}
-        defaultValue={localState.startDate}
+        defaultValue={reduxState.startDate}
       />
 
       <DateInput
         title="Check-Out"
         placeholder="Enter checkout date"
         onChange={onCheckoutChangeHandler}
-        defaultValue={localState.endDate}
+        defaultValue={reduxState.endDate}
       />
 
       <HotelGuests />

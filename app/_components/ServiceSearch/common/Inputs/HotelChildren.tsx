@@ -1,11 +1,10 @@
-import React, { useEffect, useState } from "react";
-import Number from "./Number";
+import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { v4 } from "uuid";
 import ChildAge from "./ChildAge";
-import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
-import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import Number from "./Number";
 
-const Children = () => {
+const HotelChildren = () => {
   const dispatch = useAppDispatch();
 
   // Get the current value from redux state.
@@ -52,4 +51,4 @@ const Children = () => {
   );
 };
 
-export default Children;
+export default HotelChildren;
