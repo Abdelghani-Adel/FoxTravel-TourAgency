@@ -62,12 +62,12 @@ const Navigation = (props: props) => {
             data-bs-toggle="dropdown"
             aria-expanded="false"
           >
-            Transfer
+            Transportation
           </a>
           <ul className="dropdown-menu p-2 bgDarkGray">
             <li className="navItem">
               <Link className="navLink mb-2" aria-current="page" href="/contact">
-                Transportation
+                Transfer
               </Link>
             </li>
             <li className="navItem">

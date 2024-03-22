@@ -4,21 +4,16 @@ import InputWrapper from "../InputWrapper";
 import CalenderIcon from "../icons/CalenderIcon";
 
 const DateInput = (props: Props) => {
-  const { placeholder, title } = props;
-  const [startDate, setStartDate] = useState<Date | null>();
-
-  const onChange = (date: Date | null) => {
-    setStartDate(date);
-  };
+  const { placeholder, title, defaultValue, onChange } = props;
 
   return (
     <InputWrapper title={title}>
       <CalenderIcon />
       <div>
         <DatePicker
-          selected={startDate}
+          selected={defaultValue}
           onChange={onChange}
-          startDate={startDate}
+          startDate={defaultValue}
           selectsStart
           placeholderText={placeholder}
           className="ss_inputField"
@@ -33,4 +28,6 @@ export default DateInput;
 type Props = {
   title: string;
   placeholder: string;
+  onChange: (date: Date | null) => void;
+  defaultValue: Date | null;
 };

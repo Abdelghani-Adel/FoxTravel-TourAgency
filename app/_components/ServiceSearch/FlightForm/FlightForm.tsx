@@ -5,15 +5,11 @@ import RoundFlight from "./RoundFlight";
 import FlightTypeSelectors from "./FlightTypeSelectors";
 
 const FlightForm = () => {
-  const reduxFormState = useAppSelector((state) => state.serviceSearch);
-  const activeCategory = reduxFormState.category;
   const [flightType, setFlightType] = useState("oneway");
 
   const onFlightTypeChange = (flightType: string) => {
     setFlightType(flightType);
   };
-
-  if (activeCategory !== "Flight") return null;
 
   return (
     <div>

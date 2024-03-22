@@ -3,35 +3,45 @@
 import DropdownMenuContent from "@/app/_components/ui/DropdownMenu/DropdownMenuContent";
 import DropdownMenuToggler from "@/app/_components/ui/DropdownMenu/DropdownMenuToggler";
 import DropdownMenuWrapper from "@/app/_components/ui/DropdownMenu/DropdownMenuWrapper";
-import { useState } from "react";
+import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import InputWrapper from "../InputWrapper";
 import ArrowIcon from "../icons/ArrowIcon";
 import PersonIcon from "../icons/PersonIcon";
 import Children from "./Children";
 import Number from "./Number";
 
+// This is a controlled component, it reads from redux and update in redux.
 const HotelGuests = () => {
-  const [rooms, setRooms] = useState(1);
-  const [adults, setAdults] = useState(1);
-  const [children, setChildren] = useState<number[]>([]);
+  const dispatch = useAppDispatch();
 
-  const onRoomsChange = (newRooms: number) => setRooms(newRooms);
-  const onAdultsChange = (newAdults: number) => setAdults(newAdults);
-  const onChildrenChange = (newChildren: number[]) => setChildren(newChildren);
+  // Get the current value from redux state.
+  const reduxState = useAppSelector((state) => state.serviceSearch.hotel);
+  const { rooms, adults, childs } = reduxState;
+
+  // Update directely in redux state.
+  const onRoomsChange = (newRooms: number) => {
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, rooms: newRooms }));
+  };
+
+  // Update directely in redux state.
+  const onAdultsChange = (newAdults: number) => {
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, adults: newAdults }));
+  };
 
   return (
     <InputWrapper title="Hotel Guests">
       <PersonIcon />
       <DropdownMenuWrapper>
         <DropdownMenuToggler className="ss_dropdownToggler">
-          {rooms} Room - {adults} Adult - {children.length} Children
+          {rooms} Room - {adults} Adult - {childs.length} Children
         </DropdownMenuToggler>
 
         <DropdownMenuContent className="ss_dropdowncontent">
           <div className="d-flex flex-column gap-2">
-            <Number initValue={1} min={1} max={3} title="Rooms" onChange={onRoomsChange} />
-            <Number initValue={1} min={1} max={5} title="Adults" onChange={onAdultsChange} />
-            <Children onChildrenChange={onChildrenChange} />
+            <Number initValue={rooms} min={1} max={3} title="Rooms" onChange={onRoomsChange} />
+            <Number initValue={adults} min={1} max={5} title="Adults" onChange={onAdultsChange} />
+            <Children />
           </div>
         </DropdownMenuContent>
       </DropdownMenuWrapper>

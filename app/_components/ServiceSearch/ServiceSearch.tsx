@@ -1,7 +1,7 @@
 import React from "react";
 import CategorySelectors from "./CategorySelectors/CategorySelectors";
 import HotelFormWrapper from "./HotelForm/HotelFormWrapper";
-import FlightForm from "./FlightForm/FlightForm";
+import FlightFormWrapper from "./FlightForm/FlightFormWrapper";
 import TransportFormWrapper from "./TransportForm/TransportFormWrapper";
 
 const ServiceSearch = () => {
@@ -9,7 +9,7 @@ const ServiceSearch = () => {
     <div className="d-flex flex-column gap-3">
       <CategorySelectors />
       <HotelFormWrapper />
-      <FlightForm />
+      <FlightFormWrapper />
       <TransportFormWrapper />
     </div>
   );

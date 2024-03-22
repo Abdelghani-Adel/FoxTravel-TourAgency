@@ -2,45 +2,42 @@ import React, { useEffect, useState } from "react";
 import Number from "./Number";
 import { v4 } from "uuid";
 import ChildAge from "./ChildAge";
+import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
+import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
 
-type props = {
-  onChildrenChange: (newChilds: number[]) => void;
-};
+const Children = () => {
+  const dispatch = useAppDispatch();
 
-const Children = (props: props) => {
-  const [childsCount, setChildsCount] = useState(0);
-  const [childsAges, setChildsAges] = useState<number[]>([]);
+  // Get the current value from redux state.
+  const reduxState = useAppSelector((state) => state.serviceSearch.hotel);
+  const { childs } = reduxState;
 
-  const onCountChange = (newChildren: number) => setChildsCount(newChildren);
-
-  const onChildAgeChange = (newAge: number, index: number) => {
-    setChildsAges((prev) => {
-      const updatedChilds = [...prev];
-      updatedChilds[index] = newAge;
-      return updatedChilds;
-    });
+  // Update the childs count.
+  const onCountChange = (newChildren: number) => {
+    if (newChildren > childs.length) {
+      const newChilds = [...reduxState.childs, 1];
+      dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, childs: newChilds }));
+    } else {
+      const newChilds = reduxState.childs.slice(0, -1);
+      dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, childs: newChilds }));
+    }
   };
 
-  useEffect(() => {
-    if (childsCount > childsAges.length) {
-      setChildsAges((prev) => [...prev, 1]);
-    } else if (childsCount < childsAges.length) {
-      setChildsAges((prev) => prev.slice(0, -1));
-    }
-  }, [childsCount]);
-
-  useEffect(() => {
-    props.onChildrenChange(childsAges);
-  }, [childsAges]);
+  // Update child age.
+  const onChildAgeChange = (newAge: number, index: number) => {
+    const updatedChilds = [...reduxState.childs];
+    updatedChilds[index] = newAge;
+    dispatch(serviceSearchActions.updateHotelForm({ ...reduxState, childs: updatedChilds }));
+  };
 
   return (
     <>
-      <Number initValue={0} min={0} max={8} title="Children" onChange={onCountChange} />
+      <Number initValue={childs.length} min={0} max={8} title="Children" onChange={onCountChange} />
 
-      {childsCount > 0 && (
+      {childs.length > 0 && (
         <div>
           <div className="row row-cols-2 g-2 mb-2">
-            {childsAges.map((age, i) => (
+            {childs.map((age, i) => (
               <ChildAge key={v4()} id={i} value={age} onChange={onChildAgeChange} />
             ))}
           </div>
