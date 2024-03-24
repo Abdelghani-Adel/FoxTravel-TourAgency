@@ -4,8 +4,10 @@ import SubmitBtn from "../common/SubmitBtn";
 import DateInput from "../common/Inputs/DateInput";
 import FlightPassengers from "../common/Inputs/FlightPassengers";
 import { v4 } from "uuid";
+import { useAppSelector } from "@/app/_redux/store";
 
 const MultipleFlights = () => {
+  const reduxState = useAppSelector((state) => state.serviceSearch.hotel);
   const [destCount, setDestCount] = useState<number>(3);
   const divsArray = Array.from({ length: destCount - 1 });
 
@@ -26,7 +28,12 @@ const MultipleFlights = () => {
         <div className="d-flex gap-2">
           <Location title="From" placeholder="Departure Location" onChange={() => {}} />
           <Location title="To" placeholder="Destination Location" onChange={() => {}} />
-          <DateInput title="Departure" placeholder="Enter departure date" />
+          <DateInput
+            title="Departure"
+            placeholder="Enter departure date"
+            defaultValue={reduxState.startDate}
+            onChange={() => {}}
+          />
           <FlightPassengers />
         </div>
 
@@ -34,7 +41,12 @@ const MultipleFlights = () => {
           <div className="d-flex gap-2 align-items-center" key={v4()}>
             <Location title="From" placeholder="Departure Location" onChange={() => {}} />
             <Location title="To" placeholder="Destination Location" onChange={() => {}} />
-            <DateInput title="Departure" placeholder="Enter departure date" />
+            <DateInput
+              title="Departure"
+              placeholder="Enter departure date"
+              defaultValue={reduxState.startDate}
+              onChange={() => {}}
+            />
             <FlightPassengers />
             <button type="button" onClick={cancelDest} className="foxBtn smBtn secondBtn">
               X
