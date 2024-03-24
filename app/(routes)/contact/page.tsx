@@ -1,31 +1,44 @@
 "use client";
-import Logo from "@/app/_components/layout/MainHeader/Logo";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import React from "react";
-import { MdOutlineMail, MdOutlineLocationOn } from "react-icons/md";
-import { FaPhone, FaLocationDot } from "react-icons/fa6";
-import { FaWhatsapp, FaFacebook } from "react-icons/fa";
-import ContactForm from "./_contactForm";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import BranchDetails from "./_branchDetails";
+import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import BranchList from "./_branchList";
+import ContactForm from "./_contactForm";
+import SocialMediaLinks from "@/app/_components/layout/MainFooter/SocialMediaLinks";
 
 const Page = () => {
   useHideLoadingLayer();
 
   return (
-    <div className="bg-light">
+    <div className="contactUs">
       <PageStripe title="contact us" />
-      <div className="container pb-4 pt-4">
-        <div className="text-center mb-3">
-          <Logo />
+      <div className="bg-light section boxShadow">
+        <div className="container">
+          <BranchList />
         </div>
+      </div>
 
-        <BranchList />
+      <div className="section">
+        <div className="container">
+          <SocialMediaLinks />
 
-        <div className="row">
-          <div className="col-md-6 m-auto">
-            <ContactForm />
+          <h2 className="text-center mt-4 mb-2">We provide tours, packages and more ...</h2>
+
+          <div className="row">
+            <div className="col-12 col-md-6 m-auto text-center textGray fw-normal">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor voluptatem quisquam
+              vero aliquid alias ipsam sunt. Minima id distinctio quod dignissimos corporis eligendi
+              mollitia ratione at maxime? Corporis temporibus voluptatem qui eveniet suscipit.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="section bg-light boxShadow">
+        <div className="container pb-4 pt-4">
+          <div className="row">
+            <div className="col-md-6 m-auto">
+              <ContactForm />
+            </div>
           </div>
         </div>
       </div>

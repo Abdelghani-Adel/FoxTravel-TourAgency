@@ -27,7 +27,8 @@ const OurTeam = () => {
 
   return (
     <div className="row mt-5 mb-5" id="ourTeam" ref={sectionRef}>
-      <h2 className="textSecondary fw-bolder text-center mb-3">MEET OUR TEAM</h2>
+      <h2 className="fw-bold">Our Team</h2>
+      <p className="mb-5 textGray fw-normal">Lorem, ipsum dolor.</p>
       <DepartementButtons curDepartment={department} changeDepartment={changeDepartment} />
       <EmployeeList department={department} />
     </div>

@@ -36,7 +36,7 @@ const OrderSummary = (props: Props) => {
           </div>
 
           <div>
-            <Image src="/img/logo.png" width={250} height={60} alt="" />
+            <Image src="/img/logo.png" width={150} height={60} alt="" />
           </div>
         </div>
       </div>

@@ -33,7 +33,7 @@ const MainFooter = () => {
             <div className="mb-3">
               <h5 className="textSecondary">CUSTOMER SUPPORT</h5>
               <p className="fw-light">+201028880661</p>
-              <p className="fw-light">nfo@toxtraveleg.com</p>
+              <p className="fw-light">info@toxtraveleg.com</p>
             </div>
 
             <div>

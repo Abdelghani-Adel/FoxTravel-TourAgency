@@ -31,8 +31,9 @@
   display: flex;
   gap: 5px;
   align-items: stretch;
-  justify-content: center;
-  width: max-content;
+  // justify-content: center;
+  // width: max-content;
+  flex-wrap: wrap;
   margin: auto;
 }
 
@@ -41,13 +42,14 @@
   background-color: #fff;
   color: #000;
   border-radius: 10px;
+  flex-grow: 2;
   border: 1px solid;
 }
 
 .ss_inputWrapper-inner {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .ss_inputField {
@@ -139,4 +141,5 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 2;
 }

@@ -15,12 +15,11 @@ const Page = () => {
         <h1 className="text-center txtSecondary fw-bolder">Find Your Dream Luxury Hotel</h1>
       </div>
       <div className="container mt-4 mb-3">
-        <div className="row mb-3">
-          <HotelForm />
-        </div>
-
         <div className="row g-3">
           <div className="col-3 d-none d-lg-block">
+            <div className="bg-warning py-4 px-3 rounded-4">
+              <HotelForm />
+            </div>
             <Filter />
           </div>
 

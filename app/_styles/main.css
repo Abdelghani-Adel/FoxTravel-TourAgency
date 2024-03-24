@@ -1023,8 +1023,7 @@ q:after {
   display: flex;
   gap: 5px;
   align-items: stretch;
-  justify-content: center;
-  width: max-content;
+  flex-wrap: wrap;
   margin: auto;
 }
 
@@ -1033,13 +1032,14 @@ q:after {
   background-color: #fff;
   color: #000;
   border-radius: 10px;
+  flex-grow: 2;
   border: 1px solid;
 }
 
 .ss_inputWrapper-inner {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
 }
 
 .ss_inputField {
@@ -1131,6 +1131,7 @@ q:after {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-grow: 2;
 }
 
 .bgMain {
@@ -1243,8 +1244,8 @@ q:after {
 }
 
 .section {
-  padding-top: 80px;
-  margin-bottom: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .sectionHeader {
@@ -1835,8 +1836,8 @@ q:after {
 
 .mainTeamImage {
   position: relative;
-  height: 50vh;
-  width: 90%;
+  height: 60vh;
+  width: 75%;
   margin: auto;
   border-radius: 20px;
   overflow: hidden;
@@ -1893,7 +1894,7 @@ q:after {
 }
 
 .boxShadow {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 2px;
 }
 
 .notFoundPage {
@@ -1915,7 +1916,7 @@ q:after {
   margin: auto;
   padding: 20px;
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
   display: flex;
   flex-direction: column;
@@ -1925,4 +1926,13 @@ q:after {
   font-size: 3rem;
   color: #f36c24;
   text-align: center;
+}
+
+.contactUs .socialIcon_list {
+  justify-content: center;
+}
+
+.contactUs .socialIcon {
+  color: #f36c24;
+  font-size: 4rem;
 }
