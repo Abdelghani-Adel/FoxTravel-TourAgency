@@ -1,12 +1,16 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
+// ===================================================== //
+// Mobile Style
+// ===================================================== //
+
 .ss_category {
   position: relative;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: 300;
   padding: 5px 10px;
-  border-bottom: 2px solid transparent;
+  border-bottom: 1px solid transparent;
   transition: 0.3s ease-in-out;
   cursor: pointer;
 }
@@ -17,9 +21,9 @@
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: #fff;
-  transition: 0.4s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .ss_category.active::after,
@@ -27,12 +31,16 @@
   width: 100%;
 }
 
+// .serviceSearchForm {
+//   display: flex;
+//   flex-direction: column;
+//   gap: 10px;
+// }
+
 .serviceSearchForm {
   display: flex;
   gap: 5px;
   align-items: stretch;
-  // justify-content: center;
-  // width: max-content;
   flex-wrap: wrap;
   margin: auto;
 }
@@ -42,7 +50,7 @@
   background-color: #fff;
   color: #000;
   border-radius: 10px;
-  flex-grow: 2;
+  // flex-grow: 2;
   border: 1px solid;
 }
 
@@ -143,3 +151,7 @@
   align-items: center;
   flex-grow: 2;
 }
+
+// ===================================================== //
+// Tablet Style ( max : px )
+// ===================================================== //

@@ -1,0 +1,32 @@
+@use "../abstract/variables" as v;
+
+.policySelectorList {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 1rem;
+}
+.policySelector {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+}
+.policySelector.active {
+  color: v.$secondaryColor;
+}
+
+.termsPage h1 {
+  margin-bottom: 1rem;
+}
+
+.termsPage h4 {
+  margin-bottom: 0.6rem;
+  font-weight: 400;
+}
+
+.termsPage p {
+  font-weight: 400;
+  margin-bottom: 0.6rem;
+}

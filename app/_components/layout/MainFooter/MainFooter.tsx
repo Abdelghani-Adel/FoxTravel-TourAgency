@@ -110,7 +110,7 @@ const MainFooter = () => {
                 </Link>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Link href="/terms" className="mainFooter_link">
                   Booking Terms & Conditions
                 </Link>
               </li>
