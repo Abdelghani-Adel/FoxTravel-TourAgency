@@ -33,7 +33,7 @@ const Page = ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="row mb-2">
-        <div className="col-12 col-md-8">
+        <div className="col-12">
           <HotelFormWrapper />
         </div>
       </div>
