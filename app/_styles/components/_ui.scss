@@ -353,15 +353,27 @@
 // ============================================== //
 .multiSteps {
   display: flex;
-  justify-content: space-between;
+  gap: 100px;
 }
 
 .multiSteps .step {
+  position: relative;
   text-align: center;
   color: rgb(201, 201, 201);
   font-weight: 300;
   font-size: 1.2rem;
   transition: 0.3s ease-in-out;
+}
+
+.multiSteps .step:not(:last-of-type)::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 2px;
+  background-color: black;
+  left: 100%;
+  top: 50%;
+  z-index: 2;
 }
 
 .multiSteps .step .number {

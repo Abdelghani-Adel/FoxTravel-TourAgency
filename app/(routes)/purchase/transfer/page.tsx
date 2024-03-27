@@ -26,7 +26,7 @@ const Page = () => {
         </div>
 
         <div className="row mb-3">
-          <div className="col-5 m-auto">
+          <div className="m-auto">
             <MultiSteps currentStep={currentStep} steps={steps} />
           </div>
         </div>

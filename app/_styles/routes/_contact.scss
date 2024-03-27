@@ -25,3 +25,17 @@
   color: v.$secondaryColor;
   font-size: 4rem;
 }
+
+.contactForm {
+  position: relative;
+  z-index: 1;
+}
+
+.contact_backgroundMap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  // opacity: 0.8;
+}

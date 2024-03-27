@@ -33,7 +33,20 @@ const Page = () => {
         </div>
       </div>
 
-      <div className="section bg-light boxShadow">
+      <div className="section boxShadow position-relative">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14194.848047506724!2d33.8243366!3d27.1967868!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14528739189cdf03%3A0x316a7f9b75ed293e!2sFox%20Travel%20Egypt!5e0!3m2!1sen!2seg!4v1711527972683!5m2!1sen!2seg"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Branch Location"
+          className="contact_backgroundMap"
+          // style={{
+          //   height: "500px",
+          //   width: "700px",
+          //   border: "1px solid #38a636",
+          //   padding: "5px",
+          //   borderRadius: "10px",
+          // }}
+        />
         <div className="container pb-4 pt-4">
           <div className="row">
             <div className="col-md-6 m-auto">
