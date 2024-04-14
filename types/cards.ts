@@ -12,7 +12,7 @@ type packageCard = {
   dates: string[];
   duration: string;
   rating: number;
-  reviewsQuantity: number;
+  totalReviews: number;
   price: number;
 };
 
@@ -20,8 +20,8 @@ type destinationCard = {
   id: number;
   image: string;
   title: string;
-  hotelsQuantity: number;
-  toursQuantity: number;
+  totalHotels: number;
+  totalTours: number;
 };
 
 type tourCard = {
@@ -30,7 +30,7 @@ type tourCard = {
   title: string;
   address: string;
   rating: number;
-  reviewsQuantity: number;
+  totalReviews: number;
   tourCategory: string;
   duration: string;
   badges: cardBadge[];
@@ -43,7 +43,7 @@ type hotelCard = {
   title: string;
   address: string;
   rating: number;
-  reviewsQuantity: number;
+  totalReviews: number;
   badges: cardBadge[];
   price: number;
 };

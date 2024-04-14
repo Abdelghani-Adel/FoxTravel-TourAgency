@@ -1,12 +1,11 @@
-import React, { useState } from "react";
-import InputWrapper from "../InputWrapper";
-import Image from "next/image";
-import Number from "./Number";
-import PersonIcon from "../icons/PersonIcon";
-import ArrowIcon from "../icons/ArrowIcon";
-import DropdownMenuWrapper from "@/app/_components/ui/DropdownMenu/DropdownMenuWrapper";
-import DropdownMenuToggler from "@/app/_components/ui/DropdownMenu/DropdownMenuToggler";
 import DropdownMenuContent from "@/app/_components/ui/DropdownMenu/DropdownMenuContent";
+import DropdownMenuToggler from "@/app/_components/ui/DropdownMenu/DropdownMenuToggler";
+import DropdownMenuWrapper from "@/app/_components/ui/DropdownMenu/DropdownMenuWrapper";
+import { useState } from "react";
+import ArrowIcon from "../icons/ArrowIcon";
+import PersonIcon from "../icons/PersonIcon";
+import InputWrapper from "../InputWrapper";
+import Number from "./Number";
 
 const FlightPassengers = () => {
   const [adults, setAdults] = useState(1);
