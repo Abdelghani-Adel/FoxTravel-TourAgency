@@ -33,41 +33,32 @@ const PackageCard = (props: IPackageCardProps) => {
         <Image src={img} fill alt="" />
       </div>
 
-      <div className="packageCard_info">
-        <h5 className="txtMain fw-bold">{title}</h5>
-        <p className="fw-normal txtGray mb-1">{desc}</p>
+      <h5 className="cardTitle">{title}</h5>
 
-        <p className="fw-normal mb-1">
-          <span>
-            <MdOutlineDateRange className="icon" />
-          </span>{" "}
-          <span>
-            {startDate} ~ {endDate}
-          </span>
+      <p className="cardDescription">{desc}</p>
+
+      <p className="cardP">
+        <MdOutlineDateRange className="icon" /> {startDate} ~ {endDate}
+      </p>
+
+      <p className="cardP">
+        <GiDuration className="icon" /> Duration: {duration}
+      </p>
+
+      <p className="cardP">
+        <MdOutlineSportsHandball className="icon" /> Enjoy {activitiesCount}+ activities
+      </p>
+
+      <div className="d-flex justify-content-between align-items-center mb-2">
+        <p className="cardP">
+          <RtsRating rating={rating} readonly /> ({formatNumber(reviews)})
         </p>
-
-        <p className="fw-normal mb-1">
-          <span>
-            <GiDuration className="icon" /> Duration: {duration}
-          </span>
+        <p className="cardP">
+          <RiMoneyDollarCircleLine className="icon" /> {price} {currency}
         </p>
-
-        <p className="fw-normal mb-1">
-          <MdOutlineSportsHandball className="icon" /> Enjoy {activitiesCount}+ activities
-        </p>
-
-        <div className="d-flex justify-content-between align-items-center mb-2">
-          <p className="mb-0">
-            <RtsRating rating={rating} readonly />
-            <span className="fw-light">({formatNumber(reviews)})</span>
-          </p>
-          <p className="fw-normal mb-0">
-            <RiMoneyDollarCircleLine className="icon" /> {price} {currency}
-          </p>
-        </div>
-
-        <button className="foxBtn mainBtn w-100">Find Out More</button>
       </div>
+
+      <button className="foxBtn mainBtn w-100">Find Out More</button>
     </Link>
   );
 };

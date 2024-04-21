@@ -109,43 +109,47 @@
 }
 
 // ============================================== //
+
+.cardTitle {
+  font-weight: 500;
+  color: #000;
+  margin-bottom: 1vh;
+  font-size: 2rem;
+}
+
+.cardDescription {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: gray;
+  font-weight: 300;
+}
+
+.cardP {
+  font-weight: 400;
+}
+
+// ============================================== //
 // PakageCard
 // ============================================== //
-$packageCardHeight: 60vh;
-$packageCardImgHeight: calc($packageCardHeight * 40 / 100);
-
 .packageCard {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   color: #000;
-  height: $packageCardHeight;
+  height: 500px;
+  text-decoration: none;
 }
 
 .packageCard_img {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  height: $packageCardImgHeight;
-  width: $packageCardImgHeight;
-  z-index: 1;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 5px solid #fff;
-  outline: 2px solid v.$primaryColor;
-  margin-top: 2px;
-}
-
-.packageCard_info {
-  position: absolute;
-  bottom: 0;
-  border-radius: 10px;
-  padding-top: calc(($packageCardHeight - $packageCardImgHeight) / 2);
-  padding-inline: 10px;
-  padding-bottom: 10px;
-  border: 2px solid v.$primaryColor;
+  position: relative;
+  width: 100%;
+  height: 230px;
+  margin-bottom: 10px;
 }
 
 .packageCard_info .icon {
