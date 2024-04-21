@@ -1,6 +1,6 @@
 import React from "react";
 
-const FoxCardBadges = ({ badges }: { badges: IFoxCardBadge[] }) => {
+const FoxCardBadges = ({ badges }: { badges: ICardBadge[] }) => {
   return (
     <div className="foxCard_badgesWrapper">
       {badges &&

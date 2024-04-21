@@ -1,13 +1,12 @@
 [
   {
     "id": 1,
-    "image": "/img/hotels/1.png",
+    "img": "/img/hotels/1.png",
     "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
     "address": "Westminster Borough, London",
     "rating": 4.7,
     "reviews": 3014,
     "price": 72,
-    "currency": "$",
     "badges": [
       {
         "id": 1,
@@ -19,13 +18,12 @@
   },
   {
     "id": 2,
-    "image": "/img/hotels/1.png",
+    "img": "/img/hotels/1.png",
     "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
     "address": "Westminster Borough, London",
     "rating": 4.7,
     "reviews": 3014,
     "price": 72,
-    "currency": "$",
     "badges": [
       {
         "id": 1,
@@ -37,13 +35,12 @@
   },
   {
     "id": 3,
-    "image": "/img/hotels/1.png",
+    "img": "/img/hotels/1.png",
     "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
     "address": "Westminster Borough, London",
     "rating": 4.7,
     "reviews": 3014,
     "price": 72,
-    "currency": "$",
     "badges": [
       {
         "id": 1,
@@ -55,13 +52,12 @@
   },
   {
     "id": 4,
-    "image": "/img/hotels/1.png",
+    "img": "/img/hotels/1.png",
     "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
     "address": "Westminster Borough, London",
     "rating": 4.7,
     "reviews": 3014,
     "price": 72,
-    "currency": "$",
     "badges": [
       {
         "id": 1,
@@ -73,13 +69,12 @@
   },
   {
     "id": 5,
-    "image": "/img/hotels/1.png",
+    "img": "/img/hotels/1.png",
     "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
     "address": "Westminster Borough, London",
     "rating": 4.7,
     "reviews": 3014,
     "price": 72,
-    "currency": "$",
     "badges": [
       {
         "id": 1,

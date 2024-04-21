@@ -6,7 +6,7 @@ import React from "react";
 const Itenrary = () => {
   return (
     <Collabse Header={Header}>
-      <div className="d-flex gap-4">
+      <div className="d-flex flex-column flex-md-row gap-4">
         <div>
           <Image
             className="rounded-3 overflow-hidden"
@@ -25,7 +25,8 @@ const Itenrary = () => {
             atque voluptas illum nemo dolor commodi explicabo! Provident at dolorum accusamus animi
             debitis.
           </p>
-          <div className="d-flex gap-3">
+
+          <div className="d-flex flex-column flex-md-row gap-3">
             <div className="d-flex align-items-center gap-2">
               <h6 className="mb-0">Accommodation: </h6>
               <Link href="/hotels/1" className="fw-light">

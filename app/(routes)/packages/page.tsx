@@ -24,22 +24,7 @@ const Page = () => {
             <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
               {packageList.map((pkg) => (
                 <div key={v4()} className="col">
-                  <PackageCard
-                    key={pkg.id}
-                    id={pkg.id}
-                    img={pkg.image}
-                    title={pkg.title}
-                    rating={pkg.rating}
-                    reviews={pkg.reviews}
-                    price={pkg.price}
-                    desc={pkg.desc}
-                    currency={pkg.currency}
-                    startDate={pkg.startDate}
-                    endDate={pkg.endDate}
-                    activitiesCount={pkg.activitiesCount}
-                    startingPoints={pkg.startingPoints}
-                    duration={pkg.duration}
-                  />
+                  <PackageCard key={pkg.id} data={pkg} />
                 </div>
               ))}
             </div>

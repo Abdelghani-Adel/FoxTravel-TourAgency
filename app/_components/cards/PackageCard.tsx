@@ -1,14 +1,17 @@
+import RtsRating from "@/app/_components/ui/RtsRating";
 import { encrypt } from "@/app/_utils/Cryptojs";
 import { formatNumber } from "@/app/_utils/Formatters";
 import Image from "next/image";
+import Link from "next/link";
 import { GiDuration } from "react-icons/gi";
 import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import FoxCard from "./FoxCard/FoxCard";
-import RtsRating from "@/app/_components/ui/RtsRating";
-import Link from "next/link";
 
-const PackageCard = (props: IPackageCardProps) => {
+type Props = {
+  data: IPackageCard;
+};
+
+const PackageCard = (props: Props) => {
   const {
     id,
     img,
@@ -17,12 +20,11 @@ const PackageCard = (props: IPackageCardProps) => {
     reviews,
     desc,
     price,
-    currency,
     startDate,
     endDate,
     activitiesCount,
     duration,
-  } = props;
+  } = props.data;
 
   const encryptedId = encrypt(id.toString());
   const url = `/packages/${encryptedId}`;
@@ -55,7 +57,7 @@ const PackageCard = (props: IPackageCardProps) => {
           <RtsRating rating={rating} readonly /> ({formatNumber(reviews)})
         </p>
         <h4 className="textSecondary">
-          <RiMoneyDollarCircleLine className="cardIcon" /> {price} {currency}
+          <RiMoneyDollarCircleLine className="cardIcon" /> {price} $
         </h4>
       </div>
 

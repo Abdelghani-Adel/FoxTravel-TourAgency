@@ -24,16 +24,7 @@ const Page = () => {
             <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
               {destinationList.map((dest) => (
                 <div key={v4()} className="col">
-                  <DestinationCard
-                    key={dest.id}
-                    id={dest.id}
-                    title={dest.title}
-                    img={dest.img}
-                    hotels={dest.hotels}
-                    cars={dest.cars}
-                    trips={dest.trips}
-                    activities={dest.activities}
-                  />
+                  <DestinationCard key={dest.id} data={dest} />
                 </div>
               ))}
             </div>

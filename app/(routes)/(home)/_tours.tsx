@@ -16,19 +16,7 @@ const Tours = () => {
 
       <SwiperScroll>
         {toursList.map((tour) => (
-          <TourCard
-            key={tour.id}
-            id={tour.id}
-            image={tour.image}
-            rating={tour.rating}
-            reviews={tour.reviews}
-            price={tour.price}
-            currency={tour.currency}
-            badges={tour.badges}
-            title={tour.title}
-            address={tour.address}
-            duration={tour.duration}
-          />
+          <TourCard key={tour.id} data={tour} />
         ))}
       </SwiperScroll>
     </div>

@@ -12,18 +12,7 @@ const FlightSearchResult = () => {
           <div className="row g-3">
             {hotels.map((hotel) => (
               <div className="col-12 col-md-4" key={v4()}>
-                <HotelCard
-                  key={hotel.id}
-                  id={hotel.id}
-                  title={hotel.title}
-                  image={hotel.image}
-                  address={hotel.address}
-                  rating={hotel.rating}
-                  reviewers={hotel.reviews}
-                  price={hotel.price}
-                  currency={hotel.currency}
-                  badges={hotel.badges}
-                />
+                <HotelCard key={hotel.id} data={hotel} />
               </div>
             ))}
           </div>

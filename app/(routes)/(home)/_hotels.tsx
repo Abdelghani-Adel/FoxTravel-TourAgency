@@ -17,18 +17,7 @@ const Hotels = () => {
 
       <SwiperScroll>
         {hotels.map((hotel) => (
-          <HotelCard
-            key={hotel.id}
-            id={hotel.id}
-            title={hotel.title}
-            image={hotel.image}
-            address={hotel.address}
-            rating={hotel.rating}
-            reviewers={hotel.reviews}
-            price={hotel.price}
-            currency={hotel.currency}
-            badges={hotel.badges}
-          />
+          <HotelCard key={hotel.id} data={hotel} />
         ))}
       </SwiperScroll>
     </div>

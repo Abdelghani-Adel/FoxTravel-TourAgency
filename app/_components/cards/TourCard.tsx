@@ -1,17 +1,18 @@
 "use client";
 
 import { encrypt } from "@/app/_utils/Cryptojs";
-import FoxCard from "./FoxCard/FoxCard";
+import Image from "next/image";
+import Link from "next/link";
 import FoxCardBadges from "./FoxCard/FoxCardBadges";
-import FoxCardImage from "./FoxCard/FoxCardImage";
 import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
-import FoxCardTitle from "./FoxCard/FoxCardTitle";
-import Link from "next/link";
-import Image from "next/image";
 
-const TourCard = (props: ITripCardProps) => {
-  const { id, title, address, image, rating, reviews, price, currency, badges, duration } = props;
+type props = {
+  data: ITourCard;
+};
+
+const TourCard = (props: props) => {
+  const { id, title, address, img, rating, reviews, price, badges, duration } = props.data;
 
   const encryptedId = encrypt(id.toString());
   const url = `/tours/${encryptedId}`;
@@ -19,7 +20,7 @@ const TourCard = (props: ITripCardProps) => {
   return (
     <Link href={url} className="foxCard">
       <div className="foxCard_img">
-        <Image fill src={image} alt="" />
+        <Image fill src={img} alt="" />
       </div>
 
       <FoxCardBadges badges={badges} />
@@ -40,7 +41,7 @@ const TourCard = (props: ITripCardProps) => {
       </p>
 
       <p>
-        <FoxCardPrice price={price} curr={currency} />
+        <FoxCardPrice price={price} curr="$" />
       </p>
 
       <button className="foxBtn secondBtn w-100">Discover More</button>

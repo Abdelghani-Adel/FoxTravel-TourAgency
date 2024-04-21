@@ -5,9 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const DestinationCard = (props: IDestinationCardProps) => {
+type props = {
+  data: IDestinationCard;
+};
+
+const DestinationCard = (props: props) => {
   const dispatch = useAppDispatch();
-  const { id, img, title, hotels, cars, trips, activities } = props;
+  const { id, img, title, hotels, cars, trips, activities } = props.data;
   const encryptedId = encrypt(`${id}`);
   const url = `/destinations/${encryptedId}`;
 

@@ -1,15 +1,14 @@
 "use client";
-import React from "react";
-import FoxCard from "./FoxCard/FoxCard";
-import FoxCardImage from "./FoxCard/FoxCardImage";
-import FoxCardTitle from "./FoxCard/FoxCardTitle";
+import { encrypt } from "@/app/_utils/Cryptojs";
 import { IoPerson } from "react-icons/io5";
 import { LuBaggageClaim } from "react-icons/lu";
 import { SiYamahamotorcorporation } from "react-icons/si";
-import FoxCardRating from "./FoxCard/FoxCardRating";
-import FoxCardPrice from "./FoxCard/FoxCardPrice";
+import FoxCard from "./FoxCard/FoxCard";
 import FoxCardBadges from "./FoxCard/FoxCardBadges";
-import { encrypt } from "@/app/_utils/Cryptojs";
+import FoxCardImage from "./FoxCard/FoxCardImage";
+import FoxCardPrice from "./FoxCard/FoxCardPrice";
+import FoxCardRating from "./FoxCard/FoxCardRating";
+import FoxCardTitle from "./FoxCard/FoxCardTitle";
 
 const CarCard = (props: ICarCardProps) => {
   const { id, model, img, passengers, bags, transmission } = props;

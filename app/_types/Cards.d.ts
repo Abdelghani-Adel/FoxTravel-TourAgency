@@ -1,7 +1,56 @@
-type IFoxCardBadge = {
+type ICardBadge = {
   id: number;
   badgeType: string;
   badgeTitle: string;
+};
+
+type IDestinationCard = {
+  id: number;
+  img: string;
+  title: string;
+  hotels: string;
+  cars: string;
+  trips: string;
+  activities: string;
+};
+
+type IPackageCard = {
+  id: number;
+  img: string;
+  title: string;
+  desc: string;
+  startDate: string;
+  endDate: string;
+  activitiesCount: number;
+  rating: number;
+  reviews: number;
+  price: number;
+  duration: string;
+};
+
+type IHotelCard = {
+  id: number;
+  img: string;
+  title: string;
+  address: string;
+  rating: number;
+  reviews: number;
+  price: number;
+  currency: string;
+  badges: ICardBadge[];
+};
+
+type ITourCard = {
+  id: number;
+  img: string;
+  title: string;
+  address: string;
+  rating: number;
+  reviews: number;
+  price: number;
+  currency: string;
+  badges: ICardBadge[];
+  duration: string;
 };
 
 // ================== TransferCard ================= //
@@ -19,37 +68,12 @@ type ITransferCard = {
   price: number;
   currency: string;
   duration: string;
-  badges: IFoxCardBadge[];
+  badges: ICardBadge[];
   includes: string[];
   excludes: string[];
   notes: string[];
 };
 // ============================================== //
-
-type IHotelCardProps = {
-  id: number;
-  title: string;
-  address: string;
-  image: string;
-  rating: number;
-  reviewers: number;
-  price: number;
-  currency: string;
-  badges: IFoxCardBadge[];
-};
-
-type ITripCardProps = {
-  id: number;
-  title: string;
-  address: string;
-  image: string;
-  rating: number;
-  reviews: number;
-  price: number;
-  currency: string;
-  badges: IFoxCardBadge[];
-  duration: string;
-};
 
 type ICarCardProps = {
   id: number;
@@ -60,37 +84,8 @@ type ICarCardProps = {
   transmission: string;
   rating: number;
   reviews: number;
-  badges: IFoxCardBadge[];
+  badges: ICardBadge[];
   price: number;
-  currency: string;
-  duration: string;
-};
-
-type IDestinationCardProps = {
-  id: number;
-  img: string;
-  title: string;
-  hotels?: string;
-  cars?: string;
-  trips?: string;
-  activities?: string;
-};
-
-type IPackageCardProps = {
-  id: number;
-  img: string;
-  title: string;
-  startDate: string;
-  endDate: string;
-  activitiesCount: number;
-  desc: string;
-  startingPoints: {
-    id: number;
-    address: string;
-  }[];
-  rating: number;
-  price: number;
-  reviews: number;
   currency: string;
   duration: string;
 };

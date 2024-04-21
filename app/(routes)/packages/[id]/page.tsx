@@ -11,12 +11,9 @@ import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { SiYourtraveldottv } from "react-icons/si";
 
 const Page = ({ params }: { params: { id: string } }) => {
-  const dispatch = useAppDispatch();
-  const packageId = params.id;
-
   return (
     <div className="container mt-4 mb-4">
-      <div className="row mb-3">
+      <div className="row mb-3 g-3">
         <div className="col-12 col-lg-8 order-2 order-lg-1">
           <div className="d-flex justify-content-between align-items-center flex-column gap-3 mb-2 flex-md-row">
             <h3 className="mb-0">{packageDetails.title}</h3>
@@ -28,9 +25,6 @@ const Page = ({ params }: { params: { id: string } }) => {
               <span className="textGray fw-normal">
                 <RtsRating readonly rating={4.5} /> (215)
               </span>
-              <p className="mb-0 textGray fw-normal">
-                {/* {packageDetails.duration} : {packageDetails.startDate} ~ {packageDetails.endDate} */}
-              </p>
             </div>
             <p className="foxPrice">
               <span>{packageDetails.currency}</span>

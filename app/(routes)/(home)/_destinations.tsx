@@ -32,16 +32,7 @@ const Destinations = () => {
 
       <SwiperScroll>
         {CardsData.map((card) => (
-          <DestinationCard
-            key={card.id}
-            id={card.id}
-            title={card.title}
-            img={card.img}
-            hotels={card.hotels}
-            cars={card.cars}
-            trips={card.trips}
-            activities={card.activities}
-          />
+          <DestinationCard key={card.id} data={card} />
         ))}
       </SwiperScroll>
     </div>

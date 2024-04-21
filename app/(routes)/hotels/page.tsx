@@ -27,18 +27,7 @@ const Page = () => {
             <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
               {hotelList.map((hotel) => (
                 <div key={v4()} className="col">
-                  <HotelCard
-                    key={hotel.id}
-                    id={hotel.id}
-                    title={hotel.title}
-                    image={hotel.image}
-                    address={hotel.address}
-                    rating={hotel.rating}
-                    reviewers={hotel.reviews}
-                    price={hotel.price}
-                    currency={hotel.currency}
-                    badges={hotel.badges}
-                  />
+                  <HotelCard key={hotel.id} data={hotel} />
                 </div>
               ))}
             </div>
