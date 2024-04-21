@@ -142,7 +142,7 @@ $packageCardImgHeight: calc($packageCardHeight * 40 / 100);
   position: absolute;
   bottom: 0;
   border-radius: 10px;
-  padding-top: calc($packageCardHeight - $packageCardImgHeight);
+  padding-top: calc(($packageCardHeight - $packageCardImgHeight) / 2);
   padding-inline: 10px;
   padding-bottom: 10px;
   border: 2px solid v.$primaryColor;
