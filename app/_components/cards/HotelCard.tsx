@@ -22,7 +22,7 @@ const HotelCard = (props: IHotelCardProps) => {
       </div>
 
       <FoxCardBadges badges={badges} />
-      <h5 className="cardTitle">{title}</h5>
+      <h5 className="foxCard_title">{title}</h5>
       <p className="foxCard_desc">{address}</p>
       <p className="foxCard_desc">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat impedit dolorum

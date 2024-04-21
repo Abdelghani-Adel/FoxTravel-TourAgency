@@ -42,6 +42,17 @@
   font-weight: 300;
 }
 
+.foxCard_title {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+
+  font-weight: 500;
+  color: #000;
+  font-size: 1.5rem;
+}
+
 .foxCard_badgesWrapper {
   position: absolute;
   top: 10px;
@@ -71,17 +82,6 @@
   background-color: #039b0b;
 }
 
-.foxCard_title {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-
-  font-weight: 500;
-  color: #000;
-  font-size: 2rem;
-}
-
 .foxCard_rating {
   display: flex;
   gap: 5px;
@@ -100,38 +100,7 @@
   }
 }
 
-.hotelCard_rating {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  margin-bottom: 1rem;
-
-  .reviewers {
-    color: gray;
-    margin-bottom: 0;
-  }
-}
-
-.foxCard_separator {
-  width: 100%;
-  height: 1px;
-  background-color: v.$gray;
-  margin-top: 5px;
-  margin-bottom: 5px;
-}
-
 // ============================================== //
-
-.cardTitle {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-
-  font-weight: 500;
-  color: #000;
-  font-size: 2rem;
-}
 
 .cardIcon {
   font-size: 1.4rem;
@@ -330,42 +299,8 @@ $duration: 3s;
 }
 
 // ============================================== //
-// TripCard
-// ============================================== //
-.tripCard {
-  height: 60vh;
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 5px;
-}
-
-.tripCard_img {
-  position: relative;
-  height: 75%;
-  flex-shrink: 0;
-}
-
-.tripCard_title {
-  font-size: 1.5rem;
-  font-weight: 600;
-}
-
-// ============================================== //
-// CarCard
-// ============================================== //
-.carCard_image {
-  border: 1px solid v.$gray;
-  border-radius: 10px;
-}
-
-// ============================================== //
 // EmployeeCard
 // ============================================== //
-
 .employeeCard {
   border: 3px solid v.$gray;
   border-radius: 10px;

@@ -33,7 +33,7 @@ const PackageCard = (props: IPackageCardProps) => {
         <Image src={img} fill alt="" />
       </div>
 
-      <h5 className="cardTitle">{title}</h5>
+      <h5 className="foxCard_title">{title}</h5>
 
       <p className="foxCard_desc">{desc}</p>
 
