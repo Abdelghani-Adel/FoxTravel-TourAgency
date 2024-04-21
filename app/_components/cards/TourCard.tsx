@@ -7,6 +7,8 @@ import FoxCardImage from "./FoxCard/FoxCardImage";
 import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
 import FoxCardTitle from "./FoxCard/FoxCardTitle";
+import Link from "next/link";
+import Image from "next/image";
 
 const TourCard = (props: ITripCardProps) => {
   const { id, title, address, image, rating, reviews, price, currency, badges, duration } = props;
@@ -15,22 +17,34 @@ const TourCard = (props: ITripCardProps) => {
   const url = `/tours/${encryptedId}`;
 
   return (
-    <FoxCard url={url}>
-      <FoxCardImage image={image} />
+    <Link href={url} className="foxCard">
+      <div className="foxCard_img">
+        <Image fill src={image} alt="" />
+      </div>
+
       <FoxCardBadges badges={badges} />
 
-      <p className="fw-normal txtGray mb-0">{duration} . Private and Luxury</p>
+      <h5 className="foxCard_title">{title}</h5>
 
-      <FoxCardTitle title={title} />
+      <p className="foxCard_desc">{address}</p>
 
-      <p className="txtGray fw-normal">{address}</p>
+      <p className="fw-normal txtGray">{duration} . Private and Luxury</p>
 
-      <div className="d-flex justify-content-between align-items-center">
+      <p className="foxCard_desc">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit veritatis vero ipsum illum,
+        porro fugiat dolorum molestiae distinctio quaerat aperiam.
+      </p>
+
+      <p>
         <FoxCardRating rating={rating} reviews={reviews} />
+      </p>
 
+      <p>
         <FoxCardPrice price={price} curr={currency} />
-      </div>
-    </FoxCard>
+      </p>
+
+      <button className="foxBtn secondBtn w-100">Discover More</button>
+    </Link>
   );
 };
 
