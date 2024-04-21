@@ -28,30 +28,30 @@ const PackageCard = (props: IPackageCardProps) => {
   const url = `/packages/${encryptedId}`;
 
   return (
-    <Link href={url} className="packageCard">
-      <div className="packageCard_img">
+    <Link href={url} className="foxCard">
+      <div className="foxCard_img">
         <Image src={img} fill alt="" />
       </div>
 
       <h5 className="cardTitle">{title}</h5>
 
-      <p className="cardDescription">{desc}</p>
+      <p className="foxCard_desc">{desc}</p>
 
-      <p className="cardP">
+      <p className="fw-normal">
         <MdOutlineDateRange className="cardIcon textSecondary" /> {startDate} ~ {endDate}
       </p>
 
-      <p className="cardP">
+      <p className="fw-normal">
         <GiDuration className="cardIcon textSecondary" /> Duration: {duration}
       </p>
 
-      <p className="cardP">
+      <p className="fw-normal">
         <MdOutlineSportsHandball className="cardIcon textSecondary" /> Enjoy {activitiesCount}+
         activities
       </p>
 
       <div className="d-flex justify-content-between align-items-center">
-        <p className="cardP">
+        <p className="fw-normal">
           <RtsRating rating={rating} readonly /> ({formatNumber(reviews)})
         </p>
         <h4 className="textSecondary">

@@ -7,6 +7,8 @@ import FoxCardImage from "./FoxCard/FoxCardImage";
 import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
 import FoxCardTitle from "./FoxCard/FoxCardTitle";
+import Link from "next/link";
+import Image from "next/image";
 
 const HotelCard = (props: IHotelCardProps) => {
   const { id, title, address, image, rating, reviewers, price, currency, badges } = props;
@@ -14,18 +16,29 @@ const HotelCard = (props: IHotelCardProps) => {
   const url = `/hotels/${encryptedId}`;
 
   return (
-    <FoxCard url={url}>
-      <FoxCardImage image={image} />
-      <FoxCardBadges badges={badges} />
-      <FoxCardTitle title={title} />
-
-      <p className="fw-light mb-2">{address}</p>
-
-      <div className="mb-2">
-        <FoxCardRating rating={rating} reviews={reviewers} />
+    <Link href={url} className="foxCard">
+      <div className="foxCard_img">
+        <Image fill src={image} alt="" />
       </div>
-      <FoxCardPrice price={price} curr={currency} />
-    </FoxCard>
+
+      <FoxCardBadges badges={badges} />
+      <h5 className="cardTitle">{title}</h5>
+      <p className="foxCard_desc">{address}</p>
+      <p className="foxCard_desc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore placeat impedit dolorum
+        repudiandae repellendus nesciunt aut praesentium consequatur abss.
+      </p>
+
+      <p>
+        <FoxCardRating rating={rating} reviews={reviewers} />
+      </p>
+
+      <h5>
+        <FoxCardPrice price={price} curr={currency} />
+      </h5>
+
+      <button className="foxBtn secondBtn w-100">Discover More</button>
+    </Link>
   );
 };
 

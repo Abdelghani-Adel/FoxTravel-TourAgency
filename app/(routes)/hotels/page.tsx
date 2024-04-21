@@ -13,6 +13,7 @@ const Page = () => {
   return (
     <>
       <PageStripe title="Find your dream luxury hotel" />
+
       <div className="container mt-4 mb-3">
         <div className="row g-3">
           <div className="col-3 d-none d-lg-block">

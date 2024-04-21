@@ -6,21 +6,23 @@
 // FoxCard
 // ============================================== //
 .foxCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
+  gap: 5px;
   border-radius: 10px;
   overflow: hidden;
-  display: block;
+  color: #000;
+  height: 500px;
   text-decoration: none;
-  color: inherit;
-  height: clamp(40vh, 480px + 5vw, 60vh);
 }
 
 .foxCard_img {
   position: relative;
-  height: 60%;
   width: 100%;
+  height: 230px;
   margin-bottom: 10px;
-  overflow: hidden;
 }
 
 .foxCard_img img {
@@ -29,6 +31,15 @@
 
 .foxCard_img:hover img {
   transform: scale(1.05);
+}
+
+.foxCard_desc {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  color: gray;
+  font-weight: 300;
 }
 
 .foxCard_badgesWrapper {
@@ -114,44 +125,8 @@
   font-size: 2rem;
 }
 
-.cardDescription {
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  color: gray;
-  font-weight: 300;
-}
-
-.cardP {
-  font-weight: 400;
-}
-
 .cardIcon {
   font-size: 1.4rem;
-}
-
-// ============================================== //
-// PakageCard
-// ============================================== //
-.packageCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
-  gap: 5px;
-  border-radius: 10px;
-  overflow: hidden;
-  color: #000;
-  height: 500px;
-  text-decoration: none;
-}
-
-.packageCard_img {
-  position: relative;
-  width: 100%;
-  height: 230px;
-  margin-bottom: 10px;
 }
 
 /////////////////////////////////
@@ -253,94 +228,6 @@ $duration: 3s;
   padding: 10px;
   color: #fff;
   border-radius: 10px;
-}
-
-// ============================================== //
-// HotelCard
-// ============================================== //
-.hotelCard {
-  position: relative;
-  border-radius: 10px;
-  overflow: hidden;
-  display: block;
-  text-decoration: none;
-  color: inherit;
-  height: 65vh;
-}
-
-.hotelCard_img {
-  position: relative;
-  height: 60%;
-  width: 100%;
-  margin-bottom: 10px;
-}
-
-.hotelCard_badges {
-  position: absolute;
-  top: 10px;
-  left: 0;
-
-  .hotelBadge {
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-weight: 600;
-  }
-
-  .hotelBadge.feature {
-    background-color: v.$secondaryColor;
-    color: #fff;
-  }
-
-  .hotelBadge.sale {
-    background-color: #923e01;
-    color: #fff;
-  }
-
-  .hotelBadge.specs {
-    background-color: #f8d448;
-  }
-}
-
-.hotelCard_name {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 0.4rem;
-}
-
-.hotelCard_address {
-  margin-bottom: 1rem;
-  color: gray;
-}
-
-.hotelCard_rating {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-  margin-bottom: 1rem;
-
-  .rating {
-    height: 30px;
-    width: 30px;
-    line-height: 30px;
-    background-color: v.$secondaryColor;
-    color: #fff;
-    text-align: center;
-    border-radius: 7px;
-    margin-bottom: 0;
-  }
-
-  .reviewers {
-    color: gray;
-    margin-bottom: 0;
-  }
-}
-
-.hotelCard_bottomPrice {
-  .currency,
-  .price {
-    color: v.$secondaryColor;
-    font-weight: bold;
-  }
 }
 
 // ============================================== //
