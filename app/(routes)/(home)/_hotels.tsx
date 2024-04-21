@@ -1,34 +1,19 @@
 "use client";
 
-import React from "react";
-import { GoArrowUpRight } from "react-icons/go";
+import HotelCard from "@/app/_components/cards/HotelCard";
+import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
 import hotels from "@/public/data/Cards_Hotels.json";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
-import HotelCard from "@/app/_components/cards/HotelCard";
-import Link from "next/link";
-import { useAppDispatch } from "@/app/_redux/store";
-import { loaderActions } from "@/app/_redux/slices/loaderSlice";
 
 const Hotels = () => {
-  const dispatch = useAppDispatch();
-  const showLoadingLayer = () => dispatch(loaderActions.showLoadingOverlay());
-
   return (
-    <div className="recommendedHotels section mb-5">
-      <div className="recommendedHotels_header">
-        <div>
-          <h3 className="fw-bold">Recommended Hotels</h3>
-          <p className="mb-0">These hotels have a lot to offer</p>
-        </div>
-
-        <div>
-          <button className="foxBtn secondBtn" onClick={showLoadingLayer}>
-            <Link href="/hotels">
-              View All Hotels <GoArrowUpRight className="fs-3" />
-            </Link>
-          </button>
-        </div>
-      </div>
+    <div className="recommendedHotels section">
+      <SectionHeaderWithBtn
+        title="Recommended Hotels"
+        desc="These hotels have a lot to offer"
+        target="/hotels"
+        btnTitle="View all hotels"
+      />
 
       <SwiperScroll>
         {hotels.map((hotel) => (

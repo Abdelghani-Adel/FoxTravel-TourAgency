@@ -2,9 +2,8 @@
 @use "../abstract/variables" as v;
 
 // ===================================================== //
-// Mobile Style
+// category selectors
 // ===================================================== //
-
 .ss_category {
   position: relative;
   font-size: 1.1rem;
@@ -31,27 +30,37 @@
   width: 100%;
 }
 
-// .serviceSearchForm {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 10px;
-// }
-
-.serviceSearchForm {
+// ===================================================== //
+// single form wrapper
+// ===================================================== //
+.ss_formWrapperInner {
   display: flex;
+  flex-direction: column;
   gap: 5px;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: auto;
 }
 
+.ss_formWrapper {
+  container-type: inline-size;
+}
+
+@container (min-width: 500px) {
+  .ss_formWrapperInner {
+    flex-direction: row;
+    width: max-content;
+    margin: auto;
+  }
+}
+
+// ===================================================== //
+// input wrapper
+// ===================================================== //
 .ss_inputWrapper {
   padding: 5px 10px;
   background-color: #fff;
   color: #000;
   border-radius: 10px;
-  // flex-grow: 2;
   border: 1px solid;
+  flex-shrink: 0;
 }
 
 .ss_inputWrapper-inner {
@@ -66,6 +75,9 @@
   font-weight: 300;
 }
 
+// ===================================================== //
+// dropdown
+// ===================================================== //
 .ss_dropdownToggler {
   font-weight: 300;
   background-color: transparent;
@@ -83,6 +95,9 @@
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
+// ===================================================== //
+// custom inputs (children - number ... )
+// ===================================================== //
 .ss_childAgeInput {
   width: 100%;
   background-color: transparent;
@@ -153,5 +168,49 @@
 }
 
 // ===================================================== //
-// Tablet Style ( max : px )
+// multiple transfers
 // ===================================================== //
+
+.ss_multiple_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: v.$primaryColor;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+  gap: 10px;
+}
+
+.ss_multiple_title {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.ss_multiple_input {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0.8rem;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.ss_multiple_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .ss_multiple_input {
+    width: 100%;
+    flex-shrink: 0;
+    flex-direction: row;
+  }
+
+  .ss_multiple_actions {
+    flex-direction: row;
+  }
+}

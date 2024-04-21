@@ -5,6 +5,7 @@ import DateInput from "../common/Inputs/DateInput";
 import HotelGuests from "../common/Inputs/HotelGuests";
 import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import FormWrapper from "../common/FormWrapper";
 
 const HotelForm = () => {
   const dispatch = useAppDispatch();
@@ -23,7 +24,7 @@ const HotelForm = () => {
   };
 
   return (
-    <form className="serviceSearchForm">
+    <FormWrapper onSubmit={() => {}}>
       <Location
         title="Destination"
         placeholder="Where are you going?"
@@ -46,7 +47,7 @@ const HotelForm = () => {
 
       <HotelGuests />
       <SubmitBtn />
-    </form>
+    </FormWrapper>
   );
 };
 

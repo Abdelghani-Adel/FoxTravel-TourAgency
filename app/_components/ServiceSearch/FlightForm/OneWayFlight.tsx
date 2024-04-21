@@ -5,6 +5,7 @@ import DateInput from "../common/Inputs/DateInput";
 import FlightPassengers from "../common/Inputs/FlightPassengers";
 import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
+import FormWrapper from "../common/FormWrapper";
 
 const OneWayFlight = () => {
   const dispatch = useAppDispatch();
@@ -16,7 +17,7 @@ const OneWayFlight = () => {
   };
 
   return (
-    <form className="serviceSearchForm">
+    <FormWrapper onSubmit={() => {}}>
       <Location title="From" placeholder="Departure Location" onChange={() => {}} />
       <Location title="To" placeholder="Destination Location" onChange={() => {}} />
       <DateInput
@@ -27,7 +28,7 @@ const OneWayFlight = () => {
       />
       <FlightPassengers />
       <SubmitBtn />
-    </form>
+    </FormWrapper>
   );
 };
 

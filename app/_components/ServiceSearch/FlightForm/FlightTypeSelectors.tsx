@@ -9,7 +9,7 @@ import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
 const optionsList = [
   {
     value: "oneway",
-    label: "One Way",
+    label: "Oneway",
   },
   {
     value: "round",
@@ -49,7 +49,7 @@ const FlightTypeSelectors = () => {
       />
 
       <button className="foxBtn secondBtn smBtn" onClick={showMultipleForm}>
-        Multiple Destinations
+        Multiple
       </button>
 
       <MyModal show={isMultipleFormShown} onClose={hideMultipleForm}>

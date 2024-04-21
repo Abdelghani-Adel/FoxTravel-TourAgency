@@ -22,7 +22,7 @@ const MainFooter = () => {
   return (
     <div className="mainFooter">
       <div className="container-fluid">
-        <div className="row">
+        <div className="row g-4">
           <div className="col-12 col-md-2">
             <div className="footer_iconWrapper">
               <Image src="/img/icon.png" fill alt="" />
@@ -31,13 +31,13 @@ const MainFooter = () => {
 
           <div className="col-12 col-md-2">
             <div className="mb-3">
-              <h5 className="textSecondary">CUSTOMER SUPPORT</h5>
+              <h5 className="textSecondary text-center text-md-start mb-2">CUSTOMER SUPPORT</h5>
               <p className="fw-light">+201028880661</p>
               <p className="fw-light">info@toxtraveleg.com</p>
             </div>
 
             <div>
-              <h5 className="textSecondary">JOIN OUR NEWS LETTER</h5>
+              <h5 className="textSecondary text-center text-md-start mb-2">JOIN OUR NEWS LETTER</h5>
               <p className="fw-light">
                 Follow Fox Travel Egypt on social media to keep up to date with latest updates
               </p>
@@ -46,7 +46,7 @@ const MainFooter = () => {
           </div>
 
           <div className="col-12 col-md-2">
-            <h5 className="textSecondary">TRAVEL SERVICES</h5>
+            <h5 className="textSecondary text-center text-md-start mb-2">TRAVEL SERVICES</h5>
             <ul className="fotter_ul">
               <li>
                 <Link href="/hotels" className="mainFooter_link">
@@ -92,7 +92,7 @@ const MainFooter = () => {
           </div>
 
           <div className="col-12 col-md-2">
-            <h5 className="textSecondary">FOX TRAVEL EGYPT</h5>
+            <h5 className="textSecondary text-center text-md-start mb-2">FOX TRAVEL EGYPT</h5>
             <ul className="fotter_ul">
               <li>
                 <Link href="/about" className="mainFooter_link">
@@ -121,7 +121,7 @@ const MainFooter = () => {
             <div className="d-flex align-items-center gap-2 mb-3">
               <HiOutlineMail className="display-2" />
               <div>
-                <h5 className="textSecondary">YOUR TRAVEL JOURNEY STARTS HERE!</h5>
+                <h5 className="textSecondary mb-2">YOUR TRAVEL JOURNEY STARTS HERE!</h5>
                 <p className="fw-light">Sign up and we Will send the Lest deals to you</p>
               </div>
             </div>
@@ -131,7 +131,7 @@ const MainFooter = () => {
               <button className="foxBtn secondBtn smBtn">SUBSCRIBE</button>
             </div>
 
-            <div className="d-flex align-items-center gap-2">
+            <div className="d-flex flex-wrap align-items-center gap-2">
               <Image src="/img/iata.png" width={80} height={50} alt="IATA" />
               <Image src="/img/etaa.png" width={90} height={60} alt="IATA" />
               <Image src="/img/minister.png" width={80} height={70} alt="IATA" />

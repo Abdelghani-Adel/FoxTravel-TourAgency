@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
 import { v4 } from "uuid";
 
 type option = {
@@ -19,7 +19,7 @@ const RadioOptions = (props: props) => {
   };
 
   return (
-    <div className="d-flex gap-4">
+    <div className="d-flex gap-2">
       {props.options.map((option, i) => (
         <div className="form-check" key={v4()}>
           <input

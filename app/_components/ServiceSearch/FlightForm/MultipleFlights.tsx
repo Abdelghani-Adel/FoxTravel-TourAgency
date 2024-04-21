@@ -22,10 +22,22 @@ const MultipleFlights = () => {
   };
 
   return (
-    <form className="serviceSearchForm flex-column text-white bgMain p-3 rounded-3">
-      <h1 className="text-center mb-2 fw-normal">Multiple Destinations</h1>
-      <div className="d-flex flex-column gap-3">
-        <div className="d-flex gap-2">
+    <form className="ss_multiple_wrapper">
+      <h1 className="ss_multiple_title">Multiple Destinations</h1>
+      <div className="ss_multiple_input">
+        <Location title="From" placeholder="Departure Location" onChange={() => {}} />
+        <Location title="To" placeholder="Destination Location" onChange={() => {}} />
+        <DateInput
+          title="Departure"
+          placeholder="Enter departure date"
+          defaultValue={reduxState.startDate}
+          onChange={() => {}}
+        />
+        <FlightPassengers />
+      </div>
+
+      {divsArray.map((_, index) => (
+        <div className="ss_multiple_input" key={v4()}>
           <Location title="From" placeholder="Departure Location" onChange={() => {}} />
           <Location title="To" placeholder="Destination Location" onChange={() => {}} />
           <DateInput
@@ -35,31 +47,17 @@ const MultipleFlights = () => {
             onChange={() => {}}
           />
           <FlightPassengers />
-        </div>
-
-        {divsArray.map((_, index) => (
-          <div className="d-flex gap-2 align-items-center" key={v4()}>
-            <Location title="From" placeholder="Departure Location" onChange={() => {}} />
-            <Location title="To" placeholder="Destination Location" onChange={() => {}} />
-            <DateInput
-              title="Departure"
-              placeholder="Enter departure date"
-              defaultValue={reduxState.startDate}
-              onChange={() => {}}
-            />
-            <FlightPassengers />
-            <button type="button" onClick={cancelDest} className="foxBtn smBtn secondBtn">
-              X
-            </button>
-          </div>
-        ))}
-
-        <div className="d-flex gap-2 justify-content-center">
-          <button type="button" className="foxBtn thirdBtn" onClick={addNewDest}>
-            Add Destination
+          <button type="button" onClick={cancelDest} className="foxBtn smBtn secondBtn">
+            X
           </button>
-          <SubmitBtn />
         </div>
+      ))}
+
+      <div className="ss_multiple_actions">
+        <button type="button" className="foxBtn thirdBtn" onClick={addNewDest}>
+          Add Destination
+        </button>
+        <SubmitBtn />
       </div>
     </form>
   );

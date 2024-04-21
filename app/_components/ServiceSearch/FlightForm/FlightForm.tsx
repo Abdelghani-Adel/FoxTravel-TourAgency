@@ -1,8 +1,7 @@
-import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
-import React, { useState } from "react";
+import { useAppSelector } from "@/app/_redux/store";
+import FlightTypeSelectors from "./FlightTypeSelectors";
 import OneWayFlight from "./OneWayFlight";
 import RoundFlight from "./RoundFlight";
-import FlightTypeSelectors from "./FlightTypeSelectors";
 
 const FlightForm = () => {
   const reduxState = useAppSelector((state) => state.serviceSearch.flight);

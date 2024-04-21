@@ -12,11 +12,11 @@ type props = {
 const optionsList = [
   {
     value: "oneway",
-    label: "One Way",
+    label: "Oneway",
   },
   {
     value: "return",
-    label: "Round Trip",
+    label: "Round",
   },
   {
     value: "excursion",
@@ -29,7 +29,7 @@ const TransportTypeSelectors = (props: props) => {
   const { onChange } = props;
 
   return (
-    <div className="d-flex gap-4 mb-2 justify-content-center align-items-center fw-normal">
+    <div className="d-flex gap-2 mb-2 justify-content-center align-items-center fw-normal">
       <RadioOptions
         selectedType={props.selectedType}
         fieldName="searchType"

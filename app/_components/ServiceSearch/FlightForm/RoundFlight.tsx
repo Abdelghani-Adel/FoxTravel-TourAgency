@@ -4,12 +4,13 @@ import SubmitBtn from "../common/SubmitBtn";
 import DateInput from "../common/Inputs/DateInput";
 import FlightPassengers from "../common/Inputs/FlightPassengers";
 import { useAppSelector } from "@/app/_redux/store";
+import FormWrapper from "../common/FormWrapper";
 
 const RoundFlight = () => {
   const reduxState = useAppSelector((state) => state.serviceSearch.hotel);
 
   return (
-    <form className="serviceSearchForm">
+    <FormWrapper onSubmit={() => {}}>
       <Location title="From" placeholder="Departure Location" onChange={() => {}} />
       <Location title="To" placeholder="Destination Location" onChange={() => {}} />
       <DateInput
@@ -26,7 +27,7 @@ const RoundFlight = () => {
       />
       <FlightPassengers />
       <SubmitBtn />
-    </form>
+    </FormWrapper>
   );
 };
 

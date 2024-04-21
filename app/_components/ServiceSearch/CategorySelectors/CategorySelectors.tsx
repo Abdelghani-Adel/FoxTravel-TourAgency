@@ -6,7 +6,7 @@ const categories: IServiceSearchCategory[] = ["Hotel", "Flight", "Transport"];
 
 const CategorySelectors = () => {
   return (
-    <ul className="d-flex gap-4 justify-content-center">
+    <ul className="d-flex gap-4 justify-content-center mb-3">
       {categories.map((category) => (
         <Category key={v4()} categoryName={category} />
       ))}

@@ -4,11 +4,15 @@
 // ------------- heroSeaction ------------- //
 .home_heroSection {
   position: relative;
+  padding-top: clamp(10%, 100px, 15vh);
+  padding-bottom: 10%;
 }
 
 // home_heroSectionBg
 .home_heroSectionBg {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -28,8 +32,6 @@
 
 // featuredHeroBox
 .featuredHeroBox {
-  padding-top: 30%;
-  padding-bottom: 10%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -39,73 +41,17 @@
 }
 
 .home_heroSection--mainTitle {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 1rem + 3vw, 4rem);
   font-weight: 600;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .home_heroSection--caption {
   text-align: center;
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-@include mixins.media-query(medium) {
-  .home_heroSectionBg {
-    position: relative;
-    min-height: 100vh;
-  }
-  .featuredHeroBox {
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-  }
-  .home_heroSection--mainTitle {
-    font-size: 3.5rem;
-  }
-
-  .home_heroSection--caption {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-}
-
-@include mixins.media-query(large) {
-  .featuredHeroBox {
-    width: 80%;
-  }
-  .home_heroSection--mainTitle {
-    font-size: 4rem;
-  }
-
-  .home_heroSection--caption {
-    font-size: 1.2rem;
-  }
-}
-
-@include mixins.media-query(xlarge) {
-  .featuredHeroBox {
-    width: max-content;
-  }
-}
-
-// ------------- PopularDestinations ------------- //
-.popularDestinations_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-// ------------- RecommendedHotels ------------- //
-.recommendedHotels_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  font-size: clamp(1rem, 1rem, 5rem);
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 // ------------- EmailSubscriber ------------- //
@@ -124,12 +70,13 @@
   text-align: center;
 
   svg {
-    font-size: 4rem;
+    font-size: clamp(25px, 2rem + 1vw, 40px);
     color: v.$secondaryColor;
     margin-bottom: 1rem;
   }
 
   .title {
-    font-weight: 500;
+    font-size: clamp(25px, 0.5rem + 1vw, 40px);
+    font-weight: 300;
   }
 }

@@ -4,10 +4,11 @@ import SubmitBtn from "../common/SubmitBtn";
 import DateInput from "../common/Inputs/DateInput";
 import DateTimeInput from "../common/Inputs/DateTimeInput";
 import CarPassengersDropdown from "../common/Inputs/CarPassengers";
+import FormWrapper from "../common/FormWrapper";
 
 const OneWayTransfer = () => {
   return (
-    <form className="serviceSearchForm">
+    <FormWrapper onSubmit={() => {}}>
       <Location title="Pickup Location" placeholder="Airport, city, hotel..." onChange={() => {}} />
       <Location
         title="Drop off location"
@@ -17,7 +18,7 @@ const OneWayTransfer = () => {
       <DateTimeInput title="Pickup Date" placeholder="Enter pickup date" />
       <CarPassengersDropdown />
       <SubmitBtn />
-    </form>
+    </FormWrapper>
   );
 };
 

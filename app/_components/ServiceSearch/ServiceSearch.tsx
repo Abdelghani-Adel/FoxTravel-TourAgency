@@ -6,12 +6,12 @@ import TransportFormWrapper from "./TransportForm/TransportFormWrapper";
 
 const ServiceSearch = () => {
   return (
-    <div className="d-flex flex-column gap-3">
+    <>
       <CategorySelectors />
       <HotelFormWrapper />
       <FlightFormWrapper />
       <TransportFormWrapper />
-    </div>
+    </>
   );
 };
 

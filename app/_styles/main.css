@@ -246,7 +246,7 @@ q:after {
   display: block;
   text-decoration: none;
   color: inherit;
-  height: 70vh;
+  height: clamp(40vh, 480px + 5vw, 60vh);
 }
 
 .foxCard_img {
@@ -820,11 +820,21 @@ q:after {
 
 .footer_iconWrapper {
   position: relative;
-  width: 100%;
+  width: 50%;
   margin: auto;
   aspect-ratio: 1;
+  margin-bottom: 2rem;
 }
 
+@media (min-width: 992px) {
+  .footer_iconWrapper {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    aspect-ratio: 1;
+    margin-bottom: auto;
+  }
+}
 .fotter_ul {
   list-style: square;
   padding-inline-start: 40px;
@@ -1019,20 +1029,30 @@ q:after {
   width: 100%;
 }
 
-.serviceSearchForm {
+.ss_formWrapperInner {
   display: flex;
+  flex-direction: column;
   gap: 5px;
-  align-items: stretch;
-  flex-wrap: wrap;
-  margin: auto;
 }
 
+.ss_formWrapper {
+  container-type: inline-size;
+}
+
+@container (min-width: 500px) {
+  .ss_formWrapperInner {
+    flex-direction: row;
+    width: max-content;
+    margin: auto;
+  }
+}
 .ss_inputWrapper {
   padding: 5px 10px;
   background-color: #fff;
   color: #000;
   border-radius: 10px;
   border: 1px solid;
+  flex-shrink: 0;
 }
 
 .ss_inputWrapper-inner {
@@ -1133,6 +1153,48 @@ q:after {
   flex-grow: 2;
 }
 
+.ss_multiple_wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: #161514;
+  padding: 1rem 2rem;
+  border-radius: 10px;
+  color: #fff;
+  gap: 10px;
+}
+
+.ss_multiple_title {
+  width: 100%;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+.ss_multiple_input {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  padding: 0.8rem;
+  gap: 10px;
+  border-radius: 10px;
+}
+
+.ss_multiple_actions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .ss_multiple_input {
+    width: 100%;
+    flex-shrink: 0;
+    flex-direction: row;
+  }
+  .ss_multiple_actions {
+    flex-direction: row;
+  }
+}
 .bgMain {
   background-color: #161514;
 }
@@ -1243,16 +1305,18 @@ q:after {
 }
 
 .section {
-  padding-top: 60px;
-  padding-bottom: 60px;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 .sectionHeader {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
   text-align: center;
   align-items: center;
-  margin-bottom: 2rem;
+  gap: 20px;
+  margin: 2rem 0;
 }
 
 .sectionHeader_title {
@@ -1265,29 +1329,12 @@ q:after {
   color: gray;
 }
 
-.sectionHeader_btn {
-  border: 1px solid transparent;
-  outline: none;
-  background-color: #f36c24;
-  padding: 10px 20px;
-  border-radius: 10px;
-  color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.sectionHeader_btn:hover {
-  color: #f36c24;
-  background-color: transparent;
-  border: 1px solid;
-}
-
 @media (min-width: 768px) {
   .sectionHeader {
     flex-direction: row;
     text-align: left;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 2rem;
   }
   .sectionHeader_title {
     font-size: 2.2rem;
@@ -1576,10 +1623,14 @@ q:after {
 
 .home_heroSection {
   position: relative;
+  padding-top: clamp(10%, 100px, 15vh);
+  padding-bottom: 10%;
 }
 
 .home_heroSectionBg {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
 }
@@ -1598,8 +1649,6 @@ q:after {
 }
 
 .featuredHeroBox {
-  padding-top: 30%;
-  padding-bottom: 10%;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
@@ -1609,66 +1658,17 @@ q:after {
 }
 
 .home_heroSection--mainTitle {
-  font-size: 2.2rem;
+  font-size: clamp(1.8rem, 1rem + 3vw, 4rem);
   font-weight: 600;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
 .home_heroSection--caption {
   text-align: center;
   font-size: 1rem;
-  font-weight: 400;
-}
-
-@media (min-width: 768px) {
-  .home_heroSectionBg {
-    position: relative;
-    min-height: 100vh;
-  }
-  .featuredHeroBox {
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 90%;
-  }
-  .home_heroSection--mainTitle {
-    font-size: 3.5rem;
-  }
-  .home_heroSection--caption {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-  }
-}
-@media (min-width: 992px) {
-  .featuredHeroBox {
-    width: 80%;
-  }
-  .home_heroSection--mainTitle {
-    font-size: 4rem;
-  }
-  .home_heroSection--caption {
-    font-size: 1.2rem;
-  }
-}
-@media (min-width: 1200px) {
-  .featuredHeroBox {
-    width: max-content;
-  }
-}
-.popularDestinations_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
-}
-
-.recommendedHotels_header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
 }
 
 .emailSubscriber {
@@ -1686,13 +1686,14 @@ q:after {
 }
 
 .companyFeature svg {
-  font-size: 4rem;
+  font-size: clamp(25px, 2rem + 1vw, 40px);
   color: #f36c24;
   margin-bottom: 1rem;
 }
 
 .companyFeature .title {
-  font-weight: 500;
+  font-size: clamp(25px, 0.5rem + 1vw, 40px);
+  font-weight: 300;
 }
 
 .pageNavigator {

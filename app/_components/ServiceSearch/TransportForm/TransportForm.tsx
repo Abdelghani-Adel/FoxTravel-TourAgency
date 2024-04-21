@@ -1,14 +1,10 @@
-import React, { useState } from "react";
-import { useAppSelector } from "@/app/_redux/store";
-import TransportTypeSelectors from "./TransportTypeSelectors";
+import { useState } from "react";
+import ExcursionTransfer from "./ExcursionTransfer";
 import OneWayTransfer from "./OneWayTransfer";
 import ReturnTransfer from "./ReturnTransfer";
-import ExcursionTransfer from "./ExcursionTransfer";
-import MultipleTransfers from "./MultipleTransfers";
+import TransportTypeSelectors from "./TransportTypeSelectors";
 
 const TransportForm = () => {
-  const reduxFormState = useAppSelector((state) => state.serviceSearch);
-  const activeCategory = reduxFormState.category;
   const [flightType, setFlightType] = useState("oneway");
 
   const onFlightTypeChange = (flightType: string) => {

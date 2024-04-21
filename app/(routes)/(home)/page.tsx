@@ -12,11 +12,11 @@ export default function Home() {
   useHideLoadingLayer();
 
   return (
-    <main className="homePage">
+    <main>
       <HeroSection />
 
       <div className="container">
-        <Cars />
+        {/* <Cars /> */}
         <Packages />
         <Destinations />
         <Tours />
