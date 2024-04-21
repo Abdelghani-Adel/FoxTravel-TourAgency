@@ -97,9 +97,6 @@
   }
 }
 
-.foxCard_price {
-}
-
 .foxCard_separator {
   width: 100%;
   height: 1px;
@@ -350,17 +347,11 @@ $duration: 3s;
 // DestinationCard
 // ============================================== //
 .destinationCard {
-  height: 55vh;
+  height: 400px;
   position: relative;
   border-radius: 10px;
   overflow: hidden;
   transition: 0.3s ease-in-out;
-}
-
-.destinationCard a {
-  height: 100%;
-  width: 100%;
-  position: relative;
   display: block;
   color: #fff;
   text-decoration: none;
@@ -376,7 +367,7 @@ $duration: 3s;
 .destinationCard_bg::after {
   content: "";
   position: absolute;
-  z-index: 2;
+  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -395,9 +386,6 @@ $duration: 3s;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
-}
-
-.destinationCard_desc {
   font-size: 0.8rem;
 }
 

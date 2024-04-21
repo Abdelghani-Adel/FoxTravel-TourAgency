@@ -5,15 +5,15 @@ import packageList from "@/public/data/Cards_Packages.json";
 import PackageCard from "@/app/_components/cards/PackageCard";
 import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
+import PageStripe from "@/app/_components/ui/PageStripe";
 
 const Page = () => {
   useHideLoadingLayer();
 
   return (
     <>
-      <div className="bg-light py-5">
-        <h1 className="text-center txtSecondary fw-bolder">Find Your Next Adventure</h1>
-      </div>
+      <PageStripe title="Find Your Next Adventure" />
+
       <div className="container mt-4 mb-3">
         <div className="row g-3">
           <div className="col-3 d-none d-lg-block">
@@ -21,9 +21,9 @@ const Page = () => {
           </div>
 
           <div className="col-12 col-lg-9">
-            <div className="row g-3">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
               {packageList.map((pkg) => (
-                <div key={v4()} className="col-12 col-md-4">
+                <div key={v4()} className="col">
                   <PackageCard
                     key={pkg.id}
                     id={pkg.id}

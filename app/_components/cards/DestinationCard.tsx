@@ -14,27 +14,23 @@ const DestinationCard = (props: IDestinationCardProps) => {
   const onNavigate = () => dispatch(loaderActions.showLoadingOverlay());
 
   return (
-    <div className="destinationCard">
-      <Link href={url} onClick={onNavigate}>
-        <div className="destinationCard_bg">
-          <Image fill src={img} alt="" />
-        </div>
+    <Link className="destinationCard" href={url} onClick={onNavigate}>
+      <div className="destinationCard_bg">
+        <Image fill src={img} alt="" />
+      </div>
 
-        <div className="destinationCard_header">
-          <p className="destinationCard_desc">
-            {hotels ? `${hotels} Hotels - ` : ""}
-            {cars ? `${cars} Cars - ` : ""}
-            {trips ? `${trips} Trips - ` : ""}
-            {activities ? `${activities} Activities` : ""}
-          </p>
-        </div>
+      <p className="destinationCard_header">
+        {hotels ? `${hotels} Hotels - ` : ""}
+        {cars ? `${cars} Cars - ` : ""}
+        {trips ? `${trips} Trips - ` : ""}
+        {activities ? `${activities} Activities` : ""}
+      </p>
 
-        <div className="destinationCard_footer">
-          <h3 className="destinationCard_name">{title}</h3>
-          <button className="destinationCard_btn">Discover</button>
-        </div>
-      </Link>
-    </div>
+      <div className="destinationCard_footer">
+        <h3 className="destinationCard_name">{title}</h3>
+        <button className="destinationCard_btn">Discover</button>
+      </div>
+    </Link>
   );
 };
 
