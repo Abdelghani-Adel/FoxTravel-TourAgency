@@ -130,6 +130,10 @@
   font-weight: 400;
 }
 
+.cardIcon {
+  font-size: 1.4rem;
+}
+
 // ============================================== //
 // PakageCard
 // ============================================== //
@@ -138,6 +142,7 @@
   flex-direction: column;
   justify-content: space-between;
   position: relative;
+  gap: 5px;
   border-radius: 10px;
   overflow: hidden;
   color: #000;
@@ -150,15 +155,6 @@
   width: 100%;
   height: 230px;
   margin-bottom: 10px;
-}
-
-.packageCard_info .icon {
-  font-size: 1.7rem;
-  color: v.$primaryColor;
-}
-
-.packageCard_info .foxCard_rating .ratingBox {
-  background-color: v.$thirdColor;
 }
 
 /////////////////////////////////

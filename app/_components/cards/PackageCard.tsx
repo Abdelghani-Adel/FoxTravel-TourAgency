@@ -38,24 +38,25 @@ const PackageCard = (props: IPackageCardProps) => {
       <p className="cardDescription">{desc}</p>
 
       <p className="cardP">
-        <MdOutlineDateRange className="icon" /> {startDate} ~ {endDate}
+        <MdOutlineDateRange className="cardIcon textSecondary" /> {startDate} ~ {endDate}
       </p>
 
       <p className="cardP">
-        <GiDuration className="icon" /> Duration: {duration}
+        <GiDuration className="cardIcon textSecondary" /> Duration: {duration}
       </p>
 
       <p className="cardP">
-        <MdOutlineSportsHandball className="icon" /> Enjoy {activitiesCount}+ activities
+        <MdOutlineSportsHandball className="cardIcon textSecondary" /> Enjoy {activitiesCount}+
+        activities
       </p>
 
-      <div className="d-flex justify-content-between align-items-center mb-2">
+      <div className="d-flex justify-content-between align-items-center">
         <p className="cardP">
           <RtsRating rating={rating} readonly /> ({formatNumber(reviews)})
         </p>
-        <p className="cardP">
-          <RiMoneyDollarCircleLine className="icon" /> {price} {currency}
-        </p>
+        <h4 className="textSecondary">
+          <RiMoneyDollarCircleLine className="cardIcon" /> {price} {currency}
+        </h4>
       </div>
 
       <button className="foxBtn mainBtn w-100">Find Out More</button>
