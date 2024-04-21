@@ -16,17 +16,17 @@ const Page = () => {
 
       <div className="container mt-4 mb-3">
         <div className="row g-3">
-          <div className="col-3 d-none d-lg-block">
+          <div className="col-lg-4 col-xxl-3 d-none d-lg-block">
             <div className="bg-warning py-4 px-3 rounded-4">
               <HotelForm />
             </div>
             <Filter />
           </div>
 
-          <div className="col-12 col-lg-9">
-            <div className="row g-3">
+          <div className="col-12 col-lg-8 col-xxl-9">
+            <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
               {hotelList.map((hotel) => (
-                <div key={v4()} className="col-12 col-md-4">
+                <div key={v4()} className="col">
                   <HotelCard
                     key={hotel.id}
                     id={hotel.id}

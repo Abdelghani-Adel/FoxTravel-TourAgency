@@ -351,9 +351,12 @@ q:after {
 }
 
 .cardTitle {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
   font-weight: 500;
   color: #000;
-  margin-bottom: 1vh;
   font-size: 2rem;
 }
 
