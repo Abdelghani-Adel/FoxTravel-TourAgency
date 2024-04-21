@@ -1,6 +1,5 @@
 "use client";
 import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import Cars from "./_cars";
 import CompanyFeatures from "./_companyFeatures";
 import Destinations from "./_destinations";
 import HeroSection from "./_heroSection";

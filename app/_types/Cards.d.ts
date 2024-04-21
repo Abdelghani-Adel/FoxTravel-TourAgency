@@ -73,19 +73,3 @@ type ITransferCard = {
   excludes: string[];
   notes: string[];
 };
-// ============================================== //
-
-type ICarCardProps = {
-  id: number;
-  model: string;
-  img: string;
-  passengers: number;
-  bags: number;
-  transmission: string;
-  rating: number;
-  reviews: number;
-  badges: ICardBadge[];
-  price: number;
-  currency: string;
-  duration: string;
-};
