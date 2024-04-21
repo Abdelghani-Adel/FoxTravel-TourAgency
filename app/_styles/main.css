@@ -339,28 +339,37 @@ q:after {
   margin-bottom: 5px;
 }
 
+.packageCard {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #000;
+  height: 60vh;
+}
+
 .packageCard_img {
-  height: 40%;
-  aspect-ratio: 1;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  height: 24vh;
+  width: 24vh;
+  z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
   outline: 2px solid #161514;
   margin-top: 2px;
-  z-index: 1;
 }
 
 .packageCard_info {
-  height: 80%;
-  width: 100%;
   position: absolute;
   bottom: 0;
   border-radius: 10px;
-  padding: 15vh 10px 10px;
+  padding-top: 36vh;
+  padding-inline: 10px;
+  padding-bottom: 10px;
   border: 2px solid #161514;
 }
 
@@ -1567,15 +1576,15 @@ q:after {
 }
 
 .pageStripe {
-  height: 35vh;
+  height: clamp(40px, 4rem + 10vw, 400px);
   overflow: hidden;
   position: relative;
 }
 
 .pageStripBackground {
   position: relative;
-  top: -130%;
-  height: 100vh;
+  top: -90%;
+  height: clamp(400px, 250px + 20vw, 100vh);
   width: 100vw;
 }
 
@@ -1587,21 +1596,22 @@ q:after {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
-  opacity: 0.55;
+  background: linear-gradient(0, rgba(10, 16, 54, 0.8), #3c3837 80.43%);
+  opacity: 0.65;
   backdrop-filter: blur(4px);
 }
 
 .pageStripeTitle {
   position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateY(-50%);
+  width: 100%;
+  text-align: center;
   color: #fff;
   z-index: 2;
-  text-transform: uppercase;
-  font-size: 3rem;
-  letter-spacing: 5px;
+  text-transform: capitalize;
+  font-size: clamp(1rem, 10px + 4vw, 3.5rem);
+  font-weight: 400;
 }
 
 .foxFilter_group {

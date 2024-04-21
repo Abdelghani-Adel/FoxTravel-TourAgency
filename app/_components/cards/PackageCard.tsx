@@ -6,6 +6,7 @@ import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 import FoxCard from "./FoxCard/FoxCard";
 import RtsRating from "@/app/_components/ui/RtsRating";
+import Link from "next/link";
 
 const PackageCard = (props: IPackageCardProps) => {
   const {
@@ -27,7 +28,7 @@ const PackageCard = (props: IPackageCardProps) => {
   const url = `/packages/${encryptedId}`;
 
   return (
-    <FoxCard url={url}>
+    <Link href={url} className="packageCard">
       <div className="packageCard_img">
         <Image src={img} fill alt="" />
       </div>
@@ -67,7 +68,7 @@ const PackageCard = (props: IPackageCardProps) => {
 
         <button className="foxBtn mainBtn w-100">Find Out More</button>
       </div>
-    </FoxCard>
+    </Link>
   );
 };
 

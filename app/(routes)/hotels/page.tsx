@@ -5,15 +5,14 @@ import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
 import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
+import PageStripe from "@/app/_components/ui/PageStripe";
 
 const Page = () => {
   useHideLoadingLayer();
 
   return (
     <>
-      <div className="bg-light py-5">
-        <h1 className="text-center txtSecondary fw-bolder">Find Your Dream Luxury Hotel</h1>
-      </div>
+      <PageStripe title="Find your dream luxury hotel" />
       <div className="container mt-4 mb-3">
         <div className="row g-3">
           <div className="col-3 d-none d-lg-block">

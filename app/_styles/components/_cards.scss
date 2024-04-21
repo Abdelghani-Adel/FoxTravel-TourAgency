@@ -1,4 +1,5 @@
 @use "../mixins/mediaQuery" as mixins;
+@use "../mixins/borwserCompat" as browserMixins;
 @use "../abstract/variables" as v;
 
 // ============================================== //
@@ -110,28 +111,40 @@
 // ============================================== //
 // PakageCard
 // ============================================== //
+$packageCardHeight: 60vh;
+$packageCardImgHeight: calc($packageCardHeight * 40 / 100);
+
+.packageCard {
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #000;
+  height: $packageCardHeight;
+}
+
 .packageCard_img {
-  height: 40%;
-  aspect-ratio: 1;
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  height: $packageCardImgHeight;
+  width: $packageCardImgHeight;
+  z-index: 1;
   border-radius: 50%;
   overflow: hidden;
   border: 5px solid #fff;
   outline: 2px solid v.$primaryColor;
   margin-top: 2px;
-  z-index: 1;
 }
 
 .packageCard_info {
-  height: 80%;
-  width: 100%;
   position: absolute;
   bottom: 0;
   border-radius: 10px;
-  padding: 15vh 10px 10px;
+  padding-top: calc($packageCardHeight - $packageCardImgHeight);
+  padding-inline: 10px;
+  padding-bottom: 10px;
   border: 2px solid v.$primaryColor;
 }
 
