@@ -54,7 +54,7 @@ const PackageCard = (props: Props) => {
 
       <div className="d-flex justify-content-between align-items-center">
         <p className="fw-normal">
-          <RtsRating rating={rating} readonly /> ({formatNumber(reviews)})
+          {/* <RtsRating rating={rating} readonly /> ({formatNumber(reviews)}) */}
         </p>
         <h4 className="textSecondary">
           <RiMoneyDollarCircleLine className="cardIcon" /> {price} $

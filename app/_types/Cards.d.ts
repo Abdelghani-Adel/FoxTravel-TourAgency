@@ -53,7 +53,6 @@ type ITourCard = {
   duration: string;
 };
 
-// ================== TransferCard ================= //
 type ITransferCard = {
   id: string;
   title: string;

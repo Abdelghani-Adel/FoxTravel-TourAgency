@@ -8,7 +8,7 @@ const Header = () => {
   const hotelDetails = useAppSelector((state) => state.hotelDetails);
 
   return (
-    <div className="row justify-content-between">
+    <div className="row justify-content-between g-3 mb-3">
       <div className="col-12 col-md-8">
         <h2 className="mb-1 fw-bolder">{hotelDetails.name}</h2>
         <p>
@@ -22,8 +22,8 @@ const Header = () => {
 
       <div className="col-12 col-md-4">
         <div className="d-flex flex-column flex-lg-row justify-content-end align-items-lg-center gap-3">
-          <IoIosHeartEmpty className="fs-4" />
-          <GrShareOption className="fs-4" />
+          {/* <IoIosHeartEmpty className="fs-4" />
+          <GrShareOption className="fs-4" /> */}
           <button className="foxBtn mainBtn">
             <a href="#hotelPrices">Select Room</a>
           </button>

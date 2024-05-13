@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import CategorySelectors from "./CategorySelectors/CategorySelectors";
 import HotelFormWrapper from "./HotelForm/HotelFormWrapper";

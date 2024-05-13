@@ -1,26 +1,36 @@
-"use client";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import CompanyFeatures from "./_companyFeatures";
-import Destinations from "./_destinations";
-import HeroSection from "./_heroSection";
-import Hotels from "./_hotels";
-import Packages from "./_packages";
-import Tours from "./_tours";
+import React, { Suspense, lazy } from "react";
+
+const HeroSection = lazy(() => import("./_heroSection"));
+const Packages = lazy(() => import("./_packages"));
+const Destinations = lazy(() => import("./_destinations"));
+const Tours = lazy(() => import("./_tours"));
+const Hotels = lazy(() => import("./_hotels"));
+const CompanyFeatures = lazy(() => import("./_companyFeatures"));
 
 export default function Home() {
-  useHideLoadingLayer();
+  // useHideLoadingLayer();
 
   return (
     <main>
-      <HeroSection />
-
+      <Suspense fallback={<div>Loading...</div>}>
+        <HeroSection />
+      </Suspense>
       <div className="container">
-        {/* <Cars /> */}
-        <Packages />
-        <Destinations />
-        <Tours />
-        <Hotels />
-        <CompanyFeatures />
+        <Suspense fallback={<div>Loading...</div>}>
+          <Packages />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Destinations />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Tours />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Hotels />
+        </Suspense>
+        <Suspense fallback={<div>Loading...</div>}>
+          <CompanyFeatures />
+        </Suspense>
       </div>
     </main>
   );

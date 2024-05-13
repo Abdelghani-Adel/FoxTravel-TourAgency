@@ -1,4 +1,4 @@
-import React from "react";
+"use client";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Scrollbar, Navigation } from "swiper/modules";
 import { FaArrowAltCircleLeft, FaArrowAltCircleRight } from "react-icons/fa";

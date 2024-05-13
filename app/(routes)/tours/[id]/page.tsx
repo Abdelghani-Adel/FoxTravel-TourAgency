@@ -18,11 +18,11 @@ const Page = ({ params }: { params: { id: string } }) => {
       </div>
 
       <div className="row mt-1 gx-4 gy-4">
-        <div className="col-8">
+        <div className="col-12 col-md-8">
           <SwiperNavigate images={tourDetails.images} />
         </div>
 
-        <div className="col-4">
+        <div className="col-12 col-md-4">
           <TourBookingCard />
         </div>
 
