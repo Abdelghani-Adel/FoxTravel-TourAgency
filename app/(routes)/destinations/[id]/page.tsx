@@ -2,7 +2,6 @@
 import { useAppSelector } from "@/app/_redux/store";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import Cars from "@/app/(routes)/(home)/_cars";
 import Hotels from "@/app/(routes)/(home)/_hotels";
 import Tours from "@/app/(routes)/(home)/_tours";
 import parse from "html-react-parser";
@@ -46,7 +45,6 @@ const Page = ({ params }: { params: { id: string } }) => {
       </div>
 
       <Hotels />
-      <Cars />
       <Tours />
     </div>
   );
