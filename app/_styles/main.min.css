@@ -1323,7 +1323,7 @@ q:after {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  width: max-content;
+  width: 100%;
 }
 
 .column .ss_inputGroup {
