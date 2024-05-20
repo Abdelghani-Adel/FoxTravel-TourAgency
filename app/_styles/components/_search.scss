@@ -1,0 +1,166 @@
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
+
+.serviceSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+// Seach type selectors (tabs: Hotel - Flight .... )
+.ss_searchTypeSelectorList {
+  display: flex;
+  gap: 1rem;
+}
+
+.ss_searchTypeSelector {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ss_searchTypeSelector::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_searchTypeSelector.active::after,
+.ss_searchTypeSelector:hover::after {
+  width: 100%;
+}
+
+// input group (location - date .... ) without submit button
+.ss_inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+.column .ss_inputGroup {
+  flex-direction: column;
+  width: 100%;
+}
+
+// Form input (combination of title, icon and input itself)
+.ss_formInput {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.ss_formInputTitle {
+  font-weight: 400;
+}
+
+.ss_formInputField {
+  outline: none;
+  min-width: 180px;
+  border: none;
+
+  &::placeholder {
+    color: rgb(194, 194, 194);
+  }
+}
+
+// Dropdown
+.ss_dropdownToggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+// Multiple modal (multiple flights or transfers ... )
+.ss_multipleListModal {
+  padding: 0.4rem;
+  border-radius: 10px;
+  background-color: v.$secondaryColor;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+// Number input (Rectangular with + - buttons)
+.ss_numberInput {
+  padding: 5px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  width: 130px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.ss_numberInput-value {
+  font-size: 14px;
+}
+
+.ss_numberInputBtn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: blue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_numberInputBtn:hover:not(:disabled) {
+  background-color: blue;
+  color: #fff;
+}
+
+.ss_numberInputBtn:disabled {
+  color: rgb(146, 146, 146);
+}
+
+.numberIcons span {
+  position: relative;
+  top: -3px;
+}
+
+// Radio options (oneway - multiple - round)
+.ss_radioOptionList {
+  display: flex;
+  gap: 1rem;
+}
+
+// Media Queries
+@include mixins.media-query(medium) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@include mixins.media-query(xlarge) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}

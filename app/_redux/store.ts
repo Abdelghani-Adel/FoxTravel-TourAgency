@@ -4,14 +4,20 @@ import type { TypedUseSelectorHook } from "react-redux";
 import loaderSlice from "./slices/loaderSlice";
 import hotelDetailsSlice from "./slices/hotelDetails";
 import destinationDetailsSlice from "./slices/destnationDetailsSlice";
-import serviceSearch from "./slices/serviceSearch";
+import hotelSearchSlice from "./slices/hotelSearchSlice";
+import flightSearchSlice from "./slices/flightSearchSlice";
+import transportSearchSlice from "./slices/transportSearchSlice";
+import searchConfigSlice from "./slices/searchConfig";
 
 const store = configureStore({
   reducer: {
     loader: loaderSlice.reducer,
     hotelDetails: hotelDetailsSlice.reducer,
     destinationDetails: destinationDetailsSlice.reducer,
-    serviceSearch: serviceSearch.reducer,
+    hotelSearch: hotelSearchSlice,
+    flightSearch: flightSearchSlice,
+    transportSearch: transportSearchSlice,
+    searchConfig: searchConfigSlice.reducer,
   },
 });
 

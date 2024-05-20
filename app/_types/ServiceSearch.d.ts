@@ -1,3 +1,7 @@
+type ISearchType = "Hotel" | "Flight" | "Transport";
+
+// ======================================================================================================== //
+
 type ISearchFormState = {
   category: IServiceSearchCategory;
   hotel: ISearchHotelState;
@@ -82,3 +86,65 @@ type ISearchTransportState = {
     excursionType: string;
   };
 };
+
+// ========================================================================================================================== //
+
+interface IPassengers {
+  adults: number;
+  children: number;
+  infants: number;
+}
+
+interface FlightSearchState {
+  type: ISSFlightType;
+  oneWay: {
+    departureLocation: string;
+    toLocation: string;
+    departureDate: Date | null;
+    passengers: IPassengers;
+  };
+  round: {
+    departureLocation: string;
+    toLocation: string;
+    departureDate: Date | null;
+    returnDate: Date | null;
+    passengers: IPassengers;
+  };
+  multiple: {
+    departureLocation: string;
+    toLocation: string;
+    departureDate: Date | null;
+    passengers: IPassengers;
+  }[];
+}
+
+type ITransportType = "oneway" | "round" | "excursion" | "multiple";
+
+interface TransportationSearchState {
+  type: ITransportType;
+  oneWay: {
+    pickupLocation: string;
+    dropoffLocation: string;
+    pickupDate: Date | null;
+    passengers: number;
+  };
+  round: {
+    pickupLocation: string;
+    dropoffLocation: string;
+    pickupDate: Date | null;
+    returnDate: Date | null;
+    passengers: number;
+  };
+  excursions: {
+    pickupLocation: string;
+    pickupDate: Date | null;
+    passengers: number;
+    excursionType: string;
+  };
+  multiple: {
+    pickupLocation: string;
+    dropoffLocation: string;
+    pickupDate: Date | null;
+    passengers: number;
+  }[];
+}

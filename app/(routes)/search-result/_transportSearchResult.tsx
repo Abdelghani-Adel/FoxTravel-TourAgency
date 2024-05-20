@@ -1,12 +1,12 @@
 import TransferCard from "@/app/_components/cards/TransferCard";
 import Filter from "@/app/_components/Filter/Filter";
-import TransportFormWrapper from "@/app/_components/ServiceSearch/TransportForm/TransportFormWrapper";
+import TransportSearch from "@/app/_components/ServiceSearch/TransportSearch/TransportSearch";
 
 const TransportSearchResult = () => {
   return (
     <div className="container mt-4 mb-5">
       <div className="m-auto mb-4">
-        <TransportFormWrapper />
+        <TransportSearch />
       </div>
 
       <div className="row g-4">

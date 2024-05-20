@@ -847,198 +847,6 @@ q:after {
   margin-top: auto;
 }
 
-.ss_category {
-  position: relative;
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 5px 10px;
-  border-bottom: 1px solid transparent;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.ss_category::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.ss_category.active::after,
-.ss_category:hover::after {
-  width: 100%;
-}
-
-.ss_formWrapperInner {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
-.ss_formWrapper {
-  container-type: inline-size;
-}
-
-@container (min-width: 500px) {
-  .ss_formWrapperInner {
-    flex-direction: row;
-    width: max-content;
-    margin: auto;
-  }
-}
-.ss_inputWrapper {
-  padding: 5px 10px;
-  background-color: #fff;
-  color: #000;
-  border-radius: 10px;
-  border: 1px solid;
-  flex-shrink: 0;
-}
-
-.ss_inputWrapper-inner {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.ss_inputField {
-  border: none;
-  outline: none;
-  font-weight: 300;
-}
-
-.ss_dropdownToggler {
-  font-weight: 300;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  padding: 0;
-}
-
-.ss_dropdowncontent {
-  width: 350px;
-  padding: 15px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-}
-
-.ss_childAgeInput {
-  width: 100%;
-  background-color: transparent;
-  border: 1px solid gray;
-  border-radius: 5px;
-  padding: 5px 15px;
-  font-weight: 300;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.numberInput {
-  padding: 5px 10px;
-  border: 1px solid rgb(44, 44, 44);
-  width: 130px;
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  font-weight: 400;
-}
-
-.numberInput .number {
-  font-size: 14px;
-}
-
-.numberIcons {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  outline: none;
-  color: blue;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
-}
-
-.numberIcons:hover:not(:disabled) {
-  background-color: blue;
-  color: #fff;
-}
-
-.numberIcons:disabled {
-  color: rgb(146, 146, 146);
-}
-
-.numberIcons span {
-  position: relative;
-  top: -3px;
-}
-
-.ss_optionsListBtn {
-  width: 100%;
-  background-color: transparent;
-  border: none;
-  border-radius: 5px;
-  font-weight: 300;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-grow: 2;
-}
-
-.ss_multiple_wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  background-color: #161514;
-  padding: 1rem 2rem;
-  border-radius: 10px;
-  color: #fff;
-  gap: 10px;
-}
-
-.ss_multiple_title {
-  width: 100%;
-  flex-shrink: 0;
-  text-align: center;
-}
-
-.ss_multiple_input {
-  display: flex;
-  flex-direction: column;
-  background-color: #fff;
-  padding: 0.8rem;
-  gap: 10px;
-  border-radius: 10px;
-}
-
-.ss_multiple_actions {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-@media screen and (min-width: 768px) {
-  .ss_multiple_input {
-    width: 100%;
-    flex-shrink: 0;
-    flex-direction: row;
-  }
-  .ss_multiple_actions {
-    flex-direction: row;
-  }
-}
 .bgMain {
   background-color: #161514;
 }
@@ -1146,6 +954,14 @@ q:after {
 
 .btnAction:hover {
   background-color: #161514;
+}
+
+.btnClick {
+  border: none;
+  outline: none;
+  color: inherit;
+  width: 100%;
+  background-color: transparent;
 }
 
 .section {
@@ -1364,7 +1180,6 @@ q:after {
   border-radius: 10px;
   max-width: 100%;
   max-height: 100%;
-  overflow: auto;
 }
 
 .multiSteps {
@@ -1466,6 +1281,160 @@ q:after {
   cursor: pointer;
 }
 
+.serviceSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ss_searchTypeSelectorList {
+  display: flex;
+  gap: 1rem;
+}
+
+.ss_searchTypeSelector {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ss_searchTypeSelector::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_searchTypeSelector.active::after,
+.ss_searchTypeSelector:hover::after {
+  width: 100%;
+}
+
+.ss_inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: max-content;
+}
+
+.column .ss_inputGroup {
+  flex-direction: column;
+  width: 100%;
+}
+
+.ss_formInput {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.ss_formInputTitle {
+  font-weight: 400;
+}
+
+.ss_formInputField {
+  outline: none;
+  min-width: 180px;
+  border: none;
+}
+
+.ss_formInputField::placeholder {
+  color: rgb(194, 194, 194);
+}
+
+.ss_dropdownToggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ss_multipleListModal {
+  padding: 0.4rem;
+  border-radius: 10px;
+  background-color: #f36c24;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ss_numberInput {
+  padding: 5px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  width: 130px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.ss_numberInput-value {
+  font-size: 14px;
+}
+
+.ss_numberInputBtn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: blue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_numberInputBtn:hover:not(:disabled) {
+  background-color: blue;
+  color: #fff;
+}
+
+.ss_numberInputBtn:disabled {
+  color: rgb(146, 146, 146);
+}
+
+.numberIcons span {
+  position: relative;
+  top: -3px;
+}
+
+.ss_radioOptionList {
+  display: flex;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
 .home_heroSection {
   position: relative;
   padding-top: clamp(10%, 100px, 15vh);

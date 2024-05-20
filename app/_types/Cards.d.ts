@@ -36,7 +36,6 @@ type IHotelCard = {
   rating: number;
   reviews: number;
   price: number;
-  currency: string;
   badges: ICardBadge[];
 };
 
@@ -48,7 +47,6 @@ type ITourCard = {
   rating: number;
   reviews: number;
   price: number;
-  currency: string;
   badges: ICardBadge[];
   duration: string;
 };

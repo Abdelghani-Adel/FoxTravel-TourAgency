@@ -1,5 +1,5 @@
-import DateInput from "@/app/_components/ServiceSearch/common/Inputs/DateInput";
-import FlightPassengers from "@/app/_components/ServiceSearch/common/Inputs/FlightPassengers";
+import DateInput from "@/app/_components/ServiceSearch/common/DateInput";
+import FlightPassengers from "@/app/_components/ServiceSearch/FlightSearch/FlightPassengers";
 import tourDetails from "@/public/data/Details_tour.json";
 
 const TourBookingCard = () => {
@@ -9,8 +9,8 @@ const TourBookingCard = () => {
         <span className="fw-light">from</span> {tourDetails.price}
         {tourDetails.currency}
       </p>
-      <DateInput title="Date" defaultValue={new Date()} onChange={() => {}} placeholder="Choose" />
-      <FlightPassengers />
+      {/* <DateInput title="Date" defaultValue={new Date()} onChange={() => {}} placeholder="Choose" />
+      <FlightPassengers /> */}
       <button className="foxBtn secondBtn w-100">Book Now</button>
     </div>
   );

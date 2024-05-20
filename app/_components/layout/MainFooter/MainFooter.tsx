@@ -7,15 +7,15 @@ import { FaHeadphones } from "react-icons/fa6";
 import SocialMediaLinks from "./SocialMediaLinks";
 import { HiOutlineMail } from "react-icons/hi";
 import { useAppDispatch } from "@/app/_redux/store";
-import { serviceSearchActions } from "@/app/_redux/slices/serviceSearch";
 import { useRouter } from "next/navigation";
+import { searchConfigActions } from "@/app/_redux/slices/searchConfig";
 
 const MainFooter = () => {
   const dispatch = useAppDispatch();
   const router = useRouter();
 
   const updateSearchCategory = () => {
-    dispatch(serviceSearchActions.updateCategory("Flight"));
+    dispatch(searchConfigActions.changeType("Flight"));
     router.push("/");
   };
 

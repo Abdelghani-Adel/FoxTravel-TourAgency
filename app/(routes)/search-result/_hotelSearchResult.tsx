@@ -3,7 +3,7 @@ import Filter from "@/app/_components/Filter/Filter";
 import hotels from "@/public/data/Cards_Hotels.json";
 import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
-import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
+import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
 
 const HotelSearchResult = () => {
   return (
@@ -11,7 +11,7 @@ const HotelSearchResult = () => {
       <div className="row g-4">
         <div className="col-3 d-none d-lg-block">
           <div className="bgThird py-4 px-3 rounded-4">
-            <HotelForm />
+            <HotelSearch />
           </div>
           <Filter />
         </div>

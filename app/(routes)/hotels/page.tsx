@@ -4,8 +4,8 @@ import hotelList from "@/public/data/Cards_Hotels.json";
 import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
-import HotelForm from "@/app/_components/ServiceSearch/HotelForm/HotelForm";
 import PageStripe from "@/app/_components/ui/PageStripe";
+import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
 
 const Page = () => {
   useHideLoadingLayer();
@@ -17,8 +17,8 @@ const Page = () => {
       <div className="container mt-4 mb-3">
         <div className="row g-3">
           <div className="col-lg-4 col-xxl-3 d-none d-lg-block">
-            <div className="bg-warning py-4 px-3 rounded-4">
-              <HotelForm />
+            <div className="bg-warning p-2 rounded-4 column">
+              <HotelSearch />
             </div>
             <Filter />
           </div>
