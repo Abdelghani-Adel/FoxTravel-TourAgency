@@ -61,7 +61,7 @@ const MultipleFlightSingle = (props: ISingleProps) => {
     dispatch(flightSearchActions.setMultipleDepartureDate(data));
   };
 
-  const onPassengersChange = (passengers: IPassengers) => {
+  const onPassengersChange = (passengers: IFlightPassengers) => {
     const data = {
       index,
       passengers,
@@ -102,7 +102,7 @@ type ISingleProps = {
     departureLocation: string;
     toLocation: string;
     departureDate: Date | null;
-    passengers: IPassengers;
+    passengers: IFlightPassengers;
   };
   index: number;
 };

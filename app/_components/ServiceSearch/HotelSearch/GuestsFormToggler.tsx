@@ -19,7 +19,7 @@ const GuestsFormToggler = () => {
       <div>
         <span>{hotelSearch.rooms} Rooms - </span>
         <span>{hotelSearch.adults} Adults - </span>
-        <span>{hotelSearch.childs.length} Children</span>
+        <span>{hotelSearch.childs.length} Childs</span>
       </div>
 
       <IoIosArrowDown />

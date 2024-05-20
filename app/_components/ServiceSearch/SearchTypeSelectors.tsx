@@ -6,7 +6,7 @@ const SearchTypeSelectors = () => {
   const dispatch = useAppDispatch();
   const type = useAppSelector((state) => state.searchConfig.searchType);
 
-  const onClickHandler = (category: IServiceSearchCategory) => {
+  const onClickHandler = (category: ISearchType) => {
     dispatch(searchConfigActions.changeType(category));
   };
 

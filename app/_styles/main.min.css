@@ -847,6 +847,175 @@ q:after {
   margin-top: auto;
 }
 
+.serviceSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ss_searchTypeSelectorList {
+  display: flex;
+  gap: 1rem;
+}
+
+.ss_searchTypeSelector {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.ss_searchTypeSelector::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_searchTypeSelector.active::after,
+.ss_searchTypeSelector:hover::after {
+  width: 100%;
+}
+
+.ss_inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.column .ss_inputGroup {
+  flex-direction: column;
+  width: 100%;
+}
+
+.ss_formInput {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.ss_formInputTitle {
+  font-weight: 400;
+}
+
+.ss_formInputField {
+  outline: none;
+  min-width: 180px;
+  border: none;
+}
+
+.ss_formInputField::placeholder {
+  color: rgb(194, 194, 194);
+}
+
+.ss_dropdownToggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ss_multipleListModal {
+  padding: 0.4rem;
+  border-radius: 10px;
+  background-color: #f36c24;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.ss_numberInput {
+  padding: 5px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  width: 130px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 400;
+}
+
+.ss_numberInput-value {
+  font-size: 14px;
+}
+
+.ss_numberInputBtn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: blue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_numberInputBtn:hover:not(:disabled) {
+  background-color: blue;
+  color: #fff;
+}
+
+.ss_numberInputBtn:disabled {
+  color: rgb(146, 146, 146);
+}
+
+.numberIcons span {
+  position: relative;
+  top: -3px;
+}
+
+.ss_radioOptionList {
+  display: flex;
+  gap: 1rem;
+}
+
+.ss_submitBtn {
+  display: flex;
+  align-items: center;
+  background-color: #161514;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
+
+.ss_submitBtn:hover {
+  background-color: #3c3837;
+}
+
+@media (min-width: 768px) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media (min-width: 1200px) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
 .bgMain {
   background-color: #161514;
 }
@@ -1281,160 +1450,6 @@ q:after {
   cursor: pointer;
 }
 
-.serviceSearch {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 1rem;
-}
-
-.ss_searchTypeSelectorList {
-  display: flex;
-  gap: 1rem;
-}
-
-.ss_searchTypeSelector {
-  position: relative;
-  font-size: 1.1rem;
-  font-weight: 300;
-  padding: 5px 10px;
-  border-bottom: 1px solid transparent;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.ss_searchTypeSelector::after {
-  content: " ";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 1px;
-  background-color: #fff;
-  transition: 0.3s ease-in-out;
-}
-
-.ss_searchTypeSelector.active::after,
-.ss_searchTypeSelector:hover::after {
-  width: 100%;
-}
-
-.ss_inputGroup {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  width: 100%;
-}
-
-.column .ss_inputGroup {
-  flex-direction: column;
-  width: 100%;
-}
-
-.ss_formInput {
-  background-color: #fff;
-  color: #000;
-  padding: 5px 10px;
-  border-radius: 10px;
-  flex-shrink: 0;
-}
-
-.ss_formInputTitle {
-  font-weight: 400;
-}
-
-.ss_formInputField {
-  outline: none;
-  min-width: 180px;
-  border: none;
-}
-
-.ss_formInputField::placeholder {
-  color: rgb(194, 194, 194);
-}
-
-.ss_dropdownToggler {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.ss_multipleListModal {
-  padding: 0.4rem;
-  border-radius: 10px;
-  background-color: #f36c24;
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
-
-.ss_numberInput {
-  padding: 5px 10px;
-  border: 1px solid rgb(44, 44, 44);
-  width: 130px;
-  height: 45px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-  font-weight: 400;
-}
-
-.ss_numberInput-value {
-  font-size: 14px;
-}
-
-.ss_numberInputBtn {
-  background-color: transparent;
-  padding: 0;
-  border: none;
-  outline: none;
-  color: blue;
-  font-size: 22px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 34px;
-  border-radius: 5px;
-  transition: 0.3s ease-in-out;
-}
-
-.ss_numberInputBtn:hover:not(:disabled) {
-  background-color: blue;
-  color: #fff;
-}
-
-.ss_numberInputBtn:disabled {
-  color: rgb(146, 146, 146);
-}
-
-.numberIcons span {
-  position: relative;
-  top: -3px;
-}
-
-.ss_radioOptionList {
-  display: flex;
-  gap: 1rem;
-}
-
-@media (min-width: 768px) {
-  .ss_inputGroup {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-}
-@media (min-width: 1200px) {
-  .ss_inputGroup {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
-  }
-}
 .home_heroSection {
   position: relative;
   padding-top: clamp(10%, 100px, 15vh);

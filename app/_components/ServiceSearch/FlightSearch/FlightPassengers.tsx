@@ -4,8 +4,8 @@ import { IoPerson } from "react-icons/io5";
 import { IoIosArrowDown } from "react-icons/io";
 
 type IProps = {
-  passengers: IPassengers;
-  onChange: (passengers: IPassengers) => void;
+  passengers: IFlightPassengers;
+  onChange: (passengers: IFlightPassengers) => void;
 };
 
 const FlightPassengers = (props: IProps) => {

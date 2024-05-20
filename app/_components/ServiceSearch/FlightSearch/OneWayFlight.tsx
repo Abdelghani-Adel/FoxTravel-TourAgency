@@ -21,7 +21,7 @@ const OneWayFlight = () => {
     dispatch(flightSearchActions.setOneWayDepartureDate(date));
   };
 
-  const onPassengersChange = (passengers: IPassengers) => {
+  const onPassengersChange = (passengers: IFlightPassengers) => {
     dispatch(flightSearchActions.setOneWayPassengers(passengers));
   };
 

@@ -22,7 +22,7 @@ const FlightTypeSelector = () => {
   const dispatch = useAppDispatch();
   const flightType = useAppSelector((state) => state.flightSearch.type);
 
-  const onFlightTypeChange = (flightType: ISSFlightType) => {
+  const onFlightTypeChange = (flightType: IFlightType) => {
     dispatch(flightSearchActions.setFlightType(flightType));
   };
 

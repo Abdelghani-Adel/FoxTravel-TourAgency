@@ -1,216 +1,182 @@
-// @use "../mixins/mediaQuery" as mixins;
-// @use "../abstract/variables" as v;
+@use "../mixins/mediaQuery" as mixins;
+@use "../abstract/variables" as v;
 
-// // ===================================================== //
-// // category selectors
-// // ===================================================== //
-// .ss_category {
-//   position: relative;
-//   font-size: 1.1rem;
-//   font-weight: 300;
-//   padding: 5px 10px;
-//   border-bottom: 1px solid transparent;
-//   transition: 0.3s ease-in-out;
-//   cursor: pointer;
-// }
+.serviceSearch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
 
-// .ss_category::after {
-//   content: " ";
-//   position: absolute;
-//   bottom: 0;
-//   left: 0;
-//   width: 0;
-//   height: 1px;
-//   background-color: #fff;
-//   transition: 0.3s ease-in-out;
-// }
+// Seach type selectors (tabs: Hotel - Flight .... )
+.ss_searchTypeSelectorList {
+  display: flex;
+  gap: 1rem;
+}
 
-// .ss_category.active::after,
-// .ss_category:hover::after {
-//   width: 100%;
-// }
+.ss_searchTypeSelector {
+  position: relative;
+  font-size: 1.1rem;
+  font-weight: 300;
+  padding: 5px 10px;
+  border-bottom: 1px solid transparent;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
 
-// // ===================================================== //
-// // single form wrapper
-// // ===================================================== //
-// // .ss_formWrapperInner {
-// //   display: flex;
-// //   flex-direction: column;
-// //   gap: 5px;
-// // }
+.ss_searchTypeSelector::after {
+  content: " ";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: 0.3s ease-in-out;
+}
 
-// // .ss_formWrapper {
-// //   container-type: inline-size;
-// // }
+.ss_searchTypeSelector.active::after,
+.ss_searchTypeSelector:hover::after {
+  width: 100%;
+}
 
-// // @container (min-width: 500px) {
-// //   .ss_formWrapperInner {
-// //     flex-direction: row;
-// //     width: max-content;
-// //     margin: auto;
-// //   }
-// // }
+// input group (location - date .... ) without submit button
+.ss_inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
 
-// // ===================================================== //
-// // input wrapper
-// // ===================================================== //
-// .ss_inputWrapper {
-//   padding: 5px 10px;
-//   background-color: #fff;
-//   color: #000;
-//   border-radius: 10px;
-//   border: 1px solid;
-//   flex-shrink: 0;
-// }
+.column .ss_inputGroup {
+  flex-direction: column;
+  width: 100%;
+}
 
-// .ss_inputWrapper-inner {
-//   display: flex;
-//   align-items: center;
-//   gap: 8px;
-// }
+// Form input (combination of title, icon and input itself)
+.ss_formInput {
+  background-color: #fff;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 10px;
+  flex-shrink: 0;
+}
 
-// .ss_inputField {
-//   border: none;
-//   outline: none;
-//   font-weight: 300;
-// }
+.ss_formInputTitle {
+  font-weight: 400;
+}
 
-// // ===================================================== //
-// // dropdown
-// // ===================================================== //
-// .ss_dropdownToggler {
-//   font-weight: 300;
-//   background-color: transparent;
-//   border: none;
-//   outline: none;
-//   display: flex;
-//   align-items: center;
-//   justify-content: space-evenly;
-//   padding: 0;
-// }
+.ss_formInputField {
+  outline: none;
+  min-width: 180px;
+  border: none;
 
-// .ss_dropdowncontent {
-//   width: 350px;
-//   padding: 15px;
-//   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-// }
+  &::placeholder {
+    color: rgb(194, 194, 194);
+  }
+}
 
-// // ===================================================== //
-// // custom inputs (children - number ... )
-// // ===================================================== //
-// .ss_childAgeInput {
-//   width: 100%;
-//   background-color: transparent;
-//   border: 1px solid gray;
-//   border-radius: 5px;
-//   padding: 5px 15px;
-//   font-weight: 300;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-// }
+// Dropdown
+.ss_dropdownToggler {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
-// .numberInput {
-//   padding: 5px 10px;
-//   border: 1px solid rgb(44, 44, 44);
-//   width: 130px;
-//   height: 45px;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   border-radius: 5px;
-//   font-weight: 400;
-// }
+// Multiple modal (multiple flights or transfers ... )
+.ss_multipleListModal {
+  padding: 0.4rem;
+  border-radius: 10px;
+  background-color: v.$secondaryColor;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
 
-// .numberInput .number {
-//   font-size: 14px;
-// }
+// Number input (Rectangular with + - buttons)
+.ss_numberInput {
+  padding: 5px 10px;
+  border: 1px solid rgb(44, 44, 44);
+  width: 130px;
+  height: 45px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  font-weight: 400;
+}
 
-// .numberIcons {
-//   background-color: transparent;
-//   padding: 0;
-//   border: none;
-//   outline: none;
-//   color: blue;
-//   font-size: 22px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 34px;
-//   border-radius: 5px;
-//   transition: 0.3s ease-in-out;
-// }
+.ss_numberInput-value {
+  font-size: 14px;
+}
 
-// .numberIcons:hover:not(:disabled) {
-//   background-color: blue;
-//   color: #fff;
-// }
+.ss_numberInputBtn {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  outline: none;
+  color: blue;
+  font-size: 22px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 34px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
 
-// .numberIcons:disabled {
-//   color: rgb(146, 146, 146);
-// }
+.ss_numberInputBtn:hover:not(:disabled) {
+  background-color: blue;
+  color: #fff;
+}
 
-// .numberIcons span {
-//   position: relative;
-//   top: -3px;
-// }
+.ss_numberInputBtn:disabled {
+  color: rgb(146, 146, 146);
+}
 
-// .ss_optionsListBtn {
-//   width: 100%;
-//   background-color: transparent;
-//   border: none;
-//   border-radius: 5px;
-//   font-weight: 300;
-//   display: flex;
-//   justify-content: space-between;
-//   align-items: center;
-//   flex-grow: 2;
-// }
+.numberIcons span {
+  position: relative;
+  top: -3px;
+}
 
-// // ===================================================== //
-// // multiple transfers
-// // ===================================================== //
+// Radio options (oneway - multiple - round)
+.ss_radioOptionList {
+  display: flex;
+  gap: 1rem;
+}
 
-// .ss_multiple_wrapper {
-//   display: flex;
-//   flex-direction: column;
-//   flex-wrap: wrap;
-//   background-color: v.$primaryColor;
-//   padding: 1rem 2rem;
-//   border-radius: 10px;
-//   color: #fff;
-//   gap: 10px;
-// }
+// submit button
+.ss_submitBtn {
+  display: flex;
+  align-items: center;
+  background-color: v.$primaryColor;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 15px;
+  transition: 0.3s ease-in-out;
+}
 
-// .ss_multiple_title {
-//   width: 100%;
-//   flex-shrink: 0;
-//   text-align: center;
-// }
+.ss_submitBtn:hover {
+  background-color: v.$primaryColorHover;
+}
 
-// .ss_multiple_input {
-//   display: flex;
-//   flex-direction: column;
-//   background-color: #fff;
-//   padding: 0.8rem;
-//   gap: 10px;
-//   border-radius: 10px;
-// }
+// Media Queries
+@include mixins.media-query(medium) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
 
-// .ss_multiple_actions {
-//   display: flex;
-//   flex-direction: column;
-//   gap: 10px;
-// }
-
-// @media screen and (min-width: 768px) {
-//   .ss_multiple_input {
-//     width: 100%;
-//     flex-shrink: 0;
-//     flex-direction: row;
-//   }
-
-//   .ss_multiple_actions {
-//     flex-direction: row;
-//   }
-// }
+@include mixins.media-query(xlarge) {
+  .ss_inputGroup {
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}

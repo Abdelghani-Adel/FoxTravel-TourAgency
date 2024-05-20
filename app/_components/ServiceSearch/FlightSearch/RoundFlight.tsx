@@ -25,7 +25,7 @@ const RoundFlight = () => {
     dispatch(flightSearchActions.setRoundReturnDate(date));
   };
 
-  const onPassengersChange = (passengers: IPassengers) => {
+  const onPassengersChange = (passengers: IFlightPassengers) => {
     dispatch(flightSearchActions.setRoundPassengers(passengers));
   };
 

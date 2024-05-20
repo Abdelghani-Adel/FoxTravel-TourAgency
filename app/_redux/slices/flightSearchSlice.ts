@@ -41,7 +41,7 @@ const flightsSearchSlice = createSlice({
   name: "flightsSearch",
   initialState,
   reducers: {
-    setFlightType(state, action: PayloadAction<ISSFlightType>) {
+    setFlightType(state, action: PayloadAction<IFlightType>) {
       state.type = action.payload;
     },
     // OneWay actions
@@ -54,7 +54,7 @@ const flightsSearchSlice = createSlice({
     setOneWayDepartureDate(state, action: PayloadAction<Date | null>) {
       state.oneWay.departureDate = action.payload;
     },
-    setOneWayPassengers(state, action: PayloadAction<IPassengers>) {
+    setOneWayPassengers(state, action: PayloadAction<IFlightPassengers>) {
       state.oneWay.passengers = action.payload;
     },
     // Round actions
@@ -70,7 +70,7 @@ const flightsSearchSlice = createSlice({
     setRoundReturnDate(state, action: PayloadAction<Date | null>) {
       state.round.returnDate = action.payload;
     },
-    setRoundPassengers(state, action: PayloadAction<IPassengers>) {
+    setRoundPassengers(state, action: PayloadAction<IFlightPassengers>) {
       state.round.passengers = action.payload;
     },
     // Multiple actions
@@ -103,7 +103,7 @@ const flightsSearchSlice = createSlice({
     },
     setMultiplePassengers(
       state,
-      action: PayloadAction<{ index: number; passengers: IPassengers }>
+      action: PayloadAction<{ index: number; passengers: IFlightPassengers }>
     ) {
       state.multiple[action.payload.index].passengers = action.payload.passengers;
     },
