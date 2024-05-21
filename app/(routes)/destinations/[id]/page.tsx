@@ -37,7 +37,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
         <div className="col-12 col-lg-4 order-1">
           <div className="hotelImageWrapper">
-            <ImageGallerySwiperCards />
+            <ImageGallerySwiperCards images={details.images} />
           </div>
         </div>
       </div>

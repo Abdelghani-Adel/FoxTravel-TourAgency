@@ -24,9 +24,7 @@ const HotelRoomOld = (props: props) => {
         <div className="row gy-3">
           <div className="col-12 col-md-6 col-lg-6 col-xl-4 col-xxl-3">
             <div className="hotelRoom_gallery">
-              <div className="hotelRoom_imgWrapper">
-                <ImageGallerySwiperCards />
-              </div>
+              <div className="hotelRoom_imgWrapper">{/* <ImageGallerySwiperCards /> */}</div>
             </div>
           </div>
 

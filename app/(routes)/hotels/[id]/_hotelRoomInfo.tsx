@@ -25,7 +25,7 @@ const HotelRoomInfo = ({ room }: { room: any }) => {
             <div className="row text-start">
               <div className="col-4">
                 <div style={{ height: "40vh" }}>
-                  <ImageGallerySwiperCards />
+                  <ImageGallerySwiperCards images={room.images} />
                 </div>
               </div>
 

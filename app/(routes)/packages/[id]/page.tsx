@@ -72,9 +72,7 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="col-12 col-lg-4 order-1">
-          <div className="hotelImageWrapper">
-            <ImageGallerySwiperCards />
-          </div>
+          <div className="hotelImageWrapper">{/* <ImageGallerySwiperCards /> */}</div>
         </div>
       </div>
 
