@@ -1,15 +1,11 @@
 "use client";
-import React from "react";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import tourList from "@/public/data/Cards_Tours.json";
 import TourCard from "@/app/_components/cards/TourCard";
-import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
+import tourList from "@/public/data/Cards_Tours.json";
+import { v4 } from "uuid";
 
 const Page = () => {
-  useHideLoadingLayer();
-
   return (
     <>
       <PageStripe title="Find Your Dream Tour" />

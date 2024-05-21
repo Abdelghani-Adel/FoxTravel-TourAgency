@@ -1,13 +1,10 @@
 "use client";
+import SocialMediaLinks from "@/app/_components/layout/MainFooter/SocialMediaLinks";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import BranchList from "./_branchList";
 import ContactForm from "./_contactForm";
-import SocialMediaLinks from "@/app/_components/layout/MainFooter/SocialMediaLinks";
 
 const Page = () => {
-  useHideLoadingLayer();
-
   return (
     <div className="contactUs">
       <PageStripe title="contact us" />

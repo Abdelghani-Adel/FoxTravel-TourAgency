@@ -1,5 +1,3 @@
-"use client";
-
 import { encrypt } from "@/app/_utils/Cryptojs";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,13 +28,9 @@ const HotelCard = (props: props) => {
         repudiandae repellendus nesciunt aut praesentium consequatur abss.
       </p>
 
-      <p>
-        <FoxCardRating rating={rating} reviews={reviews} />
-      </p>
+      <FoxCardRating rating={rating} reviews={reviews} />
 
-      <h5>
-        <FoxCardPrice price={price} curr="$" />
-      </h5>
+      <FoxCardPrice price={price} curr="$" />
 
       <button className="foxBtn secondBtn w-100">Discover More</button>
     </Link>

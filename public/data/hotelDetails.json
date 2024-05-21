@@ -10,7 +10,20 @@
     "currency": "USD",
     "amount": 99
   },
-  "images": ["", ""],
+  "images": [
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png"
+  ],
   "highlights": [
     {
       "title": "In London City Centre",

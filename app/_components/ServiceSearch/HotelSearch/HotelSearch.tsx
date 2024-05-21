@@ -1,14 +1,13 @@
-import React, { ChangeEvent, FormEvent } from "react";
+"use client";
+import React, { ChangeEvent } from "react";
 import LocationInput from "../common/LocationInput";
 import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { hotelSearchActions } from "@/app/_redux/slices/hotelSearchSlice";
 import DateInput from "../common/DateInput";
 import HotelGuests from "./HotelGuests";
 import SubmitButton from "../common/SubmitButton";
-import { useRouter } from "next/navigation";
 
 const HotelSearch = () => {
-  const router = useRouter();
   const dispatch = useAppDispatch();
   const hotelSearch = useAppSelector((state) => state.hotelSearch);
 

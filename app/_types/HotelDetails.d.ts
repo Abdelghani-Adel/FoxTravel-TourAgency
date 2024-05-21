@@ -1,11 +1,24 @@
-interface Location {
-  address: string;
-  mapLocation: string;
-}
-
-interface Price {
-  currency: string;
-  amount: number;
+interface Hotel {
+  name: string;
+  location: {
+    address: string;
+    mapLocation: string;
+  };
+  rating: number;
+  totalReviews: number;
+  price: {
+    currency: string;
+    amount: number;
+  };
+  images: string[];
+  highlights: Highlight[];
+  description: string;
+  facilities: Facility[];
+  rooms: Room[];
+  availability: Availability;
+  reviewsStatistics: ReviewStatistic[];
+  surroundings: string[];
+  helpfulFacts: HelpfulFact[];
 }
 
 interface Highlight {
@@ -18,21 +31,46 @@ interface Facility {
   icon: string;
 }
 
-interface Benefit {
-  title: string;
-  icon: string;
-}
-
-interface Review {
-  averageRating: number;
-  totalReviews: number;
+interface Room {
+  id: number;
+  roomType: string;
+  guests: number;
+  pricePerNight: number;
+  includes: string[];
 }
 
 interface Availability {
-  availableRooms: number;
+  availableRooms: AvailableRoom[];
   totalRooms: number;
-  minimumNights: number;
-  maximumNights: number;
+  reservedRooms: number;
+}
+
+interface AvailableRoom {
+  roomImages: string[];
+  roomType: string;
+  beds: number;
+  benefits: Benefit[];
+  price: {
+    amount: number;
+    currency: string;
+  };
+  amenities: string[];
+  reviews: {
+    averageRating: number;
+    totalReviews: number;
+  };
+  availability: {
+    availableRooms: number;
+    totalRooms: number;
+    minimumNights: number;
+    maximumNights: number;
+  };
+  additionalInfo: AdditionalInfo[];
+}
+
+interface Benefit {
+  title: string;
+  icon: string;
 }
 
 interface AdditionalInfo {
@@ -40,39 +78,12 @@ interface AdditionalInfo {
   info: string;
 }
 
-interface Room {
-  roomImages: string[];
-  roomType: string;
-  beds: number;
-  benefits: Benefit[];
-  price: Price;
-  amenities: string[];
-  reviews: Review;
-  availability: Availability;
-  additionalInfo: AdditionalInfo[];
-}
-
-interface ReviewsStatistic {
+interface ReviewStatistic {
   title: string;
   rating: number;
 }
 
-interface IHotelDetails {
-  name: string;
-  location: Location;
-  rating: number;
-  totalReviews: number;
-  price: Price;
-  images: string[];
-  highlights: Highlight[];
-  description: string;
-  facilities: Facility[];
-  availability: {
-    availableRooms: Room[];
-    totalRooms: number;
-    reservedRooms: number;
-  };
-  reviewsStatistics: ReviewsStatistic[];
-  surroundings: string[];
-  helpfulFacts: AdditionalInfo[];
+interface HelpfulFact {
+  title: string;
+  info: string;
 }

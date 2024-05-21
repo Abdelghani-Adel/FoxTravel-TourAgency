@@ -6,8 +6,11 @@ import LogoWhite from "./LogoWhite";
 import MobileMenu from "./MobileMenu";
 import Navigation from "./Navigation";
 import { usePathname } from "next/navigation";
+// import useBackButtonDetect from "@/app/_hooks/useBackButtonDetect";
 
 const MainHeader = () => {
+  // useBackButtonDetect();
+
   const pathRoute = usePathname();
   const [mobileMenuShown, setMobileMenuShown] = useState(false);
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);

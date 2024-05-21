@@ -1,17 +1,20 @@
-import { useAppSelector } from "@/app/_redux/store";
-import React from "react";
 import { BsInfo } from "react-icons/bs";
+import { v4 } from "uuid";
 
-const HelpfulFacts = () => {
-  const facts = useAppSelector((state) => state.hotelDetails?.helpfulFacts);
+type IProps = {
+  facts: HelpfulFact[];
+};
+
+const HelpfulFacts = (props: IProps) => {
+  const { facts } = props;
 
   return (
     <div>
       <h4 className="fw-normal mb-4">Some helpful facts</h4>
 
       <div className="row row-cols-2 row-cols-lg-4 g-3">
-        {facts?.map((fact, i) => (
-          <div key={i} className="col">
+        {facts?.map((fact) => (
+          <div key={v4()} className="col">
             <h6>
               <BsInfo /> <span className="fw-normal">{fact.title}</span> :{" "}
               <span className="fw-light">{fact.info}</span>

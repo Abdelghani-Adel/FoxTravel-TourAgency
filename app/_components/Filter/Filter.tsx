@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import filterData from "@/public/data/Filter.json";
 import { v4 } from "uuid";

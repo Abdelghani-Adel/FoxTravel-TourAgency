@@ -1,52 +1,42 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectCards } from "swiper/modules";
+"use client";
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/effect-cards";
+import { EffectCards } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 import styles from "./ImageGalleryImageCards.module.css";
-import Image from "next/image";
-import Modal from "../../../app/_components/ui/Modal";
-import ModalTrigger from "../../../app/_components/ui/ModalTrigger";
+import { v4 } from "uuid";
 
-const images = [
-  "/img/hotelDetails/1.png",
-  "/img/hotelDetails/2.png",
-  "/img/hotelDetails/4.png",
-  "/img/hotelDetails/5.png",
-  "/img/hotelDetails/1.png",
-  "/img/hotelDetails/2.png",
-  "/img/hotelDetails/4.png",
-  "/img/hotelDetails/5.png",
-  "/img/hotelDetails/1.png",
-  "/img/hotelDetails/2.png",
-  "/img/hotelDetails/4.png",
-  "/img/hotelDetails/5.png",
-];
+type IProps = {
+  images: string[];
+};
 
-const ImageGallerySwiperCards = () => {
-  const [clickedImage, setClickedImage] = useState("");
+const ImageGallerySwiperCards = (props: IProps) => {
+  const { images } = props;
+
+  if (!images) {
+    return null;
+  }
 
   return (
     <>
       <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className={styles.swiper}>
-        {images.map((image, i) => (
-          <SwiperSlide key={i} className={styles.swiperSlide}>
-            <div className={styles.imgWrapper} onClick={() => setClickedImage(image)}>
-              <ModalTrigger modalId="PhotoGallery">
-                <Image fill src={image} alt="" />
-              </ModalTrigger>
+        {images.map((image) => (
+          <SwiperSlide key={v4()} className={styles.swiperSlide}>
+            <div className={styles.imgWrapper}>
+              <Image fill src={image} alt="" />
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
-      <Modal id="PhotoGallery">
+      {/* <Modal id="PhotoGallery">
         <div className={styles.modalWrapper}>
           <div className={styles.modalImageWrapper}>
             <Image fill src={clickedImage ? clickedImage : ""} alt="" />
           </div>
         </div>
-      </Modal>
+      </Modal> */}
     </>
   );
 };

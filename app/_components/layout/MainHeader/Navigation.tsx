@@ -1,10 +1,7 @@
 "use client";
 
-import { loaderActions } from "@/app/_redux/slices/loaderSlice";
-import { useAppDispatch } from "@/app/_redux/store";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import React from "react";
 
 type props = {
   onItemClick?: () => void;
@@ -12,9 +9,7 @@ type props = {
 
 const Navigation = (props: props) => {
   const pathname = usePathname();
-  const dispatch = useAppDispatch();
   const onNavigate = () => {
-    dispatch(loaderActions.showLoadingOverlay());
     props.onItemClick && props.onItemClick();
   };
 

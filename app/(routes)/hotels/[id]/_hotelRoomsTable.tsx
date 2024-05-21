@@ -1,13 +1,15 @@
-import { useAppSelector } from "@/app/_redux/store";
-import React from "react";
-import { v4 } from "uuid";
-import { IoIosCheckmark } from "react-icons/io";
-import HotelRoomInfo from "./_hotelRoomInfo";
-import { GiPerson } from "react-icons/gi";
 import { BsPersonStanding } from "react-icons/bs";
+import { GiPerson } from "react-icons/gi";
+import { IoIosCheckmark } from "react-icons/io";
+import { v4 } from "uuid";
+import HotelRoomInfo from "./_hotelRoomInfo";
 
-const HotelRoomsTable = () => {
-  const rooms = useAppSelector((state) => state.hotelDetails.rooms);
+type IProps = {
+  rooms: Room[];
+};
+
+const HotelRoomsTable = (props: IProps) => {
+  const { rooms } = props;
 
   return (
     <div id="hotelPrices">

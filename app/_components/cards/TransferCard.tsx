@@ -1,24 +1,20 @@
-import React, { useState } from "react";
-import data from "@/public/data/TransferCards.json";
-import { LuBaggageClaim } from "react-icons/lu";
-import { FaCheck, FaSuitcase } from "react-icons/fa6";
-import Image from "next/image";
-import FoxCardBadges from "./FoxCard/FoxCardBadges";
-import { v4 } from "uuid";
-import { MdNotListedLocation } from "react-icons/md";
 import MyModal from "@/app/_components/ui/MyModal";
+import data from "@/public/data/TransferCards.json";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
-import { useAppDispatch } from "@/app/_redux/store";
-import { loaderActions } from "@/app/_redux/slices/loaderSlice";
+import { useState } from "react";
+import { FaCheck, FaSuitcase } from "react-icons/fa6";
+import { LuBaggageClaim } from "react-icons/lu";
+import { MdNotListedLocation } from "react-icons/md";
+import { v4 } from "uuid";
+import FoxCardBadges from "./FoxCard/FoxCardBadges";
 
 const TransferCard = () => {
   const router = useRouter();
-  const dispatch = useAppDispatch();
   const carInfo = data[0];
   const [moreInfoShown, setMoreInfoShown] = useState(false);
 
   const chooseHandler = () => {
-    dispatch(loaderActions.showLoadingOverlay());
     router.push("/purchase/transfer");
   };
 

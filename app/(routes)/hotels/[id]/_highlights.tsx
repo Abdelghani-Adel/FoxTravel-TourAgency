@@ -1,18 +1,25 @@
-import { useAppSelector } from "@/app/_redux/store";
-import React from "react";
-import { MdInsights } from "react-icons/md";
 import { MdOutlineEmojiTransportation } from "react-icons/md";
 import { PiTelevisionSimpleLight } from "react-icons/pi";
+import { v4 } from "uuid";
 
-const Highlights = () => {
-  const highlights = useAppSelector((state) => state.hotelDetails?.highlights);
+type IProps = {
+  highlights: Highlight[];
+};
 
+const Highlights = (props: IProps) => {
+  const { highlights } = props;
   return (
     <div className="hotelHighlights hotelDetails_secion">
       <div className="row">
         <h5 className="mb-1">Property Highlights</h5>
         <div className="d-flex flex-wrap gap-4">
-          <div className="d-flex gap-2 align-items-center">
+          {highlights.map((highlight) => (
+            <div key={v4()} className="d-flex gap-2 align-items-center">
+              <p className="fw-light">{highlight.title}</p>
+            </div>
+          ))}
+
+          {/* <div className="d-flex gap-2 align-items-center">
             <MdOutlineEmojiTransportation className="fs-2 txtThird" />{" "}
             <p className="fw-light">Airport Transfer</p>
           </div>
@@ -20,7 +27,7 @@ const Highlights = () => {
           <div className="d-flex gap-2 align-items-center">
             <PiTelevisionSimpleLight className="fs-3 txtThird" />{" "}
             <p className="fw-light">Premium TV channels</p>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

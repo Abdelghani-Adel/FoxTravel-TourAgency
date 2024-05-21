@@ -990,6 +990,7 @@ q:after {
 .ss_submitBtn {
   display: flex;
   align-items: center;
+  justify-content: center;
   background-color: #161514;
   color: #fff;
   padding: 10px 20px;

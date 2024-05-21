@@ -12,20 +12,20 @@ const WhyChooseUs = () => {
       </div>
       <div className="companyFeatures">
         <div className="row g-3">
-          <div className="col-12 col-md-4">
-            <div className="companyFeature" data-aos="fade-up" data-aos-delay={100}>
+          <div className="col-12 col-md-4" data-aos="fade-up" data-aos-delay={100}>
+            <div className="companyFeature">
               <RiPriceTag2Line />
               <h3 className="fw-normal">Best Price Guarantee</h3>
             </div>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="companyFeature" data-aos="fade-up" data-aos-delay={200}>
+          <div className="col-12 col-md-4" data-aos-delay={200}>
+            <div className="companyFeature" data-aos="fade-up">
               <MdDateRange />
               <h3 className="fw-normal">Easy & Quick Booking</h3>
             </div>
           </div>
-          <div className="col-12 col-md-4">
-            <div className="companyFeature" data-aos="fade-up" data-aos-delay={300}>
+          <div className="col-12 col-md-4" data-aos-delay={300}>
+            <div className="companyFeature" data-aos="fade-up">
               <BiSupport />
               <h3 className="fw-normal">Customer Care 24/7</h3>
             </div>

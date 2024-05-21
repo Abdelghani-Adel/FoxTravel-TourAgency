@@ -1,16 +1,13 @@
 "use client";
 import SwiperNavigate from "@/app/_components/Swipers/SwiperNavigate";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import tourDetails from "@/public/data/Details_tour.json";
+import ReviewStatistics from "./_reviewStatistics";
 import TourBookingCard from "./_tourBookingCard";
 import TourHeader from "./_tourHeader";
 import TourInfoList from "./_tourInfoList";
 import TourSnapshot from "./_tourSnapshot";
-import ReviewStatistics from "./_reviewStatistics";
 
 const Page = ({ params }: { params: { id: string } }) => {
-  useHideLoadingLayer();
-
   return (
     <div className="container mt-4 mb-4">
       <div className="row">

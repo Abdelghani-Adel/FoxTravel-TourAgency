@@ -1,12 +1,15 @@
-import { useAppSelector } from "@/app/_redux/store";
 import React from "react";
 import ProgressBar from "@/app/_components/ui/ProgressBar";
+import { v4 } from "uuid";
 
-const ReviewStatistics = () => {
-  const hotelDetails = useAppSelector((state) => state.hotelDetails);
-  const statistics = hotelDetails?.reviewsStatistics;
-  const rating = hotelDetails?.rating;
-  const totalReviews = hotelDetails?.totalReviews;
+type IProps = {
+  statistics: ReviewStatistic[];
+  rating: number;
+  totalReviews: number;
+};
+
+const ReviewStatistics = (props: IProps) => {
+  const { statistics, rating, totalReviews } = props;
 
   return (
     <div>
@@ -22,8 +25,8 @@ const ReviewStatistics = () => {
 
         <div className="col-12 col-md-6 col-lg-9">
           <div className="row g-4">
-            {statistics?.map((state, i) => (
-              <div key={i} className="col-6 col-lg-4">
+            {statistics?.map((state) => (
+              <div key={v4()} className="col-6 col-lg-4">
                 <div className="d-flex justify-content-between">
                   <h6>{state.title}</h6>
                   <h6 className="fw-light">{state.rating}</h6>

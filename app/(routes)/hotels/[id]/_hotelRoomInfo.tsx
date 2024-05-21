@@ -1,3 +1,4 @@
+"use client";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import FoxCardRating from "@/app/_components/cards/FoxCard/FoxCardRating";
 import MyModal from "@/app/_components/ui/MyModal";

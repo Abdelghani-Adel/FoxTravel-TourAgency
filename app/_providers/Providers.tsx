@@ -10,6 +10,7 @@ import "swiper/css/scrollbar";
 import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/_styles/main.css";
+import useBackButtonDetect from "../_hooks/useBackButtonDetect";
 
 /**
  * This component is resbonsible for all processes needs to be invoked at the loading stage.

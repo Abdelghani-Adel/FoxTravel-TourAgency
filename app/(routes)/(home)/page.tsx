@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import { Suspense, lazy } from "react";
 
 const HeroSection = lazy(() => import("./_heroSection"));
 const Packages = lazy(() => import("./_packages"));
@@ -8,8 +8,6 @@ const Hotels = lazy(() => import("./_hotels"));
 const CompanyFeatures = lazy(() => import("./_companyFeatures"));
 
 export default function Home() {
-  // useHideLoadingLayer();
-
   return (
     <main>
       <Suspense fallback={<div>Loading...</div>}>

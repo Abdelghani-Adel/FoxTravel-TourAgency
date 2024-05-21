@@ -1,15 +1,12 @@
 "use client";
 
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import packageList from "@/public/data/Cards_Packages.json";
 import PackageCard from "@/app/_components/cards/PackageCard";
-import { v4 } from "uuid";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
+import packageList from "@/public/data/Cards_Packages.json";
+import { v4 } from "uuid";
 
 const Page = () => {
-  useHideLoadingLayer();
-
   return (
     <>
       <PageStripe title="Find Your Next Adventure" />

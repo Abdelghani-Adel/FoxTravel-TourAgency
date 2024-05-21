@@ -1,24 +1,18 @@
-import { loaderActions } from "@/app/_redux/slices/loaderSlice";
-import { useAppDispatch } from "@/app/_redux/store";
 import { encrypt } from "@/app/_utils/Cryptojs";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 type props = {
   data: IDestinationCard;
 };
 
 const DestinationCard = (props: props) => {
-  const dispatch = useAppDispatch();
   const { id, img, title, hotels, cars, trips, activities } = props.data;
   const encryptedId = encrypt(`${id}`);
   const url = `/destinations/${encryptedId}`;
 
-  const onNavigate = () => dispatch(loaderActions.showLoadingOverlay());
-
   return (
-    <Link className="destinationCard" href={url} onClick={onNavigate}>
+    <Link className="destinationCard" href={url}>
       <div className="destinationCard_bg">
         <Image fill src={img} alt="" />
       </div>

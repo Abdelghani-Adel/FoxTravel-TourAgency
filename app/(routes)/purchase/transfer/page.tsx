@@ -1,17 +1,15 @@
 "use client";
+import TransportSearch from "@/app/_components/ServiceSearch/TransportSearch/TransportSearch";
 import MultiSteps from "@/app/_components/ui/MultiSteps/MultiSteps";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
-import React, { useState } from "react";
+import { useState } from "react";
 import Extras from "./_extras";
 import OrderDetails from "./_orderDetails";
 import OrderSummary from "./_orderSummary";
 import Purchase from "./_purchase";
-import TransportSearch from "@/app/_components/ServiceSearch/TransportSearch/TransportSearch";
 
 const steps = ["Extras", "Order Details", "Order Summary", "Purchase"];
 
 const Page = () => {
-  useHideLoadingLayer();
   const [currentStep, setCurrentStep] = useState(1);
   const [total, setTotal] = useState(50);
 

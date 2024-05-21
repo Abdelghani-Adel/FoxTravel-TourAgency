@@ -1,3 +1,4 @@
+"use client";
 import RtsRating from "@/app/_components/ui/RtsRating";
 import { formatNumber } from "@/app/_utils/Formatters";
 import React from "react";

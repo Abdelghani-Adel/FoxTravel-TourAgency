@@ -36,13 +36,9 @@ const TourCard = (props: props) => {
         porro fugiat dolorum molestiae distinctio quaerat aperiam.
       </p>
 
-      <p>
-        <FoxCardRating rating={rating} reviews={reviews} />
-      </p>
+      <FoxCardRating rating={rating} reviews={reviews} />
 
-      <p>
-        <FoxCardPrice price={price} curr="$" />
-      </p>
+      <FoxCardPrice price={price} curr="$" />
 
       <button className="foxBtn secondBtn w-100">Discover More</button>
     </Link>

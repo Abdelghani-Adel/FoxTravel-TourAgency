@@ -1,13 +1,11 @@
 "use client";
-import { useAppSelector } from "@/app/_redux/store";
-import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import useHideLoadingLayer from "@/app/_hooks/loadingLayer";
 import Hotels from "@/app/(routes)/(home)/_hotels";
 import Tours from "@/app/(routes)/(home)/_tours";
+import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
+import { useAppSelector } from "@/app/_redux/store";
 import parse from "html-react-parser";
 
 const Page = ({ params }: { params: { id: string } }) => {
-  useHideLoadingLayer();
   const details = useAppSelector((state) => state.destinationDetails);
 
   return (
