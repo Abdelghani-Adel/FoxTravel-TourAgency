@@ -1,15 +1,15 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Filter from "@/app/_components/Filter/Filter";
-import hotels from "@/public/data/Cards_Hotels.json";
 import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
 import { useAppSelector } from "@/app/_redux/store";
+import { searchHotels } from "@/app/_services/searchServices";
 
 const Page = () => {
   const hotelSearchState = useAppSelector((state) => state.hotelSearch);
-  const [searchResult, setSearchResult] = useState();
+  const [searchResult, setSearchResult] = useState<any[]>();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -23,22 +23,9 @@ const Page = () => {
       };
 
       // Send the request to the server;
-      const response = await fetch("/api/hotels", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(reqBody),
-      });
+      const { data, error } = await searchHotels();
 
-      // Handle the response;
-      if (response.ok) {
-        const data = await response.json();
-        setSearchResult(data);
-      } else {
-        const error = await response.json();
-        console.log(error);
-      }
+      setSearchResult(data);
     };
 
     fetchData();
@@ -56,7 +43,7 @@ const Page = () => {
 
         <div className="col-12 col-lg-9">
           <div className="row g-3">
-            {hotels.map((hotel) => (
+            {searchResult?.map((hotel) => (
               <div className="col-12 col-md-4" key={v4()}>
                 <HotelCard key={hotel.id} data={hotel} />
               </div>

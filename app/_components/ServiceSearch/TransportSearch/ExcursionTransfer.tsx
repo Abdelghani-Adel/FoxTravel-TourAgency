@@ -5,6 +5,7 @@ import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { transportSearchActions } from "@/app/_redux/slices/transportSearchSlice";
 import TransportPassengers from "./TransportPassengers";
 import ExcursionType from "./ExcursionsType";
+import SubmitButton from "../common/SubmitButton";
 
 const ExcursionTransfer = () => {
   const dispatch = useAppDispatch();
@@ -41,6 +42,8 @@ const ExcursionTransfer = () => {
       <ExcursionType />
 
       <TransportPassengers passengers={formData.passengers} onChange={onPassengersChange} />
+
+      <SubmitButton link="/search/transport" />
     </div>
   );
 };

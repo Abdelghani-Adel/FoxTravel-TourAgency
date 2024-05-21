@@ -985,6 +985,7 @@ q:after {
 .ss_radioOptionList {
   display: flex;
   gap: 1rem;
+  justify-content: center;
 }
 
 .ss_submitBtn {

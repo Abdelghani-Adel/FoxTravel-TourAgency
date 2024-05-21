@@ -4,6 +4,7 @@ import DateInput from "../common/DateInput";
 import { useAppDispatch, useAppSelector } from "@/app/_redux/store";
 import { transportSearchActions } from "@/app/_redux/slices/transportSearchSlice";
 import TransportPassengers from "./TransportPassengers";
+import SubmitButton from "../common/SubmitButton";
 
 const OneWayTransfer = () => {
   const dispatch = useAppDispatch();
@@ -49,6 +50,8 @@ const OneWayTransfer = () => {
       />
 
       <TransportPassengers passengers={formData.passengers} onChange={onPassengersChange} />
+
+      <SubmitButton link="/search/transport" />
     </div>
   );
 };

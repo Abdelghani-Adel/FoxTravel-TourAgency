@@ -31,7 +31,7 @@ const TransportTypeSelector = () => {
   };
 
   return (
-    <div>
+    <div className="text-center">
       <RadioOptions
         selectedType={transportType}
         fieldName="searchType"

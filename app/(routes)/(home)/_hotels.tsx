@@ -1,11 +1,16 @@
-"use client";
-
 import HotelCard from "@/app/_components/cards/HotelCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import hotels from "@/public/data/Cards_Hotels.json";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
+import { getHotels } from "@/app/_services/hotelServices";
+import { v4 } from "uuid";
 
-const Hotels = () => {
+const Hotels = async () => {
+  const { data, error } = await getHotels();
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
+
   return (
     <div className="recommendedHotels section">
       <SectionHeaderWithBtn
@@ -16,8 +21,8 @@ const Hotels = () => {
       />
 
       <SwiperScroll>
-        {hotels.map((hotel) => (
-          <HotelCard key={hotel.id} data={hotel} />
+        {data?.map((hotel: any) => (
+          <HotelCard key={v4()} data={hotel} />
         ))}
       </SwiperScroll>
     </div>

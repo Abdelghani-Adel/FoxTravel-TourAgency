@@ -10,9 +10,8 @@ const CompanyFeatures = lazy(() => import("./_companyFeatures"));
 export default function Home() {
   return (
     <main>
-      <Suspense fallback={<div>Loading...</div>}>
-        <HeroSection />
-      </Suspense>
+      <HeroSection />
+
       <div className="container">
         <Suspense fallback={<div>Loading...</div>}>
           <Packages />
