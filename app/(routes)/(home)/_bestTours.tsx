@@ -1,10 +1,16 @@
-"use client";
 import TourCard from "@/app/_components/cards/TourCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
 import SwiperScroll from "@/app/_components/ui/SwiperScroll";
-import toursList from "@/public/data/Cards_Tours.json";
+import { getBestTours } from "@/app/_services/tourServices";
 
-const Tours = () => {
+const BestTours = async () => {
+  const { data, error } = await getBestTours();
+  const toursList: ITour[] = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
+
   return (
     <div className="section">
       <SectionHeaderWithBtn
@@ -23,4 +29,4 @@ const Tours = () => {
   );
 };
 
-export default Tours;
+export default BestTours;

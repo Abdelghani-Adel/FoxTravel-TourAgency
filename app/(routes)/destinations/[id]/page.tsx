@@ -1,6 +1,6 @@
 "use client";
-import Hotels from "@/app/(routes)/(home)/_hotels";
-import Tours from "@/app/(routes)/(home)/_tours";
+import BestHotels from "@/app/(routes)/(home)/_bestHotels";
+import BestTours from "@/app/(routes)/(home)/_bestTours";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import { useAppSelector } from "@/app/_redux/store";
 import parse from "html-react-parser";
@@ -42,8 +42,8 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
       </div>
 
-      <Hotels />
-      <Tours />
+      <BestHotels />
+      <BestTours />
     </div>
   );
 };

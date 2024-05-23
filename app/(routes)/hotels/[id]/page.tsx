@@ -8,12 +8,12 @@ import PageNavigator from "@/app/(routes)/hotels/[id]/_pageNavigator";
 import ReviewStatistics from "@/app/(routes)/hotels/[id]/_reviewStatistics";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
-import { getHotelDetailsById } from "@/app/_services/hotelServices";
+import { getHotelDetails } from "@/app/_services/hotelServices";
 import { decrypt } from "@/app/_utils/Cryptojs";
 
 const Page = async ({ params }: { params: { id: string } }) => {
   const hotelId = decrypt(params.id);
-  const { data, error } = await getHotelDetailsById(hotelId);
+  const { data, error } = await getHotelDetails(hotelId);
   const details: Hotel = data;
 
   if (error) {

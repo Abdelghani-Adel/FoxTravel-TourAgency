@@ -8,7 +8,7 @@ import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
 
 type props = {
-  data: ITourCard;
+  data: ITour;
 };
 
 const TourCard = (props: props) => {

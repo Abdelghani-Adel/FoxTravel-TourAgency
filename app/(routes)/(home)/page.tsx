@@ -1,10 +1,10 @@
 import { Suspense, lazy } from "react";
 
 const HeroSection = lazy(() => import("./_heroSection"));
-const Packages = lazy(() => import("./_packages"));
-const Destinations = lazy(() => import("./_destinations"));
-const Tours = lazy(() => import("./_tours"));
-const Hotels = lazy(() => import("./_hotels"));
+const BestPackages = lazy(() => import("./_bestPackages"));
+const BestDestinations = lazy(() => import("./_bestDestinations"));
+const BestTours = lazy(() => import("./_bestTours"));
+const BestHotels = lazy(() => import("./_bestHotels"));
 const CompanyFeatures = lazy(() => import("./_companyFeatures"));
 
 export default function Home() {
@@ -14,17 +14,21 @@ export default function Home() {
 
       <div className="container">
         <Suspense fallback={<div>Loading...</div>}>
-          <Packages />
+          <BestPackages />
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
-          <Destinations />
+          <BestDestinations />
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
-          <Tours />
+          <BestTours />
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
-          <Hotels />
+          <BestHotels />
         </Suspense>
+
         <Suspense fallback={<div>Loading...</div>}>
           <CompanyFeatures />
         </Suspense>

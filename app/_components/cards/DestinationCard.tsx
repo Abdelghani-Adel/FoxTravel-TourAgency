@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 type props = {
-  data: IDestinationCard;
+  data: IDestination;
 };
 
 const DestinationCard = (props: props) => {

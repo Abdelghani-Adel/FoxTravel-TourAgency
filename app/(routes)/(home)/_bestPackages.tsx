@@ -1,12 +1,15 @@
 import PackageCard from "@/app/_components/cards/PackageCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import packages from "@/public/data/Cards_Packages.json";
+import { getBestPackages } from "@/app/_services/packageServices";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
-import { promises as fs } from "fs";
 
-const Packages = async () => {
-  const file = await fs.readFile(process.cwd() + "/public/data/Cards_Packages.json", "utf8");
-  const packages: IPackageCard[] = JSON.parse(file);
+const BestPackages = async () => {
+  const { data, error } = await getBestPackages();
+  const packages: IPackage[] = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
 
   return (
     <div>
@@ -26,4 +29,4 @@ const Packages = async () => {
   );
 };
 
-export default Packages;
+export default BestPackages;

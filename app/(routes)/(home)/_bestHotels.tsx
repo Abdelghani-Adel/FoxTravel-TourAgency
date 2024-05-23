@@ -1,11 +1,12 @@
 import HotelCard from "@/app/_components/cards/HotelCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import SwiperScroll from "../../_components/ui/SwiperScroll";
-import { getHotels } from "@/app/_services/hotelServices";
+import { getBestHotels } from "@/app/_services/hotelServices";
 import { v4 } from "uuid";
+import SwiperScroll from "../../_components/ui/SwiperScroll";
 
-const Hotels = async () => {
-  const { data, error } = await getHotels();
+const BestHotels = async () => {
+  const { data, error } = await getBestHotels();
+  const hotelList: IHotel[] = data;
 
   if (error) {
     return <h3 className="text-center text-danger">{`${error}`}</h3>;
@@ -21,7 +22,7 @@ const Hotels = async () => {
       />
 
       <SwiperScroll>
-        {data?.map((hotel: any) => (
+        {hotelList.map((hotel: any) => (
           <HotelCard key={v4()} data={hotel} />
         ))}
       </SwiperScroll>
@@ -29,4 +30,4 @@ const Hotels = async () => {
   );
 };
 
-export default Hotels;
+export default BestHotels;

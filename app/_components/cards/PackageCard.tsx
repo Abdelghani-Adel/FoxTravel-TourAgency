@@ -8,7 +8,7 @@ import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
 
 type Props = {
-  data: IPackageCard;
+  data: IPackage;
 };
 
 const PackageCard = (props: Props) => {
