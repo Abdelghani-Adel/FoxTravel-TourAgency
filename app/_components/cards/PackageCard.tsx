@@ -6,7 +6,7 @@ import Link from "next/link";
 import { GiDuration } from "react-icons/gi";
 import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
-import Navigate from "../ui/MyLink";
+import Navigate from "../ui/Navigate";
 
 type Props = {
   data: IPackage;

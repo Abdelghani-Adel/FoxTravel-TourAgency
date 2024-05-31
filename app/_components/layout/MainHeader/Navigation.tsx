@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import Navigate from "../../ui/MyLink";
+import Navigate from "../../ui/Navigate";
 
 type props = {
   onItemClick?: () => void;

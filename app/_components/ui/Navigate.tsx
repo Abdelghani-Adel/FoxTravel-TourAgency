@@ -1,7 +1,6 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useEffect, useTransition } from "react";
-
 import { loaderActions } from "@/app/_redux/slices/loaderSlice";
 import { useAppDispatch } from "@/app/_redux/store";
 import NextLink from "next/link";
@@ -12,8 +11,7 @@ type IProps = {
   className?: string;
 };
 
-const Navigate = (props: IProps) => {
-  const { href, children, className } = props;
+const Navigate = ({ href, children, className = "" }: IProps) => {
   const router = useRouter();
   const dispatch = useAppDispatch();
   const [isPending, startTransition] = useTransition();
@@ -21,24 +19,20 @@ const Navigate = (props: IProps) => {
   useEffect(() => {
     if (isPending) {
       dispatch(loaderActions.showLoadingOverlay());
-    }
-
-    if (!isPending) {
+    } else {
       dispatch(loaderActions.hideLoadingOverlay());
     }
-  }, [isPending]);
+  }, [isPending, dispatch]);
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    e.preventDefault();
+    startTransition(() => {
+      router.push(href);
+    });
+  };
 
   return (
-    <NextLink
-      className={`${className ?? ""}`}
-      href={href}
-      onClick={(e) => {
-        e.preventDefault();
-        startTransition(() => {
-          router.push(href);
-        });
-      }}
-    >
+    <NextLink className={className} href={href} onClick={handleClick}>
       {children}
     </NextLink>
   );

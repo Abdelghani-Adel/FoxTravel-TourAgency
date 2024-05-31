@@ -1,7 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
-import Navigate from "./MyLink";
+import Navigate from "./Navigate";
 
 type IProps = {
   title: string;

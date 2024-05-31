@@ -1,4 +1,4 @@
-import Navigate from "../../ui/MyLink";
+import Navigate from "../../ui/Navigate";
 
 const SubmitButton = ({ link }: { link: string }) => {
   return (

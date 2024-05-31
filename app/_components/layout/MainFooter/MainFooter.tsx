@@ -9,7 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { useAppDispatch } from "@/app/_redux/store";
 import { useRouter } from "next/navigation";
 import { searchConfigActions } from "@/app/_redux/slices/searchConfig";
-import Navigate from "../../ui/MyLink";
+import Navigate from "../../ui/Navigate";
 
 const MainFooter = () => {
   const dispatch = useAppDispatch();

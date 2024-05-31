@@ -4,7 +4,7 @@ import Link from "next/link";
 import FoxCardBadges from "./FoxCard/FoxCardBadges";
 import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
-import Navigate from "../ui/MyLink";
+import Navigate from "../ui/Navigate";
 
 type props = {
   data: IHotel;

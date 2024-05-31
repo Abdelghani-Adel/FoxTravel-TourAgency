@@ -1,6 +1,6 @@
 "use client";
 import Collabse from "@/app/_components/ui/Collabse";
-import Navigate from "@/app/_components/ui/MyLink";
+import Navigate from "@/app/_components/ui/Navigate";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";

@@ -1,7 +1,7 @@
 import { encrypt } from "@/app/_utils/Cryptojs";
 import Image from "next/image";
 import Link from "next/link";
-import Navigate from "../ui/MyLink";
+import Navigate from "../ui/Navigate";
 
 type props = {
   data: IDestination;

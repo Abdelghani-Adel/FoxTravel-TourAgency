@@ -1188,11 +1188,12 @@ q:after {
   z-index: 999;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(4, 4, 4, 0.53);
+  background-color: rgba(4, 4, 4, 0.29);
   display: flex;
   justify-content: center;
   align-items: center;
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  backdrop-filter: blur(0px);
 }
 
 .loading-container {

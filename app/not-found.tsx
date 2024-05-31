@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navigate from "./_components/ui/MyLink";
+import Navigate from "./_components/ui/Navigate";
 
 export const metadata = {
   title: "404 || GoTrip - Travel & Tour React NextJS Template",
