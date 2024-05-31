@@ -5,13 +5,12 @@ import React from "react";
 import LoadingScreen1 from "@/app/_components/loadingScreens/LoadingScreen1";
 
 const LoaderOverlay = () => {
-  // const navigation = useNav();
   const loader = useAppSelector((state) => state.loader);
 
   if (!loader.isShown) return null;
 
   return (
-    <div className="loadingScreen">
+    <div className="loadingScreen" data-aos="fade" data-aos-duaraion="300">
       <LoadingScreen1 />
     </div>
   );
