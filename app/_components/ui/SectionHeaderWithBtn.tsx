@@ -1,6 +1,7 @@
 import Link from "next/link";
 import React from "react";
 import { GoArrowUpRight } from "react-icons/go";
+import Navigate from "./MyLink";
 
 type IProps = {
   title: string;
@@ -21,9 +22,9 @@ const SectionHeaderWithBtn = (props: IProps) => {
 
       <div>
         <button className="foxBtn secondBtn">
-          <Link href={target}>
+          <Navigate href={target}>
             {btnTitle} <GoArrowUpRight className="fs-3" />
-          </Link>
+          </Navigate>
         </button>
       </div>
     </div>

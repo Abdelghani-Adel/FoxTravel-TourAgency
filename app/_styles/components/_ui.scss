@@ -1,6 +1,15 @@
 @use "../mixins/mediaQuery" as mixins;
 @use "../abstract/variables" as v;
 
+.custom-class {
+  position: fixed; /* equivalent to fixed */
+  height: 0.25rem; /* equivalent to h-1 */
+  box-shadow: 0 1rem 3rem rgba(14, 165, 233, 0.2); /* equivalent to shadow-lg shadow-sky-500/20 */
+  background-color: #0ea5e9; /* equivalent to bg-sky-500 */
+  top: 0; /* equivalent to top-0 */
+  width: 100%; /* Ensure it spans the full width */
+}
+
 // ============================================== //
 // Colors
 // ============================================== //

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 type IInitialState = {
-  hotels: IHotelCard[];
+  hotels: IHotel[];
   flights: any;
   transfers: any;
 };

@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { BsStar, BsStarFill } from "react-icons/bs";
 import { IconContext } from "react-icons/lib";

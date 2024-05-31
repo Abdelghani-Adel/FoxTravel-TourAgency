@@ -5,6 +5,20 @@
   "currency": "$",
   "startDate": "01/03/2024",
   "endDate": "07/03/2024",
+  "images": [
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png",
+    "/img/hotelDetails/1.png",
+    "/img/hotelDetails/2.png",
+    "/img/hotelDetails/4.png",
+    "/img/hotelDetails/5.png"
+  ],
   "startingPoints": [
     {
       "id": 1,

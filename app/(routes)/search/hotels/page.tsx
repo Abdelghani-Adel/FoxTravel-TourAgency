@@ -5,7 +5,7 @@ import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
 import { useAppSelector } from "@/app/_redux/store";
-import { searchHotels } from "@/app/_services/searchServices";
+import { searchHotels } from "@/app/_services/hotelServices";
 
 const Page = () => {
   const hotelSearchState = useAppSelector((state) => state.hotelSearch);
@@ -14,16 +14,17 @@ const Page = () => {
   useEffect(() => {
     const fetchData = async () => {
       // Prepare the request body;
-      const reqBody = {
+      const reqBody: ISearchHotel = {
         city: hotelSearchState.city,
         startDate: hotelSearchState.startDate,
         endDate: hotelSearchState.endDate,
         adults: hotelSearchState.adults,
         children: hotelSearchState.childs,
+        rooms: hotelSearchState.rooms,
       };
 
       // Send the request to the server;
-      const { data, error } = await searchHotels();
+      const { data, error } = await searchHotels(reqBody);
 
       setSearchResult(data);
     };

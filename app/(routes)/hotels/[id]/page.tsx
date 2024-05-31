@@ -14,7 +14,7 @@ import { decrypt } from "@/app/_utils/Cryptojs";
 const Page = async ({ params }: { params: { id: string } }) => {
   const hotelId = decrypt(params.id);
   const { data, error } = await getHotelDetails(hotelId);
-  const details: Hotel = data;
+  const details: IHotelDetails = data;
 
   if (error) {
     return <h3 className="text-center text-danger">{`${error}`}</h3>;

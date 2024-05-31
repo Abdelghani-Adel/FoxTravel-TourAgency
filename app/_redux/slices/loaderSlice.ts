@@ -19,4 +19,4 @@ const loaderSlice = createSlice({
 
 export const loaderActions = loaderSlice.actions;
 
-export default loaderSlice;
+export default loaderSlice.reducer;

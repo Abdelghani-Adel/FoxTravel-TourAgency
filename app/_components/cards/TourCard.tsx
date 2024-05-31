@@ -6,6 +6,7 @@ import Link from "next/link";
 import FoxCardBadges from "./FoxCard/FoxCardBadges";
 import FoxCardPrice from "./FoxCard/FoxCardPrice";
 import FoxCardRating from "./FoxCard/FoxCardRating";
+import Navigate from "../ui/MyLink";
 
 type props = {
   data: ITour;
@@ -18,7 +19,7 @@ const TourCard = (props: props) => {
   const url = `/tours/${encryptedId}`;
 
   return (
-    <Link href={url} className="foxCard">
+    <Navigate href={url} className="foxCard">
       <div className="foxCard_img">
         <Image fill src={img} alt="" />
       </div>
@@ -41,7 +42,7 @@ const TourCard = (props: props) => {
       <FoxCardPrice price={price} curr="$" />
 
       <button className="foxBtn secondBtn w-100">Discover More</button>
-    </Link>
+    </Navigate>
   );
 };
 

@@ -1,13 +1,20 @@
-"use client";
 import SwiperNavigate from "@/app/_components/Swipers/SwiperNavigate";
-import tourDetails from "@/public/data/Details_tour.json";
-import ReviewStatistics from "./_reviewStatistics";
 import TourBookingCard from "./_tourBookingCard";
 import TourHeader from "./_tourHeader";
 import TourInfoList from "./_tourInfoList";
 import TourSnapshot from "./_tourSnapshot";
+import { decrypt } from "@/app/_utils/Cryptojs";
+import { getTourDetails } from "@/app/_services/tourServices";
 
-const Page = ({ params }: { params: { id: string } }) => {
+const Page = async ({ params }: { params: { id: string } }) => {
+  // const tourId = decrypt(params.id);
+  const { data, error } = await getTourDetails("1");
+  const tourDetails: ITourDetails = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
+
   return (
     <div className="container mt-4 mb-4">
       <div className="row">
@@ -42,7 +49,7 @@ const Page = ({ params }: { params: { id: string } }) => {
 
         <hr />
 
-        <ReviewStatistics />
+        {/* <ReviewStatistics /> */}
       </div>
     </div>
   );

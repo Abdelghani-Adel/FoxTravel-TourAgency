@@ -1,4 +1,6 @@
+"use client";
 import Collabse from "@/app/_components/ui/Collabse";
+import Navigate from "@/app/_components/ui/MyLink";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
@@ -29,9 +31,9 @@ const Itenrary = () => {
           <div className="d-flex flex-column flex-md-row gap-3">
             <div className="d-flex align-items-center gap-2">
               <h6 className="mb-0">Accommodation: </h6>
-              <Link href="/hotels/1" className="fw-light">
+              <Navigate href="/hotels/1" className="fw-light">
                 <span>SunRise Makadi</span>
-              </Link>
+              </Navigate>
             </div>
             <div className="d-flex align-items-center gap-2">
               <h6 className="mb-0">Transportation: By Bus</h6>

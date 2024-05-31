@@ -1,5 +1,3 @@
-import DateInput from "@/app/_components/ServiceSearch/common/DateInput";
-import FlightPassengers from "@/app/_components/ServiceSearch/FlightSearch/FlightPassengers";
 import tourDetails from "@/public/data/Details_tour.json";
 
 const TourBookingCard = () => {

@@ -1,22 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-interface HotelSearchState {
-  config: {
-    minAdults: number;
-    maxAdults: number;
-    minRooms: number;
-    maxRooms: number;
-    minChilds: number;
-    maxChilds: number;
-  };
-  city: string;
-  startDate: Date | null;
-  endDate: Date | null;
-  adults: number;
-  childs: number[];
-  rooms: number;
-}
-
 const initialState: HotelSearchState = {
   city: "",
   startDate: null,

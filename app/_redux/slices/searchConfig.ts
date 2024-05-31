@@ -16,4 +16,4 @@ const searchConfigSlice = createSlice({
 
 export const searchConfigActions = searchConfigSlice.actions;
 
-export default searchConfigSlice;
+export default searchConfigSlice.reducer;

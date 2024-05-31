@@ -1,12 +1,17 @@
-"use client";
-
 import PackageCard from "@/app/_components/cards/PackageCard";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import packageList from "@/public/data/Cards_Packages.json";
+import { getPackages } from "@/app/_services/packageServices";
 import { v4 } from "uuid";
 
-const Page = () => {
+const Page = async () => {
+  const { data, error } = await getPackages();
+  const packages: IPackage[] = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
+
   return (
     <>
       <PageStripe title="Find Your Next Adventure" />
@@ -19,7 +24,7 @@ const Page = () => {
 
           <div className="col-12 col-lg-9">
             <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
-              {packageList.map((pkg) => (
+              {packages.map((pkg) => (
                 <div key={v4()} className="col">
                   <PackageCard key={pkg.id} data={pkg} />
                 </div>

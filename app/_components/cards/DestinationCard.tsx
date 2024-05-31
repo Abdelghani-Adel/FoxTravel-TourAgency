@@ -1,6 +1,7 @@
 import { encrypt } from "@/app/_utils/Cryptojs";
 import Image from "next/image";
 import Link from "next/link";
+import Navigate from "../ui/MyLink";
 
 type props = {
   data: IDestination;
@@ -12,7 +13,7 @@ const DestinationCard = (props: props) => {
   const url = `/destinations/${encryptedId}`;
 
   return (
-    <Link className="destinationCard" href={url}>
+    <Navigate className="destinationCard" href={url}>
       <div className="destinationCard_bg">
         <Image fill src={img} alt="" />
       </div>
@@ -28,7 +29,7 @@ const DestinationCard = (props: props) => {
         <h3 className="destinationCard_name">{title}</h3>
         <button className="destinationCard_btn">Discover</button>
       </div>
-    </Link>
+    </Navigate>
   );
 };
 

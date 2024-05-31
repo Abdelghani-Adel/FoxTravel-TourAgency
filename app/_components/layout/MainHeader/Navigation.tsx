@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Navigate from "../../ui/MyLink";
 
 type props = {
   onItemClick?: () => void;
@@ -17,36 +18,36 @@ const Navigation = (props: props) => {
     <nav className="navigation">
       <ul className="navList">
         <li className={`navItem ${pathname === "/" ? "active" : ""}`} onClick={onNavigate}>
-          <Link className="navLink" aria-current="page" href="/">
+          <Navigate className="navLink" aria-current="page" href="/">
             Home
-          </Link>
+          </Navigate>
         </li>
 
         <li className={`navItem ${pathname === "/hotels" ? "active" : ""}`} onClick={onNavigate}>
-          <Link className="navLink" aria-current="page" href="/hotels">
+          <Navigate className="navLink" aria-current="page" href="/hotels">
             Hotels
-          </Link>
+          </Navigate>
         </li>
 
         <li className={`navItem ${pathname === "/packages" ? "active" : ""}`} onClick={onNavigate}>
-          <Link className="navLink" aria-current="page" href="/packages">
+          <Navigate className="navLink" aria-current="page" href="/packages">
             Packages
-          </Link>
+          </Navigate>
         </li>
 
         <li
           className={`navItem ${pathname === "/destinations" ? "active" : ""}`}
           onClick={onNavigate}
         >
-          <Link className="navLink" aria-current="page" href="/destinations">
+          <Navigate className="navLink" aria-current="page" href="/destinations">
             Destinations
-          </Link>
+          </Navigate>
         </li>
 
         <li className={`navItem ${pathname === "/tours" ? "active" : ""}`} onClick={onNavigate}>
-          <Link className="navLink" aria-current="page" href="/tours">
+          <Navigate className="navLink" aria-current="page" href="/tours">
             Tours
-          </Link>
+          </Navigate>
         </li>
 
         <li className="navItem">
@@ -61,22 +62,22 @@ const Navigation = (props: props) => {
           </a>
           <ul className="dropdown-menu p-2 bgDarkGray">
             <li className="navItem">
-              <Link className="navLink mb-2" aria-current="page" href="/contact">
+              <Navigate className="navLink mb-2" aria-current="page" href="/contact">
                 Transfer
-              </Link>
+              </Navigate>
             </li>
             <li className="navItem">
-              <Link className="navLink" aria-current="page" href="/contact">
+              <Navigate className="navLink" aria-current="page" href="/contact">
                 Car Rental
-              </Link>
+              </Navigate>
             </li>
           </ul>
         </li>
 
         <li className={`navItem ${pathname === "/contact" ? "active" : ""}`} onClick={onNavigate}>
-          <Link className="navLink" aria-current="page" href="/contact">
+          <Navigate className="navLink" aria-current="page" href="/contact">
             Contact
-          </Link>
+          </Navigate>
         </li>
       </ul>
     </nav>

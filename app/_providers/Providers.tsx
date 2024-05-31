@@ -11,6 +11,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "@/app/_styles/main.css";
 import useBackButtonDetect from "../_hooks/useBackButtonDetect";
+import { ProgressBar, ProgressBarProvider } from "react-transition-progress";
 
 /**
  * This component is resbonsible for all processes needs to be invoked at the loading stage.
@@ -34,7 +35,11 @@ const Providers = ({ children }: Readonly<{ children: React.ReactNode }>) => {
       import("bootstrap/dist/js/bootstrap.bundle.min");
     }
   }, []);
-  return <Provider store={store}>{children}</Provider>;
+  return (
+    <ProgressBarProvider>
+      <Provider store={store}>{children}</Provider>
+    </ProgressBarProvider>
+  );
 };
 
 export default Providers;

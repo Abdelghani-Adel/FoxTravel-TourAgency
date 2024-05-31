@@ -3,6 +3,7 @@ import MainHeader from "@/app/_components/layout/MainHeader/MainHeader";
 import LoaderOverlay from "@/app/_components/layout/LoaderOverlay";
 import type { Metadata } from "next";
 import Providers from "@/app/_providers/Providers";
+import { ProgressBar } from "react-transition-progress";
 
 export const metadata: Metadata = {
   title: "Fox Travel",
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
           ></link>
         </head>
         <body>
+          {/* <ProgressBar className="custom-class" /> */}
           <LoaderOverlay />
           <MainHeader />
           {children}

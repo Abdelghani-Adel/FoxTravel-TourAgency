@@ -1,11 +1,10 @@
-import Link from "next/link";
-import React from "react";
+import Navigate from "../../ui/MyLink";
 
 const SubmitButton = ({ link }: { link: string }) => {
   return (
-    <Link href={link} className="ss_submitBtn">
+    <Navigate href={link} className="ss_submitBtn">
       Search
-    </Link>
+    </Navigate>
   );
 };
 

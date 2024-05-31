@@ -16,4 +16,16 @@ export const getBestTours = async () => {
 
 export const getTours = async () => {};
 
-export const getTourDetails = async (tourId: string) => {};
+export const getTourDetails = async (tourId: string) => {
+  let data = null;
+  let error = null;
+
+  try {
+    const response = await apiClient.get("/data/Details_tour.json");
+    data = response.data;
+  } catch (err) {
+    error = "Error: Couldn't get the data";
+  }
+
+  return { data, error };
+};

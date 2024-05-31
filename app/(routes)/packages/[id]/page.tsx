@@ -1,16 +1,23 @@
-"use client";
-import Itenrary from "./_itenrary";
-import TransportaionLine from "./_transportaionLine";
-import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import RtsRating from "@/app/_components/ui/RtsRating";
-import { useAppDispatch } from "@/app/_redux/store";
-import packageDetails from "@/public/data/packageDetails.json";
+import { decrypt } from "@/app/_utils/Cryptojs";
 import { FaXmark } from "react-icons/fa6";
 import { GiCheckMark } from "react-icons/gi";
 import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { SiYourtraveldottv } from "react-icons/si";
+import Itenrary from "./_itenrary";
+import TransportaionLine from "./_transportaionLine";
+import { getPackageDetails } from "@/app/_services/packageServices";
+import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 
-const Page = ({ params }: { params: { id: string } }) => {
+const Page = async ({ params }: { params: { id: string } }) => {
+  const packageId = decrypt(params.id);
+  const { data, error } = await getPackageDetails(packageId);
+  const packageDetails: IPackageDetails = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
+
   return (
     <div className="container mt-4 mb-4">
       <div className="row mb-3 g-3">
@@ -72,7 +79,9 @@ const Page = ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="col-12 col-lg-4 order-1">
-          <div className="hotelImageWrapper">{/* <ImageGallerySwiperCards /> */}</div>
+          <div className="hotelImageWrapper">
+            <ImageGallerySwiperCards images={packageDetails.images} />{" "}
+          </div>
         </div>
       </div>
 

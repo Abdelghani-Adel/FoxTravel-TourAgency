@@ -8,6 +8,23 @@ type IFlightPassengers = {
   infants: number;
 };
 
+interface HotelSearchState {
+  config: {
+    minAdults: number;
+    maxAdults: number;
+    minRooms: number;
+    maxRooms: number;
+    minChilds: number;
+    maxChilds: number;
+  };
+  city: string;
+  startDate: Date | null;
+  endDate: Date | null;
+  adults: number;
+  childs: number[];
+  rooms: number;
+}
+
 interface FlightSearchState {
   type: IFlightType;
   oneWay: {

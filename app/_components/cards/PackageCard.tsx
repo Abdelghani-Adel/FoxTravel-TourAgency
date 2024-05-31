@@ -6,6 +6,7 @@ import Link from "next/link";
 import { GiDuration } from "react-icons/gi";
 import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
+import Navigate from "../ui/MyLink";
 
 type Props = {
   data: IPackage;
@@ -30,7 +31,7 @@ const PackageCard = (props: Props) => {
   const url = `/packages/${encryptedId}`;
 
   return (
-    <Link href={url} className="foxCard">
+    <Navigate href={url} className="foxCard">
       <div className="foxCard_img">
         <Image src={img} fill alt="" />
       </div>
@@ -62,7 +63,7 @@ const PackageCard = (props: Props) => {
       </div>
 
       <button className="foxBtn mainBtn w-100">Find Out More</button>
-    </Link>
+    </Navigate>
   );
 };
 

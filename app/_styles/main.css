@@ -935,6 +935,7 @@ q:after {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: max-content;
 }
 
 .ss_numberInput {
@@ -1018,6 +1019,15 @@ q:after {
     justify-content: center;
   }
 }
+.custom-class {
+  position: fixed; /* equivalent to fixed */
+  height: 0.25rem; /* equivalent to h-1 */
+  box-shadow: 0 1rem 3rem rgba(14, 165, 233, 0.2); /* equivalent to shadow-lg shadow-sky-500/20 */
+  background-color: #0ea5e9; /* equivalent to bg-sky-500 */
+  top: 0; /* equivalent to top-0 */
+  width: 100%; /* Ensure it spans the full width */
+}
+
 .bgMain {
   background-color: #161514;
 }
@@ -1454,8 +1464,9 @@ q:after {
 
 .home_heroSection {
   position: relative;
-  padding-top: clamp(10%, 100px, 15vh);
+  padding-top: clamp(12%, 150px, 15vh);
   padding-bottom: 10%;
+  height: 95vh;
 }
 
 .home_heroSectionBg {

@@ -9,6 +9,7 @@ import { HiOutlineMail } from "react-icons/hi";
 import { useAppDispatch } from "@/app/_redux/store";
 import { useRouter } from "next/navigation";
 import { searchConfigActions } from "@/app/_redux/slices/searchConfig";
+import Navigate from "../../ui/MyLink";
 
 const MainFooter = () => {
   const dispatch = useAppDispatch();
@@ -49,24 +50,24 @@ const MainFooter = () => {
             <h5 className="textSecondary text-center text-md-start mb-2">TRAVEL SERVICES</h5>
             <ul className="fotter_ul">
               <li>
-                <Link href="/hotels" className="mainFooter_link">
+                <Navigate href="/hotels" className="mainFooter_link">
                   Hotel Deals
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/" className="mainFooter_link">
+                <Navigate href="/" className="mainFooter_link">
                   Nile Cruises
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="#" className="mainFooter_link">
+                <Navigate href="#" className="mainFooter_link">
                   Hajj & Umrah
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/cars" className="mainFooter_link">
+                <Navigate href="/cars" className="mainFooter_link">
                   Transporation
-                </Link>
+                </Navigate>
               </li>
               <li>
                 <span className="mainFooter_link cursorPointer" onClick={updateSearchCategory}>
@@ -74,19 +75,19 @@ const MainFooter = () => {
                 </span>
               </li>
               <li>
-                <Link href="/destinations" className="mainFooter_link">
+                <Navigate href="/destinations" className="mainFooter_link">
                   International Holidays
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/packages" className="mainFooter_link">
+                <Navigate href="/packages" className="mainFooter_link">
                   Egypt Packages
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/tours" className="mainFooter_link">
+                <Navigate href="/tours" className="mainFooter_link">
                   Excursions
-                </Link>
+                </Navigate>
               </li>
             </ul>
           </div>
@@ -95,24 +96,24 @@ const MainFooter = () => {
             <h5 className="textSecondary text-center text-md-start mb-2">FOX TRAVEL EGYPT</h5>
             <ul className="fotter_ul">
               <li>
-                <Link href="/about" className="mainFooter_link">
+                <Navigate href="/about" className="mainFooter_link">
                   About Us
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/about?section=ourTeam" className="mainFooter_link">
+                <Navigate href="/about?section=ourTeam" className="mainFooter_link">
                   Our Team
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/contact" className="mainFooter_link">
+                <Navigate href="/contact" className="mainFooter_link">
                   Contact Us
-                </Link>
+                </Navigate>
               </li>
               <li>
-                <Link href="/terms" className="mainFooter_link">
+                <Navigate href="/terms" className="mainFooter_link">
                   Booking Terms & Conditions
-                </Link>
+                </Navigate>
               </li>
             </ul>
           </div>

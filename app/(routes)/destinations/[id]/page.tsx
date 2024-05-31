@@ -1,12 +1,19 @@
-"use client";
 import BestHotels from "@/app/(routes)/(home)/_bestHotels";
 import BestTours from "@/app/(routes)/(home)/_bestTours";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import { useAppSelector } from "@/app/_redux/store";
+import { getDestinationDetails } from "@/app/_services/destinationServices";
+import { decrypt } from "@/app/_utils/Cryptojs";
 import parse from "html-react-parser";
+import { v4 } from "uuid";
 
-const Page = ({ params }: { params: { id: string } }) => {
-  const details = useAppSelector((state) => state.destinationDetails);
+const Page = async ({ params }: { params: { id: string } }) => {
+  const hotelId = decrypt(params.id);
+  const { data, error } = await getDestinationDetails(hotelId);
+  const details: IDestinationDetails = data;
+
+  if (error) {
+    return <h3 className="text-center text-danger">{`${error}`}</h3>;
+  }
 
   return (
     <div className="container mt-4 mb-5">
@@ -21,8 +28,8 @@ const Page = ({ params }: { params: { id: string } }) => {
 
           <h4>What to know before visiting {details.destinationName}</h4>
           <div className="row mt-2">
-            {details.generalInfo.map((info, i) => (
-              <div key={i} className="col-6 col-md-3">
+            {details.generalInfo.map((info) => (
+              <div key={v4()} className="col-6 col-md-3">
                 <p className="mb-0 fw-light">{info.title}</p>
                 <p className="mb-0 fw-normal">{info.info}</p>
                 <p className="mb-0 fw-light">{info.desc}</p>
