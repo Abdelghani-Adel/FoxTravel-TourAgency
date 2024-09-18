@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "img": "/img/hotels/albatros.jpg",
+    "img": "/img/packages/id1.jpg",
     "title": "3 Nights Cairo",
     "desc": "Discover the Magic of Cairo in 3 Days..",
     "startDate": "01/10/2024",
@@ -14,7 +14,7 @@
   },
   {
     "id": 2,
-    "img": "/img/hotels/sunrise.jpg",
+    "img": "/img/packages/id2.jpg",
     "desc": " Explore Alexandria's top attractions in one days.",
     "title": "Overday Alexandria - 1 Night Cairo ",
     "startDate": "04/10/2024",
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "img": "/img/hotels/mariott.jpg",
+    "img": "/img/packages/id3.jpg",
     "desc": "Overday Fayoum - 1 Night Cairo.",
     "title": "Discover Fayoum's highlights in a single day",
     "startDate": "05/10/2024",
@@ -40,7 +40,7 @@
   },
   {
     "id": 4,
-    "img": "/img/hotels/selena.jpg",
+    "img": "/img/packages/id4.jpg",
     "desc": "Explore the Nile's wonders: 4 days of temple treasures.s.",
     "title": "3 Nights Nile Cruise",
     "startDate": "06/10/2024",
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "img": "/img/hotels/palminn.jpg",
+    "img": "/img/packages/id5.jpg",
     "desc": "Explore the Nile's wonders: 5 days of temple treasures.s.",
     "title": "4 Nights Nile Cruise",
     "startDate": "06/10/2024",
@@ -66,7 +66,7 @@
   },
   {
     "id": 6,
-    "img": "/img/hotels/sunrise.jpg",
+    "img": "/img/packages/id6.jpg",
     "desc": "Immerse yourself in ancient wonders: Dendara and Abydos.",
     "title": "Over day Dendara & Abydos - 1 Night Luxor",
     "startDate": "10/10/2024",

@@ -17,9 +17,9 @@ export default function Home() {
           <BestPackages />
         </Suspense>
 
-        <Suspense fallback={<div>Loading...</div>}>
+        {/* <Suspense fallback={<div>Loading...</div>}>
           <BestDestinations />
-        </Suspense>
+        </Suspense> */}
 
         <Suspense fallback={<div>Loading...</div>}>
           <BestTours />

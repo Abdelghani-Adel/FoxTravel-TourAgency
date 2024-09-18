@@ -1,8 +1,6 @@
-import RtsRating from "@/app/_components/ui/RtsRating";
+"use client";
 import { encrypt } from "@/app/_utils/Cryptojs";
-import { formatNumber } from "@/app/_utils/Formatters";
 import Image from "next/image";
-import Link from "next/link";
 import { GiDuration } from "react-icons/gi";
 import { MdOutlineDateRange, MdOutlineSportsHandball } from "react-icons/md";
 import { RiMoneyDollarCircleLine } from "react-icons/ri";
@@ -26,6 +24,8 @@ const PackageCard = (props: Props) => {
     activitiesCount,
     duration,
   } = props.data;
+
+  console.log(props.data);
 
   const encryptedId = encrypt(id.toString());
   const url = `/packages/${encryptedId}`;

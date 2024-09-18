@@ -74,11 +74,11 @@ const MainFooter = () => {
                   Flight Booking
                 </span>
               </li>
-              <li>
+              {/* <li>
                 <Navigate href="/destinations" className="mainFooter_link">
                   International Holidays
                 </Navigate>
-              </li>
+              </li> */}
               <li>
                 <Navigate href="/packages" className="mainFooter_link">
                   Egypt Packages
