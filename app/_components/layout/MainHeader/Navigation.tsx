@@ -50,7 +50,7 @@ const Navigation = (props: props) => {
           </Navigate>
         </li>
 
-        <li className="navItem">
+        {/* <li className="navItem">
           <a
             className="nav-link dropdown-toggle"
             href="#"
@@ -72,7 +72,7 @@ const Navigation = (props: props) => {
               </Navigate>
             </li>
           </ul>
-        </li>
+        </li> */}
 
         <li className={`navItem ${pathname === "/contact" ? "active" : ""}`} onClick={onNavigate}>
           <Navigate className="navLink" aria-current="page" href="/contact">

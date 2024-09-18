@@ -18,11 +18,11 @@ const SearchTypeSelectors = () => {
         </button>
       </li>
 
-      <li className={`ss_searchTypeSelector ${type === "Flight" ? "active" : ""}`}>
+      {/* <li className={`ss_searchTypeSelector ${type === "Flight" ? "active" : ""}`}>
         <button className="btnClick" onClick={() => onClickHandler("Flight")}>
           Flight
         </button>
-      </li>
+      </li> */}
 
       <li className={`ss_searchTypeSelector ${type === "Transport" ? "active" : ""}`}>
         <button className="btnClick" onClick={() => onClickHandler("Transport")}>
