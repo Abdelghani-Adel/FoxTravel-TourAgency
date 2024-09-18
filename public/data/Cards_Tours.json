@@ -1,29 +1,63 @@
 [
   {
     "id": 1,
-    "img": "/img/hotels/1.png",
-    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
-    "address": "Westminster Borough, London",
+    "img": "/img/tours/1.jpg",
+    "title": "Hurghada City Tour!",
+    "address": "Hurghada - Red Sea",
     "rating": 4.7,
     "reviews": 3014,
-    "price": 72,
+    "price": 20,
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "specs",
+        "badgeTitle": "Best Seller"
+      }
+    ],
+    "duration": "4+ hours"
+  },
+  {
+    "id": 2,
+    "img": "/img/tours/2.jpg",
+    "title": "Grand Safari",
+    "address": "Hurghada - Red Sea",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 55,
     "badges": [
       {
         "id": 1,
         "badgeType": "feature",
-        "badgeTitle": "breakfast included"
+        "badgeTitle": "Dinner Included"
       }
     ],
-    "duration": "18+ hours"
+    "duration": "6+ hours"
   },
   {
-    "id": 2,
-    "img": "/img/hotels/1.png",
-    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
-    "address": "Westminster Borough, London",
+    "id": 3,
+    "img": "/img/tours/3.jpg",
+    "title": "Grand Aquarium",
+    "address": "Hurghada - Red Sea",
     "rating": 4.7,
     "reviews": 3014,
-    "price": 72,
+    "price": 60,
+    "badges": [
+      {
+        "id": 1,
+        "badgeType": "feature",
+        "badgeTitle": "Transfer Included"
+      }
+    ],
+    "duration": "4+ hours"
+  },
+  {
+    "id": 4,
+    "img": "/img/tours/4.jpg",
+    "title": "Paradise Island Sea Trip",
+    "address": "Hurghada - Red Sea",
+    "rating": 4.7,
+    "reviews": 3014,
+    "price": 50,
     "badges": [
       {
         "id": 1,
@@ -31,57 +65,23 @@
         "badgeTitle": "-25% today"
       }
     ],
-    "duration": "18+ hours"
-  },
-  {
-    "id": 3,
-    "img": "/img/hotels/1.png",
-    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
-    "address": "Westminster Borough, London",
-    "rating": 4.7,
-    "reviews": 3014,
-    "price": 72,
-    "badges": [
-      {
-        "id": 1,
-        "badgeType": "specs",
-        "badgeTitle": "best seller"
-      }
-    ],
-    "duration": "18+ hours"
-  },
-  {
-    "id": 4,
-    "img": "/img/hotels/1.png",
-    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
-    "address": "Westminster Borough, London",
-    "rating": 4.7,
-    "reviews": 3014,
-    "price": 72,
-    "badges": [
-      {
-        "id": 1,
-        "badgeType": "feature",
-        "badgeTitle": "breakfast included"
-      }
-    ],
-    "duration": "18+ hours"
+    "duration": "6+ hours"
   },
   {
     "id": 5,
-    "img": "/img/hotels/1.png",
-    "title": "Stonehenge, windsor castle and bath with pub lunch in lacock",
-    "address": "Westminster Borough, London",
+    "img": "/img/tours/5.jpg",
+    "title": "Luxor Overday",
+    "address": "Hurghada - Red Sea",
     "rating": 4.7,
     "reviews": 3014,
-    "price": 72,
+    "price": 100,
     "badges": [
       {
         "id": 1,
         "badgeType": "feature",
-        "badgeTitle": "breakfast included"
+        "badgeTitle": "Lunch included"
       }
     ],
-    "duration": "18+ hours"
+    "duration": "12+ hours"
   }
 ]
