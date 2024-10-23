@@ -2,10 +2,21 @@
 import TourCard from "@/app/_components/cards/TourCard";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import tourList from "@/public/data/Cards_Tours.json";
+import { getCardsList } from "@/app/_services/tourServices";
+import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 
 const Page = () => {
+  const [tourList, setTourList] = useState<any[]>([]);
+
+  useEffect(() => {
+    const fetchTours = async () => {
+      const { data, error } = await getCardsList();
+      setTourList(data);
+    };
+
+    fetchTours();
+  }, []);
   return (
     <>
       <PageStripe title="Find Your Dream Tour" />
@@ -18,9 +29,9 @@ const Page = () => {
 
           <div className="col-12 col-lg-9">
             <div className="row row-cols-1 row-cols-md-2 row-cols-xxl-3 g-4">
-              {tourList.map((tour) => (
+              {tourList?.map((tour) => (
                 <div key={v4()} className="col">
-                  <TourCard key={tour.id} data={tour} />
+                  <TourCard key={tour.serviceId} data={tour} />
                 </div>
               ))}
             </div>

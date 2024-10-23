@@ -1,10 +1,10 @@
 import TourCard from "@/app/_components/cards/TourCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
 import SwiperScroll from "@/app/_components/ui/SwiperScroll";
-import { getBestTours } from "@/app/_services/tourServices";
+import { getCardsList } from "@/app/_services/tourServices";
 
 const BestTours = async () => {
-  const { data, error } = await getBestTours();
+  const { data, error } = await getCardsList();
   const toursList: ITour[] = data;
 
   if (error) {
@@ -22,7 +22,7 @@ const BestTours = async () => {
 
       <SwiperScroll>
         {toursList.map((tour) => (
-          <TourCard key={tour.id} data={tour} />
+          <TourCard key={tour.serviceId} data={tour} />
         ))}
       </SwiperScroll>
     </div>

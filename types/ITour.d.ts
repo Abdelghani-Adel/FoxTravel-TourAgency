@@ -1,5 +1,5 @@
 interface ITour {
-  id: number;
+  serviceId: number;
   img: string;
   title: string;
   address: string;

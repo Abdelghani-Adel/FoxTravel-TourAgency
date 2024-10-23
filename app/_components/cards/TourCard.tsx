@@ -13,9 +13,9 @@ type props = {
 };
 
 const TourCard = (props: props) => {
-  const { id, title, address, img, rating, reviews, price, badges, duration } = props.data;
+  const { serviceId, title, address, img, rating, reviews, price, badges, duration } = props.data;
 
-  const encryptedId = encrypt(id.toString());
+  const encryptedId = encrypt(serviceId.toString());
   const url = `/tours/${encryptedId}`;
 
   return (
