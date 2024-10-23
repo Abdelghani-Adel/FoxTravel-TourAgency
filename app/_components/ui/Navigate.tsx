@@ -22,6 +22,10 @@ const Navigate = ({ href, children, className = "" }: IProps) => {
     } else {
       dispatch(loaderActions.hideLoadingOverlay());
     }
+
+    return () => {
+      dispatch(loaderActions.hideLoadingOverlay());
+    };
   }, [isPending, dispatch]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
