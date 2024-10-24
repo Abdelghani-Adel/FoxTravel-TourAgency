@@ -9,4 +9,5 @@ interface ITour {
   badges: ICardBadge[];
   duration: string;
   descrption: string;
+  currency: string;
 }
