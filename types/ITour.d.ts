@@ -8,4 +8,5 @@ interface ITour {
   price: number;
   badges: ICardBadge[];
   duration: string;
+  descrption: string;
 }

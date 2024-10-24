@@ -13,7 +13,8 @@ type props = {
 };
 
 const TourCard = (props: props) => {
-  const { serviceId, title, address, img, rating, reviews, price, badges, duration } = props.data;
+  const { serviceId, title, address, img, rating, reviews, price, badges, duration, descrption } =
+    props.data;
 
   const encryptedId = encrypt(serviceId.toString());
   const url = `/tours/${encryptedId}`;
@@ -32,10 +33,7 @@ const TourCard = (props: props) => {
 
       <p className="fw-normal txtGray">{duration} . Private and Luxury</p>
 
-      <p className="foxCard_desc">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Velit veritatis vero ipsum illum,
-        porro fugiat dolorum molestiae distinctio quaerat aperiam.
-      </p>
+      <p className="foxCard_desc">{descrption}</p>
 
       <FoxCardRating rating={rating} reviews={reviews} />
 
