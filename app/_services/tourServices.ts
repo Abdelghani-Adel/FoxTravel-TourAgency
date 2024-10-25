@@ -33,8 +33,22 @@ export const getTourDetails = async (tourId: string) => {
   let error = null;
 
   try {
-    const response = await apiClient.get("/data/Details_tour.json");
-    data = response.data;
+    const formData = new FormData();
+    formData.append("languageCode", "en");
+    formData.append("currCode", "€");
+    formData.append("serviceId", tourId);
+
+    const response = await apiClient.post(
+      "https://fox.devsdiamond.com/api/Tours/GetServiceDetails",
+      formData,
+      {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      }
+    );
+
+    data = response.data[0];
   } catch (err) {
     error = "Error: Couldn't get the data";
   }

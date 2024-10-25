@@ -1,4 +1,5 @@
 interface ITourDetails {
+  serviceId: number;
   images: string[];
   title: string;
   location: string;
@@ -9,7 +10,7 @@ interface ITourDetails {
   snapshot: Snapshot;
   overview: string;
   information: Information[];
-  itinerary: Itinerary[];
+  // itinerary: Itinerary[];
 }
 
 interface Snapshot {
@@ -22,9 +23,9 @@ interface Information {
   details: string[];
 }
 
-interface Itinerary {
-  title: string;
-  duration: string;
-  description: string;
-  images: string[];
-}
+// interface Itinerary {
+//   title: string;
+//   duration: string;
+//   description: string;
+//   images: string[];
+// }

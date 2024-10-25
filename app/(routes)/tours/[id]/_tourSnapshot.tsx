@@ -1,9 +1,9 @@
 import React from "react";
 import { GrGroup } from "react-icons/gr";
 import { IoTimeOutline } from "react-icons/io5";
-import tourDetails from "@/public/data/Details_tour.json";
+// import tourDetails from "@/public/data/Details_tour.json";
 
-const TourSnapshot = () => {
+const TourSnapshot = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div>
       <h4 className="mb-3 textSecondary">Tour Snapshot</h4>

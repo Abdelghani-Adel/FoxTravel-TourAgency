@@ -1,10 +1,10 @@
 import React from "react";
-import tourDetails from "@/public/data/Details_tour.json";
+// import tourDetails from "@/public/data/Details_tour.json";
 import RtsRating from "@/app/_components/ui/RtsRating";
 import { CiLocationOn } from "react-icons/ci";
 import { formatNumber } from "@/app/_utils/Formatters";
 
-const TourHeader = () => {
+const TourHeader = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div>
       <h3 className="mb-0">{tourDetails.title}</h3>

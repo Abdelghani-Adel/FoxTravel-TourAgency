@@ -1,6 +1,6 @@
-import tourDetails from "@/public/data/Details_tour.json";
+// import tourDetails from "@/public/data/Details_tour.json";
 
-const TourBookingCard = () => {
+const TourBookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div className="card p-4 boxShadow d-flex flex-column gap-4">
       <p className="fs-2">

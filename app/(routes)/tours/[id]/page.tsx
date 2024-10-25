@@ -7,8 +7,8 @@ import { decrypt } from "@/app/_utils/Cryptojs";
 import { getTourDetails } from "@/app/_services/tourServices";
 
 const Page = async ({ params }: { params: { id: string } }) => {
-  // const tourId = decrypt(params.id);
-  const { data, error } = await getTourDetails("1");
+  const tourId = decrypt(params.id);
+  const { data, error } = await getTourDetails(tourId);
   const tourDetails: ITourDetails = data;
 
   if (error) {
@@ -18,7 +18,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
   return (
     <div className="container mt-4 mb-4">
       <div className="row">
-        <TourHeader />
+        <TourHeader tourDetails={tourDetails} />
       </div>
 
       <div className="row mt-1 gx-4 gy-4">
@@ -27,11 +27,11 @@ const Page = async ({ params }: { params: { id: string } }) => {
         </div>
 
         <div className="col-12 col-md-4">
-          <TourBookingCard />
+          <TourBookingCard tourDetails={tourDetails} />
         </div>
 
         <div className="col-12 col-md-8">
-          <TourSnapshot />
+          <TourSnapshot tourDetails={tourDetails} />
         </div>
 
         <div className="col-12 col-md-8">
@@ -45,7 +45,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
         <hr />
 
-        <TourInfoList />
+        <TourInfoList tourDetails={tourDetails} />
 
         <hr />
 
