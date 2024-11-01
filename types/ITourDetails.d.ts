@@ -10,7 +10,12 @@ interface ITourDetails {
   snapshot: Snapshot;
   overview: string;
   information: Information[];
-  // itinerary: Itinerary[];
+  inclusions: informations2[];
+}
+
+interface informations2 {
+  title: string;
+  details: string[];
 }
 
 interface Snapshot {
@@ -20,7 +25,7 @@ interface Snapshot {
 
 interface Information {
   title: string;
-  details: string[];
+  details: string;
 }
 
 // interface Itinerary {
