@@ -2,6 +2,24 @@
 @use "../mixins/borwserCompat" as browserMixins;
 @use "../abstract/variables" as v;
 
+.forceStyle ul {
+  list-style-type: disc !important; /* Display default bullet points */
+  padding-left: 20px !important; /* Add left padding for the list */
+  color: #ff6600 !important; /* Set the bullet color to orange */
+  margin: 0 !important; /* Reset margin */
+}
+
+.forceStyle li {
+  margin-bottom: 8px !important; /* Add spacing between list items */
+  color: #e2eaeb !important; /* Set text color for list items */
+  font-size: 16px !important; /* Define font size */
+  font-weight: 300 !important;
+}
+
+.forceStyle ul li::marker {
+  color: #ff6600; /* Set bullet color to orange */
+}
+
 // ============================================== //
 // Start FoxCard
 // ============================================== //

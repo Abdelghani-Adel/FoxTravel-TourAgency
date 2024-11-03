@@ -52,7 +52,7 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <hr />
 
         {tourDetails.information.map((info) => (
-          <div key={v4()} className="col-12 col-md-6">
+          <div key={v4()} className="col-12 col-md-6 forceStyle">
             <h4 className="mb-3 textSecondary">{info.title}</h4>
             <div dangerouslySetInnerHTML={{ __html: info.details }}></div>
           </div>
