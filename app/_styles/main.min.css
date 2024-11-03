@@ -248,9 +248,13 @@ q:after {
 
 .forceStyle li {
   margin-bottom: 8px !important; /* Add spacing between list items */
-  color: #e2eaeb !important; /* Set text color for list items */
+  color: #2f4045 !important; /* Set text color for list items */
   font-size: 16px !important; /* Define font size */
   font-weight: 300 !important;
+}
+
+.forceStyle li * {
+  color: #2f4045 !important;
 }
 
 .forceStyle ul li::marker {
