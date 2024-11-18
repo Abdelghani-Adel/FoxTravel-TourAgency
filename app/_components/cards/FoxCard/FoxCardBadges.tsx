@@ -1,4 +1,5 @@
 import React from "react";
+import { v4 } from "uuid";
 
 const FoxCardBadges = ({ badges }: { badges: ICardBadge[] }) => {
   return (
@@ -6,7 +7,7 @@ const FoxCardBadges = ({ badges }: { badges: ICardBadge[] }) => {
       {badges &&
         badges.length > 0 &&
         badges.map((badge) => (
-          <p key={badge.id} className={`foxCard_badge ${badge.badgeType}`}>
+          <p key={v4()} className={`foxCard_badge ${badge.badgeType}`}>
             {badge.badgeTitle}
           </p>
         ))}

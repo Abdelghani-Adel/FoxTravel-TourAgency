@@ -11,6 +11,7 @@ interface ITourDetails {
   overview: string;
   information: Information[];
   inclusions: informations2[];
+  recommendation: string;
 }
 
 interface informations2 {

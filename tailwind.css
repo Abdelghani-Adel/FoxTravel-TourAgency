@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-datepicker-wrapper {
+  display: block !important;
+}
+
+/* @keyframes animate-header {
+  0% {
+    background-color: #fff;
+  }
+
+  100% {
+    background-color: #000;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 10vh;
+  z-index: 50;
+
+  animation: linear forwards;
+  animation-duration: 2s;
+  animation-name: animate-header;
+  animation-timeline: scroll();
+  animation-range: 0vh 10vh;
+}
+
+body {
+  padding-top: 10vh !important;
+} */

@@ -25,8 +25,6 @@ const PackageCard = (props: Props) => {
     duration,
   } = props.data;
 
-  console.log(props.data);
-
   const encryptedId = encrypt(id.toString());
   const url = `/packages/${encryptedId}`;
 

@@ -1,31 +1,41 @@
 import LoaderOverlay from "@/app/_components/layout/LoaderOverlay";
 import MainFooter from "@/app/_components/layout/MainFooter/MainFooter";
 import MainHeader from "@/app/_components/layout/MainHeader/MainHeader";
+import "@/tailwind.css";
 import Providers from "@/app/_providers/Providers";
 import type { Metadata } from "next";
+import Header from "@/components/Header";
+import "react-datepicker/dist/react-datepicker.css";
 
 export const metadata: Metadata = {
   title: "Fox Travel",
   description: "Powered by RTS",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+export default function RootLayout({
+  children,
+}: Readonly<{ children: React.ReactNode }>) {
   return (
     <Providers>
       <html lang="en">
         <head>
           <link rel="preconnect" href="https://fonts.googleapis.com" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin=""
+          />
           <link
             href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
             rel="stylesheet"
           ></link>
         </head>
         <body>
-          {/* <ProgressBar className="custom-class" /> */}
           <LoaderOverlay />
+
+          {/* <Header /> */}
           <MainHeader />
-          {children}
+          <main>{children}</main>
           <MainFooter />
 
           <div id="foxPortal"></div>

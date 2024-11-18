@@ -4,6 +4,7 @@ import React, { useEffect } from "react";
 import { Provider } from "react-redux";
 import store from "../_redux/store";
 import Aos from "aos";
+import "@/tailwind.css";
 import "aos/dist/aos.css";
 import "swiper/css";
 import "swiper/css/scrollbar";
