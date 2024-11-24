@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import Navigate from "./_components/ui/Navigate";
+import Navigate from "@/components/ui/Navigate";
 
 export const metadata = {
   title: "404 || GoTrip - Travel & Tour React NextJS Template",
@@ -24,7 +24,9 @@ const NotFount = () => {
             </h1>
 
             <h2>Oops! It looks like you're lost.</h2>
-            <p className="fw-normal mb-4">The page you're looking for isn't available.</p>
+            <p className="fw-normal mb-4">
+              The page you're looking for isn't available.
+            </p>
 
             <button className="foxBtn secondBtn">
               <Navigate href="/">Go Back To Homapage</Navigate>

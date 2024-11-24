@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
-import { loaderActions } from "../app/_redux/slices/loaderSlice";
+import { loaderActions } from "@/redux/slices/loaderSlice";
 import { usePathname, useRouter } from "next/navigation";
 
 const useBackButtonDetect = () => {
