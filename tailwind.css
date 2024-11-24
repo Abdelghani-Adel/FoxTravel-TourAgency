@@ -6,30 +6,18 @@
   display: block !important;
 }
 
-/* @keyframes animate-header {
-  0% {
-    background-color: #fff;
-  }
-
-  100% {
-    background-color: #000;
-  }
+.swiper-button-prev,
+.swiper-button-next {
+  color: orange !important;
+  width: 40px !important;
+  height: 40px !important;
+  background-color: rgba(0, 0, 0, 0.774);
+  border-radius: 8px;
 }
 
-.header {
-  position: fixed;
-  top: 0;
-  width: 100vw;
-  height: 10vh;
-  z-index: 50;
-
-  animation: linear forwards;
-  animation-duration: 2s;
-  animation-name: animate-header;
-  animation-timeline: scroll();
-  animation-range: 0vh 10vh;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  padding: 5px !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
 }
-
-body {
-  padding-top: 10vh !important;
-} */

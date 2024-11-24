@@ -1,10 +1,19 @@
 import React from "react";
-import LoadingScreen1 from "./_components/loadingScreens/LoadingScreen1";
 
 const loading = () => {
   return (
     <div className="loadingScreen">
-      <LoadingScreen1 />
+      <div className="loading-container">
+        <div className="loading-text">
+          <span>L</span>
+          <span>O</span>
+          <span>A</span>
+          <span>D</span>
+          <span>I</span>
+          <span>N</span>
+          <span>G</span>
+        </div>
+      </div>
     </div>
   );
 };

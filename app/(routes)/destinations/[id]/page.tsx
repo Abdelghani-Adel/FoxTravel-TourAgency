@@ -1,7 +1,7 @@
 import BestHotels from "@/app/(routes)/(home)/_bestHotels";
 import BestTours from "@/app/(routes)/(home)/_bestTours";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
-import { getDestinationDetails } from "@/app/_services/destinationServices";
+import { getDestinationDetails } from "@/services/destinationServices";
 import { decrypt } from "@/app/_utils/Cryptojs";
 import parse from "html-react-parser";
 import { v4 } from "uuid";
@@ -21,9 +21,12 @@ const Page = async ({ params }: { params: { id: string } }) => {
         <div className="col-12 col-lg-8 order-2 order-lg-1">
           <div className="destinationDetails_header">
             <h1>
-              <span className="fw-light">Explore</span> {details.destinationName}
+              <span className="fw-light">Explore</span>{" "}
+              {details.destinationName}
             </h1>
-            <p className="mb-0 fw-light">Explore deals, travel guides and things to do in London</p>
+            <p className="mb-0 fw-light">
+              Explore deals, travel guides and things to do in London
+            </p>
           </div>
 
           <h4>What to know before visiting {details.destinationName}</h4>

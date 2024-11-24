@@ -1,7 +1,7 @@
 import TourCard from "@/app/_components/cards/TourCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
 import SwiperScroll from "@/app/_components/ui/SwiperScroll";
-import { getCardsList } from "@/app/_services/tourServices";
+import { getCardsList } from "@/services/tourServices";
 
 const BestTours = async () => {
   const { data, error } = await getCardsList();

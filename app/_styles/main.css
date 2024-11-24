@@ -1,7 +1,7 @@
 body {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  /* font-weight: 500; */
   font-style: normal;
 }
 
@@ -662,8 +662,10 @@ q:after {
   background-color: #ffc107;
 }
 
-.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
-.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
+.react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^="bottom"]
+  .react-datepicker__triangle::after {
   border-bottom-color: #161514;
 }
 
@@ -1244,7 +1246,8 @@ q:after {
     opacity: 0;
     width: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     opacity: 0.8;
     width: 100%;
   }
@@ -1310,7 +1313,8 @@ q:after {
     transform: translateX(-15vw);
     opacity: 0;
   }
-  33.3%, 66% {
+  33.3%,
+  66% {
     transform: translateX(0);
     opacity: 1;
   }

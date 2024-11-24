@@ -1,6 +1,6 @@
 import HotelCard from "@/app/_components/cards/HotelCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import { getBestHotels } from "@/app/_services/hotelServices";
+import { getBestHotels } from "@/services/hotelServices";
 import { v4 } from "uuid";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
 

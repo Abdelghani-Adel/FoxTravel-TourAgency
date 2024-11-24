@@ -1,7 +1,7 @@
 import DestinationCard from "@/app/_components/cards/DestinationCard";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import { getDestinations } from "@/app/_services/destinationServices";
+import { getDestinations } from "@/services/destinationServices";
 import { v4 } from "uuid";
 
 const Page = async () => {

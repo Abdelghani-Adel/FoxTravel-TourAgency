@@ -1,5 +1,5 @@
 import HotelCard from "@/app/_components/cards/HotelCard";
-import { getHotels } from "@/app/_services/hotelServices";
+import { getHotels } from "@/services/hotelServices";
 import React from "react";
 import { v4 } from "uuid";
 

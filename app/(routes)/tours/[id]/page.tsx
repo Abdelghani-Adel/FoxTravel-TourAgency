@@ -4,11 +4,12 @@ import TourHeader from "./_tourHeader";
 import TourInfoList from "./_tourInfoList";
 import TourSnapshot from "./_tourSnapshot";
 import { decrypt } from "@/app/_utils/Cryptojs";
-import { getTourDetails } from "@/app/_services/tourServices";
+import { getTourDetails } from "@/services/tourServices";
 import TourInfo from "./_tourInfo";
 import { v4 } from "uuid";
 import { RxDotFilled } from "react-icons/rx";
 import BookingCard from "./BookingCard";
+import { GiCheckMark } from "react-icons/gi";
 
 const HTML =
   "<ul><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Confirmation will be received at time of booking</span></li><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Departs at 8am (boarding at 7.30am), Victoria Coach Station Gate 1-5, 164 Buckingham Palace Road, London, SW1W 9TP</span></li><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Please note: the tour itinerary and order may change</span></li></ul><p><br></p>";
@@ -53,27 +54,33 @@ const Page = async ({ params }: { params: { id: string } }) => {
 
         <hr />
 
-        {tourDetails.information.map((info) => (
-          <div key={v4()} className="col-12 col-md-6 forceStyle">
-            <h4 className="mb-3 textSecondary">{info.title}</h4>
-            <div dangerouslySetInnerHTML={{ __html: info.details }}></div>
-          </div>
-        ))}
+        {tourDetails.information.map((info) => {
+          if (!info.details || info.details.length < 1) return null;
+          return (
+            <div key={v4()} className="col-12 col-md-6 forceStyle">
+              <h4 className="mb-3 textSecondary">{info.title}</h4>
+              <div dangerouslySetInnerHTML={{ __html: info.details }}></div>
+            </div>
+          );
+        })}
+      </div>
 
+      <div className="row">
         {tourDetails.inclusions.map((x) => (
           <div key={v4()} className="col-12 col-md-6">
             <h4 className="mb-3 textSecondary">{x.title}</h4>
             {x.details.map((detail: any) => (
-              <p key={v4()} className="fw-light">
-                <RxDotFilled className="textSecondary" /> {detail}
+              <p key={v4()} className="fw-light flex items-center space-x-2">
+                {x.title === "Inclusions" ? (
+                  <GiCheckMark className="text-green-500" />
+                ) : (
+                  <span className="font-bold text-red-500">X</span>
+                )}
+                <span>{detail}</span>
               </p>
             ))}
           </div>
         ))}
-
-        <hr />
-
-        {/* <ReviewStatistics /> */}
       </div>
     </div>
   );

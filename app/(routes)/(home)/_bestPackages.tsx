@@ -1,6 +1,6 @@
 import PackageCard from "@/app/_components/cards/PackageCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import { getBestPackages } from "@/app/_services/packageServices";
+import { getBestPackages } from "@/services/packageServices";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
 
 const BestPackages = async () => {

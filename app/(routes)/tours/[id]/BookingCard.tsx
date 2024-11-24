@@ -42,7 +42,7 @@ const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div className="border p-4 rounded-lg shadow-lg max-w-md">
       <h2 className="text-lg font-semibold">
-        From <span className="text-xl font-bold">$72</span>
+        From <span className="text-xl font-bold">{tourDetails.price}</span>
       </h2>
       <div className="my-4">
         <Datee />
@@ -55,7 +55,7 @@ const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
         >
           <span>Number of travelers:</span>
           <span className="font-light">
-            {adults} adults - {children} children - {rooms} room
+            {adults} adults - {children} children
           </span>
         </button>
         {isTravelerSelectorVisible && (

@@ -1,6 +1,6 @@
 import DestinationCard from "@/app/_components/cards/DestinationCard";
 import SectionHeaderWithBtn from "@/app/_components/ui/SectionHeaderWithBtn";
-import { getBestDestinations } from "@/app/_services/destinationServices";
+import { getBestDestinations } from "@/services/destinationServices";
 import SwiperScroll from "../../_components/ui/SwiperScroll";
 
 const BestDestinations = async () => {

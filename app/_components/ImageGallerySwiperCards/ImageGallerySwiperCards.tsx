@@ -20,7 +20,12 @@ const ImageGallerySwiperCards = (props: IProps) => {
 
   return (
     <>
-      <Swiper effect={"cards"} grabCursor={true} modules={[EffectCards]} className={styles.swiper}>
+      <Swiper
+        effect={"cards"}
+        grabCursor={true}
+        modules={[EffectCards]}
+        className={styles.swiper}
+      >
         {images.map((image) => (
           <SwiperSlide key={v4()} className={styles.swiperSlide}>
             <div className={styles.imgWrapper}>
@@ -29,14 +34,6 @@ const ImageGallerySwiperCards = (props: IProps) => {
           </SwiperSlide>
         ))}
       </Swiper>
-
-      {/* <Modal id="PhotoGallery">
-        <div className={styles.modalWrapper}>
-          <div className={styles.modalImageWrapper}>
-            <Image fill src={clickedImage ? clickedImage : ""} alt="" />
-          </div>
-        </div>
-      </Modal> */}
     </>
   );
 };

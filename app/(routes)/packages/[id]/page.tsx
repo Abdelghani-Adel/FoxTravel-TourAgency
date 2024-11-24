@@ -6,7 +6,7 @@ import { IoLocationOutline, IoTimeOutline } from "react-icons/io5";
 import { SiYourtraveldottv } from "react-icons/si";
 import Itenrary from "./_itenrary";
 import TransportaionLine from "./_transportaionLine";
-import { getPackageDetails } from "@/app/_services/packageServices";
+import { getPackageDetails } from "@/services/packageServices";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 
 const Page = async ({ params }: { params: { id: string } }) => {
@@ -91,7 +91,9 @@ const Page = async ({ params }: { params: { id: string } }) => {
           <div className="d-flex flex-column gap-2">
             <p>
               <GiCheckMark className="text-success me-2" />{" "}
-              <span className="fw-light">Nights’ accommodation in Cairo with breakfast.</span>
+              <span className="fw-light">
+                Nights’ accommodation in Cairo with breakfast.
+              </span>
             </p>
             <p>
               <GiCheckMark className="text-success me-2" />{" "}
@@ -115,11 +117,15 @@ const Page = async ({ params }: { params: { id: string } }) => {
             </p>
             <p>
               <GiCheckMark className="text-success me-2" />{" "}
-              <span className="fw-light">All Meals Mentioned on the itinerary.</span>
+              <span className="fw-light">
+                All Meals Mentioned on the itinerary.
+              </span>
             </p>
             <p>
               <GiCheckMark className="text-success me-2" />{" "}
-              <span className="fw-light">All entrance fees for the above-mentioned tours.</span>
+              <span className="fw-light">
+                All entrance fees for the above-mentioned tours.
+              </span>
             </p>
           </div>
         </div>
@@ -129,7 +135,9 @@ const Page = async ({ params }: { params: { id: string } }) => {
           <div className="d-flex flex-column gap-2">
             <p>
               <FaXmark className="text-danger me-2" />{" "}
-              <span className="fw-light">Any items not mentioned in the above itinerary.</span>
+              <span className="fw-light">
+                Any items not mentioned in the above itinerary.
+              </span>
             </p>
             <p>
               <FaXmark className="text-danger me-2" />{" "}

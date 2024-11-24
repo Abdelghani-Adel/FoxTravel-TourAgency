@@ -2,7 +2,7 @@
 import TourCard from "@/app/_components/cards/TourCard";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import { getCardsList } from "@/app/_services/tourServices";
+import { getCardsList } from "@/services/tourServices";
 import { useEffect, useState } from "react";
 import { v4 } from "uuid";
 

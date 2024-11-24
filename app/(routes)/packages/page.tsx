@@ -1,7 +1,7 @@
 import PackageCard from "@/app/_components/cards/PackageCard";
 import Filter from "@/app/_components/Filter/Filter";
 import PageStripe from "@/app/_components/ui/PageStripe";
-import { getPackages } from "@/app/_services/packageServices";
+import { getPackages } from "@/services/packageServices";
 import { v4 } from "uuid";
 
 const Page = async () => {

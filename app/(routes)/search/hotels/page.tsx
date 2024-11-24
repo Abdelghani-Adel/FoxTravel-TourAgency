@@ -5,7 +5,7 @@ import HotelCard from "@/app/_components/cards/HotelCard";
 import { v4 } from "uuid";
 import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
 import { useAppSelector } from "@/app/_redux/store";
-import { searchHotels } from "@/app/_services/hotelServices";
+import { searchHotels } from "@/services/hotelServices";
 
 const Page = () => {
   const hotelSearchState = useAppSelector((state) => state.hotelSearch);

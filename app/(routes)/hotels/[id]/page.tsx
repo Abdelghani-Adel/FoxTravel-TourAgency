@@ -8,7 +8,7 @@ import PageNavigator from "@/app/(routes)/hotels/[id]/_pageNavigator";
 import ReviewStatistics from "@/app/(routes)/hotels/[id]/_reviewStatistics";
 import ImageGallerySwiperCards from "@/app/_components/ImageGallerySwiperCards/ImageGallerySwiperCards";
 import HotelSearch from "@/app/_components/ServiceSearch/HotelSearch/HotelSearch";
-import { getHotelDetails } from "@/app/_services/hotelServices";
+import { getHotelDetails } from "@/services/hotelServices";
 import { decrypt } from "@/app/_utils/Cryptojs";
 
 const Page = async ({ params }: { params: { id: string } }) => {

@@ -56,7 +56,7 @@ export const TravelerSelector: React.FC<TravelerSelectorProps> = ({
             </button>
           </div>
         </div>
-        <div className="flex justify-between items-center">
+        {/* <div className="flex justify-between items-center">
           <span>Rooms</span>
           <div className="flex items-center space-x-2">
             <button
@@ -73,7 +73,7 @@ export const TravelerSelector: React.FC<TravelerSelectorProps> = ({
               +
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
