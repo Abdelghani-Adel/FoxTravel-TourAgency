@@ -6,6 +6,7 @@ import Providers from "@/providers/Providers";
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import "react-datepicker/dist/react-datepicker.css";
+import TailwindHeader from "@/components/TailwindHeader";
 
 export const metadata: Metadata = {
   title: "Fox Travel",
@@ -34,7 +35,8 @@ export default function RootLayout({
           <LoaderOverlay />
 
           {/* <Header /> */}
-          <MainHeader />
+          {/* <MainHeader /> */}
+          <TailwindHeader />
           <main>{children}</main>
           <MainFooter />
 

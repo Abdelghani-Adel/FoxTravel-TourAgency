@@ -17,34 +17,37 @@ const Navigation = (props: props) => {
   return (
     <nav className="navigation">
       <ul className="navList">
-        <li className={`navItem ${pathname === "/" ? "active" : ""}`} onClick={onNavigate}>
+        <li
+          className={`navItem ${pathname === "/" ? "active" : ""}`}
+          onClick={onNavigate}
+        >
           <Navigate className="navLink" aria-current="page" href="/">
             Home
           </Navigate>
         </li>
 
-        <li className={`navItem ${pathname === "/hotels" ? "active" : ""}`} onClick={onNavigate}>
+        <li
+          className={`navItem ${pathname === "/hotels" ? "active" : ""}`}
+          onClick={onNavigate}
+        >
           <Navigate className="navLink" aria-current="page" href="/hotels">
             Hotels
           </Navigate>
         </li>
 
-        <li className={`navItem ${pathname === "/packages" ? "active" : ""}`} onClick={onNavigate}>
+        <li
+          className={`navItem ${pathname === "/packages" ? "active" : ""}`}
+          onClick={onNavigate}
+        >
           <Navigate className="navLink" aria-current="page" href="/packages">
             Packages
           </Navigate>
         </li>
 
-        {/* <li
-          className={`navItem ${pathname === "/destinations" ? "active" : ""}`}
+        <li
+          className={`navItem ${pathname === "/tours" ? "active" : ""}`}
           onClick={onNavigate}
         >
-          <Navigate className="navLink" aria-current="page" href="/destinations">
-            Destinations
-          </Navigate>
-        </li> */}
-
-        <li className={`navItem ${pathname === "/tours" ? "active" : ""}`} onClick={onNavigate}>
           <Navigate className="navLink" aria-current="page" href="/tours">
             Tours
           </Navigate>
@@ -74,7 +77,10 @@ const Navigation = (props: props) => {
           </ul>
         </li> */}
 
-        <li className={`navItem ${pathname === "/contact" ? "active" : ""}`} onClick={onNavigate}>
+        <li
+          className={`navItem ${pathname === "/contact" ? "active" : ""}`}
+          onClick={onNavigate}
+        >
           <Navigate className="navLink" aria-current="page" href="/contact">
             Contact
           </Navigate>

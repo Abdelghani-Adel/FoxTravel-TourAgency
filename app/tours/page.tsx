@@ -17,6 +17,7 @@ const Page = () => {
 
     fetchTours();
   }, []);
+
   return (
     <>
       <PageStripe title="Find Your Dream Tour" />

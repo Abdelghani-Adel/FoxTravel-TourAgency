@@ -7,8 +7,6 @@ const TourBookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
         <span className="fw-light">from</span> {tourDetails.price}
         {tourDetails.currency}
       </p>
-      {/* <DateInput title="Date" defaultValue={new Date()} onChange={() => {}} placeholder="Choose" />
-      <FlightPassengers /> */}
       <button className="foxBtn secondBtn w-100">Book Now</button>
     </div>
   );
