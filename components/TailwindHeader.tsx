@@ -50,7 +50,7 @@ const TailwindHeader = () => {
 
           {/* Navbar */}
           <nav className="hidden md:flex space-x-4 text-xl text-gray-300">
-            <NavLinks activeClass="text-white" hoverClass="text-white" />
+            <NavLinks activeClass="text-white" hoverClass="hover:text-white" />
           </nav>
         </div>
 

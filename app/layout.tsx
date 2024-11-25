@@ -1,10 +1,10 @@
 import LoaderOverlay from "@/components/layout/LoaderOverlay";
 import MainFooter from "@/components/layout/MainFooter/MainFooter";
-import MainHeader from "@/components/layout/MainHeader/MainHeader";
+
 import "@/tailwind.css";
 import Providers from "@/providers/Providers";
 import type { Metadata } from "next";
-import Header from "@/components/Header";
+
 import "react-datepicker/dist/react-datepicker.css";
 import TailwindHeader from "@/components/TailwindHeader";
 
