@@ -7,7 +7,7 @@ import { formatNumber } from "@/utils/Formatters";
 const TourHeader = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div>
-      <h1 className="mb-2 font-bold">{tourDetails.title}</h1>
+      <h1 className="mb-2 font-bold text-4xl">{tourDetails.title}</h1>
       <div className="flex space-x-3">
         <span>
           <RtsRating rating={tourDetails.rating} readonly />
