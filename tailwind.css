@@ -21,3 +21,19 @@
   font-size: 1.5rem !important;
   font-weight: 700 !important;
 }
+
+.masonry {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column by default */
+}
+
+@media (min-width: 768px) {
+  .masonry {
+    grid-template-columns: 1fr 1fr; /* Two columns for medium screens and up */
+  }
+}
+
+.masonry > * {
+  break-inside: avoid; /* Avoid breaking content across columns */
+  margin-bottom: 1rem; /* Space between items */
+}

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import DatePicker from "react-datepicker";
 import { addMonths } from "date-fns";
 
-const Datee: React.FC = () => {
+const BookingCardDate: React.FC = () => {
   const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
     null,
     null,
@@ -46,4 +46,4 @@ const Datee: React.FC = () => {
   );
 };
 
-export default Datee;
+export default BookingCardDate;

@@ -2,7 +2,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { TravelerSelector } from "./TravelerSelector";
 import { Recommendation } from "./Recommendation";
-import Datee from "./DatePicker";
+import BookingCardDate from "./BookingCardDate";
 
 const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   const [dateRange, setDateRange] = useState<string>(
@@ -42,10 +42,13 @@ const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
   return (
     <div className="border p-4 rounded-lg shadow-lg max-w-md">
       <h2 className="text-lg font-semibold">
-        From <span className="text-xl font-bold">{tourDetails.price}</span>
+        From
+        <span className="text-xl font-bold">
+          {tourDetails.price} {tourDetails.currency}
+        </span>
       </h2>
       <div className="my-4">
-        <Datee />
+        <BookingCardDate />
       </div>
 
       <div className="my-4 relative" ref={travelerSelectorRef}>

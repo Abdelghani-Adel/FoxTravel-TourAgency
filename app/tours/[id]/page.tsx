@@ -10,6 +10,8 @@ import { v4 } from "uuid";
 import { RxDotFilled } from "react-icons/rx";
 import BookingCard from "./BookingCard";
 import { GiCheckMark } from "react-icons/gi";
+import Masonry from "@mui/lab/Masonry";
+import { v4 as uuidv4 } from "uuid";
 
 const HTML =
   "<ul><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Confirmation will be received at time of booking</span></li><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Departs at 8am (boarding at 7.30am), Victoria Coach Station Gate 1-5, 164 Buckingham Palace Road, London, SW1W 9TP</span></li><li><span style='background-color: rgb(255, 255, 255); font-size: 16px; font-family: Jost, sans-serif; color: rgb(33, 37, 41);'> Please note: the tour itinerary and order may change</span></li></ul><p><br></p>";
@@ -64,6 +66,18 @@ const Page = async ({ params }: { params: { id: string } }) => {
           );
         })}
       </div>
+
+      {/* <Masonry columns={{ xs: 1, sm: 2, md: 2 }} spacing={4}>
+        {tourDetails.information.map((info) => {
+          if (!info.details || info.details.length < 1) return null;
+          return (
+            <div key={v4()} className="forceStyle h-max">
+              <h4 className="mb-3 textSecondary">{info.title}</h4>
+              <div dangerouslySetInnerHTML={{ __html: info.details }}></div>
+            </div>
+          );
+        })}
+      </Masonry> */}
 
       <div className="row">
         {tourDetails.inclusions.map((x) => (
