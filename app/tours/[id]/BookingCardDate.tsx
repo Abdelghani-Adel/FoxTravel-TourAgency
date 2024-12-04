@@ -3,11 +3,7 @@ import DatePicker from "react-datepicker";
 import { addMonths } from "date-fns";
 
 const BookingCardDate: React.FC = () => {
-  const [dateRange, setDateRange] = useState<[Date | null, Date | null]>([
-    null,
-    null,
-  ]);
-  const [startDate, endDate] = dateRange;
+  const [date, setDate] = useState<Date | null>(new Date());
 
   // Custom input component to match the image style
   const CustomInput = React.forwardRef<
@@ -30,6 +26,12 @@ const BookingCardDate: React.FC = () => {
   return (
     <div className="relative">
       <DatePicker
+        selected={new Date()}
+        onChange={(date) => {}}
+        customInput={<CustomInput />}
+      />
+
+      {/* <DatePicker
         selected={startDate}
         onChange={(update) => {
           setDateRange(update as [Date | null, Date | null]);
@@ -41,7 +43,7 @@ const BookingCardDate: React.FC = () => {
         minDate={new Date()}
         maxDate={addMonths(new Date(), 5)}
         customInput={<CustomInput />}
-      />
+      /> */}
     </div>
   );
 };

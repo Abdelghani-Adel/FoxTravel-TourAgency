@@ -1,79 +1,81 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
 import { TravelerSelector } from "./TravelerSelector";
-import { Recommendation } from "./Recommendation";
 import BookingCardDate from "./BookingCardDate";
+import DatePicker from "react-datepicker";
+import CustomeDatePicker from "@/components/CustomeDatePicker";
+import HotelGuests from "@/components/ServiceSearch/HotelSearch/HotelGuests";
+import GuestsSelector from "@/components/GuestsSelector";
+import { getTourPrice } from "@/services/tourServices";
 
 const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
-  const [dateRange, setDateRange] = useState<string>(
-    "November 05 ~ December 14"
-  );
-  const [adults, setAdults] = useState<number>(2);
-  const [children, setChildren] = useState<number>(1);
-  const [rooms, setRooms] = useState<number>(1);
-  const [isTravelerSelectorVisible, setIsTravelerSelectorVisible] =
-    useState<boolean>(false);
+  const [priceRequest, setPriceRequest] = useState<IPriceRequest>({
+    languageCode: "en",
+    currCode: tourDetails.currency,
+    ServiceTypeId: 1,
+    ServiceMainId: 2,
+    BookDateFrom: "",
+    BookDateTo: "",
+    AdultPax: 1,
+    ChdPax: 0,
+    ChdAges: [],
+  });
 
-  // Create a reference for the traveler selector container
-  const travelerSelectorRef = useRef<HTMLDivElement>(null);
+  const [price, setPrice] = useState(tourDetails.price);
 
-  const toggleTravelerSelector = () => {
-    setIsTravelerSelectorVisible(!isTravelerSelectorVisible);
-  };
-
-  // Close the traveler selector when clicking outside
   useEffect(() => {
-    const handleClickOutside = (event: MouseEvent) => {
-      if (
-        travelerSelectorRef.current &&
-        !travelerSelectorRef.current.contains(event.target as Node)
-      ) {
-        setIsTravelerSelectorVisible(false);
-      }
+    const getPrice = async () => {
+      const response = await getTourPrice(priceRequest);
+
+      setPrice(response.data.price);
     };
 
-    document.addEventListener("mousedown", handleClickOutside);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutside);
-    };
-  }, []);
+    getPrice();
+  }, [priceRequest]);
 
   return (
     <div className="border p-4 rounded-lg shadow-lg max-w-md">
       <h2 className="text-lg font-semibold">
-        From
+        From{" "}
         <span className="text-xl font-bold">
-          {tourDetails.price} {tourDetails.currency}
+          {price} {tourDetails.currency}
         </span>
       </h2>
+
       <div className="my-4">
-        <BookingCardDate />
+        <CustomeDatePicker
+          onChange={(newDate) =>
+            setPriceRequest((prev) => ({
+              ...prev,
+              BookDateFrom: newDate,
+              BookDateTo: newDate,
+            }))
+          }
+        />
       </div>
 
-      <div className="my-4 relative" ref={travelerSelectorRef}>
-        <button
-          onClick={toggleTravelerSelector}
-          className="w-full text-left border p-2 rounded-md flex flex-col"
-        >
-          <span>Number of travelers:</span>
-          <span className="font-light">
-            {adults} adults - {children} children
-          </span>
-        </button>
-        {isTravelerSelectorVisible && (
-          <div className="absolute p-2 bg-white w-full shadow-md rounded-md">
-            <TravelerSelector
-              adults={adults}
-              setAdults={setAdults}
-              children={children}
-              setChildren={setChildren}
-              rooms={rooms}
-              setRooms={setRooms}
-            />
-          </div>
-        )}
-      </div>
+      <GuestsSelector
+        withChildren
+        onAdultsChange={(newCount: number) =>
+          setPriceRequest((prev) => ({
+            ...prev,
+            AdultPax: newCount,
+          }))
+        }
+        onChildrenChange={(newCount: number) =>
+          setPriceRequest((prev) => ({
+            ...prev,
+            ChdPax: newCount,
+          }))
+        }
+        onChildrenAgesChange={(newCount: number[]) =>
+          setPriceRequest((prev) => ({
+            ...prev,
+            ChdAges: newCount,
+          }))
+        }
+      />
+
       <button className="bg-blue-600 text-white w-full py-2 rounded-md mt-4">
         Book Now
       </button>

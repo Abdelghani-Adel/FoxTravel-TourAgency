@@ -5,10 +5,11 @@ import { v4 } from "uuid";
 type Props = {
   value: number;
   id: number;
+  onChange?: (num: number, id: number) => void;
 };
 
 const ChildAgeInput = (props: Props) => {
-  const { value, id } = props;
+  const { value, id, onChange } = props;
   return (
     <div className="dropdown">
       <button
@@ -16,14 +17,22 @@ const ChildAgeInput = (props: Props) => {
         data-bs-toggle="dropdown"
         aria-expanded="false"
         data-bs-auto-close="outside"
+        className="flex items-center space-x-2 border border-gray-700 w-max p-2"
       >
-        {formatOption(value)} <IoIosArrowDown />
+        <span>{formatOption(value)}</span> <IoIosArrowDown />
       </button>
 
       <div className={`dropdown-menu`}>
         {options.map((option) => (
           <li key={v4()}>
-            <button className="dropdown-item fw-light" value={option.value} type="button">
+            <button
+              className="dropdown-item fw-light"
+              value={option.value}
+              type="button"
+              onClick={() => {
+                onChange && onChange(option.value, id);
+              }}
+            >
               {option.label}
             </button>
           </li>
@@ -43,43 +52,43 @@ const formatOption = (value: number) => {
 
 const options = [
   {
-    value: "1",
+    value: 1,
     label: "1 year old",
   },
   {
-    value: "2",
+    value: 2,
     label: "2 years old",
   },
   {
-    value: "3",
+    value: 3,
     label: "3 years old",
   },
   {
-    value: "4",
+    value: 4,
     label: "4 years old",
   },
   {
-    value: "5",
+    value: 5,
     label: "5 years old",
   },
   {
-    value: "6",
+    value: 6,
     label: "6 years old",
   },
   {
-    value: "7",
+    value: 7,
     label: "7 years old",
   },
   {
-    value: "8",
+    value: 8,
     label: "8 years old",
   },
   {
-    value: "9",
+    value: 9,
     label: "9 years old",
   },
   {
-    value: "10",
+    value: 10,
     label: "10 years old",
   },
 ];

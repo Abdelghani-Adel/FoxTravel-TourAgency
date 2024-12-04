@@ -24,6 +24,7 @@ const HotelGuests = () => {
       <div className="dropdown-menu p-3">
         <div className="d-flex flex-column gap-2">
           <RoomsController />
+
           <AdultsController />
 
           <div className="d-flex justify-content-between align-items-center gap-5">

@@ -26,6 +26,29 @@ export const getCardsList = async () => {
   return { data, error };
 };
 
+export const getTourPrice = async (req: IPriceRequest) => {
+  let data = null;
+  let error = null;
+
+  try {
+    const response = await apiClient.post(
+      "https://fox.devsdiamond.com/api/Tours/GetServicePrices",
+      req,
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+
+    data = response.data[0];
+  } catch (err) {
+    error = "Error: Couldn't get the data";
+  }
+
+  return { data, error };
+};
+
 export const getTours = async () => {};
 
 export const getTourDetails = async (tourId: string) => {
