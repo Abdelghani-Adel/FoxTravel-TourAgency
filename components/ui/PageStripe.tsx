@@ -7,12 +7,14 @@ type props = {
 
 const PageStripe = (props: props) => {
   return (
-    <div className="pageStripe">
-      <div className="pageStripBackground">
+    <div className="relative h-64">
+      <div className="absolute inset-0">
         <Image fill src="/img/hero-bg.webp" alt="" />
       </div>
 
-      <h1 className="pageStripeTitle">{props.title}</h1>
+      <h1 className="text-4xl font-bold text-center text-white">
+        {props.title}
+      </h1>
     </div>
   );
 };

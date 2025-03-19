@@ -13,7 +13,7 @@ const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
     languageCode: "en",
     currCode: tourDetails.currency,
     ServiceTypeId: 1,
-    ServiceMainId: 2,
+    ServiceMainId: tourDetails.serviceId,
     BookDateFrom: "",
     BookDateTo: "",
     AdultPax: 1,
@@ -76,9 +76,7 @@ const BookingCard = ({ tourDetails }: { tourDetails: ITourDetails }) => {
         }
       />
 
-      <button className="bg-blue-600 text-white w-full py-2 rounded-md mt-4">
-        Book Now
-      </button>
+      <button className="bg-blue-600 text-white w-full py-2 rounded-md mt-4">Book Now</button>
 
       {tourDetails.recommendation && (
         <div className="flex items-center mt-4">
