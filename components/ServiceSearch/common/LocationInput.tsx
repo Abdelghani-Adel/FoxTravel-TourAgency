@@ -1,6 +1,8 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaCity } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+import { MdLocalAirport } from "react-icons/md";
 
 interface GeoapifyFeature {
   properties: {
@@ -8,6 +10,8 @@ interface GeoapifyFeature {
     lat: string;
     lon: string;
     formatted: string;
+    result_type: string;
+    categories?: string[];
   };
 }
 
@@ -20,6 +24,7 @@ const LocationInput = (props: Iprops) => {
   const [query, setQuery] = useState<string>(value.name);
   const [suggestions, setSuggestions] = useState<GeoapifyFeature[]>([]);
   const [focused, setFocused] = useState<boolean>(false);
+  const [selected, setSelected] = useState(false);
 
   useEffect(() => {
     const delayDebounce = setTimeout(() => {
@@ -49,7 +54,18 @@ const LocationInput = (props: Iprops) => {
   const handleSelect = (sugg: GeoapifyFeature) => {
     setQuery(sugg.properties.formatted);
     setFocused(false);
+    setSelected(true);
     onSelect({ lat: sugg.properties.lat, lon: sugg.properties.lon, name: sugg.properties.formatted });
+  };
+
+  const getIconByType = (formatted: string) => {
+    if (formatted.toLocaleLowerCase().includes("airport")) {
+      return <MdLocalAirport />;
+    } else if (formatted.toLocaleLowerCase().includes("city")) {
+      return <FaCity />;
+    } else {
+      return <FaLocationDot />;
+    }
   };
 
   return (
@@ -67,16 +83,26 @@ const LocationInput = (props: Iprops) => {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onFocus={() => setFocused(true)}
-            onBlur={() => setTimeout(() => setFocused(false), 150)} // slight delay for click
+            onBlur={() => {
+              setTimeout(() => {
+                setFocused(false);
+                if (!selected) {
+                  setQuery(""); // Clear the input
+                  onSelect({ lat: "", lon: "", name: "" }); // Optional: notify parent no location is selected
+                }
+                setSelected(false); // Reset for next interaction
+              }, 150);
+            }}
           />
           {focused && suggestions.length > 0 && (
-            <ul className="border border-t-0 shadow bg-white absolute z-10 w-full">
+            <ul className="border border-t-0 shadow bg-white absolute left-1/2 -translate-x-1/2 z-10 w-max rounded-md">
               {suggestions.map((sugg) => (
                 <li
                   key={sugg.properties.place_id}
-                  className="p-2 hover:bg-gray-100 cursor-pointer"
+                  className="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
                   onClick={() => handleSelect(sugg)}
                 >
+                  <span>{getIconByType(sugg.properties.formatted)}</span>
                   {sugg.properties.formatted}
                 </li>
               ))}

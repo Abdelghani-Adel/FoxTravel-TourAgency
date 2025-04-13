@@ -3,7 +3,7 @@ import data from "@/public/data/TransferCards.json";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { FaCheck, FaSuitcase } from "react-icons/fa6";
+import { FaCheck, FaPersonWalkingLuggage, FaSuitcase } from "react-icons/fa6";
 import { LuBaggageClaim } from "react-icons/lu";
 import { MdNotListedLocation } from "react-icons/md";
 import { v4 } from "uuid";
@@ -32,7 +32,7 @@ const TransferCard = ({ transfer }: { transfer: any }) => {
 
           <p className="d-flex gap-5">
             <span className="d-flex gap-2 align-items-center">
-              <LuBaggageClaim /> {transfer.MaxPax}
+              <FaPersonWalkingLuggage /> {transfer.MaxPax}
             </span>
             <span className="d-flex gap-2 align-items-center">
               <FaSuitcase /> {transfer.MaxLuggage}
