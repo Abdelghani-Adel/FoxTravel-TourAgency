@@ -100,7 +100,7 @@ const LocationInput = (props: Iprops) => {
                 <li
                   key={sugg.properties.place_id}
                   className="p-2 hover:bg-gray-100 cursor-pointer flex items-center gap-2"
-                  onClick={() => handleSelect(sugg)}
+                  onMouseDown={() => handleSelect(sugg)}
                 >
                   <span>{getIconByType(sugg.properties.formatted)}</span>
                   {sugg.properties.formatted}
