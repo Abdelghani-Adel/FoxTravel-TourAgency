@@ -9,12 +9,12 @@ const RoundFlight = () => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.flightSearch.round);
 
-  const onLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(flightSearchActions.setRoundDepartureLocation(e.target.value));
+  const onLocationChange = (location: ILocation) => {
+    dispatch(flightSearchActions.setRoundDepartureLocation(location));
   };
 
-  const onDestinationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(flightSearchActions.setRoundToLocation(e.target.value));
+  const onDestinationChange = (location: ILocation) => {
+    dispatch(flightSearchActions.setRoundToLocation(location));
   };
 
   const onDepartureDateChange = (date: Date | null) => {
@@ -35,14 +35,14 @@ const RoundFlight = () => {
         title="From"
         placeholder="Departure Location"
         value={formData.departureLocation}
-        onChange={onLocationChange}
+        onSelect={onLocationChange}
       />
 
       <LocationInput
         title="To"
         placeholder="Destination Location"
         value={formData.toLocation}
-        onChange={onDestinationChange}
+        onSelect={onDestinationChange}
       />
 
       <DateInput
@@ -59,10 +59,7 @@ const RoundFlight = () => {
         onChange={onReturnDateChange}
       />
 
-      <FlightPassengers
-        passengers={formData.passengers}
-        onChange={onPassengersChange}
-      />
+      <FlightPassengers passengers={formData.passengers} onChange={onPassengersChange} />
     </div>
   );
 };

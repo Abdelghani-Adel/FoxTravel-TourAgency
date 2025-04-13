@@ -9,12 +9,12 @@ const OneWayFlight = () => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.flightSearch.oneWay);
 
-  const onLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(flightSearchActions.setOneWayDepartureLocation(e.target.value));
+  const onLocationChange = (location: ILocation) => {
+    dispatch(flightSearchActions.setOneWayDepartureLocation(location));
   };
 
-  const onDestinationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(flightSearchActions.setOneWayToLocation(e.target.value));
+  const onDestinationChange = (location: ILocation) => {
+    dispatch(flightSearchActions.setOneWayToLocation(location));
   };
 
   const onDepartureDateChange = (date: Date | null) => {
@@ -31,14 +31,14 @@ const OneWayFlight = () => {
         title="From"
         placeholder="Departure Location"
         value={formData.departureLocation}
-        onChange={onLocationChange}
+        onSelect={onLocationChange}
       />
 
       <LocationInput
         title="To"
         placeholder="Destination Location"
         value={formData.toLocation}
-        onChange={onDestinationChange}
+        onSelect={onDestinationChange}
       />
 
       <DateInput
@@ -48,10 +48,7 @@ const OneWayFlight = () => {
         onChange={onDepartureDateChange}
       />
 
-      <FlightPassengers
-        passengers={formData.passengers}
-        onChange={onPassengersChange}
-      />
+      <FlightPassengers passengers={formData.passengers} onChange={onPassengersChange} />
     </div>
   );
 };

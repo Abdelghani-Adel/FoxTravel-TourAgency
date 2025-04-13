@@ -11,8 +11,8 @@ const HotelSearch = () => {
   const dispatch = useAppDispatch();
   const hotelSearch = useAppSelector((state) => state.hotelSearch);
 
-  const onDestinationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(hotelSearchActions.setCity(e.target.value));
+  const onDestinationChange = (location: ILocation) => {
+    dispatch(hotelSearchActions.setCity(location));
   };
 
   const onCheckinChange = (date: Date | null) => {
@@ -29,7 +29,7 @@ const HotelSearch = () => {
         title="Destination"
         placeholder="Where are you going?"
         value={hotelSearch.city}
-        onChange={onDestinationChange}
+        onSelect={onDestinationChange}
       />
 
       <DateInput

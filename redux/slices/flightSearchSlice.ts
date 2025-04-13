@@ -3,8 +3,8 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState: FlightSearchState = {
   type: "oneway",
   oneWay: {
-    departureLocation: "",
-    toLocation: "",
+    departureLocation: { lat: "", lon: "", name: "" },
+    toLocation: { lat: "", lon: "", name: "" },
     departureDate: null,
     passengers: {
       adults: 0,
@@ -13,8 +13,8 @@ const initialState: FlightSearchState = {
     },
   },
   round: {
-    departureLocation: "",
-    toLocation: "",
+    departureLocation: { lat: "", lon: "", name: "" },
+    toLocation: { lat: "", lon: "", name: "" },
     departureDate: null,
     returnDate: null,
     passengers: {
@@ -25,8 +25,8 @@ const initialState: FlightSearchState = {
   },
   multiple: [
     {
-      departureLocation: "",
-      toLocation: "",
+      departureLocation: { lat: "", lon: "", name: "" },
+      toLocation: { lat: "", lon: "", name: "" },
       departureDate: null,
       passengers: {
         adults: 0,
@@ -45,10 +45,10 @@ const flightsSearchSlice = createSlice({
       state.type = action.payload;
     },
     // OneWay actions
-    setOneWayDepartureLocation(state, action: PayloadAction<string>) {
+    setOneWayDepartureLocation(state, action: PayloadAction<ILocation>) {
       state.oneWay.departureLocation = action.payload;
     },
-    setOneWayToLocation(state, action: PayloadAction<string>) {
+    setOneWayToLocation(state, action: PayloadAction<ILocation>) {
       state.oneWay.toLocation = action.payload;
     },
     setOneWayDepartureDate(state, action: PayloadAction<Date | null>) {
@@ -58,10 +58,10 @@ const flightsSearchSlice = createSlice({
       state.oneWay.passengers = action.payload;
     },
     // Round actions
-    setRoundDepartureLocation(state, action: PayloadAction<string>) {
+    setRoundDepartureLocation(state, action: PayloadAction<ILocation>) {
       state.round.departureLocation = action.payload;
     },
-    setRoundToLocation(state, action: PayloadAction<string>) {
+    setRoundToLocation(state, action: PayloadAction<ILocation>) {
       state.round.toLocation = action.payload;
     },
     setRoundDepartureDate(state, action: PayloadAction<Date | null>) {
@@ -76,8 +76,8 @@ const flightsSearchSlice = createSlice({
     // Multiple actions
     addFlight(state) {
       state.multiple.push({
-        departureLocation: "",
-        toLocation: "",
+        departureLocation: { lat: "", lon: "", name: "" },
+        toLocation: { lat: "", lon: "", name: "" },
         departureDate: null,
         passengers: {
           adults: 0,
@@ -89,29 +89,23 @@ const flightsSearchSlice = createSlice({
     removeFlight(state, action: PayloadAction<number>) {
       state.multiple.splice(action.payload, 1);
     },
-    setMultipleDepartureLocation(
-      state,
-      action: PayloadAction<{ index: number; location: string }>
-    ) {
+    setMultipleDepartureLocation(state, action: PayloadAction<{ index: number; location: ILocation }>) {
       state.multiple[action.payload.index].departureLocation = action.payload.location;
     },
-    setMultipleToLocation(state, action: PayloadAction<{ index: number; location: string }>) {
+    setMultipleToLocation(state, action: PayloadAction<{ index: number; location: ILocation }>) {
       state.multiple[action.payload.index].toLocation = action.payload.location;
     },
     setMultipleDepartureDate(state, action: PayloadAction<{ index: number; date: Date | null }>) {
       state.multiple[action.payload.index].departureDate = action.payload.date;
     },
-    setMultiplePassengers(
-      state,
-      action: PayloadAction<{ index: number; passengers: IFlightPassengers }>
-    ) {
+    setMultiplePassengers(state, action: PayloadAction<{ index: number; passengers: IFlightPassengers }>) {
       state.multiple[action.payload.index].passengers = action.payload.passengers;
     },
     resetSearch(state) {
       state.type = "oneway";
       state.oneWay = {
-        departureLocation: "",
-        toLocation: "",
+        departureLocation: { lat: "", lon: "", name: "" },
+        toLocation: { lat: "", lon: "", name: "" },
         departureDate: null,
         passengers: {
           adults: 0,
@@ -120,8 +114,8 @@ const flightsSearchSlice = createSlice({
         },
       };
       state.round = {
-        departureLocation: "",
-        toLocation: "",
+        departureLocation: { lat: "", lon: "", name: "" },
+        toLocation: { lat: "", lon: "", name: "" },
         departureDate: null,
         returnDate: null,
         passengers: {
@@ -132,8 +126,8 @@ const flightsSearchSlice = createSlice({
       };
       state.multiple = [
         {
-          departureLocation: "",
-          toLocation: "",
+          departureLocation: { lat: "", lon: "", name: "" },
+          toLocation: { lat: "", lon: "", name: "" },
           departureDate: null,
           passengers: {
             adults: 0,

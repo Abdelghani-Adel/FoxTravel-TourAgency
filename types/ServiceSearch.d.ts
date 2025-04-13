@@ -18,7 +18,7 @@ interface HotelSearchState {
     minChilds: number;
     maxChilds: number;
   };
-  city: string;
+  city: ILocation;
   startDate: Date | null;
   endDate: Date | null;
   adults: number;

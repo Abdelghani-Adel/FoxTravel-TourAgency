@@ -8,13 +8,10 @@ import FlightPassengers from "./FlightPassengers";
 
 const MultipleFlights = () => {
   const dispatch = useAppDispatch();
-  const multipleFlights = useAppSelector(
-    (state) => state.flightSearch.multiple
-  );
+  const multipleFlights = useAppSelector((state) => state.flightSearch.multiple);
 
   const addFlight = () => dispatch(flightSearchActions.addFlight());
-  const removeFlight = (index: number) =>
-    dispatch(flightSearchActions.removeFlight(index));
+  const removeFlight = (index: number) => dispatch(flightSearchActions.removeFlight(index));
 
   return (
     <div className="ss_multipleListModal">
@@ -40,18 +37,18 @@ const MultipleFlightSingle = (props: ISingleProps) => {
   const { flight, index } = props;
   const dispatch = useAppDispatch();
 
-  const onLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onLocationChange = (location: ILocation) => {
     const data = {
       index,
-      location: e.target.value,
+      location: location,
     };
     dispatch(flightSearchActions.setMultipleDepartureLocation(data));
   };
 
-  const onDestinationChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onDestinationChange = (location: ILocation) => {
     const data = {
       index,
-      location: e.target.value,
+      location: location,
     };
     dispatch(flightSearchActions.setMultipleToLocation(data));
   };
@@ -78,14 +75,14 @@ const MultipleFlightSingle = (props: ISingleProps) => {
         title="From"
         placeholder="Departure Location"
         value={flight.departureLocation}
-        onChange={onLocationChange}
+        onSelect={onLocationChange}
       />
 
       <LocationInput
         title="To"
         placeholder="Destination Location"
         value={flight.toLocation}
-        onChange={onDestinationChange}
+        onSelect={onDestinationChange}
       />
 
       <DateInput
@@ -95,18 +92,15 @@ const MultipleFlightSingle = (props: ISingleProps) => {
         onChange={onDepartureDateChange}
       />
 
-      <FlightPassengers
-        passengers={flight.passengers}
-        onChange={onPassengersChange}
-      />
+      <FlightPassengers passengers={flight.passengers} onChange={onPassengersChange} />
     </>
   );
 };
 
 type ISingleProps = {
   flight: {
-    departureLocation: string;
-    toLocation: string;
+    departureLocation: ILocation;
+    toLocation: ILocation;
     departureDate: Date | null;
     passengers: IFlightPassengers;
   };

@@ -1,7 +1,7 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 const initialState: HotelSearchState = {
-  city: "",
+  city: { lat: "", lon: "", name: "" },
   startDate: null,
   endDate: null,
   rooms: 1,
@@ -21,7 +21,7 @@ const hotelSearchSlice = createSlice({
   name: "hotelSearch",
   initialState,
   reducers: {
-    setCity(state, action: PayloadAction<string>) {
+    setCity(state, action: PayloadAction<ILocation>) {
       state.city = action.payload;
     },
     setStartDate(state, action: PayloadAction<Date | null>) {
@@ -49,8 +49,7 @@ const hotelSearchSlice = createSlice({
       state.rooms--;
     },
     resetSearch(state) {
-      state.city = "";
-      state.startDate = null;
+      (state.city = { lat: "", lon: "", name: "" }), (state.startDate = null);
       state.endDate = null;
       state.adults = 0;
       state.childs = [];

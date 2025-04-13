@@ -1,5 +1,5 @@
 interface ISearchHotel {
-  city: string;
+  city: ILocation;
   startDate: Date | null;
   endDate: Date | null;
   adults: number;
