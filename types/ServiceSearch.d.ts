@@ -1,6 +1,7 @@
 type ISearchType = "Hotel" | "Flight" | "Transport";
 type IFlightType = "oneway" | "round" | "multiple";
 type ITransportType = "oneway" | "round" | "excursion" | "multiple";
+type ILocation = { lat: string; lon: string; name: string };
 
 type IFlightPassengers = {
   adults: number;
@@ -28,21 +29,21 @@ interface HotelSearchState {
 interface FlightSearchState {
   type: IFlightType;
   oneWay: {
-    departureLocation: string;
-    toLocation: string;
+    departureLocation: ILocation;
+    toLocation: ILocation;
     departureDate: Date | null;
     passengers: IFlightPassengers;
   };
   round: {
-    departureLocation: string;
-    toLocation: string;
+    departureLocation: ILocation;
+    toLocation: ILocation;
     departureDate: Date | null;
     returnDate: Date | null;
     passengers: IFlightPassengers;
   };
   multiple: {
-    departureLocation: string;
-    toLocation: string;
+    departureLocation: ILocation;
+    toLocation: ILocation;
     departureDate: Date | null;
     passengers: IFlightPassengers;
   }[];
@@ -51,27 +52,27 @@ interface FlightSearchState {
 interface TransportationSearchState {
   type: ITransportType;
   oneWay: {
-    pickupLocation: string;
-    dropoffLocation: string;
+    pickupLocation: ILocation;
+    dropoffLocation: ILocation;
     pickupDate: Date | null;
     passengers: number;
   };
   round: {
-    pickupLocation: string;
-    dropoffLocation: string;
+    pickupLocation: ILocation;
+    dropoffLocation: ILocation;
     pickupDate: Date | null;
     returnDate: Date | null;
     passengers: number;
   };
   excursions: {
-    pickupLocation: string;
+    pickupLocation: ILocation;
     pickupDate: Date | null;
     passengers: number;
     excursionType: string;
   };
   multiple: {
-    pickupLocation: string;
-    dropoffLocation: string;
+    pickupLocation: ILocation;
+    dropoffLocation: ILocation;
     pickupDate: Date | null;
     passengers: number;
   }[];

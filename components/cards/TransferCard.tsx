@@ -9,7 +9,7 @@ import { MdNotListedLocation } from "react-icons/md";
 import { v4 } from "uuid";
 import FoxCardBadges from "./FoxCard/FoxCardBadges";
 
-const TransferCard = () => {
+const TransferCard = ({ transfer }: { transfer: any }) => {
   const router = useRouter();
   const carInfo = data[0];
   const [moreInfoShown, setMoreInfoShown] = useState(false);
@@ -20,39 +20,33 @@ const TransferCard = () => {
 
   return (
     <div className="transferCard">
-      <div className="carImage">
-        <Image src={carInfo.img} alt="CAR" fill />
+      <div className="carImage  overflow-hidden">
+        <Image src={transfer.ImageFullPath} alt="CAR" fill />
       </div>
       <FoxCardBadges badges={carInfo.badges} />
 
       <div className="carInfo">
         <div>
-          <h2>{carInfo.title}</h2>
+          <h2>{transfer.MetaName}</h2>
           <p>Duration : {carInfo.duration}</p>
 
           <p className="d-flex gap-5">
             <span className="d-flex gap-2 align-items-center">
-              <LuBaggageClaim /> {carInfo.luggages}
+              <LuBaggageClaim /> {transfer.MaxPax}
             </span>
             <span className="d-flex gap-2 align-items-center">
-              <FaSuitcase /> {carInfo.bags}
+              <FaSuitcase /> {transfer.MaxLuggage}
             </span>
           </p>
         </div>
 
         <div>
-          {carInfo.includes.map((item) => (
-            <p key={v4()} className="fw-normal">
-              <FaCheck className="text-success me-2" />
-              {item}
-            </p>
-          ))}
+          <p>{transfer.MetaDescription}</p>
+          <div dangerouslySetInnerHTML={{ __html: transfer.MetaContent }} />
+          <div dangerouslySetInnerHTML={{ __html: transfer.MetaAvailableLanguages }} />
         </div>
 
-        <button
-          className="foxBtn mainBtn smBtn"
-          onClick={() => setMoreInfoShown(true)}
-        >
+        {/* <button className="foxBtn mainBtn smBtn" onClick={() => setMoreInfoShown(true)}>
           More Info
         </button>
         <MyModal show={moreInfoShown} onClose={() => setMoreInfoShown(false)}>
@@ -75,13 +69,13 @@ const TransferCard = () => {
               ))}
             </div>
           </div>
-        </MyModal>
+        </MyModal> */}
       </div>
 
       <div className="carPrice">
         <h2 className="fw-bolder">
-          {carInfo.currency}
-          {carInfo.price}
+          {transfer.Currency_Code}
+          {transfer.SZn_Price}
         </h2>
         <button className="foxBtn secondBtn" onClick={chooseHandler}>
           Choose

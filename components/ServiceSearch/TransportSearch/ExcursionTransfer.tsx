@@ -11,10 +11,8 @@ const ExcursionTransfer = () => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.transportSearch.excursions);
 
-  const onPickupLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(
-      transportSearchActions.setExcursionsPickupLocation(e.target.value)
-    );
+  const onPickupLocationChange = (location: ILocation) => {
+    dispatch(transportSearchActions.setExcursionsPickupLocation(location));
   };
 
   const onPickupDateChange = (date: Date | null) => {
@@ -31,7 +29,7 @@ const ExcursionTransfer = () => {
         title="Pickup"
         placeholder="Pickup Location"
         value={formData.pickupLocation}
-        onChange={onPickupLocationChange}
+        onSelect={onPickupLocationChange}
       />
 
       <DateInput
@@ -43,10 +41,7 @@ const ExcursionTransfer = () => {
 
       <ExcursionType />
 
-      <TransportPassengers
-        passengers={formData.passengers}
-        onChange={onPassengersChange}
-      />
+      <TransportPassengers passengers={formData.passengers} onChange={onPassengersChange} />
 
       <SubmitButton link="/search/transport" />
     </div>

@@ -40,6 +40,7 @@
     "body-parser": "^1.20.2",
     "bootstrap": "^5.3.2",
     "crypto-js": "^4.2.0",
+    "dayjs": "^1.11.13",
     "framer-motion": "^11.2.9",
     "html-react-parser": "^5.1.1",
     "jquery": "^3.7.1",

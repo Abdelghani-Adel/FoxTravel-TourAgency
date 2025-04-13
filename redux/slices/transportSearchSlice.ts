@@ -3,28 +3,28 @@ import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 const initialState: TransportationSearchState = {
   type: "oneway",
   oneWay: {
-    pickupLocation: "",
-    dropoffLocation: "",
+    pickupLocation: { lat: "", lon: "", name: "" },
+    dropoffLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
     passengers: 0,
   },
   round: {
-    pickupLocation: "",
-    dropoffLocation: "",
+    pickupLocation: { lat: "", lon: "", name: "" },
+    dropoffLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
     returnDate: null,
     passengers: 0,
   },
   excursions: {
-    pickupLocation: "",
+    pickupLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
     passengers: 0,
     excursionType: "12 hours",
   },
   multiple: [
     {
-      pickupLocation: "",
-      dropoffLocation: "",
+      pickupLocation: { lat: "", lon: "", name: "" },
+      dropoffLocation: { lat: "", lon: "", name: "" },
       pickupDate: null,
       passengers: 0,
     },
@@ -39,10 +39,10 @@ const transportationSearchSlice = createSlice({
       state.type = action.payload;
     },
     // OneWay actions
-    setOneWayPickupLocation(state, action: PayloadAction<string>) {
+    setOneWayPickupLocation(state, action: PayloadAction<ILocation>) {
       state.oneWay.pickupLocation = action.payload;
     },
-    setOneWayDropoffLocation(state, action: PayloadAction<string>) {
+    setOneWayDropoffLocation(state, action: PayloadAction<ILocation>) {
       state.oneWay.dropoffLocation = action.payload;
     },
     setOneWayPickupDate(state, action: PayloadAction<Date | null>) {
@@ -52,10 +52,10 @@ const transportationSearchSlice = createSlice({
       state.oneWay.passengers = action.payload;
     },
     // Round actions
-    setRoundPickupLocation(state, action: PayloadAction<string>) {
+    setRoundPickupLocation(state, action: PayloadAction<ILocation>) {
       state.round.pickupLocation = action.payload;
     },
-    setRoundDropoffLocation(state, action: PayloadAction<string>) {
+    setRoundDropoffLocation(state, action: PayloadAction<ILocation>) {
       state.round.dropoffLocation = action.payload;
     },
     setRoundPickupDate(state, action: PayloadAction<Date | null>) {
@@ -68,7 +68,7 @@ const transportationSearchSlice = createSlice({
       state.round.passengers = action.payload;
     },
     // Excursions actions
-    setExcursionsPickupLocation(state, action: PayloadAction<string>) {
+    setExcursionsPickupLocation(state, action: PayloadAction<ILocation>) {
       state.excursions.pickupLocation = action.payload;
     },
     setExcursionsPickupDate(state, action: PayloadAction<Date | null>) {
@@ -83,8 +83,8 @@ const transportationSearchSlice = createSlice({
     // Multiple actions
     addTransport(state) {
       state.multiple.push({
-        pickupLocation: "",
-        dropoffLocation: "",
+        pickupLocation: { lat: "", lon: "", name: "" },
+        dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
         passengers: 0,
       });
@@ -92,10 +92,10 @@ const transportationSearchSlice = createSlice({
     removeTransport(state, action: PayloadAction<number>) {
       state.multiple.splice(action.payload, 1);
     },
-    setMultiplePickupLocation(state, action: PayloadAction<{ index: number; location: string }>) {
+    setMultiplePickupLocation(state, action: PayloadAction<{ index: number; location: ILocation }>) {
       state.multiple[action.payload.index].pickupLocation = action.payload.location;
     },
-    setMultipleDropoffLocation(state, action: PayloadAction<{ index: number; location: string }>) {
+    setMultipleDropoffLocation(state, action: PayloadAction<{ index: number; location: ILocation }>) {
       state.multiple[action.payload.index].dropoffLocation = action.payload.location;
     },
     setMultiplePickupDate(state, action: PayloadAction<{ index: number; date: Date | null }>) {
@@ -107,28 +107,28 @@ const transportationSearchSlice = createSlice({
     resetSearch(state) {
       state.type = "oneway";
       state.oneWay = {
-        pickupLocation: "",
-        dropoffLocation: "",
+        pickupLocation: { lat: "", lon: "", name: "" },
+        dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
         passengers: 0,
       };
       state.round = {
-        pickupLocation: "",
-        dropoffLocation: "",
+        pickupLocation: { lat: "", lon: "", name: "" },
+        dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
         returnDate: null,
         passengers: 0,
       };
       state.excursions = {
-        pickupLocation: "",
+        pickupLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
         passengers: 0,
         excursionType: "12 hours",
       };
       state.multiple = [
         {
-          pickupLocation: "",
-          dropoffLocation: "",
+          pickupLocation: { lat: "", lon: "", name: "" },
+          dropoffLocation: { lat: "", lon: "", name: "" },
           pickupDate: null,
           passengers: 0,
         },

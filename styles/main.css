@@ -1,7 +1,6 @@
 body {
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
-  /* font-weight: 500; */
   font-style: normal;
 }
 
@@ -322,6 +321,7 @@ q:after {
   text-transform: uppercase;
   color: #fff;
   letter-spacing: 1px;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -397,6 +397,7 @@ q:after {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  width: -moz-max-content;
   width: max-content;
   z-index: 3;
   transition: 0.4s ease-in-out;
@@ -480,13 +481,9 @@ q:after {
   padding-right: 100%;
   box-sizing: content-box;
   transition: ease-in-out;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-name: ticker;
   animation-name: ticker;
-  -webkit-animation-duration: 3s;
   animation-duration: 3s;
 }
 
@@ -503,6 +500,7 @@ q:after {
   border: 1px solid #f36c24;
   padding: 10px;
   border-radius: 10px;
+  width: -moz-max-content;
   width: max-content;
   background-color: #f36c24;
 }
@@ -560,6 +558,7 @@ q:after {
   border: 1px solid #858585;
   border-radius: 10px;
   padding: 5px 10px;
+  gap: 10px;
 }
 
 .transferCard .carImage {
@@ -662,10 +661,8 @@ q:after {
   background-color: #ffc107;
 }
 
-.react-datepicker-popper[data-placement^="bottom"]
-  .react-datepicker__triangle::before,
-.react-datepicker-popper[data-placement^="bottom"]
-  .react-datepicker__triangle::after {
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::before,
+.react-datepicker-popper[data-placement^=bottom] .react-datepicker__triangle::after {
   border-bottom-color: #161514;
 }
 
@@ -939,6 +936,10 @@ q:after {
   border: none;
 }
 
+.ss_formInputField::-moz-placeholder {
+  color: rgb(194, 194, 194);
+}
+
 .ss_formInputField::placeholder {
   color: rgb(194, 194, 194);
 }
@@ -959,6 +960,7 @@ q:after {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: -moz-max-content;
   width: max-content;
 }
 
@@ -1119,6 +1121,7 @@ q:after {
 .foxBtn.mainBtn.smBtn,
 .foxBtn.secondBtn.smBtn,
 .foxBtn.thirdBtn.smBtn {
+  min-height: -moz-max-content;
   min-height: max-content;
   line-height: normal;
   padding: 5px 10px;
@@ -1246,8 +1249,7 @@ q:after {
     opacity: 0;
     width: 0;
   }
-  33.3%,
-  66% {
+  33.3%, 66% {
     opacity: 0.8;
     width: 100%;
   }
@@ -1313,8 +1315,7 @@ q:after {
     transform: translateX(-15vw);
     opacity: 0;
   }
-  33.3%,
-  66% {
+  33.3%, 66% {
     transform: translateX(0);
     opacity: 1;
   }
@@ -1364,7 +1365,8 @@ q:after {
   transition: 0.3s ease-in-out;
   opacity: 0;
   background-color: rgba(4, 4, 4, 0.53);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .myModal.active {
@@ -1456,7 +1458,8 @@ q:after {
   height: 100%;
   background: linear-gradient(0, rgba(10, 16, 54, 0.8), #3c3837 80.43%);
   opacity: 0.65;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .pageStripeTitle {
@@ -1514,7 +1517,8 @@ q:after {
   height: 100%;
   background: linear-gradient(0, rgba(10, 16, 54, 0.6), #3c3837 80.43%);
   opacity: 0.85;
-  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
 }
 
 .featuredHeroBox {
@@ -1862,4 +1866,4 @@ q:after {
 .termsPage p {
   font-weight: 400;
   margin-bottom: 0.6rem;
-}
+}/*# sourceMappingURL=main.css.map */

@@ -10,12 +10,12 @@ const OneWayTransfer = () => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.transportSearch.oneWay);
 
-  const onPickupLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(transportSearchActions.setOneWayPickupLocation(e.target.value));
+  const onPickupLocationChange = (location: ILocation) => {
+    dispatch(transportSearchActions.setOneWayPickupLocation(location));
   };
 
-  const onDropoffLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
-    dispatch(transportSearchActions.setOneWayDropoffLocation(e.target.value));
+  const onDropoffLocationChange = (location: ILocation) => {
+    dispatch(transportSearchActions.setOneWayDropoffLocation(location));
   };
 
   const onPickupDateChange = (date: Date | null) => {
@@ -32,14 +32,14 @@ const OneWayTransfer = () => {
         title="Pickup"
         placeholder="Pickup Location"
         value={formData.pickupLocation}
-        onChange={onPickupLocationChange}
+        onSelect={onPickupLocationChange}
       />
 
       <LocationInput
         title="Dropoff"
         placeholder="Dropoff Location"
         value={formData.dropoffLocation}
-        onChange={onDropoffLocationChange}
+        onSelect={onDropoffLocationChange}
       />
 
       <DateInput
@@ -49,10 +49,7 @@ const OneWayTransfer = () => {
         onChange={onPickupDateChange}
       />
 
-      <TransportPassengers
-        passengers={formData.passengers}
-        onChange={onPassengersChange}
-      />
+      <TransportPassengers passengers={formData.passengers} onChange={onPassengersChange} />
 
       <SubmitButton link="/search/transport" />
     </div>

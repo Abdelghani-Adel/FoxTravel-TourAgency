@@ -8,13 +8,10 @@ import TransportPassengers from "./TransportPassengers";
 
 const MultipleTransfer = () => {
   const dispatch = useAppDispatch();
-  const multipleTransfers = useAppSelector(
-    (state) => state.transportSearch.multiple
-  );
+  const multipleTransfers = useAppSelector((state) => state.transportSearch.multiple);
 
   const addTransfer = () => dispatch(transportSearchActions.addTransport());
-  const removeTransfer = (index: number) =>
-    dispatch(transportSearchActions.removeTransport(index));
+  const removeTransfer = (index: number) => dispatch(transportSearchActions.removeTransport(index));
 
   return (
     <div className="ss_multipleListModal">
@@ -40,18 +37,18 @@ const MultipleTransferSingle = (props: ISingleProps) => {
   const { transfer, index } = props;
   const dispatch = useAppDispatch();
 
-  const onLocationChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onLocationChange = (location: ILocation) => {
     const data = {
       index,
-      location: e.target.value,
+      location: location,
     };
     dispatch(transportSearchActions.setMultiplePickupLocation(data));
   };
 
-  const onDestinationChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const onDestinationChange = (location: ILocation) => {
     const data = {
       index,
-      location: e.target.value,
+      location: location,
     };
     dispatch(transportSearchActions.setMultipleDropoffLocation(data));
   };
@@ -78,14 +75,14 @@ const MultipleTransferSingle = (props: ISingleProps) => {
         title="From"
         placeholder="Departure Location"
         value={transfer.pickupLocation}
-        onChange={onLocationChange}
+        onSelect={onLocationChange}
       />
 
       <LocationInput
         title="To"
         placeholder="Destination Location"
         value={transfer.dropoffLocation}
-        onChange={onDestinationChange}
+        onSelect={onDestinationChange}
       />
 
       <DateInput
@@ -95,18 +92,15 @@ const MultipleTransferSingle = (props: ISingleProps) => {
         onChange={onDepartureDateChange}
       />
 
-      <TransportPassengers
-        passengers={transfer.passengers}
-        onChange={onPassengersChange}
-      />
+      <TransportPassengers passengers={transfer.passengers} onChange={onPassengersChange} />
     </>
   );
 };
 
 type ISingleProps = {
   transfer: {
-    pickupLocation: string;
-    dropoffLocation: string;
+    pickupLocation: ILocation;
+    dropoffLocation: ILocation;
     pickupDate: Date | null;
     passengers: number;
   };
