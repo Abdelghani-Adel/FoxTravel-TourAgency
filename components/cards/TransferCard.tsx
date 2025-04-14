@@ -28,7 +28,7 @@ const TransferCard = ({ transfer }: { transfer: any }) => {
       <div className="carInfo">
         <div>
           <h2>{transfer.MetaName}</h2>
-          <p>Duration : {carInfo.duration}</p>
+          <div dangerouslySetInnerHTML={{ __html: transfer.MetaDepartureDetails }} />
 
           <p className="d-flex gap-5">
             <span className="d-flex gap-2 align-items-center">
@@ -46,12 +46,13 @@ const TransferCard = ({ transfer }: { transfer: any }) => {
           <div dangerouslySetInnerHTML={{ __html: transfer.MetaAvailableLanguages }} />
         </div>
 
-        {/* <button className="foxBtn mainBtn smBtn" onClick={() => setMoreInfoShown(true)}>
+        <button className="foxBtn mainBtn smBtn" onClick={() => setMoreInfoShown(true)}>
           More Info
         </button>
         <MyModal show={moreInfoShown} onClose={() => setMoreInfoShown(false)}>
           <div className="p-3 bg-white rounded-4 d-flex flex-column gap-3">
-            <div className="d-flex flex-column gap-2">
+            <div dangerouslySetInnerHTML={{ __html: transfer.MetaAdditionalInformation }} />
+            {/* <div className="d-flex flex-column gap-2">
               {carInfo.includes.map((item) => (
                 <p key={v4()} className="fw-normal">
                   <FaCheck className="text-success me-2" />
@@ -67,9 +68,9 @@ const TransferCard = ({ transfer }: { transfer: any }) => {
                   {item}
                 </p>
               ))}
-            </div>
+            </div> */}
           </div>
-        </MyModal> */}
+        </MyModal>
       </div>
 
       <div className="carPrice">

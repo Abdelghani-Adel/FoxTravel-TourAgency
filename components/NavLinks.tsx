@@ -21,9 +21,7 @@ const NavLinks = (props: IProps) => {
     <>
       <Link
         href="/"
-        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink(
-          "/"
-        )}`}
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/")}`}
         onClick={onNavClick}
       >
         Home
@@ -31,9 +29,7 @@ const NavLinks = (props: IProps) => {
 
       <Link
         href="/hotels"
-        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink(
-          "/hotels"
-        )}`}
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/hotels")}`}
         onClick={onNavClick}
       >
         Hotels
@@ -41,9 +37,7 @@ const NavLinks = (props: IProps) => {
 
       <Link
         href="/packages"
-        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink(
-          "/packages"
-        )}`}
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/packages")}`}
         onClick={onNavClick}
       >
         Packages
@@ -51,19 +45,23 @@ const NavLinks = (props: IProps) => {
 
       <Link
         href="/tours"
-        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink(
-          "/tours"
-        )}`}
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/tours")}`}
         onClick={onNavClick}
       >
         Tours
       </Link>
 
       <Link
+        href="/search/transport"
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/tours")}`}
+        onClick={onNavClick}
+      >
+        Transfers
+      </Link>
+
+      <Link
         href="/contact"
-        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink(
-          "/contact"
-        )}`}
+        className={`no-underline text-inherit ${hoverClass} ${defaultClass} transition ${activeLink("/contact")}`}
         onClick={onNavClick}
       >
         Contact
