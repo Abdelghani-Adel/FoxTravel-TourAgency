@@ -55,25 +55,25 @@ interface TransportationSearchState {
     pickupLocation: ILocation;
     dropoffLocation: ILocation;
     pickupDate: Date | null;
-    passengers: number;
+    passengers: string;
   };
   round: {
     pickupLocation: ILocation;
     dropoffLocation: ILocation;
     pickupDate: Date | null;
     returnDate: Date | null;
-    passengers: number;
+    passengers: string;
   };
   excursions: {
     pickupLocation: ILocation;
     pickupDate: Date | null;
-    passengers: number;
+    passengers: string;
     excursionType: string;
   };
   multiple: {
     pickupLocation: ILocation;
     dropoffLocation: ILocation;
     pickupDate: Date | null;
-    passengers: number;
+    passengers: string;
   }[];
 }

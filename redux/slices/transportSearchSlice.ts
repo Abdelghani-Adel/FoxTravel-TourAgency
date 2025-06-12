@@ -6,19 +6,19 @@ const initialState: TransportationSearchState = {
     pickupLocation: { lat: "", lon: "", name: "" },
     dropoffLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
-    passengers: 0,
+    passengers: "0",
   },
   round: {
     pickupLocation: { lat: "", lon: "", name: "" },
     dropoffLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
     returnDate: null,
-    passengers: 0,
+    passengers: "0",
   },
   excursions: {
     pickupLocation: { lat: "", lon: "", name: "" },
     pickupDate: null,
-    passengers: 0,
+    passengers: "0",
     excursionType: "12 hours",
   },
   multiple: [
@@ -26,7 +26,7 @@ const initialState: TransportationSearchState = {
       pickupLocation: { lat: "", lon: "", name: "" },
       dropoffLocation: { lat: "", lon: "", name: "" },
       pickupDate: null,
-      passengers: 0,
+      passengers: "0",
     },
   ],
 };
@@ -48,7 +48,7 @@ const transportationSearchSlice = createSlice({
     setOneWayPickupDate(state, action: PayloadAction<Date | null>) {
       state.oneWay.pickupDate = action.payload;
     },
-    setOneWayPassengers(state, action: PayloadAction<number>) {
+    setOneWayPassengers(state, action: PayloadAction<string>) {
       state.oneWay.passengers = action.payload;
     },
     // Round actions
@@ -64,7 +64,7 @@ const transportationSearchSlice = createSlice({
     setRoundReturnDate(state, action: PayloadAction<Date | null>) {
       state.round.returnDate = action.payload;
     },
-    setRoundPassengers(state, action: PayloadAction<number>) {
+    setRoundPassengers(state, action: PayloadAction<string>) {
       state.round.passengers = action.payload;
     },
     // Excursions actions
@@ -74,7 +74,7 @@ const transportationSearchSlice = createSlice({
     setExcursionsPickupDate(state, action: PayloadAction<Date | null>) {
       state.excursions.pickupDate = action.payload;
     },
-    setExcursionsPassengers(state, action: PayloadAction<number>) {
+    setExcursionsPassengers(state, action: PayloadAction<string>) {
       state.excursions.passengers = action.payload;
     },
     setExcursionsType(state, action: PayloadAction<string>) {
@@ -86,7 +86,7 @@ const transportationSearchSlice = createSlice({
         pickupLocation: { lat: "", lon: "", name: "" },
         dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
-        passengers: 0,
+        passengers: "0",
       });
     },
     removeTransport(state, action: PayloadAction<number>) {
@@ -101,7 +101,7 @@ const transportationSearchSlice = createSlice({
     setMultiplePickupDate(state, action: PayloadAction<{ index: number; date: Date | null }>) {
       state.multiple[action.payload.index].pickupDate = action.payload.date;
     },
-    setMultiplePassengers(state, action: PayloadAction<{ index: number; passengers: number }>) {
+    setMultiplePassengers(state, action: PayloadAction<{ index: number; passengers: string }>) {
       state.multiple[action.payload.index].passengers = action.payload.passengers;
     },
     resetSearch(state) {
@@ -110,19 +110,19 @@ const transportationSearchSlice = createSlice({
         pickupLocation: { lat: "", lon: "", name: "" },
         dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
-        passengers: 0,
+        passengers: "0",
       };
       state.round = {
         pickupLocation: { lat: "", lon: "", name: "" },
         dropoffLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
         returnDate: null,
-        passengers: 0,
+        passengers: "0",
       };
       state.excursions = {
         pickupLocation: { lat: "", lon: "", name: "" },
         pickupDate: null,
-        passengers: 0,
+        passengers: "0",
         excursionType: "12 hours",
       };
       state.multiple = [
@@ -130,7 +130,7 @@ const transportationSearchSlice = createSlice({
           pickupLocation: { lat: "", lon: "", name: "" },
           dropoffLocation: { lat: "", lon: "", name: "" },
           pickupDate: null,
-          passengers: 0,
+          passengers: "0",
         },
       ];
     },

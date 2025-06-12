@@ -6,7 +6,7 @@ import { transportSearchActions } from "@/redux/slices/transportSearchSlice";
 import TransportPassengers from "./TransportPassengers";
 import SubmitButton from "../common/SubmitButton";
 
-const OneWayTransfer = () => {
+const OneWayTransfer = ({ startDate }: { startDate: Date | null }) => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.transportSearch.oneWay);
 
@@ -22,7 +22,7 @@ const OneWayTransfer = () => {
     dispatch(transportSearchActions.setOneWayPickupDate(date));
   };
 
-  const onPassengersChange = (passengers: number) => {
+  const onPassengersChange = (passengers: string) => {
     dispatch(transportSearchActions.setOneWayPassengers(passengers));
   };
 
@@ -47,6 +47,7 @@ const OneWayTransfer = () => {
         placeholder="Enter pickup date"
         value={formData.pickupDate}
         onChange={onPickupDateChange}
+        minDate={startDate}
       />
 
       <TransportPassengers passengers={formData.passengers} onChange={onPassengersChange} />

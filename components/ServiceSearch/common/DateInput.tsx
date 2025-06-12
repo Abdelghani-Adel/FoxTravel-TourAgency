@@ -3,11 +3,7 @@ import ReactDatePicker from "react-datepicker";
 import { SlCalender } from "react-icons/sl";
 
 const DateInput = (props: IProps) => {
-  const { placeholder, title, value, onChange } = props;
-
-  // Calculate tomorrow's date
-  const tomorrow = new Date();
-  tomorrow.setDate(tomorrow.getDate() + 1);
+  const { placeholder, title, value, onChange, minDate } = props;
 
   return (
     <div className="ss_formInput">
@@ -22,7 +18,7 @@ const DateInput = (props: IProps) => {
           selectsStart
           className="ss_formInputField"
           placeholderText={placeholder}
-          minDate={tomorrow}
+          minDate={minDate}
         />
       </div>
     </div>
@@ -36,4 +32,5 @@ type IProps = {
   placeholder: string;
   value: Date | null;
   onChange: (newDate: Date | null) => void;
+  minDate?: Date | null;
 };

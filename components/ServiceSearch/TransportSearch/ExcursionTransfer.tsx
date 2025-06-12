@@ -7,7 +7,7 @@ import TransportPassengers from "./TransportPassengers";
 import ExcursionType from "./ExcursionsType";
 import SubmitButton from "../common/SubmitButton";
 
-const ExcursionTransfer = () => {
+const ExcursionTransfer = ({ startDate }: { startDate: Date | null }) => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.transportSearch.excursions);
 
@@ -19,7 +19,7 @@ const ExcursionTransfer = () => {
     dispatch(transportSearchActions.setExcursionsPickupDate(date));
   };
 
-  const onPassengersChange = (passengers: number) => {
+  const onPassengersChange = (passengers: string) => {
     dispatch(transportSearchActions.setExcursionsPassengers(passengers));
   };
 
@@ -37,6 +37,7 @@ const ExcursionTransfer = () => {
         placeholder="Enter pickup date"
         value={formData.pickupDate}
         onChange={onPickupDateChange}
+        minDate={startDate}
       />
 
       <ExcursionType />

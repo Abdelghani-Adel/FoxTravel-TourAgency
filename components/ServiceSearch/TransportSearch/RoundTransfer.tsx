@@ -6,7 +6,7 @@ import { transportSearchActions } from "@/redux/slices/transportSearchSlice";
 import TransportPassengers from "./TransportPassengers";
 import SubmitButton from "../common/SubmitButton";
 
-const RoundTransfer = () => {
+const RoundTransfer = ({ startDate }: { startDate: Date | null }) => {
   const dispatch = useAppDispatch();
   const formData = useAppSelector((state) => state.transportSearch.round);
 
@@ -26,7 +26,7 @@ const RoundTransfer = () => {
     dispatch(transportSearchActions.setRoundReturnDate(date));
   };
 
-  const onPassengersChange = (passengers: number) => {
+  const onPassengersChange = (passengers: string) => {
     dispatch(transportSearchActions.setRoundPassengers(passengers));
   };
 
@@ -51,6 +51,7 @@ const RoundTransfer = () => {
         placeholder="Enter pickup date"
         value={formData.pickupDate}
         onChange={onPickupDateChange}
+        minDate={startDate}
       />
 
       <DateInput

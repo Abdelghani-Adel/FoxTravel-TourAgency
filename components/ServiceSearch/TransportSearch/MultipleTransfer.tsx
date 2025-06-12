@@ -6,7 +6,7 @@ import DateInput from "../common/DateInput";
 import { transportSearchActions } from "@/redux/slices/transportSearchSlice";
 import TransportPassengers from "./TransportPassengers";
 
-const MultipleTransfer = () => {
+const MultipleTransfer = ({ startDate }: { startDate: Date | null }) => {
   const dispatch = useAppDispatch();
   const multipleTransfers = useAppSelector((state) => state.transportSearch.multiple);
 
@@ -61,7 +61,7 @@ const MultipleTransferSingle = (props: ISingleProps) => {
     dispatch(transportSearchActions.setMultiplePickupDate(data));
   };
 
-  const onPassengersChange = (passengers: number) => {
+  const onPassengersChange = (passengers: string) => {
     const data = {
       index,
       passengers,
@@ -102,7 +102,7 @@ type ISingleProps = {
     pickupLocation: ILocation;
     dropoffLocation: ILocation;
     pickupDate: Date | null;
-    passengers: number;
+    passengers: string;
   };
   index: number;
 };
