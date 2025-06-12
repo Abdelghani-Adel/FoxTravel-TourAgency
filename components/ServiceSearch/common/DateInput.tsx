@@ -5,6 +5,10 @@ import { SlCalender } from "react-icons/sl";
 const DateInput = (props: IProps) => {
   const { placeholder, title, value, onChange } = props;
 
+  // Calculate tomorrow's date
+  const tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+
   return (
     <div className="ss_formInput">
       <h6 className="ss_formInputTitle">{title}</h6>
@@ -18,6 +22,7 @@ const DateInput = (props: IProps) => {
           selectsStart
           className="ss_formInputField"
           placeholderText={placeholder}
+          minDate={tomorrow}
         />
       </div>
     </div>
