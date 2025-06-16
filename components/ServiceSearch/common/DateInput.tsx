@@ -5,6 +5,8 @@ import { SlCalender } from "react-icons/sl";
 const DateInput = (props: IProps) => {
   const { placeholder, title, value, onChange, minDate } = props;
 
+  console.log(minDate);
+
   return (
     <div className="ss_formInput">
       <h6 className="ss_formInputTitle">{title}</h6>

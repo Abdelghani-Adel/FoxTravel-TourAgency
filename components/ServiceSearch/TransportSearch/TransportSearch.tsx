@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useEffect, useState } from "react";
 import TransportTypeSelector from "./TransportTypeSelector";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
@@ -9,7 +11,7 @@ import MyModal from "../../ui/MyModal";
 import { transportSearchActions } from "@/redux/slices/transportSearchSlice";
 import { getStartDate } from "@/services/transportServices";
 
-const TransportSearch = async () => {
+const TransportSearch = () => {
   const [startDate, setStartDate] = useState<Date | null>(null);
 
   const dispatch = useAppDispatch();
@@ -22,7 +24,8 @@ const TransportSearch = async () => {
   useEffect(() => {
     const fetchStartDate = async () => {
       const response = await getStartDate();
-      setStartDate(response.data);
+      const [day, month, year] = response?.data?.split("/");
+      setStartDate(new Date(+year, +month - 1, +day));
     };
 
     fetchStartDate();
